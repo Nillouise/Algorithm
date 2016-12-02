@@ -143,11 +143,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Bracket.h" />
+    <ClInclude Include="Chess.h" />
     <ClInclude Include="Multiply.h" />
     <ClInclude Include="Permutation.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Bracket.cpp" />
+    <ClCompile Include="Chess.cpp" />
     <ClCompile Include="Multiply.cpp" />
     <ClCompile Include="Permutation.cpp" />
     <ClCompile Include="Source.cpp" />
