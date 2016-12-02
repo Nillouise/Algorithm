@@ -1,5 +1,6 @@
 #include<iostream>
 #include"Permutation.h"
+#include"Multiply.h"
 using namespace std;
 void print_permutation(int n, int* A, int cur) {
 	if (cur == n) { //µÝ¹é±ß½ç
@@ -19,9 +20,8 @@ void print_permutation(int n, int* A, int cur) {
 
 int main()
 {
-	Permutation p;
-	p.m = 4;
-	p.run();
+	Multiply m;
+	cout<<m.run(7,2);
 	while (1)
 	{
 
