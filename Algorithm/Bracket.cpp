@@ -66,3 +66,12 @@ int Bracket::run(int m, char* sequence)
 	return dfsBracket(0, m-1);
 
 }
+
+
+int invoke()
+{
+	Bracket m;
+	char a[10] = { ')','(','[',')',']' };
+	cout << m.run(5, a);
+	return 0;
+}

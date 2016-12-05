@@ -8,11 +8,3 @@ public:
 	int m;
 	~Permutation();
 };
-
-int invoke()
-{
-	Bracket m;
-	char a[10] = { ')','(','[',')',']' };
-	cout << m.run(5, a);
-	return 0;
-}

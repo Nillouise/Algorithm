@@ -8,3 +8,5 @@ public:
 	int run(int m,char* sequence);
 };
 
+
+int invoke();
