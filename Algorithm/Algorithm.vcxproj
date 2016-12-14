@@ -145,6 +145,7 @@
     <ClInclude Include="Bracket.h" />
     <ClInclude Include="Chess.h" />
     <ClInclude Include="FenZhiXianJie.h" />
+    <ClInclude Include="Longest Common Subsequence.h" />
     <ClInclude Include="Multiply.h" />
     <ClInclude Include="Permutation.h" />
   </ItemGroup>

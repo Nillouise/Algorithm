@@ -1,5 +1,6 @@
 #include "Bracket.h"
 #include<algorithm>
+#include<iostream>
 using namespace std;
 
 char s[100];
