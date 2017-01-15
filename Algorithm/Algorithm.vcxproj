@@ -157,6 +157,7 @@
     <ClCompile Include="convertRootTree.cpp" />
     <ClCompile Include="ExpressionTree.cpp" />
     <ClCompile Include="FenZhiXianJie.cpp" />
+    <ClCompile Include="Kruskal.cpp" />
     <ClCompile Include="Multiply.cpp" />
     <ClCompile Include="Permutation.cpp" />
     <ClCompile Include="Source.cpp" />

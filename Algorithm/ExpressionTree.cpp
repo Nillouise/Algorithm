@@ -18,7 +18,7 @@ int expression(int begin, int end, string s)
 	int c1 = -1;
 	int c2 = -1;
 	int bracket = 0;
-	for (size_t i = begin; i <= end; i++)
+	for (size_t i = begin; i <= end; i++)//这里是从begin 遍历到end，带来的后果是找到的是最右边的算符，所以整个表达式是左结合的。
 	{
 		switch (s[i]) {
 		case '(':bracket++;

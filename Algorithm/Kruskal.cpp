@@ -5,21 +5,20 @@ using namespace std;
 const int maxn = 100;
 int u[maxn], v[maxn], w[maxn];
 int r[maxn];
+int father[maxn];
 int cmp(int i, int j) {
 	return w[i] < w[j];
 }
-int father[maxn];
 bool findRoot(int x)
 {
 	return father[x] == x ? x : findRoot(father[x]);
 }
 
-int Krushal(int n)
+int Krushal(int n)//n是讲有几条边，这个算法应该不用知道有几个点——信息已经全部包含在边里了
 {
 	for (int i = 0; i < n; i++)r[i] = i;
 	for (int i = 0; i < n; i++)father[i] = i;
 	sort(r, r + n, cmp);
-	int points;
 	vector<int> MinEdgesSet;
 	for (size_t i = 0; i < n; i++)
 	{
