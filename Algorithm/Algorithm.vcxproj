@@ -154,6 +154,8 @@
   <ItemGroup>
     <ClCompile Include="Bracket.cpp" />
     <ClCompile Include="Chess.cpp" />
+    <ClCompile Include="convertRootTree.cpp" />
+    <ClCompile Include="ExpressionTree.cpp" />
     <ClCompile Include="FenZhiXianJie.cpp" />
     <ClCompile Include="Multiply.cpp" />
     <ClCompile Include="Permutation.cpp" />

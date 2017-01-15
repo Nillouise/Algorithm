@@ -16,6 +16,9 @@
     <Filter Include="Source Files\STL">
       <UniqueIdentifier>{09500a3b-70c3-44e7-9652-548f2fc25a6b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Graph">
+      <UniqueIdentifier>{b05640d4-4402-40ac-a5f3-173e2d7432d3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Permutation.h">
@@ -64,6 +67,12 @@
     </ClCompile>
     <ClCompile Include="UVa12096 The SetStack Computer.cpp">
       <Filter>Source Files\STL</Filter>
+    </ClCompile>
+    <ClCompile Include="convertRootTree.cpp">
+      <Filter>Source Files\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpressionTree.cpp">
+      <Filter>Source Files\Graph</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

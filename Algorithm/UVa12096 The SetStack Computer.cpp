@@ -64,7 +64,7 @@ int main() {
 using namespace std;
 typedef set<int> Set;
 vector<Set> setCache;
-map<Set, int> setMap;
+map<Set, int> setMap;//这个名字不是很好，不应该写类型名作为变量名的一部分
 
 #define ALL(x) x.begin(),x.end()
 #define INS(x) inserter(x,x.begin())
@@ -95,7 +95,7 @@ int main()
 			cin >> op;
 
 			if (op[0] == 'P')s.push(getID(Set()));
-			if (op[0] == 'D')s.push(s.top());
+			else if (op[0] == 'D')s.push(s.top());
 			else {
 				Set x1 = setCache[s.top()]; s.pop();
 				Set x2 = setCache[s.top()]; s.pop();
