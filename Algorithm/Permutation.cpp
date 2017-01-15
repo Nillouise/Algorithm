@@ -3,9 +3,6 @@
 using namespace std;
 
 
-Permutation::Permutation()
-{
-}
 void swap(int &a, int &b)
 {
 	int t = a;
@@ -15,6 +12,9 @@ void swap(int &a, int &b)
 
 void Permutation::run()
 {
+	int m;//how much number to permutation
+	cin >> m;
+
 	int element[100];
 	int direction[100];
 	for (int i = 0; i < 100; i++)
@@ -59,6 +59,4 @@ void Permutation::run()
 }
 
 
-Permutation::~Permutation()
-{
-}
+

@@ -3,22 +3,29 @@
 #include"Multiply.h"
 #include"Bracket.h"
 #include"Chess.h"
+#include"FenZhiXianJie.h"
 using namespace std;
 #include<time.h>
+
+
+#include<iostream>
+using namespace std;
+
 int main()
 {
-	const int MOD = 1000000;
-	int n, S = 0;
-	scanf("%d", &n);
-	for (int i = 1; i <= n; i++)
+	int n = 65536, m = 655360;
+	double total = 0;
+	for (int i = n; i <= m; i++)
 	{
-		int factorial = 1;
-		for (int j = 1; j <= i; j++)
-			factorial = (factorial * j % MOD);
-		S = (S + factorial) % MOD;
+		if ((i - n) % 1000 == 0)
+		{
+			int a=100;
+		}
+		total += (1.0 / i)*(1.0 / i);
 	}
-	printf("%d\n", S);
-	printf("Time used = %.2f\n", (double)clock() / CLOCKS_PER_SEC);
-	system("pause");
-	return 0;
+	cout << total;
+	while (true)
+	{
+
+	}
 }

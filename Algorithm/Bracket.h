@@ -3,10 +3,6 @@
 class Bracket
 {
 public:
-	Bracket();
-	~Bracket();
-	int run(int m,char* sequence);
+	int run();
 };
 
-
-int invoke();

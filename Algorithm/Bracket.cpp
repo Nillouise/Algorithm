@@ -1,6 +1,7 @@
 #include "Bracket.h"
 #include<algorithm>
 #include<iostream>
+#include<string>
 using namespace std;
 
 char s[100];
@@ -49,30 +50,18 @@ int dfsBracket(int i,int j)
 }
 
 
-Bracket::Bracket()
-{
-}
 
 
-Bracket::~Bracket()
-{
-}
-
-int Bracket::run(int m, char* sequence)
+int Bracket::run()
 {
 	for (int i = 0; i < 100; i++)
 		for (int j = 0; j < 100; j++)
 			d[i][j] = 10000;
-	memcpy(s, sequence, sizeof(char)*m);
-	return dfsBracket(0, m-1);
+	string sBracket;
+	cin >> sBracket;
 
-}
-
-
-int invoke()
-{
-	Bracket m;
-	char a[10] = { ')','(','[',')',']' };
-	cout << m.run(5, a);
+	memcpy(s, sBracket.c_str(), sizeof(char)*sBracket.length());
+	cout<< dfsBracket(0,sBracket.length()-1 );
 	return 0;
 }
+

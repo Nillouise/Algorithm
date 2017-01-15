@@ -3,6 +3,7 @@
 #include<math.h>
 #include<stdlib.h>
 #include<algorithm>
+#include<iostream>
 using namespace std;
 int d[100][100][3];
 
@@ -57,16 +58,16 @@ int dfs(int i, int j, int c)
 	}
 }
 
-Multiply::Multiply()
-{
-}
 
-
-Multiply::~Multiply()
+//character 0 to 'a',1 to 'b',2 to 'c'
+int Multiply::run()
 {
-}
-
-int Multiply::run(int m,int character)
-{
-	return dfs(1,m, character);
+	int m;
+	int character;
+	cout << "序列长度:";
+	cin >> m;
+	cout << "生成结果，a是0，b是1，c是2:";
+	cin>> character;
+	cout << dfs(0, m-1, character);
+	return 0;
 }

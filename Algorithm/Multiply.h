@@ -3,8 +3,6 @@
 class Multiply
 {
 public:
-	Multiply();
-	~Multiply();
-	int run(int m , int character);
+	int run();
 };
 

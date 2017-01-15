@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{995C513B-2C35-443B-B216-FEC65D1C8EF6}</ProjectGuid>
+    <ProjectGuid>{F4DCD2F0-DB43-43FF-A1AD-D959FB5DFAE2}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Algorithm</RootNamespace>
+    <RootNamespace>test</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -142,23 +142,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Bracket.h" />
-    <ClInclude Include="Chess.h" />
-    <ClInclude Include="FenZhiXianJie.h" />
-    <ClInclude Include="Longest Common Subsequence.h" />
-    <ClInclude Include="Multiply.h" />
-    <ClInclude Include="Permutation.h" />
-    <ClInclude Include="Permutation2.h" />
-    <ClInclude Include="UVa12096 The SetStack Computer.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Bracket.cpp" />
-    <ClCompile Include="Chess.cpp" />
-    <ClCompile Include="FenZhiXianJie.cpp" />
-    <ClCompile Include="Multiply.cpp" />
-    <ClCompile Include="Permutation.cpp" />
     <ClCompile Include="Source.cpp" />
-    <ClCompile Include="UVa12096 The SetStack Computer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
