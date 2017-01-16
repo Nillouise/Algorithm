@@ -14,7 +14,7 @@ struct Edge
 struct Node
 {
 	int d, s;
-	bool operator < (const Node& t)const
+	bool operator < (const Node& t)
 	{
 		return d < t.d;
 	}
@@ -30,13 +30,7 @@ struct Dijkstra
 	{
 		d[s] = 0;
 		priority_queue<Node> pq;
-		pq.push(Node{ 0, s });
-		return;
+		pq.push( Node{ 0, s });
+		{0, 1; };
 	}
 };
-
-int main()
-{
-	Dijkstra d;
-	d.run(100);
-}

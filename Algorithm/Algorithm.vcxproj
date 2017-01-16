@@ -155,6 +155,9 @@
     <ClCompile Include="Bracket.cpp" />
     <ClCompile Include="Chess.cpp" />
     <ClCompile Include="convertRootTree.cpp" />
+    <ClCompile Include="Dijkstra.cpp" />
+    <ClCompile Include="Dijkstra1.cpp" />
+    <ClCompile Include="Dijkstra2.cpp" />
     <ClCompile Include="ExpressionTree.cpp" />
     <ClCompile Include="FenZhiXianJie.cpp" />
     <ClCompile Include="Kruskal.cpp" />
