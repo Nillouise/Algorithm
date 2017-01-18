@@ -1,5 +1,4 @@
 #include<iostream>
-#include<vector>
 #include<queue>
 #include<cstring>
 using namespace std;
@@ -11,27 +10,28 @@ int mark[1 << maxn];
 int m;
 char before[maxm][maxn+5], after[maxm][maxn+5];
 int t[maxm];
-const int INF = 1 << 30;
+const int INF = 1000000000;
 struct Node
 {
 	int dist, state;
 	bool operator <(const Node t)const {
-		return dist < t.dist;
+		return dist > t.dist;
 	}
 };
 
 int solve()
 {
-	priority_queue<Node> pq;
-	Node start;
 	for (size_t i = 0; i < (1 << n); i++)
 	{
 		dist[i] = INF;
 		mark[i] = 0;
 	}
+	priority_queue<Node> pq;
+	Node start;
+
 	start.dist = 0;
 	start.state = (1 << n) - 1;
-	pq.push(start);
+	pq.push(Node{0,(1<<n) -1});
 	dist[start.state] = 0;
 
 	while (!pq.empty())
@@ -45,15 +45,16 @@ int solve()
 		{
 			bool patch = true;
 			for (size_t i = 0; i < n; i++)
+			{
 				if (before[p][i] == '+' && !(current.state&(1 << i))) {
 					patch = false;
 					break;
 				}
-			for (size_t i = 0; i < n; i++)
-				if (before[p][i] == '-'&&current.state&(1 << i)) {
+				if (before[p][i] == '-'&&(current.state&(1 << i))) {
 					patch = false;
 					break;
 				}
+			}
 			if (!patch)continue;
 
 			Node nextnode;
@@ -61,9 +62,10 @@ int solve()
 
 			nextnode.dist += t[p];
 			for (size_t i = 0; i < n; i++)
+			{
 				if (after[p][i] == '-')nextnode.state &= ~(1 << i);
-			for (size_t i = 0; i < n; i++)
 				if (after[p][i] == '+') nextnode.state |= (1 << i);
+			}
 			if (dist[nextnode.state]< 0 ||nextnode.dist < dist[nextnode.state])
 			{
 				dist[nextnode.state] = nextnode.dist;
