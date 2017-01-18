@@ -1,21 +1,20 @@
 #include<iostream>
 #include<vector>
 #include<queue>
-#include<cstring>
+#include<stdlib.h>
 using namespace std;
 int n;
 const int maxn = 20;
-const int maxm = 100+5;
+const int maxm = 100;
 int dist[1 << maxn];
 int mark[1 << maxn];
 int m;
-char before[maxm][maxn+5], after[maxm][maxn+5];
-int t[maxm];
+char before[maxm][20], after[maxm][20],t[maxm];
 const int INF = 1 << 30;
 struct Node
 {
 	int dist, state;
-	bool operator <(const Node t)const {
+	bool operator <(const Node t )const {
 		return dist < t.dist;
 	}
 };
@@ -23,16 +22,10 @@ struct Node
 int solve()
 {
 	priority_queue<Node> pq;
-	Node start;
-	for (size_t i = 0; i < (1 << n); i++)
-	{
-		dist[i] = INF;
-		mark[i] = 0;
-	}
-	start.dist = 0;
-	start.state = (1 << n) - 1;
-	pq.push(start);
-	dist[start.state] = 0;
+	pq.push(Node{ 0,(1 << n) - 1});
+	dist[1 << n] = 0;
+	for (size_t i = 0; i < 1<<maxn; i++)dist[i] = INF;
+	memset(mark, 0, sizeof(mark));
 
 	while (!pq.empty())
 	{
@@ -41,30 +34,31 @@ int solve()
 		if (mark[current.state] == 1)continue;
 		mark[current.state] = 1;
 
+
 		for (size_t p = 0; p < m; p++)
 		{
 			bool patch = true;
-			for (size_t i = 0; i < n; i++)
-				if (before[p][i] == '+' && !(current.state&(1 << i))) {
+			for (size_t i = 0; i < m; i++)
+				if (before[p][i] == '+' && !current.state&(1 << i)) {
 					patch = false;
 					break;
 				}
-			for (size_t i = 0; i < n; i++)
+			for (size_t i = 0; i < m; i++)
 				if (before[p][i] == '-'&&current.state&(1 << i)) {
 					patch = false;
 					break;
-				}
+			}
 			if (!patch)continue;
 
 			Node nextnode;
 			nextnode.dist = current.dist; nextnode.state = current.state;
 
 			nextnode.dist += t[p];
-			for (size_t i = 0; i < n; i++)
+			for (size_t i = 0; i < m; i++)
 				if (after[p][i] == '-')nextnode.state &= ~(1 << i);
-			for (size_t i = 0; i < n; i++)
+			for (size_t i = 0; i < m; i++)
 				if (after[p][i] == '+') nextnode.state |= (1 << i);
-			if (dist[nextnode.state]< 0 ||nextnode.dist < dist[nextnode.state])
+			if (nextnode.dist < current.dist)
 			{
 				dist[nextnode.state] = nextnode.dist;
 				pq.push(nextnode);

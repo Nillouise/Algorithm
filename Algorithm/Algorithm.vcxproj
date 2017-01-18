@@ -164,6 +164,7 @@
     <ClCompile Include="Multiply.cpp" />
     <ClCompile Include="Permutation.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="UVa 658 It%27s not a Bug.cpp" />
     <ClCompile Include="UVa12096 The SetStack Computer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
