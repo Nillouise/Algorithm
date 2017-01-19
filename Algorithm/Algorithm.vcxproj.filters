@@ -89,5 +89,8 @@
     <ClCompile Include="UVa 658 It%27s not a Bug.cpp">
       <Filter>Source Files\Graph</Filter>
     </ClCompile>
+    <ClCompile Include="Edmonds-Krap.cpp">
+      <Filter>Source Files\Graph</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

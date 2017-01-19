@@ -158,6 +158,7 @@
     <ClCompile Include="Dijkstra.cpp" />
     <ClCompile Include="Dijkstra1.cpp" />
     <ClCompile Include="Dijkstra2.cpp" />
+    <ClCompile Include="Edmonds-Krap.cpp" />
     <ClCompile Include="ExpressionTree.cpp" />
     <ClCompile Include="FenZhiXianJie.cpp" />
     <ClCompile Include="Kruskal.cpp" />
