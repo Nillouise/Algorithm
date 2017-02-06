@@ -19,6 +19,12 @@
     <Filter Include="Source Files\Graph">
       <UniqueIdentifier>{b05640d4-4402-40ac-a5f3-173e2d7432d3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\DP">
+      <UniqueIdentifier>{5c253277-ac4e-4d5e-b433-d1d473812790}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Exhaustive Search">
+      <UniqueIdentifier>{55e445ea-2f7d-422b-8274-a44262cc5bc3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Permutation.h">
@@ -47,9 +53,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Permutation.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Source.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -91,6 +94,15 @@
     </ClCompile>
     <ClCompile Include="Edmonds-Krap.cpp">
       <Filter>Source Files\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="MCMF.cpp">
+      <Filter>Source Files\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Permutation.cpp">
+      <Filter>Source Files\Exhaustive Search</Filter>
+    </ClCompile>
+    <ClCompile Include="Subset.cpp">
+      <Filter>Source Files\Exhaustive Search</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

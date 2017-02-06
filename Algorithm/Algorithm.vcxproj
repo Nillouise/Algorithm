@@ -162,9 +162,11 @@
     <ClCompile Include="ExpressionTree.cpp" />
     <ClCompile Include="FenZhiXianJie.cpp" />
     <ClCompile Include="Kruskal.cpp" />
+    <ClCompile Include="MCMF.cpp" />
     <ClCompile Include="Multiply.cpp" />
     <ClCompile Include="Permutation.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Subset.cpp" />
     <ClCompile Include="UVa 658 It%27s not a Bug.cpp" />
     <ClCompile Include="UVa12096 The SetStack Computer.cpp" />
   </ItemGroup>

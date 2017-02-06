@@ -33,8 +33,6 @@ class Permutation2
 				dfs(curPos + 1, total, a);
 			}
 		}
-
-
 	}
 
 };

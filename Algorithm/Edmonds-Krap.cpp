@@ -51,7 +51,7 @@ struct  EdmondsKarp
 				{
 					Edge& e = edges[G[curNode][i]];
 					if (a[e.to] > 0)continue;
-					if (e.cap <= e.flow)continue;
+					if (e.cap <= e.flow)continue;// it represent that this point is had use(use >0 to signal)
 					a[e.to] =  min(a[curNode], e.cap - e.flow);
 					p[e.to] = G[curNode][i];
 					Q.push(e.to);
