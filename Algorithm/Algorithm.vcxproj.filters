@@ -25,6 +25,9 @@
     <Filter Include="Source Files\Exhaustive Search">
       <UniqueIdentifier>{55e445ea-2f7d-422b-8274-a44262cc5bc3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Geometry">
+      <UniqueIdentifier>{eacc5842-7b9d-420b-afc3-c14cabe0d37f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -65,6 +68,12 @@
     </ClCompile>
     <ClCompile Include="Subset.cpp">
       <Filter>Source Files\Exhaustive Search</Filter>
+    </ClCompile>
+    <ClCompile Include="Convex Hull.cpp">
+      <Filter>Source Files\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="POJ1113-Wall.cpp">
+      <Filter>Source Files\Geometry</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

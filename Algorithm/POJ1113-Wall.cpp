@@ -63,7 +63,7 @@ double solve(Point *parr, int N, Point *ch)
 	int m = 0;
 	for (int i = 0; i < N; i++)
 	{
-		while (m>1 && Cross(ch[m-1] - ch[m - 2], parr[i] - ch[m-2]) <= 0)
+		while (m>1 && Cross(ch[m - 1] - ch[m - 2], parr[i] - ch[m - 2]) <= 0)
 		{
 			m--;
 		}
@@ -72,7 +72,7 @@ double solve(Point *parr, int N, Point *ch)
 	int k = m;
 	for (int i = N - 2; i >= 0; i--)
 	{
-		while (m>k&&Cross(ch[m-1] - ch[m - 2], parr[i] - ch[m-2]) <= 0)
+		while (m>k&&Cross(ch[m - 1] - ch[m - 2], parr[i] - ch[m - 2]) <= 0)
 		{
 			m--;
 		}
@@ -96,8 +96,8 @@ int main()
 		parr[i] = Point(x, y);
 	}
 
-	cout << (int)round(solve(parr, N, ch) + 2*PI* L)<<endl;
-	
+	cout << (int)round(solve(parr, N, ch) + 2 * PI* L) << endl;
+
 
 	return 0;
 }

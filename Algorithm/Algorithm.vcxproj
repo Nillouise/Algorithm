@@ -143,6 +143,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="convertRootTree.cpp" />
+    <ClCompile Include="Convex Hull.cpp" />
     <ClCompile Include="Dijkstra.cpp" />
     <ClCompile Include="Dijkstra1.cpp" />
     <ClCompile Include="Dijkstra2.cpp" />
@@ -151,6 +152,7 @@
     <ClCompile Include="Kruskal.cpp" />
     <ClCompile Include="MCMF.cpp" />
     <ClCompile Include="Permutation.cpp" />
+    <ClCompile Include="POJ1113-Wall.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Subset.cpp" />
     <ClCompile Include="UVa 658 It%27s not a Bug.cpp" />

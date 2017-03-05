@@ -27,8 +27,6 @@ void print_permutation(int *a, int length, int cur)
 			}
 
 		}
-
-
 }
 
 void print_permutation_duplicate(int *P, int *a, int length, int cur)

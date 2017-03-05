@@ -1,8 +1,5 @@
-#include<iostream>
 #include<cmath>
-#include<algorithm>
 using namespace std;
-const double PI = acos(-1.0);
 struct Point
 {
 	double x, y;
@@ -47,59 +44,6 @@ double ConverxPolygonArea(Point *p, int n)
 	for (int i = 1; i < n - 1; i++)
 		area += Cross(p[i] - p[0], p[i + 1] - p[0]);
 	return area / 2;
-}
-
-double PolygonLenght(Point*p, int n)
-{
-	double len = 0;
-	for (int i = 1; i < n; i++)
-		len += Length(p[i] - p[i - 1]);
-	return len + Length(p[0] - p[n - 1]);
-}
-
-double solve(Point *parr, int N, Point *ch)
-{
-	sort(parr, parr + N);
-	int m = 0;
-	for (int i = 0; i < N; i++)
-	{
-		while (m>1 && Cross(ch[m-1] - ch[m - 2], parr[i] - ch[m-2]) <= 0)
-		{
-			m--;
-		}
-		ch[m++] = parr[i];
-	}
-	int k = m;
-	for (int i = N - 2; i >= 0; i--)
-	{
-		while (m>k&&Cross(ch[m-1] - ch[m - 2], parr[i] - ch[m-2]) <= 0)
-		{
-			m--;
-		}
-		ch[m++] = parr[i];
-	}
-	if (N > 1) m--;
-	return PolygonLenght(ch, m);
-
-}
-
-int main()
-{
-	int N, L;
-	cin >> N >> L;
-	Point parr[1000 + 5];
-	Point ch[1000 + 5];
-	for (size_t i = 0; i < N; i++)
-	{
-		int x, y;
-		cin >> x >> y;
-		parr[i] = Point(x, y);
-	}
-
-	cout << (int)round(solve(parr, N, ch) + 2*PI* L)<<endl;
-	
-
-	return 0;
 }
 
 
