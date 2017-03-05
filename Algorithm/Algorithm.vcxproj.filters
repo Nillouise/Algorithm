@@ -27,45 +27,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Permutation.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Bracket.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Multiply.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Chess.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FenZhiXianJie.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Longest Common Subsequence.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Permutation2.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="UVa12096 The SetStack Computer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="Source.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Bracket.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Multiply.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Chess.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="FenZhiXianJie.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="UVa12096 The SetStack Computer.cpp">

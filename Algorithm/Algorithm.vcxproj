@@ -142,28 +142,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Bracket.h" />
-    <ClInclude Include="Chess.h" />
-    <ClInclude Include="FenZhiXianJie.h" />
-    <ClInclude Include="Longest Common Subsequence.h" />
-    <ClInclude Include="Multiply.h" />
-    <ClInclude Include="Permutation.h" />
-    <ClInclude Include="Permutation2.h" />
-    <ClInclude Include="UVa12096 The SetStack Computer.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Bracket.cpp" />
-    <ClCompile Include="Chess.cpp" />
     <ClCompile Include="convertRootTree.cpp" />
     <ClCompile Include="Dijkstra.cpp" />
     <ClCompile Include="Dijkstra1.cpp" />
     <ClCompile Include="Dijkstra2.cpp" />
     <ClCompile Include="Edmonds-Krap.cpp" />
     <ClCompile Include="ExpressionTree.cpp" />
-    <ClCompile Include="FenZhiXianJie.cpp" />
     <ClCompile Include="Kruskal.cpp" />
     <ClCompile Include="MCMF.cpp" />
-    <ClCompile Include="Multiply.cpp" />
     <ClCompile Include="Permutation.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Subset.cpp" />
