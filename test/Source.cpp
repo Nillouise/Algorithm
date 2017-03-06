@@ -6,6 +6,7 @@
 #include<vector>
 #include<algorithm>
 #include<iterator>
+#include<sstream>
 using namespace std;
 
 
@@ -16,8 +17,8 @@ string tran(char c)
 	{
 		s += c % 2 ? '1' : '0';
 	} while (c /= 2);
-	
-	reverse(s.begin(),s.end() );
+
+	reverse(s.begin(), s.end());//·­×ª×Ö·û´®£¬ĞèÒªAlgorithms
 	return s;
 }
 
@@ -32,13 +33,24 @@ char tran2(string s)
 	return c;
 }
 
+string printS(int num)
+{
+	stringstream ss;
+	ss << num;
+	string s;
+	ss >> s;
+	return s;
+}
+
+
 int main()
 {
 	cout << tran(2);
-	cout << endl << tran2(tran(48));
+
+	cout << printS(23);
 
 	system("pause");
-	
+
 
 	return 0;
 }

@@ -6,6 +6,7 @@
 #include<vector>
 #include<algorithm>
 #include<iterator>
+#include<sstream>
 using namespace std;
 
 
@@ -32,13 +33,22 @@ char tran2(string s)
 	return c;
 }
 
+string printS(int num)
+{
+	stringstream ss;
+	ss << num;
+	string s;
+	ss >> s;
+	return s;
+}
+
+
 int main()
 {
 	cout << tran(2);
-	cout << endl << tran2(tran(48));
+
+	cout << printS(23);
 
 	system("pause");
-
-
 	return 0;
 }
