@@ -28,6 +28,9 @@
     <Filter Include="Source Files\Geometry">
       <UniqueIdentifier>{eacc5842-7b9d-420b-afc3-c14cabe0d37f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\String">
+      <UniqueIdentifier>{637a3190-5156-47b3-ae10-0f0f30ae759b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -74,6 +77,12 @@
     </ClCompile>
     <ClCompile Include="POJ1113-Wall.cpp">
       <Filter>Source Files\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="poj3080.cpp">
+      <Filter>Source Files\String</Filter>
+    </ClCompile>
+    <ClCompile Include="BitToString.cpp">
+      <Filter>Source Files\String</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

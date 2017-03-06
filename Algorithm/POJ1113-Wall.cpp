@@ -63,7 +63,7 @@ double solve(Point *parr, int N, Point *ch)
 	int m = 0;
 	for (int i = 0; i < N; i++)
 	{
-		while (m>1 && Cross(ch[m - 1] - ch[m - 2], parr[i] - ch[m - 2]) <= 0)
+		while (m>1 && Cross(ch[m - 1] - ch[m - 2], parr[i] - ch[m - 2]) <= 0)//这里 是 m-1 和m-2，因为m是指向空位的。
 		{
 			m--;
 		}
@@ -72,7 +72,7 @@ double solve(Point *parr, int N, Point *ch)
 	int k = m;
 	for (int i = N - 2; i >= 0; i--)
 	{
-		while (m>k&&Cross(ch[m - 1] - ch[m - 2], parr[i] - ch[m - 2]) <= 0)
+		while (m>k&&Cross(ch[m - 1] - ch[m - 2], parr[i] - ch[m - 2]) <= 0)//这里跟 上面的 差不多，因为都是挑 逆时针翘上去的点，无论是上面的包 还是下面的包
 		{
 			m--;
 		}
