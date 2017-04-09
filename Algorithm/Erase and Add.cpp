@@ -1,3 +1,21 @@
+/*
+主要关注重点
+while (scanf("%s", s), s[0] != '.')
+scanf("%s%s", op, s2);这里利用了，scanf遇到空格就算一个字符串的结束这个特点，也就是说，空格天然就是scanf的分隔符
+vector<string>::iterator it;记住这遍历的格式
+for (it = m.begin(); it != m.end(); it++)
+{
+	if ((*it) == t)
+	{
+		m.erase(it);
+		break;
+	}
+}删除 vector内的元素用vector.erase(iterator)
+
+
+*/
+
+
 #include<cstdio>
 #include<cmath>
 #include<iostream>
