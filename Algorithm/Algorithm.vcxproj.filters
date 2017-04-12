@@ -120,10 +120,19 @@
     <ClCompile Include="poj 1753.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
+    <ClCompile Include="poj1068.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="poj 1328 错误.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
     <ClCompile Include="poj 1328.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj1068.cpp">
+    <ClCompile Include="poj 1328 别人的正确的跟我差不多的答案.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="poj3295.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
   </ItemGroup>

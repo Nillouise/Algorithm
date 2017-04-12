@@ -1,5 +1,6 @@
 //字符数目变量忘记相减，没有牢记每个变量的含义和与题目的联系
-//忘记Pn代表的含义是 P-sequence 的数目而不是真正构造出来的字符串 大小,这点在debug时居然没有第一时间反应出来，for循环提前退出，没有break掉，肯定就是因为边界条件写错了
+//忘记Pn代表的含义是 P-sequence 的数目而不是真正构造出来的字符串 大小,这点在debug时居然没有第一时间反应出来，
+//for循环提前退出，没有break掉，肯定就是因为边界条件写错了
 #include<iostream>
 #include<stdio.h>
 #include<stdlib.h>

@@ -1,11 +1,10 @@
 //一开始就没想对了
 //结构体要在定义了后才能用，这个和全局变量可能会产生冲突。
 //没有留意到坐标x可以是负数。
-//搞了一个下午，仍没弄清哪里错了，跟别人答案思路几乎是复刻的，能拿到的样例数据都是对的，结果还是wa。
-//所以现在要科学地放弃这道题目，更科学的做法是，两小时前放弃这道题目。
 #include<iostream>
+#include<stdio.h>
+#include<stdlib.h>
 #include<algorithm>
-#include<fstream>
 #include<cmath>
 using namespace std;
 const int INF = 1000000;
@@ -16,24 +15,22 @@ struct qujian
 	bool operator <(const qujian &t)const {
 		return b < t.b;
 	}
-}line[1005];
+}line[10000];
 
 int main()
 {
-	int T = 0;
 	freopen("input.txt", "r", stdin);
-	while (true)
+	int T = 0;
+	while (cin >> n >> d&& n != 0)
 	{
-		cin >> n >> d;
-		if (n == 0 && d == 0)break;
 		int flag = 1;
 		for (int i = 0; i < n; i++)
 		{
 			int x, y;
 			cin >> x >> y;
 			qujian cur;
-			cur.b = x - (double)sqrt((double)d*d - (double)y*y);
-			cur.e = x + (double)sqrt((double)d*d - (double)y*y);
+			cur.b = x - (double)sqrt(d*d - y*y);
+			cur.e = x + (double)sqrt(d*d - y*y);
 			line[i] = cur;
 			if (abs(y) > d)flag = 0;
 		}
