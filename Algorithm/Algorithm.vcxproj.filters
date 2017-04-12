@@ -34,11 +34,14 @@
     <Filter Include="Source Files\DataStructure">
       <UniqueIdentifier>{5fbd41fe-5694-4c1b-b82c-2010bc009322}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\广工">
-      <UniqueIdentifier>{4d56f616-5b22-4034-b39a-a81253adaa00}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Nim">
       <UniqueIdentifier>{389a349c-a9f7-42ed-837e-f0bc4ab2224a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\POJSet">
+      <UniqueIdentifier>{abff2768-02b2-4416-a154-7d318ecc4504}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\POJSet\Base">
+      <UniqueIdentifier>{c901347e-ea75-49a0-8b5a-add96d7b46da}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -102,12 +105,6 @@
     <ClCompile Include="RMQ Poj3264.cpp">
       <Filter>Source Files\DataStructure</Filter>
     </ClCompile>
-    <ClCompile Include="H 选数字.cpp">
-      <Filter>Source Files\广工</Filter>
-    </ClCompile>
-    <ClCompile Include="Nim.cpp">
-      <Filter>Source Files\广工</Filter>
-    </ClCompile>
     <ClCompile Include="enumeration poj1753.cpp">
       <Filter>Source Files\Exhaustive Search</Filter>
     </ClCompile>
@@ -116,6 +113,18 @@
     </ClCompile>
     <ClCompile Include="Erase and Add.cpp">
       <Filter>Source Files\String</Filter>
+    </ClCompile>
+    <ClCompile Include="poj 2965.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="poj 1753.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="poj 1328.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="poj1068.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -152,13 +152,15 @@
     <ClCompile Include="enumeration poj1753.cpp" />
     <ClCompile Include="Erase and Add.cpp" />
     <ClCompile Include="ExpressionTree.cpp" />
-    <ClCompile Include="H 选数字.cpp" />
     <ClCompile Include="Kruskal.cpp" />
     <ClCompile Include="MCMF.cpp" />
-    <ClCompile Include="Nim.cpp" />
     <ClCompile Include="Permutation.cpp" />
+    <ClCompile Include="poj 1328.cpp" />
+    <ClCompile Include="poj 1753.cpp" />
+    <ClCompile Include="poj1068.cpp" />
     <ClCompile Include="POJ1113-Wall.cpp" />
     <ClCompile Include="poj1125.cpp" />
+    <ClCompile Include="poj 2965.cpp" />
     <ClCompile Include="poj3080.cpp" />
     <ClCompile Include="RMQ Poj3264.cpp" />
     <ClCompile Include="Source.cpp" />

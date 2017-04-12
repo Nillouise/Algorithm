@@ -1,3 +1,7 @@
+/*
+vec[0].substr(i, j - i);substr 是从 a位置开始，选出 b个元素。
+*/
+
 #include<iostream>
 #include<string>
 #include<set>
@@ -7,7 +11,6 @@
 #include<algorithm>
 #include<iterator>
 using namespace std;
-
 
 
 int main()

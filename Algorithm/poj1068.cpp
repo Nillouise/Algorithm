@@ -1,5 +1,5 @@
 //字符数目变量忘记相减，没有牢记每个变量的含义和与题目的联系
-//忘记Pn代表的含义是 P-sequence 的数目而不是真正构造出来的字符串 大小
+//忘记Pn代表的含义是 P-sequence 的数目而不是真正构造出来的字符串 大小,这点在debug时居然没有第一时间反应出来，for循环提前退出，没有break掉，肯定就是因为边界条件写错了
 #include<iostream>
 #include<stdio.h>
 #include<stdlib.h>
@@ -17,7 +17,7 @@ int main()
 	freopen("input.txt", "r", stdin);
 	int T;
 	cin >> T;
-	
+
 	while (T--)
 	{
 		int Pn;
@@ -29,19 +29,19 @@ int main()
 		S += ')';
 		for (size_t i = 1; i < Pn; i++)
 		{
-			for (size_t j = 0; j < P[i]-P[i-1]; j++)S += '(';
+			for (size_t j = 0; j < P[i] - P[i - 1]; j++)S += '(';
 			S += ')';
 		}
-//		cout << S;
+		//		cout << S;
 		for (size_t i = 0; i < S.length(); i++)
 		{
 			if (S[i] == ')')
 			{
 				int rp = 0, balan = 0;
-				for (int  j = i; j >=0; j--)
+				for (int j = i; j >= 0; j--)
 				{
 					if (S[j] == ')') {
-						balan++; 
+						balan++;
 						rp++;
 					}
 					else
