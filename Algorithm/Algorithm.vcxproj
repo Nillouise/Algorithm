@@ -142,6 +142,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="poj1860 别人.cpp" />
+    <ClCompile Include="poj1860.cpp" />
+    <ClCompile Include="poj2632.cpp" />
     <ClCompile Include="poj3295.cpp" />
     <ClCompile Include="BitToString.cpp" />
     <ClCompile Include="convertRootTree.cpp" />
@@ -172,6 +175,7 @@
     <ClCompile Include="TurnOverChess.cpp" />
     <ClCompile Include="UVa 658 It%27s not a Bug.cpp" />
     <ClCompile Include="UVa12096 The SetStack Computer.cpp" />
+    <ClCompile Include="UVa1395.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
