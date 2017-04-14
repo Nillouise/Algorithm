@@ -147,17 +147,17 @@ int EK(int start, int end)
 			flow += curFlow;
 			int u = -1;
 			int v = end;
-//			cout << "flow " << flow << " " << v << " ";
+			//			cout << "flow " << flow << " " << v << " ";
 			for (;;)
 			{
 				u = pa[v];
 				if (u == -1)break;
-//				cout << u << "　";
+				//				cout << u << "　";
 				G[u][v] -= curFlow;//这里老子又出了个bug ，这里是curflow才对，减也只是用来减 当前的流而已
 				G[v][u] += curFlow;//写成flow，因为我又没有考虑变量的含义
 				v = u;
 			}
-//			cout << endl;
+			//			cout << endl;
 		}
 	}
 }

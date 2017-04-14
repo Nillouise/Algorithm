@@ -147,5 +147,17 @@
     <ClCompile Include="poj1860 别人.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
+    <ClCompile Include="poj1094.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="UVa 10305 Topo.cpp">
+      <Filter>Source Files\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="poj3041.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="poj1459.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

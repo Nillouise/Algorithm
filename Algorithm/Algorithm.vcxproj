@@ -142,9 +142,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="poj1094.cpp" />
+    <ClCompile Include="poj1459.cpp" />
     <ClCompile Include="poj1860 别人.cpp" />
     <ClCompile Include="poj1860.cpp" />
     <ClCompile Include="poj2632.cpp" />
+    <ClCompile Include="poj3041.cpp" />
     <ClCompile Include="poj3295.cpp" />
     <ClCompile Include="BitToString.cpp" />
     <ClCompile Include="convertRootTree.cpp" />
@@ -173,6 +176,7 @@
     <ClCompile Include="Subset.cpp" />
     <ClCompile Include="TreeArray.cpp" />
     <ClCompile Include="TurnOverChess.cpp" />
+    <ClCompile Include="UVa 10305 Topo.cpp" />
     <ClCompile Include="UVa 658 It%27s not a Bug.cpp" />
     <ClCompile Include="UVa12096 The SetStack Computer.cpp" />
     <ClCompile Include="UVa1395.cpp" />

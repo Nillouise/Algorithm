@@ -9,7 +9,7 @@ using namespace std;
 int N, M, S;
 double V;
 const int INF = 1000000;
-const int maxn = 1000;//这题数组开小了
+const int maxn = 1000;//这题数组开小了，导致 runtime error
 struct Edge
 {
 	int u, v;
