@@ -5,8 +5,8 @@
 #include<stack>
 using namespace std;
 int n;
-const int maxstate= 1200010;
-const int hashsize= 1200007;
+const int maxstate = 1200010;
+const int hashsize = 1200007;
 struct snow
 {
 	int f[6];
@@ -26,7 +26,7 @@ int hashID(int *a)
 }
 bool comp(snow s1, snow s2)
 {
-	int a[12]; for (size_t i = 0; i < 6; i++) { a[i+6] = a[i] = s1.f[i]; }
+	int a[12]; for (size_t i = 0; i < 6; i++) { a[i + 6] = a[i] = s1.f[i]; }
 
 	//正序比较
 	for (size_t i = 0; i < 6; i++)
@@ -49,7 +49,7 @@ bool comp(snow s1, snow s2)
 		int flag = 0;
 		for (int j = 0; j < 6; j++)
 		{
-			if (s2.f[5-j] != a[i + j])//逆序比较只是把 j改成了 5-j就可以了
+			if (s2.f[5 - j] != a[i + j])//逆序比较只是把 j改成了 5-j就可以了
 			{
 				flag = 1;
 				break;
@@ -65,11 +65,11 @@ int insertIndex = 0;
 bool tryToInsert(int *a)
 {
 
-	snow sn;for (size_t i = 0; i < 6; i++) sn.f[i] = a[i];
+	snow sn; for (size_t i = 0; i < 6; i++) sn.f[i] = a[i];
 
 	int h = hashID(a);
 	int node = head[h];
-	while (node!=-1)
+	while (node != -1)
 	{
 		if (comp(hashtable[node], sn))
 		{
@@ -100,7 +100,7 @@ int main()
 			int a[6];
 			for (size_t j = 0; j < 6; j++)
 			{
-//				cin >> a[j];//貌似这里会导致超时
+				//				cin >> a[j];//这里会导致超时
 				scanf("%d", &a[j]);
 			}
 			if (!flag)

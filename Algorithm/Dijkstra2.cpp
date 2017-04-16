@@ -3,7 +3,7 @@
 #include<queue>
 
 using namespace std;
-const int maxn = 100;
+const int maxstate = 100;
 const int  INF = 1000;
 
 struct Edge
@@ -22,9 +22,9 @@ struct Node
 
 struct Dijkstra
 {
-	int d[maxn];
-	int done[maxn];
-	vector<int> G[maxn];
+	int d[maxstate];
+	int done[maxstate];
+	vector<int> G[maxstate];
 	vector<Edge> edges;
 	void run(int s)
 	{

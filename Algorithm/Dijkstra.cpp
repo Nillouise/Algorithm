@@ -7,17 +7,17 @@ using namespace std;
 
 //这个是 平方级的算法。
 
-const int maxn = 100;
+const int maxstate = 100;
 
-int w[maxn][maxn];
+int w[maxstate][maxstate];
 
 
 const int INF = 10000;
-int d[maxn];
-int done[maxn];
+int d[maxstate];
+int done[maxstate];
 int main()
 {
-	for (size_t i = 0; i < maxn; i++)
+	for (size_t i = 0; i < maxstate; i++)
 		d[i] = (i==0?0: INF);
 	d[0] = 0;
 	int pc = 100;

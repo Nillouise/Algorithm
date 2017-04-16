@@ -159,5 +159,14 @@
     <ClCompile Include="poj1459.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
+    <ClCompile Include="poj2299.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="poj1035.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="poj3349.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

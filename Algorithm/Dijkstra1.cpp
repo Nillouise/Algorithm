@@ -5,12 +5,12 @@ using namespace std;
 
 //这个是用邻接矩阵做的
 
-const int maxn = 100;
-int u[maxn], v[maxn], w[maxn];
-int nextEdge[maxn];
-int pointFirstEdge[maxn];
-int done[maxn];
-int d[maxn];
+const int maxstate = 100;
+int u[maxstate], v[maxstate], w[maxstate];
+int nextEdge[maxstate];
+int pointFirstEdge[maxstate];
+int done[maxstate];
+int d[maxstate];
 const int INF = 1000;
 
 int main()
@@ -21,7 +21,7 @@ int main()
 	//init 
 	memset(nextEdge, -1, sizeof(nextEdge));
 	memset(pointFirstEdge, -1, sizeof(pointFirstEdge));
-	for (size_t i = 0; i < maxn; i++)
+	for (size_t i = 0; i < maxstate; i++)
 	{
 		d[i] = INF;
 	}

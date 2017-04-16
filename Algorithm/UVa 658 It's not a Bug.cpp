@@ -3,12 +3,12 @@
 #include<cstring>
 using namespace std;
 int n;
-const int maxn = 20;
+const int maxstate = 20;
 const int maxm = 100 + 5;
-int dist[1 << maxn];
-int mark[1 << maxn];
+int dist[1 << maxstate];
+int mark[1 << maxstate];
 int m;
-char before[maxm][maxn + 5], after[maxm][maxn + 5];
+char before[maxm][maxstate + 5], after[maxm][maxstate + 5];
 int t[maxm];
 const int INF = 1000000000;
 struct Node

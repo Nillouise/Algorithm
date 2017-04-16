@@ -101,14 +101,14 @@
 #include<queue>
 #include<vector>
 using namespace std;
-const int maxn = 1000;
+const int maxstate = 1000;
 const int INF = 1000000;
 int n, np, nc, m;
-int G[maxn][maxn];
-int pa[maxn];
+int G[maxstate][maxstate];
+int pa[maxstate];
 int bfs(int start, int end)
 {
-	int flow[maxn];
+	int flow[maxstate];
 	memset(flow, 0, sizeof(flow));
 	queue<int> q;
 	q.push(start);

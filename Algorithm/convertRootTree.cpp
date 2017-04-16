@@ -2,9 +2,9 @@
 #include<vector>
 
 using namespace std;
-const int maxn = 10;
-vector<int> G[maxn];
-int tree[maxn];
+const int maxstate = 10;
+vector<int> G[maxstate];
+int tree[maxstate];
 int dfs(int u,int fa)
 {
 	tree[u] = fa;

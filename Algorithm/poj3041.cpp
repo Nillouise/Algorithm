@@ -7,10 +7,10 @@
 #include<vector>
 using namespace std;
 int n, k;
-const int maxn = 1000;
-int chess[maxn][maxn];
-int vis[maxn];
-int match[maxn];
+const int maxstate = 1000;
+int chess[maxstate][maxstate];
+int vis[maxstate];
+int match[maxstate];
 int dfs(int x)//ÐÙÑÀÀûËã·¨
 {
 	for (size_t i = 0; i < n; i++)

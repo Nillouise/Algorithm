@@ -2,10 +2,10 @@
 #include<algorithm>
 #include<vector>
 using namespace std;
-const int maxn = 100;
-int u[maxn], v[maxn], w[maxn];
-int r[maxn];
-int father[maxn];
+const int maxstate = 100;
+int u[maxstate], v[maxstate], w[maxstate];
+int r[maxstate];
+int father[maxstate];
 int cmp(int i, int j) {
 	return w[i] < w[j];
 }

@@ -4,7 +4,7 @@
 #include<queue>
 #include<cmath>
 using namespace std;
-const int maxn = 20;
+const int maxstate = 20;
 const int INF = 100000;
 struct Edge
 {
@@ -16,9 +16,9 @@ struct  EdmondsKarp
 {
 	int n, m;
 	vector<Edge> edges;
-	vector<int> G[maxn];
-	int a[maxn];
-	int p[maxn];
+	vector<int> G[maxstate];
+	int a[maxstate];
+	int p[maxstate];
 	void init(int n) {
 		for (size_t i = 0; i < n; i++)
 			G[i].clear();

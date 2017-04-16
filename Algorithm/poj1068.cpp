@@ -9,8 +9,8 @@
 #include<string>
 #include<vector>
 using namespace std;
-const int maxn = 10000;
-int P[maxn];
+const int maxstate = 10000;
+int P[maxstate];
 
 
 int main()

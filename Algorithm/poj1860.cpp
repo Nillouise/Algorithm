@@ -9,23 +9,23 @@ using namespace std;
 int N, M, S;
 double V;
 const int INF = 1000000;
-const int maxn = 1000;//这题数组开小了，导致 runtime error
+const int maxstate = 1000;//这题数组开小了，导致 runtime error
 struct Edge
 {
 	int u, v;
 	double com, rate;
 	Edge(int u, int v, double com, double rate) :u(u), v(v), com(com), rate(rate) {}
 };
-vector<int> s[maxn];
-double d[maxn];//我他妈又把 double写成int，不关注变量的含义
-int vis[maxn];
+vector<int> s[maxstate];
+double d[maxstate];//我他妈又把 double写成int，不关注变量的含义
+int vis[maxstate];
 vector<Edge> edges;
 
 int Bellman()
 {
 	memset(vis, 0, sizeof(vis));
-	for (int i = 0; i < maxn; i++)d[i] = 0.0;
-	int cnt[maxn];
+	for (int i = 0; i < maxstate; i++)d[i] = 0.0;
+	int cnt[maxstate];
 	//	memset(cnt, 0, sizeof(maxn)); //我居然用maxn初始化变量
 	memset(cnt, 0, sizeof(cnt));
 	queue<int> q;
@@ -69,7 +69,7 @@ int main()
 	while (cin >> N >> M >> S >> V)
 	{
 		edges.clear();
-		for (size_t i = 0; i < maxn; i++)s[i].clear();
+		for (size_t i = 0; i < maxstate; i++)s[i].clear();
 		for (size_t i = 0; i < M; i++)
 		{
 			int a, b;

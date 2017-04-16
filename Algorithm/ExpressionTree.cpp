@@ -2,10 +2,10 @@
 #include<vector>
 #include<string>
 using namespace std;
-const int maxn = 100;
-int lsubtree[maxn]; int rsubtree[maxn];
+const int maxstate = 100;
+int lsubtree[maxstate]; int rsubtree[maxstate];
 int nc = 0;//nodes count
-char op[maxn];
+char op[maxstate];
 
 int expression(string s,int begin, int end)
 {
