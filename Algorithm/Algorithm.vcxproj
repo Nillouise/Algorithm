@@ -142,6 +142,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="LA 3942 Trie.cpp" />
+    <ClCompile Include="poj 2488 dfs.cpp" />
     <ClCompile Include="poj1035.cpp" />
     <ClCompile Include="poj1094.cpp" />
     <ClCompile Include="poj1459.cpp" />
@@ -150,6 +152,7 @@
     <ClCompile Include="poj2299.cpp" />
     <ClCompile Include="poj2632.cpp" />
     <ClCompile Include="poj3041.cpp" />
+    <ClCompile Include="poj3253.cpp" />
     <ClCompile Include="poj3295.cpp" />
     <ClCompile Include="BitToString.cpp" />
     <ClCompile Include="convertRootTree.cpp" />
@@ -173,7 +176,7 @@
     <ClCompile Include="poj1125.cpp" />
     <ClCompile Include="poj 2965.cpp" />
     <ClCompile Include="poj3080.cpp" />
-    <ClCompile Include="poj3349.cpp" />
+    <ClCompile Include="poj3349 hash.cpp" />
     <ClCompile Include="RMQ Poj3264.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Subset.cpp" />

@@ -26,7 +26,7 @@ int Bellman()
 	memset(vis, 0, sizeof(vis));
 	for (int i = 0; i < maxstate; i++)d[i] = 0.0;
 	int cnt[maxstate];
-	//	memset(cnt, 0, sizeof(maxn)); //我居然用maxn初始化变量
+//	memset(cnt, 0, sizeof(maxn)); //我居然用maxn初始化变量
 	memset(cnt, 0, sizeof(cnt));
 	queue<int> q;
 	d[S] = V;

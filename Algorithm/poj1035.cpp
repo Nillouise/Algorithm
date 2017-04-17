@@ -38,7 +38,7 @@ int comp(string s1, string s2)
 				return 0;
 			}
 			else {
-				//	j++;//不是j++，这样这样 i就不再比较了
+				//	j++;//不是j++，这样这样 i就不再比较了,不过这里这么写，其实不是很符合逻辑的
 				i--;
 				flag = 1;
 			}

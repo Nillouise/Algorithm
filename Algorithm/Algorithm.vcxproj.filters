@@ -165,7 +165,16 @@
     <ClCompile Include="poj1035.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj3349.cpp">
+    <ClCompile Include="poj3349 hash.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="poj3253.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="LA 3942 Trie.cpp">
+      <Filter>Source Files\DataStructure</Filter>
+    </ClCompile>
+    <ClCompile Include="poj 2488 dfs.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
   </ItemGroup>

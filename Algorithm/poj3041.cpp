@@ -36,7 +36,7 @@ int solve()
 	for (size_t i = 0; i < n; i++)
 	{
 		memset(vis, 0, sizeof(vis));
-		all += dfs(i);
+		all += dfs(i) == 1 ? 1 : 0;
 	}
 	return all;
 }

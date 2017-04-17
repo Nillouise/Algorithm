@@ -79,7 +79,7 @@ int main()
 				switch (instrusion)
 				{
 				case 'L':
-					curdirection = (curdirection - 1 + 4) % 4;
+					curdirection = (curdirection - 1 + 4) % 4;//v这里注意要+4；
 					break;
 				case 'R':
 					curdirection = (curdirection + 1) % 4;

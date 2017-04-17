@@ -1,4 +1,4 @@
-//这题的字典序 要 提早算出来
+//这题的字典序 要 提早算出来，因为 这题的字典序不是按马的顺时针或逆时针来得，而是 坐标的字典序
 
 #include<algorithm>
 #include<iostream>
@@ -14,21 +14,21 @@ int chess[50][50];
 struct point
 {
 	int x, y;
-	point(int x=0, int y=0) :x(x), y(y) {}
+	point(int x = 0, int y = 0) :x(x), y(y) {}
 };
 point path[1000];
-int inning[8][2]={
-	{-2,-1},
-	{-2,1},
-	{-1,-2},
-	{-1,2},
-	{1,-2},
-	{1,2},
-	{2,-1},
-	{2,1}
+int inning[8][2] = {
+	{ -2,-1 },
+	{ -2,1 },
+	{ -1,-2 },
+	{ -1,2 },
+	{ 1,-2 },
+	{ 1,2 },
+	{ 2,-1 },
+	{ 2,1 }
 };
 
-bool dfs(int x,int y,int step)
+bool dfs(int x, int y, int step)
 {
 	if (x == 3 && y == 4)
 	{
@@ -37,7 +37,7 @@ bool dfs(int x,int y,int step)
 
 	if (x<1 || x>p || y<1 || y>q)
 		return false;
-	path[step] = point( x,y );
+	path[step] = point(x, y);
 	if (chess[x][y] == 1)return false;
 	if (step == p*q) return true;
 	chess[x][y] = 1;
@@ -67,11 +67,11 @@ int main()
 
 	int N;
 	cin >> N;
-	for (size_t n = 1; n <=N ; n++)
+	for (size_t n = 1; n <= N; n++)
 	{
 		memset(chess, 0, sizeof(chess));
 		cin >> q >> p;//这里的 p q是倒转顺序来的，因为按我的程序，x轴上的是 ABCD，y轴上的是数字，但题目是p是数字，q是字母
-		//因此要倒转来，这题里面，x放在数组的一维里还是2维 并没有关系
+					  //因此要倒转来，这题里面，x放在数组的一维里还是2维 并没有关系
 		cout << "Scenario #" << n << ":" << endl;
 		int flag = 0;
 		for (size_t i = 1; i <= p; i++)
@@ -81,7 +81,7 @@ int main()
 				if (dfs(i, j, 1) == true)
 				{
 					flag = 1;
-					printPath(); 
+					printPath();
 					break;
 				}
 			}
