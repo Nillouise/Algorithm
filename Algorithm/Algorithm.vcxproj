@@ -159,6 +159,7 @@
     <ClCompile Include="poj3009.cpp" />
     <ClCompile Include="poj3041.cpp" />
     <ClCompile Include="poj3083.cpp" />
+    <ClCompile Include="poj3126.cpp" />
     <ClCompile Include="poj3176.cpp" />
     <ClCompile Include="poj3253.cpp" />
     <ClCompile Include="poj3267.cpp" />

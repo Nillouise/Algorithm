@@ -6,7 +6,7 @@
 #include<string>
 using namespace std;
 int S[4][4];
-int cnt = 1000000;
+int pcnt = 1000000;
 int check()
 {
 	for (size_t i = 0; i < 4; i++)
@@ -38,7 +38,7 @@ void dfs(int x, int y, int ccnt)
 {
 	if (check())
 	{
-		cnt = min(ccnt, cnt);
+		pcnt = min(ccnt, pcnt);
 	}
 	else {
 		if (y >= 4)
@@ -69,8 +69,8 @@ int main()
 		}
 	}
 	dfs(0, 0, 0);
-	if (cnt<100000)
-		cout << cnt << endl;
+	if (pcnt<100000)
+		cout << pcnt << endl;
 	else {
 		cout << "Impossible" << endl;//没写这行导致wa，没有认真看输出要求。
 	}
