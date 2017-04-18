@@ -147,7 +147,10 @@
     <ClCompile Include="poj 3278.cpp" />
     <ClCompile Include="poj1035.cpp" />
     <ClCompile Include="poj1094.cpp" />
+    <ClCompile Include="poj1416.cpp" />
+    <ClCompile Include="poj1426.cpp" />
     <ClCompile Include="poj1459.cpp" />
+    <ClCompile Include="poj1837.cpp" />
     <ClCompile Include="poj1860 别人.cpp" />
     <ClCompile Include="poj1860.cpp" />
     <ClCompile Include="poj2299.cpp" />

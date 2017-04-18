@@ -1,4 +1,5 @@
 //这题最后也是wa，但讨论版发的测试数据都过了，不管了
+//当然，这题我的代码写得相当烂，说不定参考一下别人怎么写得比较好
 
 #include<algorithm>
 #include<iostream>
@@ -116,6 +117,8 @@ int searchshort(human start)
 		human hu = q.front(); q.pop();
 		if (maze[hu.x][hu.y] == 'E')return vis[hu.x][hu.y];
 		human h1(hu.x + direct[0][0], hu.y + direct[0][1]);
+
+		//下面这里写错了，应该用一个循环代替
 		if (h1.x >= 0 && h1.x < h&&h1.y >= 0 && h1.y < w&&vis[h1.x][h1.y] == -1 && maze[h1.x][h1.y] != '#')
 		{
 			q.push(h1);
