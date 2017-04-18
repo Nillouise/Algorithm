@@ -1,3 +1,5 @@
+//这题最后也是wa，但讨论版发的测试数据都过了，不管了
+
 #include<algorithm>
 #include<iostream>
 #include<string>
@@ -11,18 +13,18 @@ char maze[50][50];
 int vis[50][50];
 int w, h;
 
-int direct[4][2] = 
-{{-1,0},
-{0,1},
-{1,0},
-{0,-1}
+int direct[4][2] =
+{ { -1,0 },
+{ 0,1 },
+{ 1,0 },
+{ 0,-1 }
 };
 
 struct human
 {
 	int x, y;
 	int direction;
-	human(int x=0, int y=0, int direction=0) :x(x), y(y), direction(direction) {}
+	human(int x = 0, int y = 0, int direction = 0) :x(x), y(y), direction(direction) {}
 };
 
 int searchleft(human start)
@@ -35,7 +37,7 @@ int searchleft(human start)
 		int newdirect = (hu.direction + 4 - 1) % 4;//记得要+4避免负数
 		int leftx = hu.x + direct[newdirect][0];
 		int lefty = hu.y + direct[newdirect][1];
-//		if (maze[leftx][lefty] != '#'&&leftx<h&&leftx>=0&&lefty<w&&lefty>=0)
+		//		if (maze[leftx][lefty] != '#'&&leftx<h&&leftx>=0&&lefty<w&&lefty>=0)
 		if (maze[leftx][lefty] != '#')
 		{
 			cnt++;
@@ -50,9 +52,9 @@ int searchleft(human start)
 			int upy = hu.y + direct[hu.direction][1];
 			if (maze[upx][upy] == '#')
 			{
-//				hu.direction = (hu.direction - 1 + 4) % 4;//向左向上都不行时，就要向右
+				//				hu.direction = (hu.direction - 1 + 4) % 4;//向左向上都不行时，就要向右
 				hu.direction = (hu.direction + 1 + 4) % 4;
-//				break;//这里是continue，进入下一个循环
+				//				break;//这里是continue，进入下一个循环
 				continue;
 			}
 			cnt++;
@@ -71,7 +73,7 @@ int searchright(human start)
 	human hu = start;
 	for (;;)
 	{
-		int newdirect = (hu.direction + 4 +1 ) % 4;//记得要+4避免负数
+		int newdirect = (hu.direction + 4 + 1) % 4;//记得要+4避免负数
 		int leftx = hu.x + direct[newdirect][0];
 		int lefty = hu.y + direct[newdirect][1];
 		//		if (maze[leftx][lefty] != '#'&&leftx<h&&leftx>=0&&lefty<w&&lefty>=0)
@@ -89,7 +91,7 @@ int searchright(human start)
 			int upy = hu.y + direct[hu.direction][1];
 			if (maze[upx][upy] == '#')
 			{
-				hu.direction = (hu.direction -1 + 4) % 4;
+				hu.direction = (hu.direction - 1 + 4) % 4;
 				//				break;//这里是continue，进入下一个循环
 				continue;
 			}
@@ -144,7 +146,7 @@ int searchshort(human start)
 int main()
 {
 	freopen("input.txt", "r", stdin);
-	
+
 	int T;
 	cin >> T;
 	while (T--)
@@ -167,7 +169,7 @@ int main()
 				}
 			}
 		}
-		cout << searchleft(start) << "　" << searchright(start) <<" "<< searchshort(start) << endl;
+		cout << searchleft(start) << "　" << searchright(start) << " " << searchshort(start) << endl;
 	}
 
 

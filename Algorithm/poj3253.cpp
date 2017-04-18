@@ -25,7 +25,7 @@ int main()
 			pq.push(a);
 		}
 		long long total = 0;
-		//		while (!pq.empty())//查empty会导致超时
+		//		while (!pq.empty())//查empty会导致超时//超时不是因为empty，而是因为本身剩余节点就要大于等于2才行（而不是>=1）
 
 		while (pq.size()>1)//这里size 要等于 2才行，不然有什么效果？就是多加了根节点一次
 		{

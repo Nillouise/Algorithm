@@ -144,14 +144,17 @@
   <ItemGroup>
     <ClCompile Include="LA 3942 Trie.cpp" />
     <ClCompile Include="poj 2488 dfs.cpp" />
+    <ClCompile Include="poj 3278.cpp" />
     <ClCompile Include="poj1035.cpp" />
     <ClCompile Include="poj1094.cpp" />
     <ClCompile Include="poj1459.cpp" />
     <ClCompile Include="poj1860 别人.cpp" />
     <ClCompile Include="poj1860.cpp" />
     <ClCompile Include="poj2299.cpp" />
+    <ClCompile Include="poj2531.cpp" />
     <ClCompile Include="poj2632.cpp" />
     <ClCompile Include="poj3041.cpp" />
+    <ClCompile Include="poj3083.cpp" />
     <ClCompile Include="poj3253.cpp" />
     <ClCompile Include="poj3295.cpp" />
     <ClCompile Include="BitToString.cpp" />
