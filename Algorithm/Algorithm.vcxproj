@@ -156,9 +156,12 @@
     <ClCompile Include="poj2299.cpp" />
     <ClCompile Include="poj2531.cpp" />
     <ClCompile Include="poj2632.cpp" />
+    <ClCompile Include="poj3009.cpp" />
     <ClCompile Include="poj3041.cpp" />
     <ClCompile Include="poj3083.cpp" />
+    <ClCompile Include="poj3176.cpp" />
     <ClCompile Include="poj3253.cpp" />
+    <ClCompile Include="poj3267.cpp" />
     <ClCompile Include="poj3295.cpp" />
     <ClCompile Include="BitToString.cpp" />
     <ClCompile Include="convertRootTree.cpp" />

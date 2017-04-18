@@ -12,7 +12,7 @@ const int INF = 10000000;
 int w, h;
 int maze[maxn][maxn];
 int mincnt = INF;
-int road[4][2] = { {-1,0},{0,1},{1,0},{0,-1} };
+int road[4][2] = { { -1,0 },{ 0,1 },{ 1,0 },{ 0,-1 } };
 int dfs(int x, int y, int step)
 {
 	if (step >= 10)return 0;
@@ -58,11 +58,11 @@ int dfs(int x, int y, int step)
 int main()
 {
 	freopen("input.txt", "r", stdin);
-	while (cin>>w>>h&&w!=0&&h!=0)
+	while (cin >> w >> h&&w != 0 && h != 0)
 	{
 		mincnt = INF;
 		memset(maze, 0, sizeof(maze));
-		int sx, sy,gx,gy;
+		int sx, sy, gx, gy;
 		for (size_t i = 0; i < h; i++)
 		{
 			for (size_t j = 0; j < w; j++)
@@ -74,7 +74,7 @@ int main()
 				}
 			}
 		}
-//		dfs(4, 3, 0);
+		//		dfs(4, 3, 0);
 		dfs(sx, sy, 0);
 		if (mincnt == INF)cout << -1 << endl;
 		else cout << mincnt << endl;
