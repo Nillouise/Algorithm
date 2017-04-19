@@ -1,5 +1,3 @@
-//贪心错误
-
 #include <iostream>
 #include <cstdio>
 #include <cstring>
@@ -16,7 +14,7 @@ int LIS()
 	int dp[maxn];
 	fill(dp, dp + maxn, INF);
 
-//	dp[0] = 0;//貌似并不需要初始化这个为0，因为插数会自动插在大于等于的地方
+	//	dp[0] = 0;//貌似并不需要初始化这个为0，因为插数会自动插在大于等于的地方
 
 	for (size_t i = 0; i < n; i++)
 	{
@@ -29,7 +27,7 @@ int LIS()
 
 int main() {
 	freopen("input.txt", "r", stdin);
-	while (cin>>n)
+	while (cin >> n)
 	{
 		for (size_t i = 0; i < n; i++)
 		{

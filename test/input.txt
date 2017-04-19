@@ -1,14 +1,2 @@
-2
-A:
-B:
-4
-A:BC
-B:ACD
-C:ABD
-D:BC
-4
-A:BCD
-B:ACD
-C:ABD
-D:ABC
-0
+7
+1 7 3 5 9 4 8
