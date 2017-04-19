@@ -1,3 +1,4 @@
+//这题的是，只要算上把当前元素移到另一边会减少值，那么就可以直接剪枝了，因为不会得到比不移更优的结果
 #include<algorithm>
 #include<iostream>
 #include<string>
