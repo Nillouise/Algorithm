@@ -225,5 +225,20 @@
     <ClCompile Include="poj2533 LIS.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
+    <ClCompile Include="poj1159 LCS+滚动数组+回文串.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="poj3252.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="poj1850.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="poj1019.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="poj3292.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

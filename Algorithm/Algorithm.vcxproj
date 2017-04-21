@@ -145,9 +145,11 @@
     <ClCompile Include="LA 3942 Trie.cpp" />
     <ClCompile Include="poj 2488 dfs.cpp" />
     <ClCompile Include="poj 3278.cpp" />
+    <ClCompile Include="poj1019.cpp" />
     <ClCompile Include="poj1035.cpp" />
     <ClCompile Include="poj1094.cpp" />
     <ClCompile Include="poj1129.cpp" />
+    <ClCompile Include="poj1159 LCS+滚动数组+回文串.cpp" />
     <ClCompile Include="poj1260 错误的贪心算法.cpp" />
     <ClCompile Include="poj1276.cpp" />
     <ClCompile Include="poj1416.cpp" />
@@ -156,6 +158,7 @@
     <ClCompile Include="poj1836 别人的.cpp" />
     <ClCompile Include="poj1836.cpp" />
     <ClCompile Include="poj1837.cpp" />
+    <ClCompile Include="poj1850.cpp" />
     <ClCompile Include="poj1860 别人.cpp" />
     <ClCompile Include="poj1860.cpp" />
     <ClCompile Include="poj2299.cpp" />
@@ -167,8 +170,10 @@
     <ClCompile Include="poj3083.cpp" />
     <ClCompile Include="poj3126.cpp" />
     <ClCompile Include="poj3176.cpp" />
+    <ClCompile Include="poj3252.cpp" />
     <ClCompile Include="poj3253.cpp" />
     <ClCompile Include="poj3267.cpp" />
+    <ClCompile Include="poj3292.cpp" />
     <ClCompile Include="poj3295.cpp" />
     <ClCompile Include="BitToString.cpp" />
     <ClCompile Include="convertRootTree.cpp" />
