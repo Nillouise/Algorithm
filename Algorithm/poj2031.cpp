@@ -11,7 +11,7 @@ const double INF = 1000000.0;
 double G[maxn][maxn];
 int n;
 
-int cal(double *a, double *b,int i,int j)
+int cal(double *a, double *b, int i, int j)
 {
 	double r = pow(a[0] - b[0], 2) + pow(a[1] - b[1], 2) + pow(a[2] - b[2], 2);
 	r = sqrt(r) - a[3] - b[3];
@@ -27,16 +27,16 @@ double prim()
 	for (size_t i = 0; i < n; i++) dist[i] = G[0][i];
 	vis[0] = 1;
 	double sum = 0;
-	for (size_t i = 0; i < n-1; i++)//这个i只表示次数而已，没有其他任何意义，因为已经入了一个点了，所以只需要再入n-1个点。
+	for (size_t i = 0; i < n - 1; i++)//这个i只表示次数而已，没有其他任何意义，因为已经入了一个点了，所以只需要再入n-1个点。
 	{
 		int v = -1;
 		double MIN = INF;
 		for (size_t i = 0; i < n; i++)
 		{
-			if (dist[i] < MIN&&vis[i]==0)//这句表示还没入团的，并且距离最小的
+			if (dist[i] < MIN&&vis[i] == 0)//这句表示还没入团的，并且距离最小的
 			{
 				v = i;
-//				MIN = dist[0];//这里我又写错变量了
+				//				MIN = dist[0];//这里我又写错变量了
 				MIN = dist[i];
 			}
 		}
@@ -57,11 +57,11 @@ int main() {
 	freopen("input.txt", "r", stdin);
 
 	double coor[100 + 5][4];
-	while (cin>>n&&n!=0)
+	while (cin >> n&&n != 0)
 	{
-//		fill(&G[0][0], &G[maxn][maxn], INF);//注意这个fill二维数组的写法，这种二维数组这么写会溢出谢谢写到别的地方去
+		//		fill(&G[0][0], &G[maxn][maxn], INF);//注意这个fill二维数组的写法，这种二维数组这么写会溢出谢谢写到别的地方去
 		for (size_t i = 0; i < maxn; i++)for (size_t j = 0; j < n; j++)G[i][j] = INF;
-				
+
 		for (size_t i = 0; i < n; i++)
 		{
 			cin >> coor[i][0] >> coor[i][1] >> coor[i][2] >> coor[i][3];
@@ -70,7 +70,7 @@ int main() {
 		{
 			for (size_t j = 0; j < n; j++)
 			{
-				cal(coor[i], coor[j],i,j);
+				cal(coor[i], coor[j], i, j);
 			}
 		}
 		printf("%.3lf\n", prim());//要打印3位精度

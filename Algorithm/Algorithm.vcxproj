@@ -142,6 +142,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="A Quailty and Playing Cards.cpp" />
     <ClCompile Include="LA 3942 Trie.cpp" />
     <ClCompile Include="poj 2488 dfs.cpp" />
     <ClCompile Include="poj 3278.cpp" />
@@ -161,6 +162,7 @@
     <ClCompile Include="poj1850.cpp" />
     <ClCompile Include="poj1860 别人.cpp" />
     <ClCompile Include="poj1860.cpp" />
+    <ClCompile Include="poj2031.cpp" />
     <ClCompile Include="poj2299.cpp" />
     <ClCompile Include="poj2531.cpp" />
     <ClCompile Include="poj2533 LIS.cpp" />
@@ -172,6 +174,7 @@
     <ClCompile Include="poj3176.cpp" />
     <ClCompile Include="poj3252.cpp" />
     <ClCompile Include="poj3253.cpp" />
+    <ClCompile Include="poj3258.cpp" />
     <ClCompile Include="poj3267.cpp" />
     <ClCompile Include="poj3292.cpp" />
     <ClCompile Include="poj3295.cpp" />
