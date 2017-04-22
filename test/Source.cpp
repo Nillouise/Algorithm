@@ -11,69 +11,68 @@ const double INF = 1000000.0;
 double G[maxn][maxn];
 int n;
 
-int cal(double *a, double *b,int i,int j)
+struct Point
 {
-	double r = pow(a[0] - b[0], 2) + pow(a[1] - b[1], 2) + pow(a[2] - b[2], 2);
-	r = sqrt(r) - a[3] - b[3];
-	G[i][j] = r < 0 ? 0 : r;
-	return 0;
+	double x, y;
+	Point(double x = 0, double y = 0) :x(x), y(y) {}
+
+	Point operator - (const Point &B)
+	{
+		return Point(x - B.x, y - B.y);
+	}
+};
+typedef Point Vector;
+double cross(Vector w, Vector v)
+{
+	return w.x*v.y - w.y*v.x;
+}
+const double eps = 1e-3;
+int dcmp(double d)
+{
+	if (fabs(d) < eps)return 0;
+	return d < 0 ? -1 : 1;
 }
 
-double prim()
+int check(Point A,Point B,Point C,Point D)
 {
-	int vis[maxn];
-	double dist[maxn];
-	fill(vis, vis + maxn, 0);
-	for (size_t i = 0; i < n; i++) dist[i] = G[0][i];
-	vis[0] = 1;
-	double sum = 0;
-	for (size_t i = 0; i < n-1; i++)//这个i只表示次数而已，没有其他任何意义，因为已经入了一个点了，所以只需要再入n-1个点。
-	{
-		int v = -1;
-		double MIN = INF;
-		for (size_t i = 0; i < n; i++)
-		{
-			if (dist[i] < MIN&&vis[i]==0)//这句表示还没入团的，并且距离最小的
-			{
-				v = i;
-//				MIN = dist[0];//这里我又写错变量了
-				MIN = dist[i];
-			}
-		}
-		vis[v] = 1;
-		sum += dist[v];
+	double area1 = cross(B - A, C - A);
+	double area2 = cross(B - A, D - A);
 
-		for (size_t i = 0; i < n; i++)
-		{
-			if (G[v][i] < dist[i] && vis[i] == 0)//这句表示 还没入团的点，距离入团了的点的最小距离（因为只需要更新V点的距离？因为V点连的都是新边，之前的边只是旧边不需要改
-				dist[i] = G[v][i];
-		}
+	return dcmp(area1)*dcmp(area2)<=0;//=0就代表不规范相交
+}
+
+double segcross(Point A, Point B, Point C, Point D)
+{
+	double area1 = cross(B - A, C - A);
+	double area2 = cross(B - A, D - A);
+
+	if (dcmp(area1)*dcmp(area2) < 0)
+	{
+		//我又写错变量
+		//	double px = (C.x*area1 - D.x*area2) / (area1 - area2);
+		double px = (C.x*area2 - D.x*area1) / (area2 - area1);
+		return px;
 	}
-	return sum;
+
+	//这个if是处理不规范相交的情况,一定要用dcmp 判断是否面积为0
+	if (dcmp(area1 )== 0)
+	{
+		return C.x;
+	}
+	else if(dcmp(area2)==0)
+	{
+		return D.x;
+	}
+
+
+	return -INF;
 
 }
 
 int main() {
 	freopen("input.txt", "r", stdin);
 
-	double coor[100 + 5][4];
-	while (cin>>n&&n!=0)
-	{
-//		fill(&G[0][0], &G[maxn][maxn], INF);//注意这个fill二维数组的写法，这种二维数组这么写会溢出谢谢写到别的地方去
-		for (size_t i = 0; i < maxn; i++)for (size_t j = 0; j < n; j++)G[i][j] = INF;
-				
-		for (size_t i = 0; i < n; i++)
-		{
-			cin >> coor[i][0] >> coor[i][1] >> coor[i][2] >> coor[i][3];
-		}
-		for (size_t i = 0; i < n; i++)
-		{
-			for (size_t j = 0; j < n; j++)
-			{
-				cal(coor[i], coor[j],i,j);
-			}
-		}
-		printf("%.3lf\n", prim());//要打印3位精度
+
 
 	}
 

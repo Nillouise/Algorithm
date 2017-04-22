@@ -148,6 +148,7 @@
     <ClCompile Include="poj 3278.cpp" />
     <ClCompile Include="poj1019.cpp" />
     <ClCompile Include="poj1035.cpp" />
+    <ClCompile Include="poj1039.cpp" />
     <ClCompile Include="poj1094.cpp" />
     <ClCompile Include="poj1129.cpp" />
     <ClCompile Include="poj1159 LCS+滚动数组+回文串.cpp" />
