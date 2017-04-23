@@ -154,6 +154,7 @@
     <ClCompile Include="poj1159 LCS+滚动数组+回文串.cpp" />
     <ClCompile Include="poj1260 错误的贪心算法.cpp" />
     <ClCompile Include="poj1276.cpp" />
+    <ClCompile Include="poj1408.cpp" />
     <ClCompile Include="poj1416.cpp" />
     <ClCompile Include="poj1426.cpp" />
     <ClCompile Include="poj1459.cpp" />

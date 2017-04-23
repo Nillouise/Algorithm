@@ -56,9 +56,9 @@ void intersect(Point ha, Point hb, Point va, Point vb, double &rx, double &ry)//
 
 double calrect(Point a, Point b, Point c, Point d)
 {
-	double angle1 =  cross(c - a, b - a);//矩形内对角线的两个三角形
+	double angle1 = cross(c - a, b - a);//矩形内对角线的两个三角形
 	double angle2 = cross(c - a, d - a);
-//	return abs(angle1) + abs(angle2);//记得取绝对值，但忘记除以2
+	//	return abs(angle1) + abs(angle2);//记得取绝对值，但忘记除以2
 	return 0.5*(abs(angle1) + abs(angle2));
 }
 
@@ -68,7 +68,7 @@ int main() {
 	freopen("input.txt", "r", stdin);
 
 	int n;
-	while (cin>>n&&n!=0)
+	while (cin >> n&&n != 0)
 	{
 		Point a[35], b[35], c[35], d[35];
 		a[0].x = 0; a[0].y = 0; a[n + 1].x = 1, a[n + 1].y = 0;
@@ -96,14 +96,14 @@ int main() {
 			d[i].x = 1;
 		}
 		double maxrect = 0;
-		for (size_t i = 1; i < n+2; i++)
+		for (size_t i = 1; i < n + 2; i++)
 		{
-			for (size_t j = 1; j < n+2; j++)
+			for (size_t j = 1; j < n + 2; j++)
 			{
 				double r[4][2];
 				for (int f = 0; f < 4; f++)
 				{
-					intersect(d[i-f%2], c[i-f%2], b[j-f/2], a[j-f/2], r[f][0], r[f][1]);//这个循环不是逆时针的，而是 上下上下这样的，需要转换
+					intersect(d[i - f % 2], c[i - f % 2], b[j - f / 2], a[j - f / 2], r[f][0], r[f][1]);//这个循环不是逆时针的，而是 上下上下这样的，需要转换
 				}
 				//下面这么写还是太蠢了，应该在calrect那里改
 				{
@@ -112,7 +112,7 @@ int main() {
 					r[3][0] = x; r[3][1] = y;
 				}
 
-//				double rect = calrect(Point(r[0][1], r[0][1]), Point(r[1][1], r[1][1]), Point(r[2][1], r[2][1]), Point(r[3][1], r[3][1]));//错的真离谱
+				//				double rect = calrect(Point(r[0][1], r[0][1]), Point(r[1][1], r[1][1]), Point(r[2][1], r[2][1]), Point(r[3][1], r[3][1]));//错的真离谱
 				double rect = calrect(Point(r[0][0], r[0][1]), Point(r[1][0], r[1][1]), Point(r[2][0], r[2][1]), Point(r[3][0], r[3][1]));
 
 				maxrect = max(rect, maxrect);
