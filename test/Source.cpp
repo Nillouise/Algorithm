@@ -1,15 +1,16 @@
+//这题要封闭多边形，因为是一个环。
+
 #include <iostream>
 #include <cstdio>
 #include <cstring>
 #include<string>
 #include <algorithm>
 #include<sstream>
-#include<cmath>//这里有log 函数
+#include<cmath>
 using namespace std;
 const int maxn = 200;
 const double INF = 1000000.0;
 double G[maxn][maxn];
-int n;
 
 struct Point
 {
@@ -63,63 +64,85 @@ double calrect(Point a, Point b, Point c, Point d)
 }
 
 
+int isInPoly(Point cent, Point *poly,int n)
+{
+	int wn = 0;
+	for (size_t i = 0; i < n-1; i++)
+	{
+		int direct = dcmp( cross(poly[i]-cent,poly[i+1]-poly[i]));
+		int d0 = dcmp(poly[i].y - cent.y);
+		int d1 = dcmp(poly[i + 1].y - cent.y);
+		if (d1 > 0 && d0 <= 0 && direct > 0)wn++;
+		if (d0 > 0 && d1 <= 0 && direct < 0)wn--;
+		
+	}
+	if (wn != 0)return 1;
+	return 0;
+
+}
+
+double lineLen(Point p)
+{
+	return sqrt(p.x*p.x + p.y*p.y);
+}
 
 int main() {
 	freopen("input.txt", "r", stdin);
 
-	int n;
-	while (cin>>n&&n!=0)
+	int vertices;
+	while (cin>>vertices&&vertices>=3)
 	{
-		Point a[35], b[35], c[35], d[35];
-		a[0].x = 0; a[0].y = 0; a[n + 1].x = 1, a[n + 1].y = 0;
-		for (size_t i = 1; i <= n; i++)
+		Point circle;
+		double radius;
+//		cin >> circle.x >> circle.y >> radius;//输入数据我又没有认真看搞错了
+		cin >> radius >> circle.x >> circle.y ;
+		Point poly[100];
+		for (size_t i = 0; i < vertices; i++)
 		{
-			cin >> a[i].x;
-			a[i].y = 0;
+			cin >> poly[i].x >> poly[i].y;
 		}
-		b[0].x = 0; b[0].y = 1; b[n + 1].x = 1, b[n + 1].y = 1;
-		for (size_t i = 1; i <= n; i++)
+		//封闭掉多边形环
+		poly[vertices].x = poly[0].x;
+		poly[vertices].y = poly[0].y;
+		int flag = 0;
+		for (size_t i = 1; i < vertices-1; i++)//注意这个-1 是精髓，因为下面是+2的
 		{
-			cin >> b[i].x;
-			b[i].y = 1;
-		}
-		c[0].x = 0; c[0].y = 0; c[n + 1].x = 0; c[n + 1].y = 1;
-		for (size_t i = 1; i <= n; i++)
-		{
-			cin >> c[i].y;
-			c[i].x = 0;
-		}
-		d[0].x = 1; d[0].y = 0; d[n + 1].x = 1; d[n + 1].y = 1;
-		for (size_t i = 1; i <= n; i++)
-		{
-			cin >> d[i].y;
-			d[i].x = 1;
-		}
-		double maxrect = 0;
-		for (size_t i = 1; i < n+2; i++)
-		{
-			for (size_t j = 1; j < n+2; j++)
+			int wirl1 = dcmp(cross(poly[i + 1] - poly[i], poly[i] - poly[i - 1]));
+			int wirl2 = dcmp(cross(poly[i + 2] - poly[i+1], poly[i+1] - poly[i]));
+
+//			if (wirl1 != wirl2)//不能这么写，因为有可能三点共线
+			if(wirl1*wirl2<0)
 			{
-				double r[4][2];
-				for (int f = 0; f < 4; f++)
-				{
-					intersect(d[i-f%2], c[i-f%2], b[j-f/2], a[j-f/2], r[f][0], r[f][1]);//这个循环不是逆时针的，而是 上下上下这样的，需要转换
-				}
-				//下面这么写还是太蠢了，应该在calrect那里改
-				{
-					double x = r[2][0], y = r[2][1];
-					r[2][0] = r[3][0]; r[2][1] = r[3][1];
-					r[3][0] = x; r[3][1] = y;
-				}
-
-//				double rect = calrect(Point(r[0][1], r[0][1]), Point(r[1][1], r[1][1]), Point(r[2][1], r[2][1]), Point(r[3][1], r[3][1]));//错的真离谱
-				double rect = calrect(Point(r[0][0], r[0][1]), Point(r[1][0], r[1][1]), Point(r[2][0], r[2][1]), Point(r[3][0], r[3][1]));
-
-				maxrect = max(rect, maxrect);
+				flag = 1;
+				break;
 			}
 		}
-		printf("%0.6lf\n", maxrect);
+		if (flag)
+		{
+			cout << "HOLE IS ILL-FORMED" << endl;
+			continue;
+		}
+		if (!isInPoly(circle, poly, vertices + 1))
+		{
+			cout << "PEG WILL NOT FIT" << endl;
+			continue;
+		}
 
+		for (size_t i = 0; i < vertices; i++)
+		{
+			double area = cross(poly[i + 1] - poly[i], poly[i] - circle);
+			double dist = abs(area) / lineLen(poly[i + 1] - poly[i]);
+
+			if (dist < radius)
+			{
+				cout << "PEG WILL NOT FIT" << endl;
+				flag = 1;
+				break;
+			}
+		}
+		if (!flag)
+			cout << "PEG WILL FIT" << endl;
 	}
+
 
 }
