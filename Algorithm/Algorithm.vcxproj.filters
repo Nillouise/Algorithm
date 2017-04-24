@@ -46,6 +46,9 @@
     <Filter Include="Source Files\Game">
       <UniqueIdentifier>{12691bf2-1e4b-4bd6-8e5f-a8a8358b8ec1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\POJSet\Intermediate">
+      <UniqueIdentifier>{17d53d60-d0eb-4516-a08c-49aa56b94da7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -257,6 +260,15 @@
     </ClCompile>
     <ClCompile Include="poj1408.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="poj3096.cpp">
+      <Filter>Source Files\POJSet\Intermediate</Filter>
+    </ClCompile>
+    <ClCompile Include="poj1584.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="poj1472.cpp">
+      <Filter>Source Files\POJSet\Intermediate</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

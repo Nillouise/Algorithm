@@ -37,7 +37,7 @@ int dfs(int *cof)
 			int cof2[12];
 			memset(cof2, 0, sizeof(cof2));
 			int r = dfs(cof2);
-			if ( r == -1)
+			if (r == -1)
 			{
 				for (size_t i = 0; i < 11; i++)
 					cof[i + 1] += cof2[i];
@@ -95,7 +95,7 @@ int start2()
 	return 0;
 }
 
-int main() 
+int main()
 {
 	freopen("input.txt", "r", stdin);
 
@@ -109,7 +109,7 @@ int main()
 		int plusFlag = 0;
 		cout << "Program #" << t << endl;
 		cout << "Runtime = ";
-		for (int i = 11; i >=0 ; i--)
+		for (int i = 11; i >= 0; i--)
 		{
 
 			if (ans[i] != 0)
@@ -117,7 +117,7 @@ int main()
 				if (plusFlag)cout << "+";
 				plusFlag = 1;
 				if (ans[i] > 1)//当系数是1，并且后面无n时，根本就不会输出了
-					//这么写挺不好的，应该把i=0的情况直接输出系数，其他的情况用一个括号概括
+							   //这么写挺不好的，应该把i=0的情况直接输出系数，其他的情况用一个括号概括
 				{
 					cout << ans[i];
 					if (i >= 1)
@@ -136,7 +136,7 @@ int main()
 
 			}
 		}
-//		cout << endl<<endl;//注意输出格式，要多一个空行
+		//		cout << endl<<endl;//注意输出格式，要多一个空行
 		//因为没数的时候，就要直接输出0
 		if (!plusFlag)
 			cout << 0 << endl << endl;

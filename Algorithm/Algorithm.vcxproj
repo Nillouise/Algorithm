@@ -158,6 +158,8 @@
     <ClCompile Include="poj1416.cpp" />
     <ClCompile Include="poj1426.cpp" />
     <ClCompile Include="poj1459.cpp" />
+    <ClCompile Include="poj1472.cpp" />
+    <ClCompile Include="poj1584.cpp" />
     <ClCompile Include="poj1836 别人的.cpp" />
     <ClCompile Include="poj1836.cpp" />
     <ClCompile Include="poj1837.cpp" />
@@ -172,6 +174,7 @@
     <ClCompile Include="poj3009.cpp" />
     <ClCompile Include="poj3041.cpp" />
     <ClCompile Include="poj3083.cpp" />
+    <ClCompile Include="poj3096.cpp" />
     <ClCompile Include="poj3126.cpp" />
     <ClCompile Include="poj3176.cpp" />
     <ClCompile Include="poj3252.cpp" />
