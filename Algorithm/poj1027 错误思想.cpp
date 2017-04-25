@@ -14,7 +14,7 @@ char maze[16][11];
 struct Point
 {
 	int x, y;
-	Point(int x=0, int y=0) :x(x), y(y) {}
+	Point(int x = 0, int y = 0) :x(x), y(y) {}
 };
 
 //好像是因为这个bfs太慢了
@@ -77,15 +77,15 @@ int bfs(int x, int y, int fun)
 		int ny = y + direct[i][1];
 		if (nx >= 0 && nx < 15 && ny >= 0 && ny < 10)
 			if (vis[nx][ny] == 0)
-				if(maze[nx][ny]== color)
+				if (maze[nx][ny] == color)
 					bfs(nx, ny, fun);
 	}
-	if(fun==1)
+	if (fun == 1)
 		maze[x][y] = 0;
 	return 0;
 }
 
-int searchArea(int &lx, int &ly,char &color)//左下角的坐标，返回数目
+int searchArea(int &lx, int &ly, char &color)//左下角的坐标，返回数目
 {
 	int preCo = 0;
 	int MAX = 0;
@@ -97,11 +97,11 @@ int searchArea(int &lx, int &ly,char &color)//左下角的坐标，返回数目
 	for (int i = 0; i < 15; i++)
 	{
 		preCo = 0;//因为每列的开头和尾端根本没有关系的
-		for (int j = 9; j >=0; j--)
+		for (int j = 9; j >= 0; j--)
 		{
-//			if (maze[i][j] != preCo&&maze[i][j] != 0)
-//			if (maze[i][j] != 0)
-			if(maze[i][j]!=0 &&vis[i][j]==0)
+			//			if (maze[i][j] != preCo&&maze[i][j] != 0)
+			//			if (maze[i][j] != 0)
+			if (maze[i][j] != 0 && vis[i][j] == 0)
 			{
 				bfscnt = 0;
 				bfs(i, j, 0);
@@ -114,7 +114,7 @@ int searchArea(int &lx, int &ly,char &color)//左下角的坐标，返回数目
 					MAXy = j;
 					MAXco = maze[i][j];
 				}
-				else if (cnt == MAX&&((i<MAXx)||(i==MAXx&&j>MAXy)))
+				else if (cnt == MAX && ((i<MAXx) || (i == MAXx&&j>MAXy)))
 				{
 					MAX = cnt;
 					MAXx = i;
@@ -145,7 +145,7 @@ int refresh()
 		for (size_t j = 0; j < 15; j++)
 		{
 			cout << maze[j][i];
-}
+		}
 		cout << endl;
 	}
 	cout << endl;
@@ -154,7 +154,7 @@ int refresh()
 
 	for (int i = 0; i < 15; i++)
 	{
-//		for (int j = 1; j < 10 ; j--)//改完代码起码要看看同一行是怎么回事
+		//		for (int j = 1; j < 10 ; j--)//改完代码起码要看看同一行是怎么回事
 		//这代码并不正确，不能使这东西沉下去，因为当有连续两行0的时候，就不行了
 		//for (int j = 9; j >0; j--)
 		//{
@@ -171,7 +171,7 @@ int refresh()
 		{
 			if (maze[i][j] != 0)continue;//忘记写这句了，只要当前是空格子时，才会需要沉降
 			int k;
-			for ( k = j; k>=0; k--)//找最贴近的不是0的格子
+			for (k = j; k >= 0; k--)//找最贴近的不是0的格子
 			{
 				if (maze[i][k] != 0)break;
 			}
@@ -193,7 +193,7 @@ int refresh()
 	}
 	cout << endl;
 #endif // DEBUG
-	for (int i = 0; i < 15 ;  i++)
+	for (int i = 0; i < 15; i++)
 	{
 		int flag = 1;
 		for (int j = 0; j < 10; j++)
@@ -203,11 +203,11 @@ int refresh()
 		if (flag == 1)
 		{
 			int next;
-//			for ( next = i+1; next < 15; next++)
+			//			for ( next = i+1; next < 15; next++)
 			//next这个变量不应该在这里++，
 			//因为next下面会用到，而且还会在另一个范围内用到
 			int ok = 0;
-			for(next =i+1;next<15;)
+			for (next = i + 1; next<15;)
 			{
 
 				for (int j = 0; j < 10; j++)
@@ -223,8 +223,8 @@ int refresh()
 			}
 			if (ok)
 			{
-//				for (int  j = 0; j < 15; j++)//写错变量
-				for(int j=0;j<10;j++)
+				//				for (int  j = 0; j < 15; j++)//写错变量
+				for (int j = 0; j<10; j++)
 				{
 					maze[i][j] = maze[next][j];
 					maze[next][j] = 0;
@@ -258,14 +258,14 @@ int refresh()
 }
 
 
-int main() 
+int main()
 {
 	freopen("input.txt", "r", stdin);
 	ios::sync_with_stdio(false);
 	int T;
 	cin >> T;
 	char c;
-//	scanf("%c", &c);
+	//	scanf("%c", &c);
 	for (size_t t = 1; t <= T; t++)
 	{
 		cout << "Game " << t << ":" << endl << endl;
@@ -278,19 +278,19 @@ int main()
 		{
 			for (size_t i = 0; i < 15; i++)
 			{
-				cin>>maze[i][j];//要关闭加速才行//关闭了加速还是不行
-//				scanf("%c", &maze[i][j]);//这样会吸入\n
+				cin >> maze[i][j];//要关闭加速才行//关闭了加速还是不行
+								  //				scanf("%c", &maze[i][j]);//这样会吸入\n
 			}
-//			scanf("%c", &c);//吸入\n
+			//			scanf("%c", &c);//吸入\n
 		}
-//		scanf("%c", &c);
+		//		scanf("%c", &c);
 		int score = 0, leftover = 10 * 15;
-		for (int step=1;;step++)
+		for (int step = 1;; step++)
 		{
 			int x, y;
 			char color;
-			int curNum = searchArea(x, y,color);
-			
+			int curNum = searchArea(x, y, color);
+
 			if (curNum < 2)
 			{
 				if (leftover == 0)score += 1000;
@@ -300,7 +300,7 @@ int main()
 			else {
 				leftover -= curNum;
 				score += (curNum - 2)*(curNum - 2);
-				printf("Move %d at(%d, %d) : removed %d balls of color %c, got %d points.\n",step,10-y,x+1,curNum,color, (curNum - 2)*(curNum-2));
+				printf("Move %d at(%d, %d) : removed %d balls of color %c, got %d points.\n", step, 10 - y, x + 1, curNum, color, (curNum - 2)*(curNum - 2));
 			}
 			delArea(x, y);
 			refresh();

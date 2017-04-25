@@ -270,5 +270,11 @@
     <ClCompile Include="poj1472.cpp">
       <Filter>Source Files\POJSet\Intermediate</Filter>
     </ClCompile>
+    <ClCompile Include="poj1027 错误思想.cpp">
+      <Filter>Source Files\POJSet\Intermediate</Filter>
+    </ClCompile>
+    <ClCompile Include="poj1027 别人的.cpp">
+      <Filter>Source Files\POJSet\Intermediate</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

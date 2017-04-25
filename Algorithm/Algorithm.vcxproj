@@ -147,6 +147,8 @@
     <ClCompile Include="poj 2488 dfs.cpp" />
     <ClCompile Include="poj 3278.cpp" />
     <ClCompile Include="poj1019.cpp" />
+    <ClCompile Include="poj1027 别人的.cpp" />
+    <ClCompile Include="poj1027 错误思想.cpp" />
     <ClCompile Include="poj1035.cpp" />
     <ClCompile Include="poj1039.cpp" />
     <ClCompile Include="poj1094.cpp" />
