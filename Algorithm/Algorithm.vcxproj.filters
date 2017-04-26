@@ -120,22 +120,7 @@
     <ClCompile Include="Erase and Add.cpp">
       <Filter>Source Files\String</Filter>
     </ClCompile>
-    <ClCompile Include="poj 2965.cpp">
-      <Filter>Source Files\POJSet\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="poj 1753.cpp">
-      <Filter>Source Files\POJSet\Base</Filter>
-    </ClCompile>
     <ClCompile Include="poj1068.cpp">
-      <Filter>Source Files\POJSet\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="poj 1328 错误.cpp">
-      <Filter>Source Files\POJSet\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="poj 1328.cpp">
-      <Filter>Source Files\POJSet\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="poj 1328 别人的正确的跟我差不多的答案.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
     <ClCompile Include="poj3295.cpp">
@@ -179,12 +164,6 @@
     </ClCompile>
     <ClCompile Include="LA 3942 Trie.cpp">
       <Filter>Source Files\DataStructure</Filter>
-    </ClCompile>
-    <ClCompile Include="poj 2488 dfs.cpp">
-      <Filter>Source Files\POJSet\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="poj 3278.cpp">
-      <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
     <ClCompile Include="poj2531.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
@@ -275,6 +254,30 @@
     </ClCompile>
     <ClCompile Include="poj1027 别人的.cpp">
       <Filter>Source Files\POJSet\Intermediate</Filter>
+    </ClCompile>
+    <ClCompile Include="poj1328 别人的正确的跟我差不多的答案.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="poj1328 错误.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="poj1328.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="poj1753.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="poj2488 dfs.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="poj2965.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="poj3278.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="poj3259.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

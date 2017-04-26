@@ -20,15 +20,10 @@ int isVal(char c)
 
 int solve(string exp)
 {
-	int adf;
 	for (int bitSet = 0; bitSet < (1 << 5); bitSet++)
 	{
-		if (bitSet == 2)
-		{
-			adf++;
-		}
 		stack<int> sta;
-		for (int i = exp.length() - 1; i >= 0; i--)
+		for (int i = exp.length() - 1; i >= 0; i--)//从后算起就是前缀式
 		{
 			if (isVal(exp[i]))sta.push(getVal(bitSet, exp[i]));
 			else {

@@ -6,55 +6,53 @@
 #include<queue>
 #include<vector>
 using namespace std;
-int n, k;
-const int maxstate = 1000;
-int chess[maxstate][maxstate];
-int vis[maxstate];
-int match[maxstate];
-int dfs(int x)
+int n, m;
+const int maxn = 500;
+int order[maxn][maxn];
+int vis[maxn];
+int cnt = 0;
+int path[maxn];
+int topo(int x)
 {
-	for (size_t i = 0; i < n; i++)
+	if (vis[x] == 1)return 0;
+	vis[x] = -1;
+	for (size_t i = 1; i <= n; i++)//因为这里好像是从1算起的
 	{
-		if (chess[x][i] == 1)
+		if (order[x][i] == 1 && vis[i] != -1)
 		{
-			if (vis[i] == 1)continue;
-			vis[i] = 1;//vis在这里修改，表示确确实实尝试了在i这里插入点了，成没成功是另一回事。
-			if (match[i] == -1|| dfs(match[i]))
-			{
-				match[i] = x;
-//				vis[i] = 1;//vis 不应该在这里修改的，不然dfs就会无限递归 i了；
-				return 1;
-			}
+			topo(i);
 		}
 	}
+	path[cnt++] = x;
+	vis[x] = 1;
 	return 0;
 }
-
-int solve()
-{
-	int all = 0;
-	for (size_t i = 0; i < n; i++)
-	{
-		memset(vis, 0, sizeof(vis));
-		all += dfs(i);
-	}
-	return all;
-}
-
 int main()
 {
-	cin >> n >> k;
-	memset(chess, 0, sizeof(chess));
-	memset(vis, 0, sizeof(vis));
-	memset(match, -1, sizeof(match));
-	for (size_t i = 0; i < k; i++)
+	freopen("input.txt", "r", stdin);
+	freopen("output.txt", "w", stdout);
+	while (cin >> n >> m && (!(n == 0 && m == 0)))//两个0时才会结束
 	{
-		int R, C;
-		cin >> R >> C; R--; C--;
-		chess[R][C] = 1;
+		memset(order, 0, sizeof(order));
+		memset(vis, 0, sizeof(vis));
+		cnt = 0;
+		memset(path, 0, sizeof(path));
+		for (size_t i = 0; i < m; i++)
+		{
+			int u, v;
+			cin >> u >> v;
+			order[u][v] = 1;
+		}
+		for (size_t i = 1; i <= n; i++)
+		{
+			topo(i);
+		}
+		for (int i = cnt - 1; i >= 0; i--)
+		{
+			cout << path[i] << " ";
+		}
+		cout << endl;
 	}
-	cout << solve() << endl;
-
 	return 0;
 
 }

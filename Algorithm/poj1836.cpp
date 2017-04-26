@@ -9,7 +9,7 @@
 #include<queue>
 using namespace std;
 const int maxn = 1000 + 5;
-double line[maxn];
+double p[maxn];
 int n;
 const double INF = 11000000;
 
@@ -53,12 +53,12 @@ int LIS(int  *result)
 		{
 			int temp = L + (R - L) / 2;
 			//			if (line[temp] < line[i])//不能等于
-			if (increse[temp] < line[i])//这里原本写错了，很明显，应该用二分数组跟当前的值比较
+			if (increse[temp] < p[i])//这里原本写错了，很明显，应该用二分数组跟当前的值比较
 				L = temp;
 			else
 				R = temp;
 		}
-		increse[L + 1] = min(increse[L + 1], line[i]);
+		increse[L + 1] = min(increse[L + 1], p[i]);
 		result[i] = L + 1;//LIS在每个字符位置记录以这个位置为重点最长的递增序列，increase只是拿来二分而已
 	}
 	return 0;
@@ -68,7 +68,7 @@ int solve()
 {
 	int increse[maxn];
 	LIS(increse);
-	invert(line, n);//reverse 的用法跟 sort不一样，后面的参数是个数不是数组末尾地址
+	invert(p, n);//reverse 的用法跟 sort不一样，后面的参数是个数不是数组末尾地址
 	int decrese[maxn];
 	LIS(decrese);
 	invert(decrese, n);
@@ -97,7 +97,7 @@ int main()
 	{
 		for (size_t i = 0; i < n; i++)
 		{
-			cin >> line[i];
+			cin >> p[i];
 		}
 		cout << solve() << endl;
 

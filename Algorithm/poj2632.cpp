@@ -36,9 +36,9 @@ int checkcrash(int x, int y)
 {
 
 	if (x<1 || x>A || y<1 || y>B)
-		return 1;
+		return 1;//走出了范围
 	if (chess[x][y].Number != -1)
-		return 2;
+		return 2;//撞了别的机器
 	return 0;
 }
 
@@ -91,7 +91,7 @@ int main()
 				}
 				if (checkcrash(x, y) && flag == 1)
 				{
-					flag = 0;
+					flag = 0;//设0后就不再会计算了
 					switch (checkcrash(x, y))
 					{
 					case 1:

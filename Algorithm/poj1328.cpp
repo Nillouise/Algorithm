@@ -30,7 +30,7 @@ int main()
 	double d;
 	int T = 0;
 	freopen("input.txt", "r", stdin);
-	while (cin >> n >> d&&(n||d))
+	while (cin >> n >> d && (n || d))
 	{
 		//cin >> n >> d;
 		//if (n == 0 && d == 0)break;
@@ -50,14 +50,14 @@ int main()
 			if (fabs(y) > d)flag = 0;
 		}
 		cout << "Case " << ++T << ": ";
-		if (!flag) 
-		{ 
+		if (!flag)
+		{
 			cout << -1 << endl;
 		}
 		else {
 			int cnt = 1;
 			sort(p, p + n);
-//			int left = p[0].b, right = p[0].e;//这行代码就是我debug了超久的代码了
+			//			int left = p[0].b, right = p[0].e;//这行代码就是我debug了超久的代码了
 			double left = p[0].b, right = p[0].e;
 			for (int i = 1; i < n; i++)
 			{
