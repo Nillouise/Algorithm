@@ -72,6 +72,7 @@ int isInPoly(Point cent, Point *poly, int n)
 		int direct = dcmp(cross(poly[i] - cent, poly[i + 1] - poly[i]));
 		int d0 = dcmp(poly[i].y - cent.y);
 		int d1 = dcmp(poly[i + 1].y - cent.y);
+		//点在多边形内时，应该只有1而已，这里指挥加一次，因为有一次y轴是小于，转到另一边的时候，就是大于了
 		if (d1 > 0 && d0 <= 0 && direct > 0)wn++;
 		if (d0 > 0 && d1 <= 0 && direct < 0)wn--;
 

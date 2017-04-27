@@ -1,6 +1,6 @@
 //这题最后也是wa，但讨论版发的测试数据都过了，不管了
 //当然，这题我的代码写得相当烂，说不定参考一下别人怎么写得比较好
-
+//wa 的原因应该是我的空格打成是中文的空格了
 #include<algorithm>
 #include<iostream>
 #include<string>
@@ -172,7 +172,7 @@ int main()
 				}
 			}
 		}
-		cout << searchleft(start) << "　" << searchright(start) << " " << searchshort(start) << endl;
+		cout << searchleft(start) << " " << searchright(start) << " " << searchshort(start) << endl;
 	}
 
 

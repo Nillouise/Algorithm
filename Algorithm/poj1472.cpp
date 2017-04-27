@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdio>
 #include <cstring>
+//输入begin,一开始这个string 跟for里面的重名了，stl的原因导致出bug
 #include<string>
 #include <algorithm>
 #include<sstream>

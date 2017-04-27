@@ -1,3 +1,4 @@
+//这题是求连通，所以用的最小生成树。
 #include <iostream>
 #include <cstdio>
 #include <cstring>

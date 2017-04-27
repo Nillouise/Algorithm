@@ -61,7 +61,7 @@ void bfs()
 			cout << v << "\n";
 			return;
 		}
-		if (!vis[m])
+		if (!vis[m])//这里的作用只是剪枝
 		{
 			vis[m] = 1;
 			q.push(v);
