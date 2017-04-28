@@ -11,7 +11,7 @@ using namespace std;
 string n;
 int k;
 string ouput;
-int mode[10][100+5];
+int mode[10][100 + 5];
 
 int init()
 {
@@ -19,16 +19,16 @@ int init()
 	{
 		mode[i][0] = i % k;
 	}
-	for (size_t j = 1; j < 100+5; j++)
+	for (size_t j = 1; j < 100 + 5; j++)
 	{
 		for (size_t i = 0; i < 10; i++)
 		{
-			mode[i][j] = (mode[i][j - 1] *( 10 % k))%k;
+			mode[i][j] = (mode[i][j - 1] * (10 % k)) % k;
 		}
 	}
 	return 0;
 }
-int vis[100+5][10000+5];
+int vis[100 + 5][10000 + 5];
 
 //为什么需要这个数组呢？因为前50个数改变某些数字后，可能会产生一样的余数，一样的余数要在后50个数里改变，需要多少个数字自然是一定的。
 int dfs(int pos, int remainder, int chn)
@@ -47,19 +47,19 @@ int dfs(int pos, int remainder, int chn)
 	}
 	for (int i = 0; i < 10; i++)
 	{
-		if (pos == 0 && i == 0&&n.length()>1)continue;//排除前导0的情况，但只有一个0时，又启用
+		if (pos == 0 && i == 0 && n.length()>1)continue;//排除前导0的情况，但只有一个0时，又启用
 		int c = n[pos] - '0';
 		ouput[pos] = '0' + i;//这里改了却忘记失败是要恢复的
 		if (c > i)
 		{
-			int nr =( remainder - mode[c - i][n.length() - pos-1])%k;//这里是一个要点，余数 是+还是减，会根据改成大数还是小数决定
+			int nr = (remainder - mode[c - i][n.length() - pos - 1]) % k;//这里是一个要点，余数 是+还是减，会根据改成大数还是小数决定
 
 			if (dfs(pos + 1, nr, chn - 1))
 				return 1;
 		}
 		else if (c < i)
 		{
-			int nr = (remainder + mode[i-c][n.length() - pos - 1])%k;
+			int nr = (remainder + mode[i - c][n.length() - pos - 1]) % k;
 			if (dfs(pos + 1, nr, chn - 1))
 				return 1;
 		}
@@ -78,10 +78,10 @@ int dfs(int pos, int remainder, int chn)
 
 
 int main() {
-//	freopen("input.txt", "r", stdin);
+	//	freopen("input.txt", "r", stdin);
 
 
-	while (cin>>n>>k)
+	while (cin >> n >> k)
 	{
 		ouput = n;
 		int remainder = 0;
@@ -89,7 +89,7 @@ int main() {
 		init();
 		for (size_t i = 0; i < n.length(); i++)
 		{
-			remainder = (remainder + (mode[n[i]-'0'][n.length() - i - 1])) % k;
+			remainder = (remainder + (mode[n[i] - '0'][n.length() - i - 1])) % k;
 		}
 		for (size_t i = 0; i < 6; i++)
 		{

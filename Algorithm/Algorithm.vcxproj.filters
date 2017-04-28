@@ -279,5 +279,8 @@
     <ClCompile Include="poj3259.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
+    <ClCompile Include="poj3373.cpp">
+      <Filter>Source Files\POJSet\Intermediate</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

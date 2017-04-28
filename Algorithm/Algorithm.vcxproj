@@ -209,6 +209,7 @@
     <ClCompile Include="poj2965.cpp" />
     <ClCompile Include="poj3080.cpp" />
     <ClCompile Include="poj3349 hash.cpp" />
+    <ClCompile Include="poj3373.cpp" />
     <ClCompile Include="RMQ Poj3264.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Subset.cpp" />
