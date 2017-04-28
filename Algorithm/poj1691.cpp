@@ -1,5 +1,4 @@
-//这题要封闭多边形，因为是一个环。
-
+//dfs一定有出口的，不要忘记加出口
 #include <iostream>
 #include <cstdio>
 #include <cstring>
@@ -65,6 +64,7 @@ int dfs(int brush)
 	int Tinn[15];
 	memcpy(Tinn, inn, sizeof(inn));
 	int finish = 1;
+	//这句是出口，dfs居然忘了加出口。
 	for (size_t i = 0; i < N; i++)
 	{
 		if (inn[i] != -1)
@@ -76,7 +76,7 @@ int dfs(int brush)
 	if (finish == 1)return 0;
 
 	int MIN = INF;
-	
+
 	for (int co = 1; co <= 20; co++)
 	{
 		int cnt = 0;
@@ -92,8 +92,8 @@ int dfs(int brush)
 		{
 			for (int i = 0; i < N; i++)
 			{
-//				if (inn[i] == 0 && color[i] == co)
-				if(Tinn[i]==0&&color[i]==co)//在原图上改，不然会修改掉inn
+				//				if (inn[i] == 0 && color[i] == co)
+				if (Tinn[i] == 0 && color[i] == co)//在原图上改，不然会修改掉inn
 				{
 					inn[i] = -1;
 					for (size_t jj = 0; jj < N; jj++)
@@ -105,7 +105,7 @@ int dfs(int brush)
 					}
 				}
 			}
-			MIN = min(MIN,dfs(co)+(brush==co?0:1));
+			MIN = min(MIN, dfs(co) + (brush == co ? 0 : 1));
 			memcpy(inn, Tinn, sizeof(inn));
 		}
 	}

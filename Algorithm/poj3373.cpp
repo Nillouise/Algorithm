@@ -1,5 +1,5 @@
-//这题要封闭多边形，因为是一个环。
-
+//为什么需要这个数组呢？因为前50个数改变某些数字后，可能会产生一样的余数，一样的余数要在后50个数里改变，需要多少个数字自然是一定的。
+//讲模的东西基本都会碰上这点。
 #include <iostream>
 #include <cstdio>
 #include <cstring>
@@ -49,7 +49,7 @@ int dfs(int pos, int remainder, int chn)
 	{
 		if (pos == 0 && i == 0 && n.length()>1)continue;//排除前导0的情况，但只有一个0时，又启用
 		int c = n[pos] - '0';
-		ouput[pos] = '0' + i;//这里改了却忘记失败是要恢复的
+		ouput[pos] = '0' + i;//这里改了却忘记失败是要恢复的，这种暂存全局变量的手尾比较长，要记住
 		if (c > i)
 		{
 			int nr = (remainder - mode[c - i][n.length() - pos - 1]) % k;//这里是一个要点，余数 是+还是减，会根据改成大数还是小数决定

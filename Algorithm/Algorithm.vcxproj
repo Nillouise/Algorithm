@@ -144,6 +144,7 @@
   <ItemGroup>
     <ClCompile Include="A Quailty and Playing Cards.cpp" />
     <ClCompile Include="LA 3942 Trie.cpp" />
+    <ClCompile Include="poj1691.cpp" />
     <ClCompile Include="poj2488 dfs.cpp" />
     <ClCompile Include="poj3259.cpp" />
     <ClCompile Include="poj3278.cpp" />
