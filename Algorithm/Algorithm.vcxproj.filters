@@ -285,5 +285,14 @@
     <ClCompile Include="poj1691.cpp">
       <Filter>Source Files\POJSet\Intermediate</Filter>
     </ClCompile>
+    <ClCompile Include="poj1191.cpp">
+      <Filter>Source Files\POJSet\Intermediate</Filter>
+    </ClCompile>
+    <ClCompile Include="poj2057.cpp">
+      <Filter>Source Files\POJSet\Intermediate</Filter>
+    </ClCompile>
+    <ClCompile Include="poj2411.cpp">
+      <Filter>Source Files\POJSet\Intermediate</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
