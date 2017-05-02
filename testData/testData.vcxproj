@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{995C513B-2C35-443B-B216-FEC65D1C8EF6}</ProjectGuid>
+    <ProjectGuid>{90DB438C-AA70-42A1-9E21-CDE291DA3E37}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Algorithm</RootNamespace>
+    <RootNamespace>testData</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -142,90 +142,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="poj1947.cpp" />
-    <ClCompile Include="A Quailty and Playing Cards.cpp" />
-    <ClCompile Include="LA 3942 Trie.cpp" />
-    <ClCompile Include="poj1191.cpp" />
-    <ClCompile Include="poj1691.cpp" />
-    <ClCompile Include="poj2057.cpp" />
-    <ClCompile Include="poj2411.cpp" />
-    <ClCompile Include="poj2488 dfs.cpp" />
-    <ClCompile Include="poj3259.cpp" />
-    <ClCompile Include="poj3278.cpp" />
-    <ClCompile Include="poj1019.cpp" />
-    <ClCompile Include="poj1027 别人的.cpp" />
-    <ClCompile Include="poj1027 错误思想.cpp" />
-    <ClCompile Include="poj1035.cpp" />
-    <ClCompile Include="poj1039.cpp" />
-    <ClCompile Include="poj1094.cpp" />
-    <ClCompile Include="poj1129.cpp" />
-    <ClCompile Include="poj1159 LCS+滚动数组+回文串.cpp" />
-    <ClCompile Include="poj1260 错误的贪心算法.cpp" />
-    <ClCompile Include="poj1276.cpp" />
-    <ClCompile Include="poj1408.cpp" />
-    <ClCompile Include="poj1416.cpp" />
-    <ClCompile Include="poj1426.cpp" />
-    <ClCompile Include="poj1459.cpp" />
-    <ClCompile Include="poj1472.cpp" />
-    <ClCompile Include="poj1584.cpp" />
-    <ClCompile Include="poj1836 别人的.cpp" />
-    <ClCompile Include="poj1836.cpp" />
-    <ClCompile Include="poj1837.cpp" />
-    <ClCompile Include="poj1850.cpp" />
-    <ClCompile Include="poj1860 别人.cpp" />
-    <ClCompile Include="poj1860.cpp" />
-    <ClCompile Include="poj2031.cpp" />
-    <ClCompile Include="poj2299.cpp" />
-    <ClCompile Include="poj2531.cpp" />
-    <ClCompile Include="poj2533 LIS.cpp" />
-    <ClCompile Include="poj2632.cpp" />
-    <ClCompile Include="poj3009.cpp" />
-    <ClCompile Include="poj3041.cpp" />
-    <ClCompile Include="poj3083.cpp" />
-    <ClCompile Include="poj3096.cpp" />
-    <ClCompile Include="poj3126.cpp" />
-    <ClCompile Include="poj3176.cpp" />
-    <ClCompile Include="poj3252.cpp" />
-    <ClCompile Include="poj3253.cpp" />
-    <ClCompile Include="poj3258.cpp" />
-    <ClCompile Include="poj3267.cpp" />
-    <ClCompile Include="poj3292.cpp" />
-    <ClCompile Include="poj3295.cpp" />
-    <ClCompile Include="BitToString.cpp" />
-    <ClCompile Include="convertRootTree.cpp" />
-    <ClCompile Include="Convex Hull.cpp" />
-    <ClCompile Include="Dijkstra.cpp" />
-    <ClCompile Include="Dijkstra1.cpp" />
-    <ClCompile Include="Dijkstra2.cpp" />
-    <ClCompile Include="Edmonds-Krap.cpp" />
-    <ClCompile Include="enumeration poj1753.cpp" />
-    <ClCompile Include="Erase and Add.cpp" />
-    <ClCompile Include="ExpressionTree.cpp" />
-    <ClCompile Include="Kruskal.cpp" />
-    <ClCompile Include="MCMF.cpp" />
-    <ClCompile Include="Permutation.cpp" />
-    <ClCompile Include="poj1328 别人的正确的跟我差不多的答案.cpp" />
-    <ClCompile Include="poj1328 错误.cpp" />
-    <ClCompile Include="poj1328.cpp" />
-    <ClCompile Include="poj1753.cpp" />
-    <ClCompile Include="poj1068.cpp" />
-    <ClCompile Include="POJ1113-Wall.cpp" />
-    <ClCompile Include="poj1125.cpp" />
-    <ClCompile Include="poj2965.cpp" />
-    <ClCompile Include="poj3080.cpp" />
-    <ClCompile Include="poj3349 hash.cpp" />
-    <ClCompile Include="poj3373.cpp" />
-    <ClCompile Include="RMQ Poj3264.cpp" />
-    <ClCompile Include="SG.cpp" />
     <ClCompile Include="Source.cpp" />
-    <ClCompile Include="Subset.cpp" />
-    <ClCompile Include="TreeArray.cpp" />
-    <ClCompile Include="TurnOverChess.cpp" />
-    <ClCompile Include="UVa 10305 Topo.cpp" />
-    <ClCompile Include="UVa 658 It%27s not a Bug.cpp" />
-    <ClCompile Include="UVa12096 The SetStack Computer.cpp" />
-    <ClCompile Include="UVa1395.cpp" />
-    <ClCompile Include="喵哈哈村的括号序列.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

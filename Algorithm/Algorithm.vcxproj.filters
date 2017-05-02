@@ -294,5 +294,14 @@
     <ClCompile Include="poj2411.cpp">
       <Filter>Source Files\POJSet\Intermediate</Filter>
     </ClCompile>
+    <ClCompile Include="poj1947.cpp">
+      <Filter>Source Files\POJSet\Intermediate</Filter>
+    </ClCompile>
+    <ClCompile Include="喵哈哈村的括号序列.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="SG.cpp">
+      <Filter>Source Files\Nim</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
