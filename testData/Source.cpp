@@ -16,12 +16,8 @@ int main()
 	n = 30;
 	for (i = 0; i < n; i++)
 	{
-		while ((rand() % 20))
-		{
-				if (rand() % 2)cout << "("; else cout << ")";
 
-		}
-		cout << endl;
+		cout <<rand()% 100000 <<" "<<rand()<< endl;
 	}
 	return 0;
 }

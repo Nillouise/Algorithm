@@ -1,56 +1,43 @@
-using namespace std; 
-typedef long long LL;
-#define MX 1005 
-#define MOD 1000000007 
-#include<cstdio>
-#include<cstring>
-LL C[MX][MX], bit[MX]; 
-int N; 
-char R[MX]; 
-void init() 
-{ 
-	int i, j; 
-	bit[0] = 1LL; 
-	for (i = 1; i < MX; i ++) 
-	{
-		bit[i] = 2 * bit[i - 1] % MOD;
-	} 
-	C[0][0] = 1; 
-	for (i = 1; i < MX; i ++) 
-	{ 
-		C[i][0] = C[i][i] = 1; 
-		for (j = 1; j < i; j ++) 
-		{ 
-			C[i][j] = (C[i - 1][j] + C[i - 1][j - 1]) % MOD;
-		} 
+#include <algorithm>
+#include <cassert>
+#include <cstring>
+#include <cstdio>
+
+const int N = 60;
+const int M = 500 + 10;
+
+int dp[N][N][M], sum[N][N], a[N][N], n, m;
+
+int main() {
+	freopen("input.txt", "r", stdin);
+	assert(scanf("%d%d", &n, &m) == 2);
+	assert(1 <= n && n <= 50);
+	assert(1 <= m && m <= 500);
+	for (int i = 1; i <= n; ++i) {
+		for (int j = 1; j <= i; ++j) {
+			assert(scanf("%d", &a[i][j]) == 1);
+			assert(0 <= a[i][j] && a[i][j] <= 1000);
+		}
 	}
-} 
-int main()
-{ 
-	init(); 
-	int Tcase, i, one; 
-	while (scanf("%d %s", &N, R) == 2)
-	{ 
-		int len = strlen(R); 
-		int rlt = 0; 
-		long long B = 0; 
-		for (i = 0; i < len && N >= 0; i ++) 
-		{ 
-			if (R[i] == '1')
-			{ 
-				if (N <= len - i - 1) 
-				{ 
-					if (N) 
-						rlt = (rlt + (long long) (bit[len - i - 1] - 1) * C[len - i - 2][N - 1] % MOD) % MOD; 
-					rlt = (rlt + B * C[len - i - 1][N] % MOD) % MOD; 
-					B += bit[len - i - 1]; 
-					B %= MOD; 
-					N --; 
-				} 
-			} 
-		} 
-		if (rlt < 0)
-			rlt += MOD; 
-		printf("%d\n", rlt); 
-	} 
+
+	for (int i = 1; i <= n; ++i) {
+		for (int j = 1; j <= i; ++j) {
+			sum[i][j] = sum[i][j - 1] + a[n - j + 1][i - j + 1];
+		}
+	}
+
+	memset(dp, 200, sizeof(dp));
+	for (int i = 0; i <= n; ++i) {
+		dp[i][0][0] = 0;
+	}
+	for (int i = 1; i <= n; ++i) {
+		for (int j = i; j >= 0; --j) {
+			for (int k = j; k <= m; ++k) {
+				dp[i][j][k] = std::max(dp[i][j + 1][k],
+					dp[i - 1][std::max(0, j - 1)][k - j] + sum[i][j]);
+			}
+		}
+	}
+	printf("%d\n", dp[n][0][m]);
+	return 0;
 }

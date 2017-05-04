@@ -215,6 +215,7 @@
     <ClCompile Include="poj3080.cpp" />
     <ClCompile Include="poj3349 hash.cpp" />
     <ClCompile Include="poj3373.cpp" />
+    <ClCompile Include="Prim.cpp" />
     <ClCompile Include="RMQ Poj3264.cpp" />
     <ClCompile Include="SG.cpp" />
     <ClCompile Include="Source.cpp" />
@@ -226,6 +227,7 @@
     <ClCompile Include="UVa12096 The SetStack Computer.cpp" />
     <ClCompile Include="UVa1395.cpp" />
     <ClCompile Include="喵哈哈村的括号序列.cpp" />
+    <ClCompile Include="喵哈哈村的本周会议（五）.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -303,5 +303,11 @@
     <ClCompile Include="SG.cpp">
       <Filter>Source Files\Nim</Filter>
     </ClCompile>
+    <ClCompile Include="Prim.cpp">
+      <Filter>Source Files\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="喵哈哈村的本周会议（五）.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
