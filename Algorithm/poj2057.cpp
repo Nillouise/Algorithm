@@ -23,10 +23,8 @@ bool comp(int a, int b)
 	//afirst +=1+ success[a] + leaf[b] / total*(failure[a] + 1 + 1 + success[b]);//失败之后回到原点 再到b探索需要+1+1;
 	//bfirst +=1+ success[b] + leaf[a] / total*(failure[b] + 1 + 1 + success[a]);
 	afirst += (leaf[a] / total)*(1 + success[a]) + leaf[b] / total*(failure[a] + 1 + 1 + 1 + success[b]);//失败之后回到原点 再到b探索需要+1+1;//这是理解错误
-																										 //成功和失败是两种完全不同的状态，完全可以根据两者不同的步数乘以各自的概率，
-																										 //所以失败那里是+1+1+1；进 出 再进另一个
+																									 //所以失败那里是+1+1+1；进 出 再进另一个
 	bfirst += (leaf[b] / total)*(1 + success[b]) + leaf[a] / total*(failure[b] + 1 + 1 + 1 + success[a]);
-
 
 	return afirst < bfirst;
 }
@@ -93,7 +91,6 @@ int dfs(int x)
 	return leaf[x] = (tree[x].size() == 0 ? 1 : sum);
 }
 
-
 double solve()
 {
 	fill(success, success + maxn, -1.0);
@@ -104,10 +101,7 @@ double solve()
 	{
 		dfs(i);
 	}
-
 	return DP(0, 1);
-
-
 }
 
 int main()
@@ -134,5 +128,4 @@ int main()
 		}
 		printf("%0.4f\n", solve());
 	}
-
 }

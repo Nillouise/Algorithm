@@ -224,6 +224,7 @@
     <ClCompile Include="TurnOverChess.cpp" />
     <ClCompile Include="UVa 10305 Topo.cpp" />
     <ClCompile Include="UVa 658 It%27s not a Bug.cpp" />
+    <ClCompile Include="uva11235.cpp" />
     <ClCompile Include="UVa12096 The SetStack Computer.cpp" />
     <ClCompile Include="UVa1395.cpp" />
     <ClCompile Include="喵哈哈村的括号序列.cpp" />

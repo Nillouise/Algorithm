@@ -309,5 +309,8 @@
     <ClCompile Include="喵哈哈村的本周会议（五）.cpp">
       <Filter>Source Files\DP</Filter>
     </ClCompile>
+    <ClCompile Include="uva11235.cpp">
+      <Filter>Source Files\DataStructure</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

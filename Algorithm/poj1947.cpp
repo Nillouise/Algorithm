@@ -71,7 +71,6 @@ int DP(int x)
 
 	}
 	return 0;
-
 }
 
 int fa[maxn];
@@ -119,10 +118,6 @@ int main() {
 			fa[J] = I;
 		}
 		cout << solve() << endl;
-
-
 	}
-
-
 	return 0;
 }
