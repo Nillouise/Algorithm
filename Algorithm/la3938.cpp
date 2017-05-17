@@ -1,5 +1,3 @@
-// LA3938 Ray, Pass me the dishes!
-// Rujia Liu
 #include<cstdio>
 #include<cstring>
 #include<algorithm>
@@ -35,12 +33,12 @@ struct Btree
 
 	void build(int o, int L, int R)
 	{
-		int lc=o*2, rc=o*2+1;
+		int lc = o * 2, rc = o * 2 + 1;
 		int M = L + (R - L) / 2;
 
 		if (L == R)
 		{
-			maxsub[o] = make_pair(L,R);
+			maxsub[o] = make_pair(L, R);
 			prefix[o] = L;
 			suffix[o] = L;
 		}
@@ -48,7 +46,7 @@ struct Btree
 			build(lc, L, M);
 			build(rc, M + 1, R);
 
-			LL v1 = sum(L,prefix[lc]);
+			LL v1 = sum(L, prefix[lc]);
 			LL v2 = sum(L, prefix[rc]);
 			if (v1 == v2)
 			{
@@ -69,13 +67,13 @@ struct Btree
 			}
 
 			maxsub[o] = better(maxsub[lc], maxsub[rc]);// 完全在左子树或者右子树
-			maxsub[o] = better(maxsub[o], make_pair(suffix[lc],prefix[rc]));// 跨越中线
+			maxsub[o] = better(maxsub[o], make_pair(suffix[lc], prefix[rc]));// 跨越中线
 
 		}
 
 	}
 
-	int queryPre(int o,int L,int R)
+	int queryPre(int o, int L, int R)
 	{
 		if (prefix[o] <= gR)return prefix[o];
 		int M = L + (R - L) / 2;
@@ -111,7 +109,7 @@ struct Btree
 		interval i1 = query(lc, L, M);
 		interval i2 = query(rc, M + 1, R);
 		interval i3;
-		i3.first= querySuf(lc, L, M);
+		i3.first = querySuf(lc, L, M);
 		i3.second = queryPre(rc, M + 1, R);
 
 		interval r = better(i1, i2);
@@ -142,7 +140,7 @@ int main() {
 		{
 			scanf("%d%d", &gL, &gR);
 			interval ans = tree.query(1, 1, n);
-			printf("%d %d\n",ans.first,ans.second);
+			printf("%d %d\n", ans.first, ans.second);
 		}
 
 	}

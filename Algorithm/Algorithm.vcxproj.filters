@@ -312,5 +312,8 @@
     <ClCompile Include="uva11235.cpp">
       <Filter>Source Files\DataStructure</Filter>
     </ClCompile>
+    <ClCompile Include="la3938.cpp">
+      <Filter>Source Files\DataStructure</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

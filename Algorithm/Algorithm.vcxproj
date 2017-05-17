@@ -142,6 +142,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="la3938.cpp" />
     <ClCompile Include="poj1947.cpp" />
     <ClCompile Include="A Quailty and Playing Cards.cpp" />
     <ClCompile Include="LA 3942 Trie.cpp" />
