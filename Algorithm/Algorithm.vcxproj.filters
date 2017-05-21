@@ -315,5 +315,8 @@
     <ClCompile Include="la3938.cpp">
       <Filter>Source Files\DataStructure</Filter>
     </ClCompile>
+    <ClCompile Include="喵哈哈村的种树大赛.cpp">
+      <Filter>Source Files\DataStructure</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
