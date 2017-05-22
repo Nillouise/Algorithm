@@ -220,6 +220,7 @@
     <ClCompile Include="RMQ Poj3264.cpp" />
     <ClCompile Include="SG.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="喵哈哈村的种树大赛 自底向下线段树.cpp" />
     <ClCompile Include="Subset.cpp" />
     <ClCompile Include="TreeArray.cpp" />
     <ClCompile Include="TurnOverChess.cpp" />
