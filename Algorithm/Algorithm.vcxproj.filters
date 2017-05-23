@@ -49,6 +49,9 @@
     <Filter Include="Source Files\POJSet\Intermediate">
       <UniqueIdentifier>{17d53d60-d0eb-4516-a08c-49aa56b94da7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Math">
+      <UniqueIdentifier>{8618eb73-d50f-4ffd-b3d2-c6996d150aa5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -323,6 +326,9 @@
     </ClCompile>
     <ClCompile Include="Tyvj1305 喵哈哈村的魔力源泉（4）单调dp.cpp">
       <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="prime factor and Euler.cpp">
+      <Filter>Source Files\Math</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

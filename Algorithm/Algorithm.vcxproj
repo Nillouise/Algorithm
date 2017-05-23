@@ -217,6 +217,7 @@
     <ClCompile Include="poj3349 hash.cpp" />
     <ClCompile Include="poj3373.cpp" />
     <ClCompile Include="Prim.cpp" />
+    <ClCompile Include="prime factor and Euler.cpp" />
     <ClCompile Include="RMQ Poj3264.cpp" />
     <ClCompile Include="SG.cpp" />
     <ClCompile Include="Source.cpp" />
