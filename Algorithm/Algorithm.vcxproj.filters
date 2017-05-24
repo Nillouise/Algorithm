@@ -339,7 +339,7 @@
     <ClCompile Include="hdu5900.cpp">
       <Filter>Source Files\DP</Filter>
     </ClCompile>
-    <ClCompile Include="hdu3506 环形DP.cpp">
+    <ClCompile Include="hdu3506 环形DP+四边形不等式优化.cpp">
       <Filter>Source Files\DP</Filter>
     </ClCompile>
   </ItemGroup>
