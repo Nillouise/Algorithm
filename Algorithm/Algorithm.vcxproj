@@ -143,6 +143,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="hdu1693 插头dp.cpp" />
+    <ClCompile Include="hdu3506 环形DP.cpp" />
+    <ClCompile Include="hdu5900.cpp" />
     <ClCompile Include="la3938.cpp" />
     <ClCompile Include="poj1947.cpp" />
     <ClCompile Include="A Quailty and Playing Cards.cpp" />
