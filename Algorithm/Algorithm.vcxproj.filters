@@ -333,5 +333,8 @@
     <ClCompile Include="单调队列优化决策DP.cpp">
       <Filter>Source Files\DP</Filter>
     </ClCompile>
+    <ClCompile Include="hdu1693 插头dp.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
