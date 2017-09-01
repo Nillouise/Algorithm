@@ -52,6 +52,9 @@
     <Filter Include="Source Files\Math">
       <UniqueIdentifier>{8618eb73-d50f-4ffd-b3d2-c6996d150aa5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Mimic">
+      <UniqueIdentifier>{7688e6db-21de-4ec9-a8ec-75c3132627f7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -341,6 +344,12 @@
     </ClCompile>
     <ClCompile Include="hdu3506 环形DP+四边形不等式优化.cpp">
       <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="Codeforces Round 431 A Odds and Ends.cpp">
+      <Filter>Source Files\Exhaustive Search</Filter>
+    </ClCompile>
+    <ClCompile Include="Codeforces Round 431 A Odds and Ends B.cpp">
+      <Filter>Source Files\Mimic</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

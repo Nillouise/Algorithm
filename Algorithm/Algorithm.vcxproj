@@ -142,6 +142,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Codeforces Round 431 A Odds and Ends B.cpp" />
+    <ClCompile Include="Codeforces Round 431 A Odds and Ends.cpp" />
     <ClCompile Include="hdu1693 插头dp.cpp" />
     <ClCompile Include="hdu3506 环形DP+四边形不等式优化.cpp" />
     <ClCompile Include="hdu5900.cpp" />

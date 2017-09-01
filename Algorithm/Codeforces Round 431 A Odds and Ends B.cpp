@@ -18,7 +18,7 @@ int tong(int b, int e, int *vis, int avoid, int paint, double &xie)
 	for (int i = 0; e + i < N; i++)
 	{
 		int c = e + i;
-		if (abs(A[b] + (e-b+i)*xie -A[c])<10e-10)
+		if (abs(A[b] + (e - b + i)*xie - A[c])<10e-10)
 		{
 			if (vis[c] == avoid)
 			{
@@ -56,7 +56,6 @@ int firstempty(int *vis, int begin, int empty)
 
 int main()
 {
-	freopen("input.txt", "r", stdin);
 
 	cin >> N;
 	int maxI;
