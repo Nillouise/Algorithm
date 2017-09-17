@@ -1,3 +1,4 @@
+//未完成
 #include<cmath>
 #include <string>
 #include <algorithm>
@@ -15,7 +16,7 @@ public:
 	{
 		for (int i = 0; i < 10; i++)z[i] = nullptr;
 	}
-	int extent(string &s,int index)
+	int extent(string &s, int index)
 	{
 		if (s.length() == 0)return 0;
 		if (s[0] - '0' == 9)
@@ -31,14 +32,14 @@ public:
 			cnt++;
 			pre = index;
 		}
-		z[s[0] - '0']->extent(s.substr(1),index);
+		z[s[0] - '0']->extent(s.substr(1), index);
 		return 0;
 	}
 
 	int search(string &s)
 	{
 		//if (cnt == 0)//这里没考虑到，字符串中途时，至起码是1,1就代表只有一条字符串了
-		if(cnt <= 1)
+		if (cnt <= 1)
 		{
 			return 1;
 		}
@@ -60,8 +61,8 @@ int showtree(int indent, Tree ct)
 	{
 		if (ct.z[i] != nullptr)
 		{
-			for (int j = 0; j < indent;j++)cout << " ";
-			cout << i<<"  "<< ct.z[i]->cnt <<endl;
+			for (int j = 0; j < indent; j++)cout << " ";
+			cout << i << "  " << ct.z[i]->cnt << endl;
 			showtree(indent + 1, *ct.z[i]);
 		}
 	}
@@ -93,7 +94,7 @@ int main()
 		{
 			//trees[v[s][i] - 'a'].extent(v[s].substr(i));//好笑，这里居然错了(-'a')，浪费我20分钟
 			//trees[v[s][i] - '0'].extent(v[s].substr(i),s);
-			trees[v[s][i] - '0'].extent(v[s].substr(i+1), s);
+			trees[v[s][i] - '0'].extent(v[s].substr(i + 1), s);
 		}
 	}
 

@@ -55,6 +55,15 @@
     <Filter Include="Source Files\Mimic">
       <UniqueIdentifier>{7688e6db-21de-4ec9-a8ec-75c3132627f7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\CF">
+      <UniqueIdentifier>{15bed0ee-58d0-4a38-baee-6d9b9afdab74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CF\Codeforces Round #432 div2">
+      <UniqueIdentifier>{bf6f576b-0d77-4d0e-8731-d885240b0aed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CF\Codeforces Round #434">
+      <UniqueIdentifier>{47f71a7d-b5d0-435d-bbcc-7fd549d5a105}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -348,8 +357,11 @@
     <ClCompile Include="Codeforces Round 431 A Odds and Ends.cpp">
       <Filter>Source Files\Exhaustive Search</Filter>
     </ClCompile>
-    <ClCompile Include="Codeforces Round 431 A Odds and Ends B.cpp">
+    <ClCompile Include="Codeforces Round 431 Odds and Ends B.cpp">
       <Filter>Source Files\Mimic</Filter>
+    </ClCompile>
+    <ClCompile Include="D.cpp">
+      <Filter>Source Files\CF\Codeforces Round #434</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
