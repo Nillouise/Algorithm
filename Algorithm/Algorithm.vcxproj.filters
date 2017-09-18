@@ -363,5 +363,20 @@
     <ClCompile Include="D.cpp">
       <Filter>Source Files\CF\Codeforces Round #434</Filter>
     </ClCompile>
+    <ClCompile Include="D2.cpp">
+      <Filter>Source Files\CF\Codeforces Round #434</Filter>
+    </ClCompile>
+    <ClCompile Include="D3.cpp">
+      <Filter>Source Files\CF\Codeforces Round #434</Filter>
+    </ClCompile>
+    <ClCompile Include="A.cpp">
+      <Filter>Source Files\CF\Codeforces Round #434</Filter>
+    </ClCompile>
+    <ClCompile Include="B.cpp">
+      <Filter>Source Files\CF\Codeforces Round #434</Filter>
+    </ClCompile>
+    <ClCompile Include="C.cpp">
+      <Filter>Source Files\CF\Codeforces Round #434</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

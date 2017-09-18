@@ -53,7 +53,8 @@ public:
 	}
 };
 
-Tree trees[10];
+//Tree trees[10];
+//这种根节点用10个表示，应该是不好的
 
 
 int showtree(int indent, Tree ct)
@@ -88,18 +89,19 @@ int main()
 		cin >> s;
 		v.push_back(s);
 	}
-
+	Tree root;
 	for (int s = 0; s < v.size(); s++)
 	{
 		for (int i = 0; i < 10; i++)
 		{
 			//trees[v[s][i] - 'a'].extent(v[s].substr(i));//好笑，这里居然错了(-'a')，浪费我20分钟
 			//trees[v[s][i] - '0'].extent(v[s].substr(i),s);
-			trees[v[s][i] - '0'].extent(v[s].substr(i + 1), s);
+			//trees[v[s][i] - '0'].extent(v[s].substr(i + 1), s);
+			root.extent(v[s], s);
 		}
 	}
 
-	showtree(0, trees[1]);
+	showtree(0, root);
 
 	for (int s = 0; s < v.size(); s++)
 	{
@@ -109,7 +111,8 @@ int main()
 		for (int b = 0; b < 9; b++)
 		{
 			string &cs = v[s].substr(b);
-			int len = trees[cs[0] - '0'].search(cs);
+			//int len = trees[cs[0] - '0'].search(cs);
+			int len = root.search(cs);
 			if (len < 0)continue;
 			if (len < MIN)
 			{
