@@ -69,330 +69,330 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source.cpp">
+    <ClCompile Include="source\Source Files\Source.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UVa12096 The SetStack Computer.cpp">
+    <ClCompile Include="source\Source Files\STL\UVa12096 The SetStack Computer.cpp">
       <Filter>Source Files\STL</Filter>
     </ClCompile>
-    <ClCompile Include="convertRootTree.cpp">
+    <ClCompile Include="source\Source Files\Graph\convertRootTree.cpp">
       <Filter>Source Files\Graph</Filter>
     </ClCompile>
-    <ClCompile Include="ExpressionTree.cpp">
+    <ClCompile Include="source\Source Files\Graph\Dijkstra.cpp">
       <Filter>Source Files\Graph</Filter>
     </ClCompile>
-    <ClCompile Include="Kruskal.cpp">
+    <ClCompile Include="source\Source Files\Graph\Dijkstra1.cpp">
       <Filter>Source Files\Graph</Filter>
     </ClCompile>
-    <ClCompile Include="Dijkstra.cpp">
+    <ClCompile Include="source\Source Files\Graph\Dijkstra2.cpp">
       <Filter>Source Files\Graph</Filter>
     </ClCompile>
-    <ClCompile Include="Dijkstra1.cpp">
+    <ClCompile Include="source\Source Files\Graph\Edmonds-Krap.cpp">
       <Filter>Source Files\Graph</Filter>
     </ClCompile>
-    <ClCompile Include="Dijkstra2.cpp">
+    <ClCompile Include="source\Source Files\Graph\ExpressionTree.cpp">
       <Filter>Source Files\Graph</Filter>
     </ClCompile>
-    <ClCompile Include="UVa 658 It%27s not a Bug.cpp">
+    <ClCompile Include="source\Source Files\Graph\Kruskal.cpp">
       <Filter>Source Files\Graph</Filter>
     </ClCompile>
-    <ClCompile Include="Edmonds-Krap.cpp">
+    <ClCompile Include="source\Source Files\Graph\MCMF.cpp">
       <Filter>Source Files\Graph</Filter>
     </ClCompile>
-    <ClCompile Include="MCMF.cpp">
+    <ClCompile Include="source\Source Files\Graph\poj1125.cpp">
       <Filter>Source Files\Graph</Filter>
     </ClCompile>
-    <ClCompile Include="Permutation.cpp">
+    <ClCompile Include="source\Source Files\Graph\Prim.cpp">
+      <Filter>Source Files\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\Graph\UVa 10305 Topo.cpp">
+      <Filter>Source Files\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\Graph\UVa 658 It%27s not a Bug.cpp">
+      <Filter>Source Files\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\Graph\UVa1395.cpp">
+      <Filter>Source Files\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\DP\hdu1693 插头dp.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\DP\hdu3506 环形DP+四边形不等式优化.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\DP\hdu5900.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\DP\Tyvj1305 喵哈哈村的魔力源泉（4）单调dp.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\DP\单调队列优化决策DP.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\DP\喵哈哈村的括号序列.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\DP\喵哈哈村的本周会议（五）.cpp">
+      <Filter>Source Files\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\Exhaustive Search\Codeforces Round 431 A Odds and Ends.cpp">
       <Filter>Source Files\Exhaustive Search</Filter>
     </ClCompile>
-    <ClCompile Include="Subset.cpp">
+    <ClCompile Include="source\Source Files\Exhaustive Search\enumeration poj1753.cpp">
       <Filter>Source Files\Exhaustive Search</Filter>
     </ClCompile>
-    <ClCompile Include="Convex Hull.cpp">
+    <ClCompile Include="source\Source Files\Exhaustive Search\Permutation.cpp">
+      <Filter>Source Files\Exhaustive Search</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\Exhaustive Search\Subset.cpp">
+      <Filter>Source Files\Exhaustive Search</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\Geometry\Convex Hull.cpp">
       <Filter>Source Files\Geometry</Filter>
     </ClCompile>
-    <ClCompile Include="POJ1113-Wall.cpp">
+    <ClCompile Include="source\Source Files\Geometry\POJ1113-Wall.cpp">
       <Filter>Source Files\Geometry</Filter>
     </ClCompile>
-    <ClCompile Include="poj3080.cpp">
+    <ClCompile Include="source\Source Files\String\BitToString.cpp">
       <Filter>Source Files\String</Filter>
     </ClCompile>
-    <ClCompile Include="BitToString.cpp">
+    <ClCompile Include="source\Source Files\String\Erase and Add.cpp">
       <Filter>Source Files\String</Filter>
     </ClCompile>
-    <ClCompile Include="poj1125.cpp">
-      <Filter>Source Files\Graph</Filter>
+    <ClCompile Include="source\Source Files\String\poj3080.cpp">
+      <Filter>Source Files\String</Filter>
     </ClCompile>
-    <ClCompile Include="TreeArray.cpp">
+    <ClCompile Include="source\Source Files\DataStructure\la3938.cpp">
       <Filter>Source Files\DataStructure</Filter>
     </ClCompile>
-    <ClCompile Include="RMQ Poj3264.cpp">
+    <ClCompile Include="source\Source Files\DataStructure\LA 3942 Trie.cpp">
       <Filter>Source Files\DataStructure</Filter>
     </ClCompile>
-    <ClCompile Include="enumeration poj1753.cpp">
-      <Filter>Source Files\Exhaustive Search</Filter>
+    <ClCompile Include="source\Source Files\DataStructure\RMQ Poj3264.cpp">
+      <Filter>Source Files\DataStructure</Filter>
     </ClCompile>
-    <ClCompile Include="TurnOverChess.cpp">
+    <ClCompile Include="source\Source Files\DataStructure\喵哈哈村的种树大赛 自底向下线段树.cpp">
+      <Filter>Source Files\DataStructure</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\DataStructure\TreeArray.cpp">
+      <Filter>Source Files\DataStructure</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\DataStructure\uva11235.cpp">
+      <Filter>Source Files\DataStructure</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\DataStructure\喵哈哈村的种树大赛.cpp">
+      <Filter>Source Files\DataStructure</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\Nim\SG.cpp">
       <Filter>Source Files\Nim</Filter>
     </ClCompile>
-    <ClCompile Include="Erase and Add.cpp">
-      <Filter>Source Files\String</Filter>
+    <ClCompile Include="source\Source Files\Nim\TurnOverChess.cpp">
+      <Filter>Source Files\Nim</Filter>
     </ClCompile>
-    <ClCompile Include="poj1068.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj2488 dfs.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj3295.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj3259.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj2632.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj3278.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="UVa1395.cpp">
-      <Filter>Source Files\Graph</Filter>
-    </ClCompile>
-    <ClCompile Include="poj1860.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj1019.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj1860 别人.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj1035.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj1094.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj1039.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="UVa 10305 Topo.cpp">
-      <Filter>Source Files\Graph</Filter>
-    </ClCompile>
-    <ClCompile Include="poj3041.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj1094.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj1459.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj1129.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj2299.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj1159 LCS+滚动数组+回文串.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj1035.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj1260 错误的贪心算法.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj3349 hash.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj1276.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj3253.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj1408.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="LA 3942 Trie.cpp">
-      <Filter>Source Files\DataStructure</Filter>
-    </ClCompile>
-    <ClCompile Include="poj2531.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj1416.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj3083.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj1426.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj1426.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj1459.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj1416.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj1584.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj1837.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj1836 别人的.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj3267.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj1836.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj3176.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj1837.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj3009.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj1850.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj3126.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj1860 别人.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj1129.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj1860.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj1276.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj2031.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj1836 别人的.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj2299.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj1836.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj2531.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj1260 错误的贪心算法.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj2533 LIS.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj2533 LIS.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj2632.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj1159 LCS+滚动数组+回文串.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj3009.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj3252.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj3041.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj1850.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj3083.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj1019.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj3126.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj3292.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj3176.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="poj3258.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj3252.cpp">
       <Filter>Source Files\POJSet\Base</Filter>
     </ClCompile>
-    <ClCompile Include="A Quailty and Playing Cards.cpp">
+    <ClCompile Include="source\Source Files\POJSet\Base\poj3253.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\POJSet\Base\poj3258.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\POJSet\Base\poj3267.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\POJSet\Base\poj3292.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\POJSet\Base\poj3295.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\POJSet\Base\poj1328 别人的正确的跟我差不多的答案.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\POJSet\Base\poj1328 错误.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\POJSet\Base\poj1328.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\POJSet\Base\poj1753.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\POJSet\Base\poj1068.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\POJSet\Base\poj2965.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\POJSet\Base\poj3349 hash.cpp">
+      <Filter>Source Files\POJSet\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\POJSet\Intermediate\poj1947.cpp">
+      <Filter>Source Files\POJSet\Intermediate</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\POJSet\Intermediate\poj1191.cpp">
+      <Filter>Source Files\POJSet\Intermediate</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\POJSet\Intermediate\poj1691.cpp">
+      <Filter>Source Files\POJSet\Intermediate</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\POJSet\Intermediate\poj2057.cpp">
+      <Filter>Source Files\POJSet\Intermediate</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\POJSet\Intermediate\poj2411.cpp">
+      <Filter>Source Files\POJSet\Intermediate</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\POJSet\Intermediate\poj1027 别人的.cpp">
+      <Filter>Source Files\POJSet\Intermediate</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\POJSet\Intermediate\poj1027 错误思想.cpp">
+      <Filter>Source Files\POJSet\Intermediate</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\POJSet\Intermediate\poj1472.cpp">
+      <Filter>Source Files\POJSet\Intermediate</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\POJSet\Intermediate\poj3096.cpp">
+      <Filter>Source Files\POJSet\Intermediate</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\POJSet\Intermediate\poj3373.cpp">
+      <Filter>Source Files\POJSet\Intermediate</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\Game\A Quailty and Playing Cards.cpp">
       <Filter>Source Files\Game</Filter>
     </ClCompile>
-    <ClCompile Include="poj2031.cpp">
-      <Filter>Source Files\POJSet\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="poj1039.cpp">
-      <Filter>Source Files\POJSet\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="poj1408.cpp">
-      <Filter>Source Files\POJSet\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="poj3096.cpp">
-      <Filter>Source Files\POJSet\Intermediate</Filter>
-    </ClCompile>
-    <ClCompile Include="poj1584.cpp">
-      <Filter>Source Files\POJSet\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="poj1472.cpp">
-      <Filter>Source Files\POJSet\Intermediate</Filter>
-    </ClCompile>
-    <ClCompile Include="poj1027 错误思想.cpp">
-      <Filter>Source Files\POJSet\Intermediate</Filter>
-    </ClCompile>
-    <ClCompile Include="poj1027 别人的.cpp">
-      <Filter>Source Files\POJSet\Intermediate</Filter>
-    </ClCompile>
-    <ClCompile Include="poj1328 别人的正确的跟我差不多的答案.cpp">
-      <Filter>Source Files\POJSet\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="poj1328 错误.cpp">
-      <Filter>Source Files\POJSet\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="poj1328.cpp">
-      <Filter>Source Files\POJSet\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="poj1753.cpp">
-      <Filter>Source Files\POJSet\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="poj2488 dfs.cpp">
-      <Filter>Source Files\POJSet\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="poj2965.cpp">
-      <Filter>Source Files\POJSet\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="poj3278.cpp">
-      <Filter>Source Files\POJSet\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="poj3259.cpp">
-      <Filter>Source Files\POJSet\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="poj3373.cpp">
-      <Filter>Source Files\POJSet\Intermediate</Filter>
-    </ClCompile>
-    <ClCompile Include="poj1691.cpp">
-      <Filter>Source Files\POJSet\Intermediate</Filter>
-    </ClCompile>
-    <ClCompile Include="poj1191.cpp">
-      <Filter>Source Files\POJSet\Intermediate</Filter>
-    </ClCompile>
-    <ClCompile Include="poj2057.cpp">
-      <Filter>Source Files\POJSet\Intermediate</Filter>
-    </ClCompile>
-    <ClCompile Include="poj2411.cpp">
-      <Filter>Source Files\POJSet\Intermediate</Filter>
-    </ClCompile>
-    <ClCompile Include="poj1947.cpp">
-      <Filter>Source Files\POJSet\Intermediate</Filter>
-    </ClCompile>
-    <ClCompile Include="喵哈哈村的括号序列.cpp">
-      <Filter>Source Files\DP</Filter>
-    </ClCompile>
-    <ClCompile Include="SG.cpp">
-      <Filter>Source Files\Nim</Filter>
-    </ClCompile>
-    <ClCompile Include="Prim.cpp">
-      <Filter>Source Files\Graph</Filter>
-    </ClCompile>
-    <ClCompile Include="喵哈哈村的本周会议（五）.cpp">
-      <Filter>Source Files\DP</Filter>
-    </ClCompile>
-    <ClCompile Include="uva11235.cpp">
-      <Filter>Source Files\DataStructure</Filter>
-    </ClCompile>
-    <ClCompile Include="la3938.cpp">
-      <Filter>Source Files\DataStructure</Filter>
-    </ClCompile>
-    <ClCompile Include="喵哈哈村的种树大赛.cpp">
-      <Filter>Source Files\DataStructure</Filter>
-    </ClCompile>
-    <ClCompile Include="喵哈哈村的种树大赛 自底向下线段树.cpp">
-      <Filter>Source Files\DataStructure</Filter>
-    </ClCompile>
-    <ClCompile Include="Tyvj1305 喵哈哈村的魔力源泉（4）单调dp.cpp">
-      <Filter>Source Files\DP</Filter>
-    </ClCompile>
-    <ClCompile Include="prime factor and Euler.cpp">
+    <ClCompile Include="source\Source Files\Math\prime factor and Euler.cpp">
       <Filter>Source Files\Math</Filter>
     </ClCompile>
-    <ClCompile Include="单调队列优化决策DP.cpp">
-      <Filter>Source Files\DP</Filter>
-    </ClCompile>
-    <ClCompile Include="hdu1693 插头dp.cpp">
-      <Filter>Source Files\DP</Filter>
-    </ClCompile>
-    <ClCompile Include="hdu5900.cpp">
-      <Filter>Source Files\DP</Filter>
-    </ClCompile>
-    <ClCompile Include="hdu3506 环形DP+四边形不等式优化.cpp">
-      <Filter>Source Files\DP</Filter>
-    </ClCompile>
-    <ClCompile Include="Codeforces Round 431 A Odds and Ends.cpp">
-      <Filter>Source Files\Exhaustive Search</Filter>
-    </ClCompile>
-    <ClCompile Include="Codeforces Round 431 Odds and Ends B.cpp">
+    <ClCompile Include="source\Source Files\Mimic\Codeforces Round 431 Odds and Ends B.cpp">
       <Filter>Source Files\Mimic</Filter>
     </ClCompile>
-    <ClCompile Include="D.cpp">
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #434\A.cpp">
       <Filter>Source Files\CF\Codeforces Round #434</Filter>
     </ClCompile>
-    <ClCompile Include="D2.cpp">
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #434\B.cpp">
       <Filter>Source Files\CF\Codeforces Round #434</Filter>
     </ClCompile>
-    <ClCompile Include="D3.cpp">
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #434\C.cpp">
       <Filter>Source Files\CF\Codeforces Round #434</Filter>
     </ClCompile>
-    <ClCompile Include="A.cpp">
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #434\D.cpp">
       <Filter>Source Files\CF\Codeforces Round #434</Filter>
     </ClCompile>
-    <ClCompile Include="B.cpp">
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #434\D2.cpp">
       <Filter>Source Files\CF\Codeforces Round #434</Filter>
     </ClCompile>
-    <ClCompile Include="C.cpp">
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #434\D3.cpp">
       <Filter>Source Files\CF\Codeforces Round #434</Filter>
     </ClCompile>
-    <ClCompile Include="A. Mahmoud and Ehab and the MEX.cpp">
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #435\A. Mahmoud and Ehab and the MEX.cpp">
       <Filter>Source Files\CF\Codeforces Round #435</Filter>
     </ClCompile>
-    <ClCompile Include="B. Mahmoud and Ehab and the bipartiteness.cpp">
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #435\B. Mahmoud and Ehab and the bipartiteness.cpp">
       <Filter>Source Files\CF\Codeforces Round #435</Filter>
     </ClCompile>
-    <ClCompile Include="C. Mahmoud and Ehab and the xor.cpp">
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #435\C. Mahmoud and Ehab and the xor.cpp">
       <Filter>Source Files\CF\Codeforces Round #435</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="resolve.txt">
+    <Text Include="source\Source Files\CF\Codeforces Round #434\resolve.txt">
       <Filter>Source Files\CF\Codeforces Round #434</Filter>
     </Text>
   </ItemGroup>
