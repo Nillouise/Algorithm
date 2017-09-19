@@ -64,6 +64,9 @@
     <Filter Include="Source Files\CF\Codeforces Round #434">
       <UniqueIdentifier>{47f71a7d-b5d0-435d-bbcc-7fd549d5a105}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\CF\Codeforces Round #435">
+      <UniqueIdentifier>{54816b9b-4ce0-4f27-9f9c-9d93815efbc7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -378,5 +381,19 @@
     <ClCompile Include="C.cpp">
       <Filter>Source Files\CF\Codeforces Round #434</Filter>
     </ClCompile>
+    <ClCompile Include="A. Mahmoud and Ehab and the MEX.cpp">
+      <Filter>Source Files\CF\Codeforces Round #435</Filter>
+    </ClCompile>
+    <ClCompile Include="B. Mahmoud and Ehab and the bipartiteness.cpp">
+      <Filter>Source Files\CF\Codeforces Round #435</Filter>
+    </ClCompile>
+    <ClCompile Include="C. Mahmoud and Ehab and the xor.cpp">
+      <Filter>Source Files\CF\Codeforces Round #435</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="resolve.txt">
+      <Filter>Source Files\CF\Codeforces Round #434</Filter>
+    </Text>
   </ItemGroup>
 </Project>

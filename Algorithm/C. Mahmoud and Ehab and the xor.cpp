@@ -34,10 +34,15 @@ int dfs(int b, int e, int curbit, vector<int> arr, int inverse)
 
 	for (size_t i = 0; i < arr.size(); i++)
 	{
-
+		if (inverse == 0)
+		{
 			arr1[i] = arr1[i] / 2;
 			arr2[i] = arr2[i] / 2 + arr[i] % 2;
-
+		}
+		else {
+			arr1[i] = arr1[i] / 2 + arr[i] % 2;
+			arr2[i] = arr2[i] / 2;
+		}
 
 		//arr2[i] /= 2 + arr[i] % 2;//ÕâÀï´íÁË
 	}

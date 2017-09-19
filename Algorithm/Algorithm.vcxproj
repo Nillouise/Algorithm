@@ -142,8 +142,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="A. Mahmoud and Ehab and the MEX.cpp" />
     <ClCompile Include="A.cpp" />
+    <ClCompile Include="B. Mahmoud and Ehab and the bipartiteness.cpp" />
     <ClCompile Include="B.cpp" />
+    <ClCompile Include="C. Mahmoud and Ehab and the xor.cpp" />
     <ClCompile Include="C.cpp" />
     <ClCompile Include="Codeforces Round 431 Odds and Ends B.cpp" />
     <ClCompile Include="Codeforces Round 431 A Odds and Ends.cpp" />
@@ -246,6 +249,9 @@
     <ClCompile Include="喵哈哈村的括号序列.cpp" />
     <ClCompile Include="喵哈哈村的本周会议（五）.cpp" />
     <ClCompile Include="喵哈哈村的种树大赛.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="resolve.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
