@@ -142,6 +142,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="D 错的.cpp" />
+    <ClCompile Include="LeetCode Weekly Contest 51 B.cpp" />
+    <ClCompile Include="LeetCode Weekly Contest 51 C.cpp" />
     <ClCompile Include="source\Source Files\CF\Codeforces Round #434\A.cpp" />
     <ClCompile Include="source\Source Files\CF\Codeforces Round #434\B.cpp" />
     <ClCompile Include="source\Source Files\CF\Codeforces Round #434\C.cpp" />

@@ -67,6 +67,9 @@
     <Filter Include="Source Files\CF\Codeforces Round #435">
       <UniqueIdentifier>{54816b9b-4ce0-4f27-9f9c-9d93815efbc7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\LeetCode">
+      <UniqueIdentifier>{b7c82500-7a45-42a6-9e90-0a28a273a57a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\Source Files\Source.cpp">
@@ -389,6 +392,15 @@
     </ClCompile>
     <ClCompile Include="source\Source Files\CF\Codeforces Round #435\C. Mahmoud and Ehab and the xor.cpp">
       <Filter>Source Files\CF\Codeforces Round #435</Filter>
+    </ClCompile>
+    <ClCompile Include="D 错的.cpp">
+      <Filter>Source Files\CF\Codeforces Round #435</Filter>
+    </ClCompile>
+    <ClCompile Include="LeetCode Weekly Contest 51 B.cpp">
+      <Filter>Source Files\LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="LeetCode Weekly Contest 51 C.cpp">
+      <Filter>Source Files\LeetCode</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -21,7 +21,7 @@ int main()
 	{
 		if (fa[i].size() > 1)twofa = i;
 	}
-	
+
 	if (twofa != -1)
 	{
 		vector<int> r;
@@ -43,7 +43,7 @@ int main()
 				return r;
 			}
 			else {
-				pre=fa[cur][0];
+				pre = fa[cur][0];
 			}
 		}
 	}
