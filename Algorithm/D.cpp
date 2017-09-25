@@ -14,7 +14,7 @@ int main()
 {
 	freopen("input.txt", "r", stdin);
 	ios::sync_with_stdio(false);
-	
+
 	int n;
 	cin >> n;
 	for (size_t i = 0; i < n; i++)
