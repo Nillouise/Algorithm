@@ -1,3 +1,4 @@
+// 这题可以不用保存中间结果，这样就不用判断系数是大于0还是小于0，还简洁
 #include <iostream>
 #include<string>
 #include<algorithm>
@@ -7,6 +8,8 @@
 using namespace std;
 typedef long long LL;
 LL a[100000 + 1000];
+//这里起名不好
+//起  int minleft[100005],minright[100005],maxleft[100005]；
 LL al[2][100000 + 1000];
 LL ar[2][100000 + 1000];
 

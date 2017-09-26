@@ -143,13 +143,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="A.cpp" />
+    <ClCompile Include="B 官方.cpp" />
+    <ClCompile Include="C 1.cpp" />
+    <ClCompile Include="C 2.cpp" />
     <ClCompile Include="C.cpp" />
     <ClCompile Include="D 错的.cpp" />
     <ClCompile Include="D.cpp" />
     <ClCompile Include="B.cpp" />
     <ClCompile Include="LeetCode Weekly Contest 51 B.cpp" />
     <ClCompile Include="LeetCode Weekly Contest 51 C.cpp" />
-    <ClCompile Include="Source.cpp" />
     <ClCompile Include="source\Source Files\CF\Codeforces Round #434\A.cpp" />
     <ClCompile Include="source\Source Files\CF\Codeforces Round #434\B.cpp" />
     <ClCompile Include="source\Source Files\CF\Codeforces Round #434\C.cpp" />
@@ -159,6 +161,7 @@
     <ClCompile Include="source\Source Files\CF\Codeforces Round #435\A. Mahmoud and Ehab and the MEX.cpp" />
     <ClCompile Include="source\Source Files\CF\Codeforces Round #435\B. Mahmoud and Ehab and the bipartiteness.cpp" />
     <ClCompile Include="source\Source Files\CF\Codeforces Round #435\C. Mahmoud and Ehab and the xor.cpp" />
+    <ClCompile Include="source\Source Files\CF\Manthan, Codefest 17\B.cpp" />
     <ClCompile Include="source\Source Files\DataStructure\LA 3942 Trie.cpp" />
     <ClCompile Include="source\Source Files\DataStructure\la3938.cpp" />
     <ClCompile Include="source\Source Files\DataStructure\RMQ Poj3264.cpp" />

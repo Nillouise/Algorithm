@@ -408,9 +408,6 @@
     <ClCompile Include="LeetCode Weekly Contest 51 C.cpp">
       <Filter>Source Files\LeetCode</Filter>
     </ClCompile>
-    <ClCompile Include="Source.cpp">
-      <Filter>Source Files\CF\Manthan, Codefest 17</Filter>
-    </ClCompile>
     <ClCompile Include="D.cpp">
       <Filter>Source Files\CF\Codeforces Round #436 %28Div.2%29</Filter>
     </ClCompile>
@@ -422,6 +419,18 @@
     </ClCompile>
     <ClCompile Include="C.cpp">
       <Filter>Source Files\CF\Codeforces Round #436 %28Div.2%29</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\CF\Manthan, Codefest 17\B.cpp">
+      <Filter>Source Files\CF\Manthan, Codefest 17</Filter>
+    </ClCompile>
+    <ClCompile Include="B 官方.cpp">
+      <Filter>Source Files\CF\Manthan, Codefest 17</Filter>
+    </ClCompile>
+    <ClCompile Include="C 1.cpp">
+      <Filter>Source Files\CF\Manthan, Codefest 17</Filter>
+    </ClCompile>
+    <ClCompile Include="C 2.cpp">
+      <Filter>Source Files\CF\Manthan, Codefest 17</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
