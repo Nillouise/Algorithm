@@ -142,9 +142,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="A.cpp" />
+    <ClCompile Include="C.cpp" />
     <ClCompile Include="D 错的.cpp" />
     <ClCompile Include="D.cpp" />
-    <ClCompile Include="div2 B.cpp" />
+    <ClCompile Include="B.cpp" />
     <ClCompile Include="LeetCode Weekly Contest 51 B.cpp" />
     <ClCompile Include="LeetCode Weekly Contest 51 C.cpp" />
     <ClCompile Include="Source.cpp" />

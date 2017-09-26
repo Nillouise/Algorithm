@@ -1,3 +1,4 @@
+//这题主要注意结尾要可能没有大写字母截断，要自己截断结尾
 #include <iostream>
 #include<string>
 #include<algorithm>

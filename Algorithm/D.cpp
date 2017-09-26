@@ -1,3 +1,13 @@
+ï»¿
+//è¿™é¢˜åšçš„æ—¶å€™å¤ªæ€¥äº†ï¼Œ æœ‰äº†ä¸€ç‚¹é”™è¯¯æ€è·¯ä¹Ÿå†™ä»£ç 
+
+
+//We will use an array cnt where we will store how many times the numbers from 1 to n met in the given array a.Put all numbers that never occur in the array a in a vector need â€” we must add this numbers in the array a to make a permutation.
+//
+//We will add numbers from need in ascending order because we want to get lexicographically minimal permutation.Let pos is a pointer on the current number needpos which we need to add on the current move.Initially, posâ€‰ = 0.
+//
+//We will iterate through the array a.Let the current number equals to ai.If cntaiâ€‰ = 1, we move to the next number in the array.If we added not all numbers from need, and aiâ€‰>â€‰needpos or there already was ai on the prefix of the array(to check it we can use, for example, boolean array), then we put needpos in the current position, decrease cntai on one, increase pos and answer on one.If we do not change anything on that step we mark that ai already was on the prefix of the array.After that we move to the next number in array a.
+
 #include <iostream>
 #include<string>
 #include<algorithm>
@@ -37,10 +47,10 @@ int main()
 	set<int> haspass;
 	for (size_t i = 0; i < n; i++)
 	{
-		//if (pos == seed.size())break;//ÕâÀïÊÇÒòÎª´íÎóµÄË¼Â·£¬²ÅĞèÒª¼ÓÕâÒ»¾äµÄ
+		//if (pos == seed.size())break;//è¿™é‡Œæ˜¯å› ä¸ºé”™è¯¯çš„æ€è·¯ï¼Œæ‰éœ€è¦åŠ è¿™ä¸€å¥çš„
 		if (m[arr[i]]>1)
 		{
-			//m[arr[i]]--;//ÕâÀï´íÁË£¬Ö»ÓĞ¸ÄÁËÎ»ÖÃ£¬²ÅĞèÒª--£»
+			//m[arr[i]]--;//è¿™é‡Œé”™äº†ï¼Œåªæœ‰æ”¹äº†ä½ç½®ï¼Œæ‰éœ€è¦--ï¼›
 			if (haspass.find(arr[i]) != haspass.end())
 			{
 				m[arr[i]]--;

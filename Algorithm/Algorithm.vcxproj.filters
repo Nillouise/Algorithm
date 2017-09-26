@@ -70,11 +70,11 @@
     <Filter Include="Source Files\LeetCode">
       <UniqueIdentifier>{b7c82500-7a45-42a6-9e90-0a28a273a57a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\CF\MD">
-      <UniqueIdentifier>{8dc8070e-1a02-4e01-9008-db6dc21d1288}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\CF\436">
+    <Filter Include="Source Files\CF\Codeforces Round #436 %28Div.2%29">
       <UniqueIdentifier>{d94a98ce-ff7f-4615-9e01-043e75fb3eb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CF\Manthan, Codefest 17">
+      <UniqueIdentifier>{8dc8070e-1a02-4e01-9008-db6dc21d1288}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -409,13 +409,19 @@
       <Filter>Source Files\LeetCode</Filter>
     </ClCompile>
     <ClCompile Include="Source.cpp">
-      <Filter>Source Files\CF\MD</Filter>
-    </ClCompile>
-    <ClCompile Include="div2 B.cpp">
-      <Filter>Source Files\CF\436</Filter>
+      <Filter>Source Files\CF\Manthan, Codefest 17</Filter>
     </ClCompile>
     <ClCompile Include="D.cpp">
-      <Filter>Source Files\CF\436</Filter>
+      <Filter>Source Files\CF\Codeforces Round #436 %28Div.2%29</Filter>
+    </ClCompile>
+    <ClCompile Include="A.cpp">
+      <Filter>Source Files\CF\Codeforces Round #436 %28Div.2%29</Filter>
+    </ClCompile>
+    <ClCompile Include="B.cpp">
+      <Filter>Source Files\CF\Codeforces Round #436 %28Div.2%29</Filter>
+    </ClCompile>
+    <ClCompile Include="C.cpp">
+      <Filter>Source Files\CF\Codeforces Round #436 %28Div.2%29</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
