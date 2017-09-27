@@ -147,6 +147,7 @@
     <ClCompile Include="C 1.cpp" />
     <ClCompile Include="C 2.cpp" />
     <ClCompile Include="C.cpp" />
+    <ClCompile Include="D binary.cpp" />
     <ClCompile Include="D 错的.cpp" />
     <ClCompile Include="D.cpp" />
     <ClCompile Include="B.cpp" />

@@ -12,7 +12,7 @@
 #include<set>
 using namespace std;
 typedef long long LL;
-const int MAXN = 1e5 + 5;//者甩出这里exponent的奇怪规范
+const int MAXN = 1e5 + 5;//注意这里exponent的奇怪规范
 const int MAXX = 10 + 5;
 const LL MOD = 1e9 + 7;
 vector<int> tree[MAXN];
@@ -39,6 +39,8 @@ int dfs(int c, int fa)
 			{
 				//if (nxt[j][s1] == 0)continue;//不能判断这个修改的背包
 				if (dp[c][j][s1] == 0)continue;//当父状态是0时，不可能更新后面的父状态
+				//这里可以看出，dp[c][0][0]，dp[c][1][1]，dp[c][0][2],只有这三个状态是有数的。
+
 				for (int k = 0; k <= x; k++)
 				{
 					if (k + j > x) break;//子节点的数量+父节点的数量不可能超过总数量

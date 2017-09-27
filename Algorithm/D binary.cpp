@@ -7,7 +7,7 @@
 using namespace std;
 int n;
 int s[1005];
-int send(int begin,int end,int zero)
+int send(int begin, int end, int zero)
 {
 	for (size_t i = 0; i < 1005; i++)
 	{
@@ -39,8 +39,8 @@ int main()
 	cin >> n;
 	int cnt0 = send(0, n, 0);
 	int cnt1 = n - cnt0;
-	int i1 = send(1, n, 0);
-	
+	int i1 = send(1, n, 0);//i1用pos1代替会比较好
+
 	if (i1 < cnt0)
 	{
 		i1 = 0;
@@ -53,12 +53,12 @@ int main()
 	}
 
 	int bg = 0, end = n;
-	while (bg<end-1)
+	while (bg<end - 1)//结尾是合法元素后一个位置的二分
 	{
 		int mid = bg + (end - bg) / 2;
 		int cur = send(bg, mid, !i1);
 		//cnt0-cur 代表前半段全是0
-		if (cnt0-cur  == mid-bg)
+		if (cnt0 - cur == mid - bg)
 		{
 			bg = mid;
 		}

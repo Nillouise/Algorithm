@@ -432,6 +432,9 @@
     <ClCompile Include="C 2.cpp">
       <Filter>Source Files\CF\Manthan, Codefest 17</Filter>
     </ClCompile>
+    <ClCompile Include="D binary.cpp">
+      <Filter>Source Files\CF\Codeforces Round #435</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="source\Source Files\CF\Codeforces Round #434\resolve.txt">
