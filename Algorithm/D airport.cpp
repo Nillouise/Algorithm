@@ -1,5 +1,3 @@
-//这题是cf的第4题，我在做完前三题后，花了1小时29分，这题我又花了一小时做出来，一次就1a了
-
 #include <iostream>
 #include<string>
 #include<cstring>
@@ -37,12 +35,11 @@ LL back[maxn];
 
 int main()
 {
-	freopen("input.txt", "r", stdin);
 
 	ios::sync_with_stdio(false);
 	cin >> n >> m >> k;
 
-	for (size_t i = 0; i < m; i++)
+	for (size_t i = 0; i < m; i++)//这里收取信息时，把去的飞机和回来的飞机分成两个数组会比较好。
 	{
 		F f;
 		cin >> f.d >> f.f >> f.t >> f.c;
@@ -50,19 +47,19 @@ int main()
 	}
 	sort(col, col + m);
 
-	map<int,int> s;
+	map<int, int> s;
 	LL total = 0;
 	for (size_t i = 0; i < m; i++)
 	{
 		if (col[i].t != 0)continue;
 
-		if (s[col[i].f]==0)
+		if (s[col[i].f] == 0)
 		{
 			s[col[i].f] = col[i].c;
 			total += col[i].c;
 		}
 		else {
-			if ( s[col[i].f] > col[i].c)
+			if (s[col[i].f] > col[i].c)
 			{
 				total -= s[col[i].f] - col[i].c;
 				s[col[i].f] = col[i].c;
@@ -80,7 +77,7 @@ int main()
 	}
 	s.clear();
 	total = 0;
-	for (int i = m-1; i >=0; i--)
+	for (int i = m - 1; i >= 0; i--)
 	{
 		if (col[i].f != 0)continue;
 		if (s[col[i].t] == 0)
@@ -110,24 +107,24 @@ int main()
 	//延展
 	for (int i = 1; i < maxn - k - 1; i++)
 	{
-		if(tom[i]==0)
+		if (tom[i] == 0)
 		{
 			tom[i] = tom[i - 1];
 		}
 	}
-	for (int i = maxn - k - 1-1; i >=0; i--)
+	for (int i = maxn - k - 1 - 1; i >= 0; i--)
 	{
 		if (back[i] == 0)
 		{
-			back[i] = back[i+1];
+			back[i] = back[i + 1];
 		}
 	}
 
 
 	LL MIN = 1e17;
-	for (int i = 1; i < maxn - k-1; i++)
+	for (int i = 1; i < maxn - k - 1; i++)
 	{
-		if (tom[i] > 0 && back[i + k+1])
+		if (tom[i] > 0 && back[i + k + 1])
 		{
 			if (MIN > tom[i] + back[i + k + 1])
 				MIN = tom[i] + back[i + k + 1];

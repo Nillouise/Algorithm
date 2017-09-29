@@ -142,12 +142,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="A Fraction.cpp" />
     <ClCompile Include="A.cpp" />
+    <ClCompile Include="B Apartment.cpp" />
     <ClCompile Include="B 官方.cpp" />
     <ClCompile Include="C 1.cpp" />
     <ClCompile Include="C 2.cpp" />
+    <ClCompile Include="C prioprity queue.cpp" />
+    <ClCompile Include="C 别人的.cpp" />
     <ClCompile Include="C.cpp" />
+    <ClCompile Include="D airport.cpp" />
     <ClCompile Include="D binary.cpp" />
+    <ClCompile Include="D 别人的.cpp" />
     <ClCompile Include="D 错的.cpp" />
     <ClCompile Include="D.cpp" />
     <ClCompile Include="B.cpp" />
