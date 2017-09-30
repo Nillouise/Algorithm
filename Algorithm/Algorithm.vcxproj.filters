@@ -456,6 +456,12 @@
     <ClCompile Include="D 别人的.cpp">
       <Filter>Source Files\CF\Codeforces Round #433 div2</Filter>
     </ClCompile>
+    <ClCompile Include="C divisor.cpp">
+      <Filter>Source Files\CF\Codeforces Round #432 div2</Filter>
+    </ClCompile>
+    <ClCompile Include="C 因数版.cpp">
+      <Filter>Source Files\CF\Codeforces Round #432 div2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="source\Source Files\CF\Codeforces Round #434\resolve.txt">
