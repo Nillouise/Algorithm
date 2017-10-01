@@ -143,21 +143,8 @@ int main()
 					else {
 						pos--;
 						gap -= cut;
-
-						//while (pos>0&& v[pos - 1].a >= v[pos - 1].b)
-						while (true)
+						while (v[pos - 1].a >= v[pos - 1].b)
 						{
-							if (pos <= 0)
-							{
-								break;
-							}
-
-							if (v[pos - 1].a <= v[pos - 1].b)
-							{
-								tmp += -1LL * preh[pos]; //注意这里
-								break;
-							}
-
 							if (gap > v[pos - 1].cnt)
 							{
 								gap -= v[pos - 1].cnt;
@@ -165,11 +152,12 @@ int main()
 							else {
 								LL require = v[pos - 1].cnt - gap;
 								tmp += -1LL * require*(v[pos - 1].a - v[pos - 1].b);
-								tmp += -1LL * preh[pos-1]; 
 								break;
 							}
 							pos--;
+							if (pos == -1)break;
 						}
+						tmp += -1LL * preh[pos - 1];//注意这里
 					}
 
 

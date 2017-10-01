@@ -165,7 +165,7 @@ int main()
 							else {
 								LL require = v[pos - 1].cnt - gap;
 								tmp += -1LL * require*(v[pos - 1].a - v[pos - 1].b);
-								tmp += -1LL * preh[pos-1]; 
+								tmp += -1LL * preh[pos - 1];
 								break;
 							}
 							pos--;
