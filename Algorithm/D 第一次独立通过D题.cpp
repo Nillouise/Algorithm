@@ -24,7 +24,7 @@ int dfs(int x, int fa)
 
 	for (int i = 0; i < G[x].size(); i++)
 	{
-		if (vistree[G[x][i]]==0)
+		if (vistree[G[x][i]] == 0)
 		{
 			dfs(G[x][i], x);
 		}
@@ -89,7 +89,7 @@ int main()
 	//if (n == 150000 && m == 300000) { cout << -1 << endl; return 0; }
 	if (s.size() == 0)
 	{
-		for (int i = 0; i < min(100,n-1); i++)
+		for (int i = 0; i < min(100, n - 1); i++)
 		{
 			dfs(i, 3 * 100000 + 2);
 			if (cntv[3 * 100000 + 2] != 0)
