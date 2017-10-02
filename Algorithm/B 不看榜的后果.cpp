@@ -1,3 +1,4 @@
+//一开始我还打算按人数一个一个塞到座位，而不是根据座位的多少安排人数，这种思路就是错的
 
 #include <iostream>
 #include<string>
@@ -59,7 +60,7 @@ int main()
 		}
 	}
 
-	LL MIN= min(seat4, m[3]);
+	LL MIN = min(seat4, m[3]);
 	m[3] -= MIN;
 	seat4 -= MIN;
 	if (m[3] > 0)
@@ -97,10 +98,10 @@ int main()
 		LL MAX = min(seat4, m[2]);
 		seat4 -= MAX;
 		seat1 += MAX;
-		m[1] += (m[2]-MAX)*2;//这里一开始又没想到
+		m[1] += (m[2] - MAX) * 2;//这里一开始又没想到
 	}
 
-	if (seat4 * 2 + seat2+ seat1 >= m[1])
+	if (seat4 * 2 + seat2 + seat1 >= m[1])
 	{
 		return cout << "YES" << endl, 0;
 	}
@@ -109,7 +110,7 @@ int main()
 	}
 
 
-	
+
 
 	//if (seat2>=m[1]+m[2])
 	//{

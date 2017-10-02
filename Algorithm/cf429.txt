@@ -1,0 +1,28 @@
+﻿Leha and function — Adiv1 
+(Author: Fedosik) 
+
+First of all, let's understand what is the value of F(N, K). 
+For any subset of size K, say, a1, a2...aK, we can represent it as a sequence of numbers d1, d2...dK + 1, so that d1 = a1, d1 + d2 = a2, ...,  . 
+We're interested in E[d1], expected value of d1. Knowing some basic facts about expected values, we can derive the following: 
+E[d1 + ... + dK + 1] = N + 1 
+E[d1] + ... + E[dK + 1] = (K + 1)·E[d1] 
+And we immediately get that . 
+We could also get the formula by using the Hockey Stick Identity, as Benq stated in his comment. 
+Now, according to rearrangement inequality,  is maximized when A is increasing and B is decreasing. 
+Complexity: O(NlogN) 
+
+Leha and another game about graph — Bdiv1 
+(Authors: progmatic, ZZzzZZzzzZzzzZZzz38) 
+
+Model solution uses the fact that the graph is connected. 
+We'll prove that "good" subset exists iff  - 1 values among di can be changed to 0 / 1 so that  is even. If the sum can only be odd, there is no solution obviously (every single valid graph has even sum of degrees). Now we'll show how to build the answer for any case with even sum. 
+First of all, change all  - 1 values so that the sum becomes even. 
+Then let's find any spanning tree and denote any vertex as the root. The problem is actually much easier now. 
+Let's process vertices one by one, by depth: from leaves to root. Let's denote current vertex as cur. 
+There are two cases: 
+1) dcur = 0 
+In this case we ignore the edge from cur to parentcur and forget about cur. Sum remains even. 
+2) dcur = 1 
+In this case we add the edge from cur to parentcur to the answer, change dparentcur to the opposite value and forget about cur. As you can see, sum changed its parity when we changed dparentcur, but then it changed back when we discarded cur. So, again, sum remains even. 
+Using this simple manipulations we come up with final answer. 
+Complexity: O(N + M) 

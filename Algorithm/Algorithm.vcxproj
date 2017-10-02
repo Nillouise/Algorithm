@@ -145,6 +145,8 @@
     <ClCompile Include="A Fraction.cpp" />
     <ClCompile Include="A.cpp" />
     <ClCompile Include="B Apartment.cpp" />
+    <ClCompile Include="B 不看榜的后果.cpp" />
+    <ClCompile Include="B 优雅的模拟.cpp" />
     <ClCompile Include="B 官方.cpp" />
     <ClCompile Include="C 1.cpp" />
     <ClCompile Include="C 2.cpp" />
@@ -155,6 +157,7 @@
     <ClCompile Include="c 别人的 分类做很好做.cpp" />
     <ClCompile Include="C 别人的.cpp" />
     <ClCompile Include="C 因数版.cpp" />
+    <ClCompile Include="c 我做的.cpp" />
     <ClCompile Include="c 第5版错的.cpp" />
     <ClCompile Include="c 第三版错的.cpp" />
     <ClCompile Include="c 第四版错的.cpp" />
@@ -278,6 +281,7 @@
     <ClCompile Include="source\Source Files\String\poj3080.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="cf429.txt" />
     <Text Include="source\Source Files\CF\Codeforces Round #434\resolve.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
