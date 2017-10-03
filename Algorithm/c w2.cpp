@@ -17,7 +17,6 @@ LL cntG[200][200];
 
 LL GG[11][105][105];
 
-vector<LL> initG2[105][105];
 LL solve2(int x1, int y1, int x2, int y2, LL t)
 {
 	t %= c + 1;
@@ -41,7 +40,6 @@ int main()
 		//initG[x + 1][y + 1] += init;
 		//icntG[x + 1][y + 1]++;
 		initG[x][y] += init;
-		initG2[x][y].push_back(init);
 		icntG[x][y]++;
 	}
 
@@ -69,13 +67,8 @@ int main()
 			{
 				if (icntG[i][j] != 0)
 				{
-					initG[i][j] = 0;
-					for (auto &a : initG2[i][j])
-					{
-						a++;
-						a %= c + 1;
-						initG[i][j] += a;
-					}
+					initG[i][j]++;
+					initG[i][j] %= c + 1;
 				}
 			}
 		}

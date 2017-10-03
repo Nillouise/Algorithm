@@ -88,6 +88,9 @@
     <Filter Include="Source Files\CF\Codeforces Round #428 div2">
       <UniqueIdentifier>{4a340849-866b-4e94-a6c8-90159e8bead8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\CF\Codeforces Round #427">
+      <UniqueIdentifier>{c92bcf6d-6d3e-4739-b691-5662c1408696}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\Source Files\Source.cpp">
@@ -500,6 +503,33 @@
     </ClCompile>
     <ClCompile Include="B 优雅的模拟.cpp">
       <Filter>Source Files\CF\Codeforces Round #428 div2</Filter>
+    </ClCompile>
+    <ClCompile Include="B 模仿别人的模拟还错那么多次.cpp">
+      <Filter>Source Files\CF\Codeforces Round #428 div2</Filter>
+    </ClCompile>
+    <ClCompile Include="B w1.cpp">
+      <Filter>Source Files\CF\Codeforces Round #427</Filter>
+    </ClCompile>
+    <ClCompile Include="B w2.cpp">
+      <Filter>Source Files\CF\Codeforces Round #427</Filter>
+    </ClCompile>
+    <ClCompile Include="B r3.cpp">
+      <Filter>Source Files\CF\Codeforces Round #427</Filter>
+    </ClCompile>
+    <ClCompile Include="c w1.cpp">
+      <Filter>Source Files\CF\Codeforces Round #427</Filter>
+    </ClCompile>
+    <ClCompile Include="c w2.cpp">
+      <Filter>Source Files\CF\Codeforces Round #427</Filter>
+    </ClCompile>
+    <ClCompile Include="c w3.cpp">
+      <Filter>Source Files\CF\Codeforces Round #427</Filter>
+    </ClCompile>
+    <ClCompile Include="c r4.cpp">
+      <Filter>Source Files\CF\Codeforces Round #427</Filter>
+    </ClCompile>
+    <ClCompile Include="c r 别人的.cpp">
+      <Filter>Source Files\CF\Codeforces Round #427</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
