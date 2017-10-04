@@ -73,7 +73,7 @@ int dfs(int x, int p, int dep)
 		}
 	}
 
-	//这样做，因为整个路径的所有因数数都要算一遍，太慢了
+	//这样做，因为整个路径的所有因数都要算一遍，太慢了
 	//for (auto i = cntdivisor.begin(); i !=cntdivisor.end();)
 	//{
 	//	if (i->second == dep)

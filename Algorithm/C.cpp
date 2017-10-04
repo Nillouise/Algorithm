@@ -27,7 +27,6 @@ int main()
 			cout << -1 << endl;
 			return 0;
 		}
-
 		//需要跑下一趟
 		if (i != k - 1)
 		{

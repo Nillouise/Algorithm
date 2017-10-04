@@ -4,7 +4,7 @@
 #include<vector>
 using namespace std;
 
-
+//复习一下怎么写字符树，当然这题并不用，因为一个电话号码最多只有50个组合，所以只要暴力就可以了
 class TreeNode
 {
 public:

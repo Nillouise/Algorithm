@@ -1,4 +1,4 @@
-By lovelynihilism, contest: Codeforces Round #427 (Div. 2), problem: (C)Star sky, Accepted, #
+
 #include <iostream>
 #include<string>
 #include<cstring>

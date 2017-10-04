@@ -447,9 +447,6 @@
     <ClCompile Include="C 2.cpp">
       <Filter>Source Files\CF\Manthan, Codefest 17</Filter>
     </ClCompile>
-    <ClCompile Include="D binary.cpp">
-      <Filter>Source Files\CF\Codeforces Round #435</Filter>
-    </ClCompile>
     <ClCompile Include="A Fraction.cpp">
       <Filter>Source Files\CF\Codeforces Round #433 div2</Filter>
     </ClCompile>
@@ -530,6 +527,9 @@
     </ClCompile>
     <ClCompile Include="c r 别人的.cpp">
       <Filter>Source Files\CF\Codeforces Round #427</Filter>
+    </ClCompile>
+    <ClCompile Include="D binary 范围二分搜索.cpp">
+      <Filter>Source Files\CF\Codeforces Round #435</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

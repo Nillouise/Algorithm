@@ -19,7 +19,8 @@ int cnt[P][C][C];
 
 int main() {
 	scanf("%d%d%d", &n, &q, &c);
-	for (int i = 0; i < n; i++) {
+	for (int i = 0; i < n; i++) 
+	{
 		int x, y, s;
 		scanf("%d%d%d", &x, &y, &s);
 		cnt[s][x][y]++;
