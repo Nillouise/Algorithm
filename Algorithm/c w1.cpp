@@ -1,3 +1,4 @@
+//这里用了一个每个数都暴力求因数的算法，导致超时，当然，本来思路就完全错了
 #include <iostream>
 #include<string>
 #include<cstring>
@@ -9,42 +10,20 @@
 #include<queue>
 using namespace std;
 typedef long long LL;
-LL n, q, c;
-struct star
-{
-	LL init;
-	int x, y;
 
-	bool operator <(star s2)const
-	{
-		return y < s2.y;
-	}
-};
-
-LL getbright(star s, LL t)
+map<LL, LL> prime(LL a)
 {
-	LL b = s.init + t;
-	b %= c + 1;//光的亮度是0到c，所以c+1才是范围
-	return b;
-}
-vector<star> v[200];
-LL solve(int x1, int y1, int x2, int y2, LL t)
-{
-	LL cnt = 0;
-	for (int i = x1; i <= x2; i++)
+	map<LL, LL> r;
+	for (int i = 2; a != 1; i++)
 	{
-		for (auto a : v[i])
+		while (a%i == 0)
 		{
-			if (a.y < y1)continue;
-			if (a.y > y2)break;
-
-			cnt += getbright(a, t);
+			r[i]++;
+			a /= i;
 		}
 	}
-	return cnt;
+	return r;
 }
-
-
 
 
 
@@ -52,29 +31,45 @@ int main()
 {
 	ios::sync_with_stdio(false);
 
-	cin >> n >> q >> c;
-
-	for (size_t i = 0; i < n; i++)
+	LL n, a, b;
+	cin >> n;
+	for (int i = 0; i<n; i++)
 	{
-		star s;
-		cin >> s.x >> s.y >> s.init;
-		v[s.x].push_back(s);
+		cin >> a >> b;
+
+		map<LL, LL> r1 = prime(a);
+		map<LL, LL>r2 = prime(b);
+
+		if (r1.size() != r2.size())
+		{
+			cout << "NO" << endl;
+			continue;
+		}
+
+		int flag = 1;
+		for (auto a = r1.begin(); a != r1.end(); a++)
+		{
+			LL cnta = a->second;
+			LL cntb = r2[a->first];
+
+			if (cnta>cntb * 2 || cntb>cnta * 2)
+			{
+				cout << "NO" << endl;
+				flag = 0;
+				break;
+			}
+			//if(2*cnta-cntb%3)
+			if ((2 * cnta - cntb) % 3)
+			{
+				cout << "NO" << endl;
+				flag = 0;
+				break;
+			}
+		}
+		if (flag)
+			cout << "YES" << endl;
+
 	}
-	for (int i = 0; i < 200; i++)
-	{
-		sort(v[i].begin(), v[i].end());
-	}
-
-	for (size_t i = 0; i < q; i++)
-	{
-		LL x1, y1, x2, y2, t;
-		cin >> t >> x1 >> y1 >> x2 >> y2;
-		cout << solve(x1, y1, x2, y2, t) << endl;
-	}
-
-
-
-
 
 	return 0;
 }

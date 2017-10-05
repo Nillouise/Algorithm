@@ -9,90 +9,114 @@
 #include<queue>
 using namespace std;
 typedef long long LL;
-LL n, q, c;
 
-LL initG[105][105];
-LL icntG[200][200];
-LL cntG[200][200];
-
-LL GG[11][105][105];
-
-vector<LL> initG2[105][105];
-LL solve2(int x1, int y1, int x2, int y2, LL t)
+int clw(int b, int m, int e)
 {
-	t %= c + 1;
-	LL init = GG[t][x2][y2] - GG[t][x1 - 1][y2] - GG[t][x2][y1 - 1] + GG[t][x1 - 1][y1 - 1];
-	LL num = cntG[x2][y2] - cntG[x1 - 1][y2] - cntG[x2][y1 - 1] + cntG[x1 - 1][y1 - 1];
-
-
-	return init;
+	//for(int i=b;i<=e;i++)
+	for (int i = b; i != e; i++)
+	{
+		if (i>12) i = (i % 12) + 1;
+		if (i == m)
+		{
+			return 0;
+		}
+	}
+	return 1;
 }
+
+
+int clw2(int b, int m, int e)
+{
+	//for (int i = b; i <= e; i++)
+	for (int i = b; i != e; i++)
+	{
+		i = (i % 60);
+		if (i == m)
+		{
+			return 0;
+		}
+	}
+	return 1;
+
+
+}
+int h, m, s, t1, t2;
+//int clw3()
+//{
+//	for (int i=s;;i++)
+//	{
+//		if (i == 60)i == 0, m++;
+//		if (m == 60)m == 0, h++;
+//		if()
+//	}
+//}
+
+
+
 
 int main()
 {
+	freopen("input.txt", "r", stdin);
+
 	ios::sync_with_stdio(false);
 
-	cin >> n >> q >> c;
-
-	for (size_t i = 0; i < n; i++)
+	int n, k;
+	cin >> n >> k;
+	set<int> s;
+	for (int i = 0; i<n; i++)
 	{
-		int x, y, init;
-		cin >> x >> y >> init;
-		//initG[x + 1][y + 1] += init;
-		//icntG[x + 1][y + 1]++;
-		initG[x][y] += init;
-		initG2[x][y].push_back(init);
-		icntG[x][y]++;
+		int c = 0;
+		for (int i = 0; i<k; i++)
+		{
+			int a;
+			cin >> a;
+			//c=(c << i) + a;
+			c = (a << i) + c;
+		}
+		s.insert(c);
 	}
 
-	//这里要加到102，因为原本是1开头
-	for (int i = 1; i < 100 + 1; i++)
+	vector<int> v;
+	for (auto i : s)
 	{
-		for (int j = 1; j < 100 + 1; j++)
-		{
-			cntG[i][j] = icntG[i][j] + cntG[i - 1][j] + cntG[i][j - 1] - cntG[i - 1][j - 1];
-		}
+		v.push_back(i);
 	}
 
-	for (int t = 0; t < 10 + 1; t++)
+	int flag;
+	for (int i = 0; i<v.size(); i++)
 	{
-		for (int i = 1; i < 100 + 1; i++)
+		if (v[i] == 0)return cout << "YES" << endl, 0;
+
+		for (int j = i + 1; j<v.size(); j++)
 		{
-			for (int j = 1; j < 100 + 1; j++)
+			flag = 1;
+			for (int o = 0; o<k; o++)
 			{
-				GG[t][i][j] = initG[i][j] + GG[t][i - 1][j] + GG[t][i][j - 1] - GG[t][i - 1][j - 1];
-			}
-		}
-		for (int i = 1; i < 100 + 1; i++)
-		{
-			for (int j = 1; j < 100 + 1; j++)
-			{
-				if (icntG[i][j] != 0)
+				//if ((v[i] & (1 << o)>0) && (v[j] & (1 << o)>0)) //这里运算符号优先序不对
+				if (((v[i] & (1 << o))>0) && ((v[j] & (1 << o))>0))
 				{
-					initG[i][j] = 0;
-					for (auto &a : initG2[i][j])
-					{
-						a++;
-						a %= c + 1;
-						initG[i][j] += a;
-					}
+					flag = 0;
+					break;
 				}
 			}
+			//i&&j&&(!(v[i]&v[j])) //这么判断最好
+
+			if (flag == 1)
+			{
+				if (n == 10000)
+				{
+					for (auto a : v)
+					{
+						cout << a << " ";
+					}
+				}
+
+				cout << "YES" << endl;
+				return 0;
+			}
 		}
 	}
-
-
-	for (size_t i = 0; i < q; i++)
-	{
-		LL x1, y1, x2, y2, t;
-		cin >> t >> x1 >> y1 >> x2 >> y2;
-		cout << solve2(x1, y1, x2, y2, t) << endl;
-	}
-
-
-
-
-
+	cout << "NO" << endl;
 
 	return 0;
 }

@@ -9,81 +9,116 @@
 #include<queue>
 using namespace std;
 typedef long long LL;
-LL n, q, c;
 
-LL initG[105][105];
-LL icntG[200][200];
-LL cntG[200][200];
-
-LL GG[11][105][105];
-
-LL solve2(int x1, int y1, int x2, int y2, LL t)
+//const LL MAXN = 1e9+1;
+const LL MAXN = 1e5 + 100;
+vector<LL> pv;
+vector<char> G(MAXN, 0);
+int prime2()
 {
-	t %= c + 1;
-	LL init = GG[t][x2][y2] - GG[t][x1 - 1][y2] - GG[t][x2][y1 - 1] + GG[t][x1 - 1][y1 - 1];
-	LL num = cntG[x2][y2] - cntG[x1 - 1][y2] - cntG[x2][y1 - 1] + cntG[x1 - 1][y1 - 1];
+	for (LL i = 2; i<MAXN; i++)
+	{
+		if (G[i] == 0)
+		{
+			for (LL j = i * 2; j<MAXN; j += i)
+			{
+				G[i] = 1;
+			}
+		}
+	}
 
-
-	return init;
+	for (LL i = 2; i<MAXN; i++)
+	{
+		if (G[i])pv.push_back(i);
+	}
+	return 0;
 }
+
+
+map<LL, LL> prime(LL a)
+{
+	map<LL, LL> r;
+	for (auto i : pv)
+	{
+		if (a == 1)break;
+		while (a%i == 0)
+		{
+			r[i]++;
+			a /= i;
+		}
+	}
+	return r;
+}
+
+
 
 int main()
 {
 	ios::sync_with_stdio(false);
 
-	cin >> n >> q >> c;
+	prime2();
 
-	for (size_t i = 0; i < n; i++)
-	{
-		int x, y, init;
-		cin >> x >> y >> init;
-		//initG[x + 1][y + 1] += init;
-		//icntG[x + 1][y + 1]++;
-		initG[x][y] += init;
-		icntG[x][y]++;
-	}
 
-	//这里要加到102，因为原本是1开头
-	for (int i = 1; i < 100 + 1; i++)
+	LL n, a, b;
+	cin >> n;
+	for (int i = 0; i<n; i++)
 	{
-		for (int j = 1; j < 100 + 1; j++)
+		cin >> a >> b;
+
+		map<LL, LL> r1 = prime(a);
+		map<LL, LL>r2 = prime(b);
+
+		if (r1.size() != r2.size())
 		{
-			cntG[i][j] = icntG[i][j] + cntG[i - 1][j] + cntG[i][j - 1] - cntG[i - 1][j - 1];
+			cout << "NO" << endl;
+			continue;
 		}
-	}
 
-	for (int t = 0; t < 10 + 1; t++)
-	{
-		for (int i = 1; i < 100 + 1; i++)
+		int flag = 1;
+		int flag2 = 1;
+		for (auto a = r1.begin(); a != r1.end(); a++)
 		{
-			for (int j = 1; j < 100 + 1; j++)
+
+			LL cnta = a->second;
+			LL cntb = r2[a->first];
+			flag = 1;
+			if (cnta>cntb * 2 || cntb>cnta * 2)
 			{
-				GG[t][i][j] = initG[i][j] + GG[t][i - 1][j] + GG[t][i][j - 1] - GG[t][i - 1][j - 1];
+				flag = 0;
 			}
-		}
-		for (int i = 1; i < 100 + 1; i++)
-		{
-			for (int j = 1; j < 100 + 1; j++)
+			//if(2*cnta-cntb%3)
+			if ((2 * cnta - cntb) % 3 || (2 * cntb - cnta) % 3)
 			{
-				if (icntG[i][j] != 0)
+				flag = 0;
+			}
+
+
+			//这里意识到我的算法有问题，于是打了这个补丁，但这个补丁想得深一点就会知道，补丁也是错的。
+			//因为他不能解决复杂的因数之间的关系（也就是一个因数有两种方法被消去，一个是消除这个因数，
+			if (flag == 0)
+			{
+				cnta = a->first;
+				cntb = r2[a->second];
+
+				if (cnta>cntb * 2 || cntb>cnta * 2)
 				{
-					initG[i][j]++;
-					initG[i][j] %= c + 1;
+					flag2 = 0;
+				}
+				//if(2*cnta-cntb%3)
+				if ((2 * cnta - cntb) % 3 || (2 * cntb - cnta) % 3)
+				{
+					flag2 = 0;
 				}
 			}
+			if (flag2 == 0)break;
+		}
+		if (flag2)
+			cout << "YES" << endl;
+		else
+		{
+			cout << "NO" << endl;
 		}
 	}
-
-
-	for (size_t i = 0; i < q; i++)
-	{
-		LL x1, y1, x2, y2, t;
-		cin >> t >> x1 >> y1 >> x2 >> y2;
-		cout << solve2(x1, y1, x2, y2, t) << endl;
-	}
-
-
-
 
 
 

@@ -91,6 +91,12 @@
     <Filter Include="Source Files\CF\Codeforces Round #427">
       <UniqueIdentifier>{c92bcf6d-6d3e-4739-b691-5662c1408696}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\CF\Codeforces Round #426">
+      <UniqueIdentifier>{bd14a0ea-c3bd-4a3e-a3b8-0591ac5f6f80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CF\Codeforces Round #438">
+      <UniqueIdentifier>{3340c3f6-9b4f-4961-93e5-7874a9a20be5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\Source Files\Source.cpp">
@@ -414,129 +420,141 @@
     <ClCompile Include="source\Source Files\CF\Codeforces Round #435\C. Mahmoud and Ehab and the xor.cpp">
       <Filter>Source Files\CF\Codeforces Round #435</Filter>
     </ClCompile>
-    <ClCompile Include="D 错的.cpp">
-      <Filter>Source Files\CF\Codeforces Round #435</Filter>
-    </ClCompile>
-    <ClCompile Include="LeetCode Weekly Contest 51 B.cpp">
-      <Filter>Source Files\LeetCode</Filter>
-    </ClCompile>
-    <ClCompile Include="LeetCode Weekly Contest 51 C.cpp">
-      <Filter>Source Files\LeetCode</Filter>
-    </ClCompile>
-    <ClCompile Include="D.cpp">
-      <Filter>Source Files\CF\Codeforces Round #436 %28Div.2%29</Filter>
-    </ClCompile>
-    <ClCompile Include="A.cpp">
-      <Filter>Source Files\CF\Codeforces Round #436 %28Div.2%29</Filter>
-    </ClCompile>
-    <ClCompile Include="B.cpp">
-      <Filter>Source Files\CF\Codeforces Round #436 %28Div.2%29</Filter>
-    </ClCompile>
-    <ClCompile Include="C.cpp">
-      <Filter>Source Files\CF\Codeforces Round #436 %28Div.2%29</Filter>
-    </ClCompile>
     <ClCompile Include="source\Source Files\CF\Manthan, Codefest 17\B.cpp">
       <Filter>Source Files\CF\Manthan, Codefest 17</Filter>
     </ClCompile>
-    <ClCompile Include="B 官方.cpp">
-      <Filter>Source Files\CF\Manthan, Codefest 17</Filter>
-    </ClCompile>
-    <ClCompile Include="C 1.cpp">
-      <Filter>Source Files\CF\Manthan, Codefest 17</Filter>
-    </ClCompile>
-    <ClCompile Include="C 2.cpp">
-      <Filter>Source Files\CF\Manthan, Codefest 17</Filter>
-    </ClCompile>
-    <ClCompile Include="A Fraction.cpp">
-      <Filter>Source Files\CF\Codeforces Round #433 div2</Filter>
-    </ClCompile>
-    <ClCompile Include="B Apartment.cpp">
-      <Filter>Source Files\CF\Codeforces Round #433 div2</Filter>
-    </ClCompile>
-    <ClCompile Include="C prioprity queue.cpp">
-      <Filter>Source Files\CF\Codeforces Round #433 div2</Filter>
-    </ClCompile>
-    <ClCompile Include="D airport.cpp">
-      <Filter>Source Files\CF\Codeforces Round #433 div2</Filter>
-    </ClCompile>
-    <ClCompile Include="C 别人的.cpp">
-      <Filter>Source Files\CF\Codeforces Round #433 div2</Filter>
-    </ClCompile>
-    <ClCompile Include="D 别人的.cpp">
-      <Filter>Source Files\CF\Codeforces Round #433 div2</Filter>
-    </ClCompile>
-    <ClCompile Include="C divisor.cpp">
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #432 div2\C divisor.cpp">
       <Filter>Source Files\CF\Codeforces Round #432 div2</Filter>
     </ClCompile>
-    <ClCompile Include="C 因数版.cpp">
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #432 div2\C 因数版.cpp">
       <Filter>Source Files\CF\Codeforces Round #432 div2</Filter>
     </ClCompile>
-    <ClCompile Include="c dividend.cpp">
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #435\D binary 范围二分搜索.cpp">
+      <Filter>Source Files\CF\Codeforces Round #435</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #435\D 错的.cpp">
+      <Filter>Source Files\CF\Codeforces Round #435</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #436 (Div.2)\A.cpp">
+      <Filter>Source Files\CF\Codeforces Round #436 %28Div.2%29</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #436 (Div.2)\C.cpp">
+      <Filter>Source Files\CF\Codeforces Round #436 %28Div.2%29</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #436 (Div.2)\D.cpp">
+      <Filter>Source Files\CF\Codeforces Round #436 %28Div.2%29</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #436 (Div.2)\B.cpp">
+      <Filter>Source Files\CF\Codeforces Round #436 %28Div.2%29</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\CF\Manthan, Codefest 17\B 官方.cpp">
+      <Filter>Source Files\CF\Manthan, Codefest 17</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\CF\Manthan, Codefest 17\C 1.cpp">
+      <Filter>Source Files\CF\Manthan, Codefest 17</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\CF\Manthan, Codefest 17\C 2.cpp">
+      <Filter>Source Files\CF\Manthan, Codefest 17</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #433 div2\A Fraction.cpp">
+      <Filter>Source Files\CF\Codeforces Round #433 div2</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #433 div2\B Apartment.cpp">
+      <Filter>Source Files\CF\Codeforces Round #433 div2</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #433 div2\C prioprity queue.cpp">
+      <Filter>Source Files\CF\Codeforces Round #433 div2</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #433 div2\C 别人的.cpp">
+      <Filter>Source Files\CF\Codeforces Round #433 div2</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #433 div2\D airport.cpp">
+      <Filter>Source Files\CF\Codeforces Round #433 div2</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #433 div2\D 别人的.cpp">
+      <Filter>Source Files\CF\Codeforces Round #433 div2</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #434 div2\c dividend.cpp">
       <Filter>Source Files\CF\Codeforces Round #434 div2</Filter>
     </ClCompile>
-    <ClCompile Include="c duvudend 第二版错的.cpp">
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #434 div2\c duvudend 第二版错的.cpp">
       <Filter>Source Files\CF\Codeforces Round #434 div2</Filter>
     </ClCompile>
-    <ClCompile Include="c 第三版错的.cpp">
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #434 div2\c 别人的 分类做很好做.cpp">
       <Filter>Source Files\CF\Codeforces Round #434 div2</Filter>
     </ClCompile>
-    <ClCompile Include="c 第四版错的.cpp">
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #434 div2\c 我做的.cpp">
       <Filter>Source Files\CF\Codeforces Round #434 div2</Filter>
     </ClCompile>
-    <ClCompile Include="c 别人的 分类做很好做.cpp">
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #434 div2\c 第5版错的.cpp">
       <Filter>Source Files\CF\Codeforces Round #434 div2</Filter>
     </ClCompile>
-    <ClCompile Include="c 第5版错的.cpp">
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #434 div2\c 第三版错的.cpp">
       <Filter>Source Files\CF\Codeforces Round #434 div2</Filter>
     </ClCompile>
-    <ClCompile Include="D 第一次独立通过D题.cpp">
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #434 div2\c 第四版错的.cpp">
+      <Filter>Source Files\CF\Codeforces Round #434 div2</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #429 div2\D 第一次独立通过D题.cpp">
       <Filter>Source Files\CF\Codeforces Round #429 div2</Filter>
     </ClCompile>
-    <ClCompile Include="c 我做的.cpp">
-      <Filter>Source Files\CF\Codeforces Round #434 div2</Filter>
-    </ClCompile>
-    <ClCompile Include="B 不看榜的后果.cpp">
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #428 div2\B 不看榜的后果.cpp">
       <Filter>Source Files\CF\Codeforces Round #428 div2</Filter>
     </ClCompile>
-    <ClCompile Include="B 优雅的模拟.cpp">
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #428 div2\B 优雅的模拟.cpp">
       <Filter>Source Files\CF\Codeforces Round #428 div2</Filter>
     </ClCompile>
-    <ClCompile Include="B 模仿别人的模拟还错那么多次.cpp">
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #428 div2\B 模仿别人的模拟还错那么多次.cpp">
       <Filter>Source Files\CF\Codeforces Round #428 div2</Filter>
     </ClCompile>
-    <ClCompile Include="B w1.cpp">
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #427\B r3.cpp">
       <Filter>Source Files\CF\Codeforces Round #427</Filter>
     </ClCompile>
-    <ClCompile Include="B w2.cpp">
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #427\B w1.cpp">
       <Filter>Source Files\CF\Codeforces Round #427</Filter>
     </ClCompile>
-    <ClCompile Include="B r3.cpp">
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #427\B w2.cpp">
       <Filter>Source Files\CF\Codeforces Round #427</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #427\c r 别人的.cpp">
+      <Filter>Source Files\CF\Codeforces Round #427</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #427\c r4.cpp">
+      <Filter>Source Files\CF\Codeforces Round #427</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #427\c w1.cpp">
+      <Filter>Source Files\CF\Codeforces Round #427</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #427\c w2.cpp">
+      <Filter>Source Files\CF\Codeforces Round #427</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #427\c w3.cpp">
+      <Filter>Source Files\CF\Codeforces Round #427</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\LeetCode\LeetCode Weekly Contest 51 B.cpp">
+      <Filter>Source Files\LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\LeetCode\LeetCode Weekly Contest 51 C.cpp">
+      <Filter>Source Files\LeetCode</Filter>
     </ClCompile>
     <ClCompile Include="c w1.cpp">
-      <Filter>Source Files\CF\Codeforces Round #427</Filter>
+      <Filter>Source Files\CF\Codeforces Round #426</Filter>
     </ClCompile>
     <ClCompile Include="c w2.cpp">
-      <Filter>Source Files\CF\Codeforces Round #427</Filter>
+      <Filter>Source Files\CF\Codeforces Round #426</Filter>
     </ClCompile>
-    <ClCompile Include="c w3.cpp">
-      <Filter>Source Files\CF\Codeforces Round #427</Filter>
+    <ClCompile Include="B.cpp">
+      <Filter>Source Files\CF\Codeforces Round #438</Filter>
     </ClCompile>
-    <ClCompile Include="c r4.cpp">
-      <Filter>Source Files\CF\Codeforces Round #427</Filter>
-    </ClCompile>
-    <ClCompile Include="c r 别人的.cpp">
-      <Filter>Source Files\CF\Codeforces Round #427</Filter>
-    </ClCompile>
-    <ClCompile Include="D binary 范围二分搜索.cpp">
-      <Filter>Source Files\CF\Codeforces Round #435</Filter>
+    <ClCompile Include="C.cpp">
+      <Filter>Source Files\CF\Codeforces Round #438</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="source\Source Files\CF\Codeforces Round #434\resolve.txt">
       <Filter>Source Files\CF\Codeforces Round #434</Filter>
     </Text>
-    <Text Include="cf429.txt">
+    <Text Include="source\Source Files\CF\Codeforces Round #429 div2\cf429.txt">
       <Filter>Source Files\CF\Codeforces Round #429 div2</Filter>
     </Text>
   </ItemGroup>
