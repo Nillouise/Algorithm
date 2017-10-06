@@ -97,6 +97,9 @@
     <Filter Include="Source Files\CF\Codeforces Round #438">
       <UniqueIdentifier>{3340c3f6-9b4f-4961-93e5-7874a9a20be5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\CF\Codeforces Round #439">
+      <UniqueIdentifier>{c07c23be-38a5-4b00-bc8e-3d95f0b40215}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\Source Files\Source.cpp">
@@ -548,6 +551,12 @@
     </ClCompile>
     <ClCompile Include="C.cpp">
       <Filter>Source Files\CF\Codeforces Round #438</Filter>
+    </ClCompile>
+    <ClCompile Include="C 乘数溢出.cpp">
+      <Filter>Source Files\CF\Codeforces Round #439</Filter>
+    </ClCompile>
+    <ClCompile Include="A 自反性.cpp">
+      <Filter>Source Files\CF\Codeforces Round #439</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
