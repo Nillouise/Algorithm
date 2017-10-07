@@ -100,6 +100,12 @@
     <Filter Include="Source Files\CF\Codeforces Round #439">
       <UniqueIdentifier>{c07c23be-38a5-4b00-bc8e-3d95f0b40215}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Uva">
+      <UniqueIdentifier>{42a7dda3-d2ba-4deb-b531-e79a4da0edde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Uva\basic">
+      <UniqueIdentifier>{23663a61-fb47-47ee-917d-bfdd577ec36e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\Source Files\Source.cpp">
@@ -557,6 +563,9 @@
     </ClCompile>
     <ClCompile Include="A 自反性.cpp">
       <Filter>Source Files\CF\Codeforces Round #439</Filter>
+    </ClCompile>
+    <ClCompile Include="uva210.cpp">
+      <Filter>Source Files\Uva\basic</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
