@@ -1,5 +1,3 @@
-//一开始我还理解错了数据（把一个变量当成另一个变量的意思），导致连样例都看不懂，还怀疑样例
-//以后看错样例要注意这一点
 #include <iostream>
 #include<string>
 #include<cstring>

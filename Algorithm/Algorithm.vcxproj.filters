@@ -567,6 +567,12 @@
     <ClCompile Include="uva210.cpp">
       <Filter>Source Files\Uva\basic</Filter>
     </ClCompile>
+    <ClCompile Include="uva 442 w 栈的顺序有严重问题.cpp">
+      <Filter>Source Files\Uva\basic</Filter>
+    </ClCompile>
+    <ClCompile Include="uva 514.cpp">
+      <Filter>Source Files\Uva\basic</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="source\Source Files\CF\Codeforces Round #434\resolve.txt">

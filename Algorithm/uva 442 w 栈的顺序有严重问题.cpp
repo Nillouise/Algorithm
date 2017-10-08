@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include<string>
 #include<cstring>
@@ -17,7 +16,7 @@ typedef pair<int, int> pii;
 int main()
 {
 	freopen("input.txt", "r", stdin);
-//	freopen("output.txt", "w", stdout);
+	//	freopen("output.txt", "w", stdout);
 	ios::sync_with_stdio(false);
 
 	int N;
@@ -35,21 +34,22 @@ int main()
 	string s;
 	getline(cin, s);
 
-	newone:
-	while(getline(cin,s))
+newone:
+	while (getline(cin, s))
 	{
 		stack<pair<pii, LL> >stk;
-		for(int i=0;i<s.size();i++)
+		for (int i = 0; i<s.size(); i++)
 		{
-			if(s[i]=='(')
+			if (s[i] == '(')
 			{
 				continue;
-			}else if(s[i] ==')')
+			}
+			else if (s[i] == ')')
 			{
-//				pair<pii, LL> pp1 = stk.top(); stk.pop();
+				//				pair<pii, LL> pp1 = stk.top(); stk.pop();
 				pair<pii, LL> pp2 = stk.top(); stk.pop();//这里把栈的顺序和读入的顺序搞错了
 				pair<pii, LL> pp1 = stk.top(); stk.pop();
-				if(pp1.first.second!=pp2.first.first)
+				if (pp1.first.second != pp2.first.first)
 				{
 					cout << "error" << endl;
 					goto newone;
@@ -62,9 +62,10 @@ int main()
 
 				stk.push(pair<pii, LL>(pp, cnt));
 
-			}else
+			}
+			else
 			{
-				stk.push(pair<pii,LL>( m[s[i]],0));
+				stk.push(pair<pii, LL>(m[s[i]], 0));
 			}
 		}
 		//下面是不必要的，因为输入保证两个矩阵之间都有一对括号括着
@@ -72,7 +73,7 @@ int main()
 		while (!stk.empty())
 		{
 			pair<pii, LL> p2 = stk.top(); stk.pop();
-			if(p.first.second!=p2.first.first)
+			if (p.first.second != p2.first.first)
 			{
 				cout << "error" << endl;
 				goto newone;

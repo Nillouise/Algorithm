@@ -1,28 +1,21 @@
-1
-3 1 1 1 1 1 1
-a = 4
-print a
-lock
-b = 9
-print b
-unlock
-print b
-end
-a = 3
-print a
-lock
-b = 8
-print b
-unlock
-print b
-end
-b = 5
-a = 17
-print a
-print b
-lock
-b = 21
-print b
-unlock
-print b
-end
+9
+A 50 10
+B 10 20
+C 20 5
+D 30 35
+E 35 15
+F 15 5
+G 5 10
+H 10 20
+I 20 25
+A
+B
+C
+(AA)
+(AB)
+(AC)
+(A(BC))
+((AB)C)
+(((((DE)F)G)H)I)
+(D(E(F(G(HI)))))
+((D(EF))((GH)I))
