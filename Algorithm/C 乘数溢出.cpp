@@ -1,3 +1,7 @@
+//The bridges between red and blue islands have no effection with those between red and purple ones.Therefore, we can make the graph into 3 parts: one between red and blue, one between blue and purple, and the last one between red and purple.
+
+
+
 #include <iostream>
 #include<string>
 #include<cstring>
@@ -77,6 +81,8 @@ int main()
 	//	}
 
 	LL cnt = 0;
+
+	//下面这三个循环可以抽出来做成一个函数
 	for (int i = 0; i <= min(a, b); i++)
 	{
 		cnt += ((C[a][i] * A[i]) % MOD) * C[b][i] % MOD;//这里会溢出

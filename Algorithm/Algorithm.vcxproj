@@ -148,6 +148,8 @@
     <ClCompile Include="c w2.cpp" />
     <ClCompile Include="C 乘数溢出.cpp" />
     <ClCompile Include="C.cpp" />
+    <ClCompile Include="D.cpp" />
+    <ClCompile Include="E.cpp" />
     <ClCompile Include="source\Source Files\CF\Codeforces Round #427\B r3.cpp" />
     <ClCompile Include="source\Source Files\CF\Codeforces Round #427\B w1.cpp" />
     <ClCompile Include="source\Source Files\CF\Codeforces Round #427\B w2.cpp" />

@@ -1,3 +1,13 @@
+﻿//Let us show that if a solution exists, then there is always a solution that uses at most two problems.First, if there is a problem not known to any of the teams, that we can just take this only problem in the set.Next, suppose that there is a problem known only to one of the teams.If there is a problem this team doesn't know, then these two problems make a good set. Otherwise, the team knows all the problems, hence we cannot find a good set.
+//
+//In the rest case, each problem is known to at least two of the teams.Now, if there is a good set of problems, then each of the problems in the set must be known to exactly two of the teams.Indeed, let pi be the number of teams that knows the problem.If a good set contains k problems, then we must have, since otherwise we would have a team that knows more than half of the problems by pigeonhole principle.We also have pi ≥ 2, hence, and only the case pi  = 2 is possible.
+//
+//At this point, if we can find a pair of problems with pi  = 2 and non - intersecting set of teams, then we are done.Otherwise, we can show that a good set does not exist by case analysis.
+//
+//To avoid O(n2) solution, we can leave at most 24 problems with unique types(sets of teams) and do pairwise checking on them.This solution has O(n) complexity.
+//上面这个分析的前提是，只有4个队伍，所以只需要最多两题，论证中的那个2的意思是，最多有4个队，4个对乘以题目数K 再乘以一半，就是2K
+
+
 #include <iostream>
 #include<string>
 #include<cstring>
@@ -5,7 +15,7 @@
 #include<vector>
 #include<map>
 #include<set>
-#include<cmath>//���sqrtҪ��
+#include<cmath>//这个sqrt要用
 #include<queue>
 using namespace std;
 typedef long long LL;
@@ -92,14 +102,14 @@ int main()
 			flag = 1;
 			for (int o = 0; o<k; o++)
 			{
-				//if ((v[i] & (1 << o)>0) && (v[j] & (1 << o)>0)) //����������������򲻶�
+				//if ((v[i] & (1 << o)>0) && (v[j] & (1 << o)>0)) //这里运算符号优先序不对
 				if (((v[i] & (1 << o))>0) && ((v[j] & (1 << o))>0))
 				{
 					flag = 0;
 					break;
 				}
 			}
-			//i&&j&&(!(v[i]&v[j])) //��ô�ж����
+			//i&&j&&(!(v[i]&v[j])) //这么判断最好
 
 			if (flag == 1)
 			{
