@@ -103,7 +103,7 @@
     <Filter Include="Source Files\Uva">
       <UniqueIdentifier>{42a7dda3-d2ba-4deb-b531-e79a4da0edde}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Uva\basic">
+    <Filter Include="Source Files\Uva\basic struct">
       <UniqueIdentifier>{23663a61-fb47-47ee-917d-bfdd577ec36e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -565,10 +565,10 @@
       <Filter>Source Files\CF\Codeforces Round #439</Filter>
     </ClCompile>
     <ClCompile Include="uva 442 w 栈的顺序有严重问题.cpp">
-      <Filter>Source Files\Uva\basic</Filter>
+      <Filter>Source Files\Uva\basic struct</Filter>
     </ClCompile>
     <ClCompile Include="uva 514.cpp">
-      <Filter>Source Files\Uva\basic</Filter>
+      <Filter>Source Files\Uva\basic struct</Filter>
     </ClCompile>
     <ClCompile Include="E.cpp">
       <Filter>Source Files\CF\Codeforces Round #439</Filter>
@@ -577,13 +577,16 @@
       <Filter>Source Files\CF\Codeforces Round #438</Filter>
     </ClCompile>
     <ClCompile Include="uva 11988.cpp">
-      <Filter>Source Files\Uva\basic</Filter>
+      <Filter>Source Files\Uva\basic struct</Filter>
     </ClCompile>
     <ClCompile Include="uva 210.cpp">
-      <Filter>Source Files\Uva\basic</Filter>
+      <Filter>Source Files\Uva\basic struct</Filter>
     </ClCompile>
     <ClCompile Include="uva 12657 特别难.cpp">
-      <Filter>Source Files\Uva\basic</Filter>
+      <Filter>Source Files\Uva\basic struct</Filter>
+    </ClCompile>
+    <ClCompile Include="uva 679.cpp">
+      <Filter>Source Files\Uva\basic struct</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

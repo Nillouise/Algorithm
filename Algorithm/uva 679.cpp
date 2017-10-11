@@ -24,19 +24,19 @@ int main()
 	cin >> T;
 
 
-	while(T--)
+	while (T--)
 	{
 		int D, I;
 		cin >> D >> I;
-		int cnt = I-1;
+		int cnt = I - 1;
 		int ind = 1;
 		//最后叶子节点没得选择，只会选择D-1次的
-		for(int d=0;d<D-1;d++)
+		for (int d = 0; d<D - 1; d++)
 		{
 			if (cnt % 2 == 0)
 			{
 				ind *= 2;
-				cnt = cnt/2;
+				cnt = cnt / 2;
 			}
 			else
 			{
@@ -44,7 +44,7 @@ int main()
 				cnt = cnt / 2;
 			}
 		}
-		cout << ind<<endl;
+		cout << ind << endl;
 	}
 	return 0;
 }

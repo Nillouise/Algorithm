@@ -301,6 +301,7 @@
     <ClCompile Include="uva 442 w 栈的顺序有严重问题.cpp" />
     <ClCompile Include="uva 514.cpp" />
     <ClCompile Include="uva 210.cpp" />
+    <ClCompile Include="uva 679.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="source\Source Files\CF\Codeforces Round #429 div2\cf429.txt" />
