@@ -582,6 +582,9 @@
     <ClCompile Include="uva 210.cpp">
       <Filter>Source Files\Uva\basic</Filter>
     </ClCompile>
+    <ClCompile Include="uva 12657 特别难.cpp">
+      <Filter>Source Files\Uva\basic</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="source\Source Files\CF\Codeforces Round #434\resolve.txt">

@@ -297,6 +297,7 @@
     <ClCompile Include="source\Source Files\String\Erase and Add.cpp" />
     <ClCompile Include="source\Source Files\String\poj3080.cpp" />
     <ClCompile Include="uva 11988.cpp" />
+    <ClCompile Include="uva 12657 特别难.cpp" />
     <ClCompile Include="uva 442 w 栈的顺序有严重问题.cpp" />
     <ClCompile Include="uva 514.cpp" />
     <ClCompile Include="uva 210.cpp" />
