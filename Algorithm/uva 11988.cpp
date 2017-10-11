@@ -19,7 +19,7 @@ int main()
 	freopen("input.txt", "r", stdin);
 
 	string s;
-	while(cin>>s)
+	while (cin >> s)
 	{
 		s = ' ' + s;
 		vector<int> next(s.size(), -1);
@@ -27,18 +27,20 @@ int main()
 		int head = 0;
 		int last = 0;
 		int pre = 0;
-		for(int i=1;i<s.size();i++)
+		for (int i = 1; i<s.size(); i++)
 		{
-			if(s[i]=='[')
+			if (s[i] == '[')
 			{
 				cur = 0;
-			}else if(s[i]==']')
+			}
+			else if (s[i] == ']')
 			{
 				cur = last;
-			}else
+			}
+			else
 			{
 				//这里要想好
-				if(cur == last)
+				if (cur == last)
 				{
 					last = i;
 				}
@@ -51,8 +53,8 @@ int main()
 		}
 		int i = next[0];
 		//这里会少打印出最后一个字符
-//		while(next[i]!=-1)
-		while(i!=-1)
+		//		while(next[i]!=-1)
+		while (i != -1)
 		{
 			cout << s[i];
 			i = next[i];
