@@ -588,6 +588,9 @@
     <ClCompile Include="uva 679.cpp">
       <Filter>Source Files\Uva\basic struct</Filter>
     </ClCompile>
+    <ClCompile Include="uva 122.cpp">
+      <Filter>Source Files\Uva\basic struct</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="source\Source Files\CF\Codeforces Round #434\resolve.txt">

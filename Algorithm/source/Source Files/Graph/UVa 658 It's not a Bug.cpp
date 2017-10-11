@@ -11,10 +11,10 @@ int m;
 char before[maxm][maxstate + 5], after[maxm][maxstate + 5];
 int t[maxm];
 const int INF = 1000000000;
-struct Node
+struct Token
 {
 	int dist, state;
-	bool operator <(const Node t)const {
+	bool operator <(const Token t)const {
 		return dist > t.dist;
 	}
 };
@@ -26,17 +26,17 @@ int solve()
 		dist[i] = INF;
 		mark[i] = 0;
 	}
-	priority_queue<Node> pq;
-	Node start;
+	priority_queue<Token> pq;
+	Token start;
 
 	start.dist = 0;
 	start.state = (1 << n) - 1;
-	pq.push(Node{ 0,(1 << n) - 1 });
+	pq.push(Token{ 0,(1 << n) - 1 });
 	dist[start.state] = 0;
 
 	while (!pq.empty())
 	{
-		Node current = pq.top(); pq.pop();
+		Token current = pq.top(); pq.pop();
 		if (current.state == 0)return current.dist;
 		if (mark[current.state] == 1)continue;
 		mark[current.state] = 1;
@@ -57,7 +57,7 @@ int solve()
 			}
 			if (!patch)continue;
 
-			Node nextnode;
+			Token nextnode;
 			nextnode.dist = current.dist; nextnode.state = current.state;
 
 			nextnode.dist += t[p];

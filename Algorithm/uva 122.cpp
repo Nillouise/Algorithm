@@ -22,34 +22,37 @@ struct Token
 
 struct Node
 {
-	Node* let=NULL;
-	Node* rit=NULL;
+	Node* let = NULL;
+	Node* rit = NULL;
 	int val = -1;
 
-	int extent(vector<char> v,int start,int nval)
+	int extent(vector<char> v, int start, int nval)
 	{
-		if(start==v.size())
+		if (start == v.size())
 		{
-			if(val==-1)
+			if (val == -1)
 			{
 				val = nval;
 				return 1;
-			}else
+			}
+			else
 			{
 				return 0;
 			}
-		}else
+		}
+		else
 		{
-			if(v[start]=='L')
+			if (v[start] == 'L')
 			{
-				if(let==NULL)
+				if (let == NULL)
 				{
 					let = new Node();
 				}
 				return let->extent(v, start + 1, nval);
-			}else
+			}
+			else
 			{
-				if(rit==NULL)
+				if (rit == NULL)
 				{
 					rit = new Node();
 				}
@@ -66,14 +69,14 @@ int main()
 
 	ios::sync_with_stdio(false);
 
-	for(;;)
+	for (;;)
 	{
 
 		vector<Token> vn;
 		for (;;)
 		{
 			string s;
-			if(!(cin >> s))
+			if (!(cin >> s))
 				exit(0);
 			//这里不及时跳出，下面的代码会出错
 			if (s == "()")break;
@@ -117,9 +120,9 @@ int main()
 
 		if (flag)
 		{
-			for(int i=0;i<vp.size();i++)
+			for (int i = 0; i<vp.size(); i++)
 			{
-				cout << vp[i] ;
+				cout << vp[i];
 				//这里居然不能打印最后一个空格。好蠢
 				if (i != vp.size() - 1)cout << " ";
 			}

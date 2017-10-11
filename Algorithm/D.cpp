@@ -14,7 +14,7 @@
 using namespace std;
 typedef long long LL;
 const int MAXK = 13;
-struct Node
+struct Token
 {
 	int len;
 	string pre;
@@ -37,12 +37,12 @@ int main()
 
 	int n;
 	cin >> n;
-	vector<Node> v;
+	vector<Token> v;
 	for (int t = 0; t<n; t++)
 	{
 		string str;
 		cin >> str;
-		Node node;
+		Token node;
 		for (int i = 0; i<str.size(); i++)
 		{
 			int mask = 0;
@@ -74,7 +74,7 @@ int main()
 		a--, b--;
 		string str = v[a].suf + v[b].pre;
 
-		Node node;
+		Token node;
 		//一开始居然还完成写这句，这是要获取这两条字句内部字段的组合，单单头尾结合的内部字符串并不能获得这些内部组合
 		node.vis = v[a].vis | v[b].vis;
 		for (int i = 0; i<str.size(); i++)
