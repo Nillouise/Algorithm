@@ -546,52 +546,52 @@
     <ClCompile Include="source\Source Files\LeetCode\LeetCode Weekly Contest 51 C.cpp">
       <Filter>Source Files\LeetCode</Filter>
     </ClCompile>
-    <ClCompile Include="c w1.cpp">
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #426\c w1.cpp">
       <Filter>Source Files\CF\Codeforces Round #426</Filter>
     </ClCompile>
-    <ClCompile Include="c w2.cpp">
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #426\c w2.cpp">
       <Filter>Source Files\CF\Codeforces Round #426</Filter>
     </ClCompile>
-    <ClCompile Include="B.cpp">
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #438\B.cpp">
       <Filter>Source Files\CF\Codeforces Round #438</Filter>
     </ClCompile>
-    <ClCompile Include="C.cpp">
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #438\C.cpp">
       <Filter>Source Files\CF\Codeforces Round #438</Filter>
     </ClCompile>
-    <ClCompile Include="C 乘数溢出.cpp">
-      <Filter>Source Files\CF\Codeforces Round #439</Filter>
-    </ClCompile>
-    <ClCompile Include="A 自反性.cpp">
-      <Filter>Source Files\CF\Codeforces Round #439</Filter>
-    </ClCompile>
-    <ClCompile Include="uva 442 w 栈的顺序有严重问题.cpp">
-      <Filter>Source Files\Uva\basic struct</Filter>
-    </ClCompile>
-    <ClCompile Include="uva 514.cpp">
-      <Filter>Source Files\Uva\basic struct</Filter>
-    </ClCompile>
-    <ClCompile Include="E.cpp">
-      <Filter>Source Files\CF\Codeforces Round #439</Filter>
-    </ClCompile>
-    <ClCompile Include="D.cpp">
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #438\D.cpp">
       <Filter>Source Files\CF\Codeforces Round #438</Filter>
     </ClCompile>
-    <ClCompile Include="uva 11988.cpp">
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #439\A 自反性.cpp">
+      <Filter>Source Files\CF\Codeforces Round #439</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #439\C 乘数溢出.cpp">
+      <Filter>Source Files\CF\Codeforces Round #439</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #439\E.cpp">
+      <Filter>Source Files\CF\Codeforces Round #439</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\Uva\basic struct\uva 210.cpp">
       <Filter>Source Files\Uva\basic struct</Filter>
     </ClCompile>
-    <ClCompile Include="uva 210.cpp">
+    <ClCompile Include="source\Source Files\Uva\basic struct\uva 442 w 栈的顺序有严重问题.cpp">
       <Filter>Source Files\Uva\basic struct</Filter>
     </ClCompile>
-    <ClCompile Include="uva 12657 特别难.cpp">
+    <ClCompile Include="source\Source Files\Uva\basic struct\uva 514.cpp">
       <Filter>Source Files\Uva\basic struct</Filter>
     </ClCompile>
-    <ClCompile Include="uva 679.cpp">
+    <ClCompile Include="source\Source Files\Uva\basic struct\uva 11988.cpp">
       <Filter>Source Files\Uva\basic struct</Filter>
     </ClCompile>
-    <ClCompile Include="uva 122.cpp">
+    <ClCompile Include="source\Source Files\Uva\basic struct\uva 12657 特别难.cpp">
       <Filter>Source Files\Uva\basic struct</Filter>
     </ClCompile>
-    <ClCompile Include="548 注意stringstream.cpp">
+    <ClCompile Include="source\Source Files\Uva\basic struct\uva 679.cpp">
+      <Filter>Source Files\Uva\basic struct</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\Uva\basic struct\uva 122.cpp">
+      <Filter>Source Files\Uva\basic struct</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Source Files\Uva\basic struct\uva 548 注意stringstream.cpp">
       <Filter>Source Files\Uva\basic struct</Filter>
     </ClCompile>
   </ItemGroup>

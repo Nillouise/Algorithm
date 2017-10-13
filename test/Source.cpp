@@ -18,47 +18,49 @@ typedef long long LL;
 vector<int> post;//后序遍历
 vector<int> mids;//中序遍历
 
-int let[10000+5];
-int rit[10000+5];
+int let[10000 + 5];
+int rit[10000 + 5];
 
 //这里用L1,R1,L2,R2做标记应该比较合适
-int build (int bp,int ep,int bm,int em)
+//这里的书上 ，不是用最后一位后一位的下标做结尾，而是用结尾哪一位的下标，感觉比我这样做好
+int build(int bp, int ep, int bm, int em)
 {
 	//这里的入口检查又错了
-//	int root =  post[ep - 1];
-//	if (ep-bp == 1)return root;
-//	if (ep - bp == 0) return -1;
+	//	int root =  post[ep - 1];
+	//	if (ep-bp == 1)return root;
+	//	if (ep - bp == 0) return -1;
 	if (ep - bp == 0)return -1;
 	int root = post[ep - 1];
-	if (ep - bp == 1)return root;//这里是必要的，因为这已经代表空了
+	//if (ep - bp == 1)return root;//这里是必要的，因为这已经代表空了
 
-//	int pos = lower_bound(&mids[bm], &mids[em], root) - &mids[bm];//这里好蠢，em因为是标记最后的元素的后一位，会导致outofbound的
-//	int pos = lower_bound(&mids + bm, &mids+em, root) - &mids - bm;//在vector的中半段找数还是不怎么合适用lower_bound
+								 //	int pos = lower_bound(&mids[bm], &mids[em], root) - &mids[bm];//这里好蠢，em因为是标记最后的元素的后一位，会导致outofbound的
+								 //	int pos = lower_bound(&mids + bm, &mids+em, root) - &mids - bm;//在vector的中半段找数还是不怎么合适用lower_bound
 	int pos = bm;
 	while (mids[pos] != root)pos++;
 	pos = pos - bm;
 
 	//这里的pos 由一开始的表示个数，变成真正的位置
 	let[root] = build(bp, bp + pos, bm, bm + pos);
-	rit[root] = build(bp + pos, ep-1, bm + pos+1, em);//-1，+1跳过树根
+	rit[root] = build(bp + pos, ep - 1, bm + pos + 1, em);//-1，+1跳过树根
 
-//	let[root] = build(bp, pos, bm, bm + pos - bp);
-//	rit[root] = build(pos, ep - 1, bm + pos - bp+1, em);
+														  //	let[root] = build(bp, pos, bm, bm + pos - bp);
+														  //	rit[root] = build(pos, ep - 1, bm + pos - bp+1, em);
 	return root;
 }
 LL MIN = 1e20;
 LL MINX = 1e20;
 
-int dfs(int x,LL total)
+int dfs(int x, LL total)
 {
 	total += x;
-	if(let[x]==-1 && rit[x]==-1)
+	if (let[x] == -1 && rit[x] == -1)
 	{
-		if(MIN>total)
+		if (MIN>total)
 		{
 			MIN = total;
 			MINX = x;
-		}else if (MIN == total&&MINX > x)
+		}
+		else if (MIN == total&&MINX > x)
 			MINX = x;
 		return 0;
 	}

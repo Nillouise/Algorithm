@@ -142,15 +142,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="548 注意stringstream.cpp" />
-    <ClCompile Include="A 自反性.cpp" />
-    <ClCompile Include="B.cpp" />
-    <ClCompile Include="c w1.cpp" />
-    <ClCompile Include="c w2.cpp" />
-    <ClCompile Include="C 乘数溢出.cpp" />
-    <ClCompile Include="C.cpp" />
-    <ClCompile Include="D.cpp" />
-    <ClCompile Include="E.cpp" />
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #426\c w1.cpp" />
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #426\c w2.cpp" />
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #438\B.cpp" />
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #438\C.cpp" />
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #438\D.cpp" />
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #439\A 自反性.cpp" />
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #439\C 乘数溢出.cpp" />
+    <ClCompile Include="source\Source Files\CF\Codeforces Round #439\E.cpp" />
+    <ClCompile Include="source\Source Files\Uva\basic struct\uva 11988.cpp" />
+    <ClCompile Include="source\Source Files\Uva\basic struct\uva 122.cpp" />
+    <ClCompile Include="source\Source Files\Uva\basic struct\uva 12657 特别难.cpp" />
+    <ClCompile Include="source\Source Files\Uva\basic struct\uva 210.cpp" />
+    <ClCompile Include="source\Source Files\Uva\basic struct\uva 442 w 栈的顺序有严重问题.cpp" />
+    <ClCompile Include="source\Source Files\Uva\basic struct\uva 514.cpp" />
+    <ClCompile Include="source\Source Files\Uva\basic struct\uva 548 注意stringstream.cpp" />
+    <ClCompile Include="source\Source Files\Uva\basic struct\uva 679.cpp" />
     <ClCompile Include="source\Source Files\CF\Codeforces Round #427\B r3.cpp" />
     <ClCompile Include="source\Source Files\CF\Codeforces Round #427\B w1.cpp" />
     <ClCompile Include="source\Source Files\CF\Codeforces Round #427\B w2.cpp" />
@@ -297,13 +304,6 @@
     <ClCompile Include="source\Source Files\String\BitToString.cpp" />
     <ClCompile Include="source\Source Files\String\Erase and Add.cpp" />
     <ClCompile Include="source\Source Files\String\poj3080.cpp" />
-    <ClCompile Include="uva 11988.cpp" />
-    <ClCompile Include="uva 122.cpp" />
-    <ClCompile Include="uva 12657 特别难.cpp" />
-    <ClCompile Include="uva 442 w 栈的顺序有严重问题.cpp" />
-    <ClCompile Include="uva 514.cpp" />
-    <ClCompile Include="uva 210.cpp" />
-    <ClCompile Include="uva 679.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="source\Source Files\CF\Codeforces Round #429 div2\cf429.txt" />
