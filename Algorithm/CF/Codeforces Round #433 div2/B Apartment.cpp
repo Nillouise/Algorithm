@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include<string>
 #include<cstring>
 #include<algorithm>
@@ -18,7 +18,7 @@ int main()
 	//freopen("stdin.txt", "r", stdin);
 	LL n, k;
 	cin >> n >> k;
-	//ËùÓĞÈË¶¼Ã»·¿×¡µÄÇé¿öÃ»¿¼ÂÇ
+	//æ‰€æœ‰äººéƒ½æ²¡æˆ¿ä½çš„æƒ…å†µæ²¡è€ƒè™‘
 	cout << ((n - k > 0 && k != 0) ? 1 : 0) << " ";
 	if (n > 3 * k)
 	{

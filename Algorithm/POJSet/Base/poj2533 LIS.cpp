@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <cstdio>
 #include <cstring>
 #include <algorithm>
@@ -14,7 +14,7 @@ int LIS()
 	int dp[maxn];
 	fill(dp, dp + maxn, INF);
 
-	//	dp[0] = 0;//ò�Ʋ�����Ҫ��ʼ�����Ϊ0����Ϊ�������Զ����ڴ��ڵ��ڵĵط�
+	//	dp[0] = 0;//貌似并不需要初始化这个为0，因为插数会自动插在大于等于的地方
 
 	for (size_t i = 0; i < n; i++)
 	{

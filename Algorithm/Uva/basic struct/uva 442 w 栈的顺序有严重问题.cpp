@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include<string>
 #include<cstring>
 #include<algorithm>
@@ -47,7 +47,7 @@ newone:
 			else if (s[i] == ')')
 			{
 				//				pair<pii, LL> pp1 = stk.top(); stk.pop();
-				pair<pii, LL> pp2 = stk.top(); stk.pop();//ÕâÀï°ÑÕ»µÄË³ĞòºÍ¶ÁÈëµÄË³Ğò¸ã´íÁË
+				pair<pii, LL> pp2 = stk.top(); stk.pop();//è¿™é‡ŒæŠŠæ ˆçš„é¡ºåºå’Œè¯»å…¥çš„é¡ºåºæé”™äº†
 				pair<pii, LL> pp1 = stk.top(); stk.pop();
 				if (pp1.first.second != pp2.first.first)
 				{
@@ -68,7 +68,7 @@ newone:
 				stk.push(pair<pii, LL>(m[s[i]], 0));
 			}
 		}
-		//ÏÂÃæÊÇ²»±ØÒªµÄ£¬ÒòÎªÊäÈë±£Ö¤Á½¸ö¾ØÕóÖ®¼ä¶¼ÓĞÒ»¶ÔÀ¨ºÅÀ¨×Å
+		//ä¸‹é¢æ˜¯ä¸å¿…è¦çš„ï¼Œå› ä¸ºè¾“å…¥ä¿è¯ä¸¤ä¸ªçŸ©é˜µä¹‹é—´éƒ½æœ‰ä¸€å¯¹æ‹¬å·æ‹¬ç€
 		pair<pii, LL> p = stk.top(); stk.pop();
 		while (!stk.empty())
 		{

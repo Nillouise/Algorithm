@@ -1,11 +1,11 @@
-#include<cmath>
+ï»¿#include<cmath>
 #include <string>
 #include <algorithm>
 #include<iostream>
 #include<vector>
 using namespace std;
 
-//ÕâÌâÎÒÊýÁ¿ÉÏ·¸ÁË´íÎó£¬¶ÔÓÚÒ»¸öÁ¬ÐøµÄÒ»¶Î¶«Î÷µÄÅÐ¶Ï£¬ÎÒ°ÑËûµ±³Éµ¥¸ö¶«Î÷ÅÐ¶ÏÁË
+//è¿™é¢˜æˆ‘æ•°é‡ä¸ŠçŠ¯äº†é”™è¯¯ï¼Œå¯¹äºŽä¸€ä¸ªè¿žç»­çš„ä¸€æ®µä¸œè¥¿çš„åˆ¤æ–­ï¼Œæˆ‘æŠŠä»–å½“æˆå•ä¸ªä¸œè¥¿åˆ¤æ–­äº†
 bool iscon(char a)
 {
 	string s = "bcdfghjklmnpqrstvwxyz";
@@ -13,13 +13,13 @@ bool iscon(char a)
 }
 
 
-//±ðÈËµÄ½â·¨
+//åˆ«äººçš„è§£æ³•
 void solve()
 {
 	ios::sync_with_stdio(0);
 	string s;
 	cin >> s;
-	//±ê¼ÇÒ»¶ÎÊý×ÖµÄ¿ªÊ¼
+	//æ ‡è®°ä¸€æ®µæ•°å­—çš„å¼€å§‹
 	int last = -1;
 	int is = 0;
 	for (int i = 0; i < s.length(); i++) {
@@ -49,7 +49,7 @@ int main()
 
 	int success = 0;
 	char pre = 'a';
-	char pre2 = 'e';//Ò»¿ªÊ¼Íü¼Ç¿¼ÂÇÕâµã
+	char pre2 = 'e';//ä¸€å¼€å§‹å¿˜è®°è€ƒè™‘è¿™ç‚¹
 	for (int i = 0; i < s.length(); i++)
 	{
 		if (iscon(s[i]))
@@ -65,10 +65,10 @@ int main()
 			success = 0;
 		}
 		cout << s[i];
-		pre2 = pre;//Ò»¿ªÊ¼Ë³ÐòÃ»¸ãºÃ
+		pre2 = pre;//ä¸€å¼€å§‹é¡ºåºæ²¡æžå¥½
 		pre = s[i];
 		//pre = s[i];
-		//pre2 = pre;//Ò»¿ªÊ¼Ë³ÐòÃ»¸ãºÃ
+		//pre2 = pre;//ä¸€å¼€å§‹é¡ºåºæ²¡æžå¥½
 	}
 	cout << endl;
 	return 0;

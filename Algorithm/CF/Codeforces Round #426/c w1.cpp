@@ -1,4 +1,4 @@
-//ÕâÀïÓÃÁËÒ»¸öÃ¿¸öÊı¶¼±©Á¦ÇóÒòÊıµÄËã·¨£¬µ¼ÖÂ³¬Ê±£¬µ±È»£¬±¾À´Ë¼Â·¾ÍÍêÈ«´íÁË
+ï»¿//è¿™é‡Œç”¨äº†ä¸€ä¸ªæ¯ä¸ªæ•°éƒ½æš´åŠ›æ±‚å› æ•°çš„ç®—æ³•ï¼Œå¯¼è‡´è¶…æ—¶ï¼Œå½“ç„¶ï¼Œæœ¬æ¥æ€è·¯å°±å®Œå…¨é”™äº†
 #include <iostream>
 #include<string>
 #include<cstring>
@@ -6,7 +6,7 @@
 #include<vector>
 #include<map>
 #include<set>
-#include<cmath>//Õâ¸ösqrtÒªÓÃ
+#include<cmath>//è¿™ä¸ªsqrtè¦ç”¨
 #include<queue>
 using namespace std;
 typedef long long LL;

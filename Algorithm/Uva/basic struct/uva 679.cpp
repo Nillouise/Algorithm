@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include<string>
 #include<cstring>
 #include<algorithm>
@@ -30,7 +30,7 @@ int main()
 		cin >> D >> I;
 		int cnt = I - 1;
 		int ind = 1;
-		//×îºóÒ¶×Ó½ÚµãÃ»µÃÑ¡Ôñ£¬Ö»»áÑ¡ÔñD-1´ÎµÄ
+		//æœ€åå¶å­èŠ‚ç‚¹æ²¡å¾—é€‰æ‹©ï¼Œåªä¼šé€‰æ‹©D-1æ¬¡çš„
 		for (int d = 0; d<D - 1; d++)
 		{
 			if (cnt % 2 == 0)

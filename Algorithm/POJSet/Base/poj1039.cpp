@@ -1,10 +1,10 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <cstdio>
 #include <cstring>
 #include<string>
 #include <algorithm>
 #include<sstream>
-#include<cmath>//ÕâÀïÓÐlog º¯Êý
+#include<cmath>//è¿™é‡Œæœ‰log å‡½æ•°
 using namespace std;
 const int maxn = 200;
 const double INF = 1000000.0;
@@ -38,7 +38,7 @@ int check(Point A, Point B, Point C, Point D)
 	double area1 = cross(B - A, C - A);
 	double area2 = cross(B - A, D - A);
 
-	return dcmp(area1)*dcmp(area2) <= 0;//=0¾Í´ú±í²»¹æ·¶Ïà½»
+	return dcmp(area1)*dcmp(area2) <= 0;//=0å°±ä»£è¡¨ä¸è§„èŒƒç›¸äº¤
 }
 
 double segcross(Point A, Point B, Point C, Point D)
@@ -48,13 +48,13 @@ double segcross(Point A, Point B, Point C, Point D)
 
 	if (dcmp(area1)*dcmp(area2) < 0)
 	{
-		//ÎÒÓÖÐ´´í±äÁ¿
+		//æˆ‘åˆå†™é”™å˜é‡
 		//	double px = (C.x*area1 - D.x*area2) / (area1 - area2);
 		double px = (C.x*area2 - D.x*area1) / (area2 - area1);
 		return px;
 	}
 
-	//Õâ¸öifÊÇ´¦Àí²»¹æ·¶Ïà½»µÄÇé¿ö,Ò»¶¨ÒªÓÃdcmp ÅÐ¶ÏÊÇ·ñÃæ»ýÎª0
+	//è¿™ä¸ªifæ˜¯å¤„ç†ä¸è§„èŒƒç›¸äº¤çš„æƒ…å†µ,ä¸€å®šè¦ç”¨dcmp åˆ¤æ–­æ˜¯å¦é¢ç§¯ä¸º0
 	if (dcmp(area1) == 0)
 	{
 		return C.x;
@@ -90,16 +90,16 @@ int main() {
 		{
 			for (size_t j = 0; j < n; j++)
 			{
-				if (i == j)continue;//i==jÊ±£¬ÊÇ´¹Ö±Ïß£¬²»ÄÜ´ÓÈë¿Ú½øÈë
+				if (i == j)continue;//i==jæ—¶ï¼Œæ˜¯åž‚ç›´çº¿ï¼Œä¸èƒ½ä»Žå…¥å£è¿›å…¥
 				int collide = 0;
 				size_t k;
 				for (k = 0; k < n; k++)
 				{
-					//					if (check(pUp[i], pDown[j], pUp[k], pUp[k - 1]) ==1)//ÕâÊÇ´íµÄ£¬ÎÒ±È½ÏµÄÊÇÓÐÃ»ÓÐ´©¹ýÇ½±Ú£¬µ«ÕâºÜÈÝÒ×¾Í»áÔì³ÉÆ½ÐÐÏß£¬£¨¾ÍÊÇ¹âÏßÊÇÓÉÇ½±ÚÉú³ÉµÄ£©
-					if (!check(pUp[i], pDown[j], pUp[k], pDown[k]))//ÕâÖ»ÊÇÃ»´©¹ý Ç½±Ú¿ÚµÄ´¹Ö±Ïß¶øÒÑ£¬²¢²»ÖªµÀÊÇ×²ÉÏÉÏÇ½±Ú»¹ÊÇÏÂÇ½±Ú¡£
+					//					if (check(pUp[i], pDown[j], pUp[k], pUp[k - 1]) ==1)//è¿™æ˜¯é”™çš„ï¼Œæˆ‘æ¯”è¾ƒçš„æ˜¯æœ‰æ²¡æœ‰ç©¿è¿‡å¢™å£ï¼Œä½†è¿™å¾ˆå®¹æ˜“å°±ä¼šé€ æˆå¹³è¡Œçº¿ï¼Œï¼ˆå°±æ˜¯å…‰çº¿æ˜¯ç”±å¢™å£ç”Ÿæˆçš„ï¼‰
+					if (!check(pUp[i], pDown[j], pUp[k], pDown[k]))//è¿™åªæ˜¯æ²¡ç©¿è¿‡ å¢™å£å£çš„åž‚ç›´çº¿è€Œå·²ï¼Œå¹¶ä¸çŸ¥é“æ˜¯æ’žä¸Šä¸Šå¢™å£è¿˜æ˜¯ä¸‹å¢™å£ã€‚
 					{
 						collide = 1;
-						//²»ÄÜÔÙÕâÀï¸³ÓèÐÂÖµ£¬ÒòÎª»¹È±ÁË±ØÒªµÄÌõ¼þ
+						//ä¸èƒ½å†è¿™é‡Œèµ‹äºˆæ–°å€¼ï¼Œå› ä¸ºè¿˜ç¼ºäº†å¿…è¦çš„æ¡ä»¶
 						//double x1 = segcross(pUp[i], pDown[j], pUp[k], pDown[k]);
 						//maxX = max(x1, maxX);
 						//x1 = segcross(pUp[i], pDown[j], pUp[k], pDown[k]);
@@ -110,7 +110,7 @@ int main() {
 					//					if (!check(pUp[i], pDown[j], pUp[k], pDown[k]) )
 					//					{
 					//						collide = 1;
-					//						//ÕâÀïÎÒÔÚ¸´ÖÆð¤ÌùÊ±£¬ÓÖÍü¼ÇÁË°Ñ±äÁ¿ÕýÈ·¸Äµô
+					//						//è¿™é‡Œæˆ‘åœ¨å¤åˆ¶é»è´´æ—¶ï¼Œåˆå¿˜è®°äº†æŠŠå˜é‡æ­£ç¡®æ”¹æŽ‰
 					////						double x1 = segcross(pUp[i], pDown[j], pDown[k], pDown[k - 1]);
 					//						double x1 = segcross(pUp[i], pDown[j], pUp[k], pDown[k]);
 					//						maxX = max(x1, maxX);
@@ -122,16 +122,16 @@ int main() {
 					flag = 1;
 					break;
 				}
-				//ÏÂÃæÕâÑù×öÊÂ±ØÒªµÄ£¬ÒòÎªÈ·±£ÁËÄÇÃ´Ò»¸öÏÖÏó£¬¹âÏß¼È²»»á´©¹ýÊúÖ±Ç½±Ú£¬Ò²Ã»´©¹ýÇ½±Ú
-				//ÒªÊÇºóÃæµÄ½ÚµãÉú³ÉµÄ¹âÏß¿ÉÒÔ´©¹ýÇ°ÃæµÄ¹Ü×Ó£¬Ç°Ãæ¹Ü×ÓÒ²±Ø¶¨ÓÐ½Úµã¿ÉÒÔÕÔ³ÉÕâÑùµÄ¹âÏß
+				//ä¸‹é¢è¿™æ ·åšäº‹å¿…è¦çš„ï¼Œå› ä¸ºç¡®ä¿äº†é‚£ä¹ˆä¸€ä¸ªçŽ°è±¡ï¼Œå…‰çº¿æ—¢ä¸ä¼šç©¿è¿‡ç«–ç›´å¢™å£ï¼Œä¹Ÿæ²¡ç©¿è¿‡å¢™å£
+				//è¦æ˜¯åŽé¢çš„èŠ‚ç‚¹ç”Ÿæˆçš„å…‰çº¿å¯ä»¥ç©¿è¿‡å‰é¢çš„ç®¡å­ï¼Œå‰é¢ç®¡å­ä¹Ÿå¿…å®šæœ‰èŠ‚ç‚¹å¯ä»¥èµµæˆè¿™æ ·çš„å…‰çº¿
 				if (k > max(i, j))
 				{
 					double temp = segcross(pUp[i], pDown[j], pUp[k], pUp[k - 1]);
-					if (maxX < temp)  //LÓëµÚk-1½Ú¹Ü×ÓµÄÉÏ¹Ü±ÚÏà½»  
+					if (maxX < temp)  //Lä¸Žç¬¬k-1èŠ‚ç®¡å­çš„ä¸Šç®¡å£ç›¸äº¤  
 						maxX = temp;
 
 					temp = segcross(pUp[i], pDown[j], pDown[k], pDown[k - 1]);
-					if (maxX < temp)  //LÓëµÚk-1½Ú¹Ü×ÓµÄÉÏ¹Ü±ÚÏà½»  
+					if (maxX < temp)  //Lä¸Žç¬¬k-1èŠ‚ç®¡å­çš„ä¸Šç®¡å£ç›¸äº¤  
 						maxX = temp;
 				}
 

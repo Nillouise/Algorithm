@@ -1,4 +1,4 @@
-#include<algorithm>
+ï»¿#include<algorithm>
 #include<iostream>
 #include<sstream>
 #include<string>
@@ -29,11 +29,11 @@ int main()
 	while (cin >> N&&N != 0)
 	{
 		memset(dp, -1, sizeof(dp));
-		//		for (size_t i = 0; i < N; i++)//ÕâÀï²¢²»ÊÇµ¥´¿µÄ¼ÆÊý£¬»¹Òª¼æ¹Ë×ø±ê£¬²»ÄÜÒÔ0¿ªÊ¼
+		//		for (size_t i = 0; i < N; i++)//è¿™é‡Œå¹¶ä¸æ˜¯å•çº¯çš„è®¡æ•°ï¼Œè¿˜è¦å…¼é¡¾åæ ‡ï¼Œä¸èƒ½ä»¥0å¼€å§‹
 		for (size_t i = 0; i < N; i++)
 		{
-			//			for (size_t j = 0; j < N; j++) //ÕâÀïÎÒÓÐ¸ã´í³ÉN
-			for (size_t j = 0; j <= i; j++)//ÕâÀïÒªµÈÓÚ£¬ÒòÎª×ø±êÎÊÌâ
+			//			for (size_t j = 0; j < N; j++) //è¿™é‡Œæˆ‘æœ‰æžé”™æˆN
+			for (size_t j = 0; j <= i; j++)//è¿™é‡Œè¦ç­‰äºŽï¼Œå› ä¸ºåæ ‡é—®é¢˜
 			{
 				cin >> A[i][j];
 			}

@@ -1,4 +1,4 @@
-//ÕâÌâµÄ×ÖµäÐò Òª ÌáÔçËã³öÀ´£¬ÒòÎª ÕâÌâµÄ×ÖµäÐò²»ÊÇ°´ÂíµÄË³Ê±Õë»òÄæÊ±ÕëÀ´µÃ£¬¶øÊÇ ×ø±êµÄ×ÖµäÐò
+ï»¿//è¿™é¢˜çš„å­—å…¸åº è¦ ææ—©ç®—å‡ºæ¥ï¼Œå› ä¸º è¿™é¢˜çš„å­—å…¸åºä¸æ˜¯æŒ‰é©¬çš„é¡ºæ—¶é’ˆæˆ–é€†æ—¶é’ˆæ¥å¾—ï¼Œè€Œæ˜¯ åæ ‡çš„å­—å…¸åº
 
 #include<algorithm>
 #include<iostream>
@@ -70,8 +70,8 @@ int main()
 	for (size_t n = 1; n <= N; n++)
 	{
 		memset(chess, 0, sizeof(chess));
-		cin >> q >> p;//ÕâÀïµÄ p qÊÇµ¹×ªË³ÐòÀ´µÄ£¬ÒòÎª°´ÎÒµÄ³ÌÐò£¬xÖáÉÏµÄÊÇ ABCD£¬yÖáÉÏµÄÊÇÊý×Ö£¬µ«ÌâÄ¿ÊÇpÊÇÊý×Ö£¬qÊÇ×ÖÄ¸
-					  //Òò´ËÒªµ¹×ªÀ´£¬ÕâÌâÀïÃæ£¬x·ÅÔÚÊý×éµÄÒ»Î¬Àï»¹ÊÇ2Î¬ ²¢Ã»ÓÐ¹ØÏµ
+		cin >> q >> p;//è¿™é‡Œçš„ p qæ˜¯å€’è½¬é¡ºåºæ¥çš„ï¼Œå› ä¸ºæŒ‰æˆ‘çš„ç¨‹åºï¼Œxè½´ä¸Šçš„æ˜¯ ABCDï¼Œyè½´ä¸Šçš„æ˜¯æ•°å­—ï¼Œä½†é¢˜ç›®æ˜¯pæ˜¯æ•°å­—ï¼Œqæ˜¯å­—æ¯
+					  //å› æ­¤è¦å€’è½¬æ¥ï¼Œè¿™é¢˜é‡Œé¢ï¼Œxæ”¾åœ¨æ•°ç»„çš„ä¸€ç»´é‡Œè¿˜æ˜¯2ç»´ å¹¶æ²¡æœ‰å…³ç³»
 		cout << "Scenario #" << n << ":" << endl;
 		int flag = 0;
 		for (size_t i = 1; i <= p; i++)

@@ -1,7 +1,7 @@
-//ÕâÌâÒòÎªÒì»ò·ûºÅµÄ×Ô·´ĞÔ£¬ËùÒÔÓÀÔ¶ÊÇÅ¼Êı¶Ô
+ï»¿//è¿™é¢˜å› ä¸ºå¼‚æˆ–ç¬¦å·çš„è‡ªåæ€§ï¼Œæ‰€ä»¥æ°¸è¿œæ˜¯å¶æ•°å¯¹
 
-//A detail worth mentioning is that xi xor yj may exceed 2¡¤106 and become as large as 2097152 = 221. Thus the array should be of size 2097152 instead of 2¡¤106 and if not, invalid memory access may take place.
-//¶øÇÒÕâÌâÓ¦¸Ã¿ªÊı×é²é£¬¶ø²»ÊÇÓÃset£¬ÒòÎª2000*2000»¹ÊÇÍ¦´óµÄ
+//A detail worth mentioning is that xi xor yj may exceed 2Â·106 and become as large as 2097152 = 221. Thus the array should be of size 2097152 instead of 2Â·106 and if not, invalid memory access may take place.
+//è€Œä¸”è¿™é¢˜åº”è¯¥å¼€æ•°ç»„æŸ¥ï¼Œè€Œä¸æ˜¯ç”¨setï¼Œå› ä¸º2000*2000è¿˜æ˜¯æŒºå¤§çš„
 
 #include <iostream>
 #include<string>
@@ -10,7 +10,7 @@
 #include<vector>
 #include<map>
 #include<set>
-#include<cmath>//Õâ¸ösqrtÒªÓÃ
+#include<cmath>//è¿™ä¸ªsqrtè¦ç”¨
 #include<queue>
 using namespace std;
 typedef long long LL;

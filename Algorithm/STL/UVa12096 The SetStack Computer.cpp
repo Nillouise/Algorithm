@@ -1,4 +1,4 @@
-// UVa12096 The SetStack Computer
+ï»¿// UVa12096 The SetStack Computer
 // Rujia Liu
 #include<iostream>
 #include<string>
@@ -14,13 +14,13 @@ using namespace std;
 #define INS(x) inserter(x,x.begin())
 
 typedef set<int> Set;
-map<Set, int> IDcache; // °Ñ¼¯ºÏÓ³Éä³ÉID
-vector<Set> Setcache; // ¸ù¾İIDÈ¡¼¯ºÏ
+map<Set, int> IDcache; // æŠŠé›†åˆæ˜ å°„æˆID
+vector<Set> Setcache; // æ ¹æ®IDå–é›†åˆ
 
-					  // ²éÕÒ¸ø¶¨¼¯ºÏxµÄID¡£Èç¹ûÕÒ²»µ½£¬·ÖÅäÒ»¸öĞÂID
+					  // æŸ¥æ‰¾ç»™å®šé›†åˆxçš„IDã€‚å¦‚æœæ‰¾ä¸åˆ°ï¼Œåˆ†é…ä¸€ä¸ªæ–°ID
 int ID(Set x) {
 	if (IDcache.count(x)) return IDcache[x];
-	Setcache.push_back(x); // Ìí¼ÓĞÂ¼¯ºÏ
+	Setcache.push_back(x); // æ·»åŠ æ–°é›†åˆ
 	return IDcache[x] = Setcache.size() - 1;
 }
 
@@ -28,7 +28,7 @@ int main() {
 	int T;
 	cin >> T;
 	while (T--) {
-		stack<int> s; // ÌâÄ¿ÖĞµÄÕ»
+		stack<int> s; // é¢˜ç›®ä¸­çš„æ ˆ
 		int n;
 		cin >> n;
 		for (int i = 0; i < n; i++) {
@@ -52,7 +52,7 @@ int main() {
 	return 0;
 }
 
-//ÎÒ×Ô¼ºµÄ°æ±¾
+//æˆ‘è‡ªå·±çš„ç‰ˆæœ¬
 #include<iostream>
 #include<algorithm>
 #include<stack>
@@ -64,7 +64,7 @@ int main() {
 using namespace std;
 typedef set<int> Set;
 vector<Set> setCache;
-map<Set, int> setMap;//Õâ¸öÃû×Ö²»ÊÇºÜºÃ£¬²»Ó¦¸ÃĞ´ÀàĞÍÃû×÷Îª±äÁ¿ÃûµÄÒ»²¿·Ö
+map<Set, int> setMap;//è¿™ä¸ªåå­—ä¸æ˜¯å¾ˆå¥½ï¼Œä¸åº”è¯¥å†™ç±»å‹åä½œä¸ºå˜é‡åçš„ä¸€éƒ¨åˆ†
 
 #define ALL(x) x.begin(),x.end()
 #define INS(x) inserter(x,x.begin())

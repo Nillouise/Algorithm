@@ -1,11 +1,11 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include<string>
 #include<cstring>
 #include<algorithm>
 #include<vector>
 #include<map>
 #include<set>
-#include<cmath>//Õâ¸ösqrtÒªÓÃ
+#include<cmath>//è¿™ä¸ªsqrtè¦ç”¨
 #include<queue>
 using namespace std;
 typedef long long LL;
@@ -20,7 +20,7 @@ vector<int> noone;
 int vistree[3 * 100000 + 10];
 int dfs(int x, int fa)
 {
-	vistree[x] = 1;//ÕâÊÇÍ¼£¬Òª·ÀÖ¹»¥Îª×Ó½Úµã£¬ÕâÀï»¥Îª×Ó½Úµã»áµ¼ÖÂÄÚ´æ±¬µô
+	vistree[x] = 1;//è¿™æ˜¯å›¾ï¼Œè¦é˜²æ­¢äº’ä¸ºå­èŠ‚ç‚¹ï¼Œè¿™é‡Œäº’ä¸ºå­èŠ‚ç‚¹ä¼šå¯¼è‡´å†…å­˜çˆ†æ‰
 
 	for (int i = 0; i < G[x].size(); i++)
 	{
@@ -117,16 +117,16 @@ int main()
 	while (!tot.empty())
 	{
 		set<int> s;
-		s.clear();//²»clear£¬¿ÉÄÜµ¼ÖÂ³¬ÄÚ´æ£¬ÒòÎªÃ»ÇåÄÚ´æ
+		s.clear();//ä¸clearï¼Œå¯èƒ½å¯¼è‡´è¶…å†…å­˜ï¼Œå› ä¸ºæ²¡æ¸…å†…å­˜
 		int solution = 0;
 		//vector<int> cv;
 		for (auto a = tot.begin(); a != tot.end();)
 		{
-			//¿´Õâ¸ö½ÚµãÓĞÃ»ÓĞÁ¬ÔÚÖ®Ç°ÏûÈ¥µÄ½ÚµãÉÏ
+			//çœ‹è¿™ä¸ªèŠ‚ç‚¹æœ‰æ²¡æœ‰è¿åœ¨ä¹‹å‰æ¶ˆå»çš„èŠ‚ç‚¹ä¸Š
 			int flag = false;
 			for (int i = 0; i < G[*a].size(); i++)
 			{
-				if (tot2.find(G[*a][i]) != tot2.end())//ÓÅ»¯
+				if (tot2.find(G[*a][i]) != tot2.end())//ä¼˜åŒ–
 				{
 					flag = true;
 					p[*a].push_back(G[*a][i]);
@@ -146,7 +146,7 @@ int main()
 		}
 		//if (solution == 0)
 		//{
-		//	//Ò²ÓĞ¿ÉÄÜ²¢Ã»ÓĞÊ÷×´½á¹¹£¨ÓÉ-1µ®ÉúµÄÒ»¿ÃÊ÷£¬µ«ÓĞÖÖÇé¿öÊÇÃ»ÓĞ-1£©
+		//	//ä¹Ÿæœ‰å¯èƒ½å¹¶æ²¡æœ‰æ ‘çŠ¶ç»“æ„ï¼ˆç”±-1è¯ç”Ÿçš„ä¸€æ£µæ ‘ï¼Œä½†æœ‰ç§æƒ…å†µæ˜¯æ²¡æœ‰-1ï¼‰
 
 		//	dfs(0, 3 * 100000+2);
 		//	if (cntT[3 * 100000 + 2]!=0)
@@ -175,7 +175,7 @@ int main()
 	}
 	vector<int >res;
 	LL cnt = 0;
-	//ÒÑ¾­²ã¼¶¶ÑµşÁË
+	//å·²ç»å±‚çº§å †å äº†
 	for (auto a = v.rbegin(); a != v.rend(); a++)
 	{
 		for (auto i : *a)
@@ -185,7 +185,7 @@ int main()
 
 			if (cntv[i] % 2 != D[i])
 			{
-				for (int j = 0; j < G[i].size(); j++)//ÔÚÖ®Ç°µÄÎ»ÖÃ·Åindex£¬ÓÅ»¯µôÕâ²½
+				for (int j = 0; j < G[i].size(); j++)//åœ¨ä¹‹å‰çš„ä½ç½®æ”¾indexï¼Œä¼˜åŒ–æ‰è¿™æ­¥
 				{
 					if (G[i][j] == p[i][0])
 					{

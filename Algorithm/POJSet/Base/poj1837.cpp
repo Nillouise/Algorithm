@@ -1,4 +1,4 @@
-#include<algorithm>
+ï»¿#include<algorithm>
 #include<iostream>
 #include<sstream>
 #include<string>
@@ -20,7 +20,7 @@ int dfs(int g, int balance)
 	int r = 0;
 	for (size_t i = 0; i < C; i++)
 	{
-		//		r += dfs(g + 1, balance + hook[i] * gram[g]);//Íü¼ÇÕâĞĞÆäÊµ×÷ÓÃÊÇ²¹¹øµÄ
+		//		r += dfs(g + 1, balance + hook[i] * gram[g]);//å¿˜è®°è¿™è¡Œå…¶å®ä½œç”¨æ˜¯è¡¥é”…çš„
 		r += dfs(g + 1, balance - hook[i] * gram[g]);
 	}
 	d[g][balance] = r;
@@ -39,7 +39,7 @@ int main()
 		for (int i = 0; i < G; i++)
 			cin >> gram[i];
 		memset(d, -1, sizeof(d));
-		//Íü¼Ç±ß½çÃ»ÓĞ¶«Î÷
+		//å¿˜è®°è¾¹ç•Œæ²¡æœ‰ä¸œè¥¿
 		for (size_t i = 0; i < C; i++)
 		{
 			d[G - 1][7500 + hook[i] * gram[G - 1]] = 1;
@@ -51,7 +51,7 @@ int main()
 	return 0;
 }
 
-//ÕâÊÇ±ğÈË×öµÄ£¬Ë¼Â·ºÜºÃ
+//è¿™æ˜¯åˆ«äººåšçš„ï¼Œæ€è·¯å¾ˆå¥½
 int dp[30][15000];
 int main()
 {
@@ -64,11 +64,11 @@ int main()
 
 		for (size_t i = 0; i < C; i++)
 			cin >> hook[i];
-		for (int i = 1; i <= G; i++)//ÕâÀï²»ÓÃgram[0]£¬ÒòÎªdpÄÄÀï»áÓÃ0±íÊ¾Ã»ÓĞ¶«Î÷
+		for (int i = 1; i <= G; i++)//è¿™é‡Œä¸ç”¨gram[0]ï¼Œå› ä¸ºdpå“ªé‡Œä¼šç”¨0è¡¨ç¤ºæ²¡æœ‰ä¸œè¥¿
 			cin >> gram[i];
 		memset(dp, 0, sizeof(dp));
 
-		dp[0][7500] = 1;//0´ú±í²»·Å¶«Î÷£¬ÄÇ¾ÍÈ·ÊµÊÇÆ½ºâµÄ£¬Æ½ºâ¾ÍÊÇ7500£¬ÒòÎª»áÓĞ¸ºÊı
+		dp[0][7500] = 1;//0ä»£è¡¨ä¸æ”¾ä¸œè¥¿ï¼Œé‚£å°±ç¡®å®æ˜¯å¹³è¡¡çš„ï¼Œå¹³è¡¡å°±æ˜¯7500ï¼Œå› ä¸ºä¼šæœ‰è´Ÿæ•°
 
 		for (size_t i = 1; i <= G; i++)
 		{
@@ -76,7 +76,7 @@ int main()
 			{
 				for (size_t k = 0; k < C; k++)
 				{
-					dp[i][j] += dp[i - 1][j - gram[i] * hook[k]];//ÕâÀïÓĞ¸üºÃµÄ·½·¨£¬¿ÉÒÔÓÅ»¯µô k
+					dp[i][j] += dp[i - 1][j - gram[i] * hook[k]];//è¿™é‡Œæœ‰æ›´å¥½çš„æ–¹æ³•ï¼Œå¯ä»¥ä¼˜åŒ–æ‰ k
 				}
 			}
 		}

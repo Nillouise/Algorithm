@@ -1,8 +1,8 @@
-//����һ��ʼ��Ӧ��֪������״dp��������ʲô��ֵ���ѧ����
-//һ��ʼ�Ϳ��Դֱ��ذ�״̬��Ϊ3��������������ʲô����û�г�ͻ�����п��ܣ���������valut������secure�ģ���Ȼ������״dp֮��
+﻿//这题一开始就应该知道是树状dp，而不是什么奇怪的数学问题
+//一开始就可以粗暴地把状态定为3个，而不是在想什么先算没有冲突的所有可能（比如所有valut都不是secure的），然后在树状dp之类
 
-//��һ��ע����ǣ�����ı߽����ݵĶ��壬���а������͸���״̬�����˼·
-//���о��ǣ�������һ������ǰ���ֵ���º����ֵ���ᵼ�¸����˺����ֵ�����ǡ���ѩ�򡱵ظ��������ǲ��еģ�
+//另一点注意的是，这题的边界数据的定义，还有把子树和父树状态分离的思路
+//还有就是，跟背包一样，用前面的值更新后面的值，会导致覆盖了后面的值（就是“滚雪球”地更新数组是不行的）
 
 #include <iostream>
 #include<string>
@@ -12,7 +12,7 @@
 #include<set>
 using namespace std;
 typedef long long LL;
-const int MAXN = 1e5 + 5;//ע������exponent����ֹ淶
+const int MAXN = 1e5 + 5;//注意这里exponent的奇怪规范
 const int MAXX = 10 + 5;
 const LL MOD = 1e9 + 7;
 vector<int> tree[MAXN];
@@ -21,7 +21,7 @@ LL dp[MAXN][MAXX][3];
 int dfs(int c, int fa)
 {
 	dp[c][0][0] = k - 1;
-	dp[c][1][1] = 1;//ע��������д������ж��ٸ�vault���������root�ڵ�
+	dp[c][1][1] = 1;//注意这里是写这个树有多少个vault，包括这个root节点
 	dp[c][0][2] = m - k;
 
 	for (int i = 0; i < tree[c].size(); i++)
@@ -35,22 +35,22 @@ int dfs(int c, int fa)
 
 		for (int j = 0; j <= x; j++)
 		{
-			for (int s1 = 0; s1 < 3; s1++)//��������ѭ�����ɸ�״̬
+			for (int s1 = 0; s1 < 3; s1++)//上面两个循环构成父状态
 			{
-				//if (nxt[j][s1] == 0)continue;//�����ж�����޸ĵı���
-				if (dp[c][j][s1] == 0)continue;//����״̬��0ʱ�������ܸ��º���ĸ�״̬
-				//������Կ�����dp[c][0][0]��dp[c][1][1]��dp[c][0][2],ֻ��������״̬�������ġ�
+				//if (nxt[j][s1] == 0)continue;//不能判断这个修改的背包
+				if (dp[c][j][s1] == 0)continue;//当父状态是0时，不可能更新后面的父状态
+				//这里可以看出，dp[c][0][0]，dp[c][1][1]，dp[c][0][2],只有这三个状态是有数的。
 
 				for (int k = 0; k <= x; k++)
 				{
-					if (k + j > x) break;//�ӽڵ������+���ڵ�����������ܳ���������
-					for (int s2 = 0; s2 < 3; s2++)//��������ѭ����������״̬
+					if (k + j > x) break;//子节点的数量+父节点的数量不可能超过总数量
+					for (int s2 = 0; s2 < 3; s2++)//上面两个循环构成子树状态
 					{
 						//if (nxt[k][s2] == 0)continue;
-						if (dp[y][k][s2] == 0)continue;//����״̬��0ʱ�������ܸ��¸�״̬
+						if (dp[y][k][s2] == 0)continue;//当子状态是0时，不可能更新父状态
 						if (s1 == 0 || (s1 == 1 && s2 == 0) || (s1 == 2 && s2 != 1))
 						{
-							//nxt[j + k][s1] += tmp[j][s1] * dp[y][k][s2];//���ﲻ����nxt����nxt�������ѭ�����ǣ��񱳰�������
+							//nxt[j + k][s1] += tmp[j][s1] * dp[y][k][s2];//这里不能用nxt更新nxt，会出现循环覆盖（像背包那样）
 							nxt[j + k][s1] += dp[c][j][s1] * dp[y][k][s2];
 							nxt[j + k][s1] %= MOD;
 						}

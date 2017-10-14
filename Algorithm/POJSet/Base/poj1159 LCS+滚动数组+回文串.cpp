@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <cstdio>
 #include <cstring>
 #include <algorithm>
@@ -22,10 +22,10 @@ int main() {
 		//		dp[0][0] = (A[0] == A2[0] ? 1 : 0);
 		for (size_t i = 0; i < n; i++)
 		{
-			dp[1][0] = (A[0] == A2[i] ? 1 : 0);//Õâ¾äÊÇ¾«»ª
+			dp[1][0] = (A[0] == A2[i] ? 1 : 0);//è¿™å¥æ˜¯ç²¾åŽ
 			for (size_t j = 1; j < n; j++)
 			{
-				//				if (A[i] == A[j]) //ÕâÀïÎÒÓÖÍü¼Ç±äÁ¿µÄº¬Òå
+				//				if (A[i] == A[j]) //è¿™é‡Œæˆ‘åˆå¿˜è®°å˜é‡çš„å«ä¹‰
 				if (A2[i] == A[j])
 				{
 					dp[1][j] = dp[0][j - 1] + 1;

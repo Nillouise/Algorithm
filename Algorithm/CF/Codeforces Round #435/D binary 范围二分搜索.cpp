@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include<string>
 #include<algorithm>
 #include<vector>
@@ -39,7 +39,7 @@ int main()
 	cin >> n;
 	int cnt0 = send(0, n, 0);
 	int cnt1 = n - cnt0;
-	int i1 = send(1, n, 0);//i1ÓÃpos1´úÌæ»á±È½ÏºÃ
+	int i1 = send(1, n, 0);//i1ç”¨pos1ä»£æ›¿ä¼šæ¯”è¾ƒå¥½
 
 	if (i1 < cnt0)
 	{
@@ -53,11 +53,11 @@ int main()
 	}
 
 	int bg = 0, end = n;
-	while (bg<end - 1)//½áÎ²ÊÇºÏ·¨ÔªËØºóÒ»¸öÎ»ÖÃµÄ¶þ·Ö
+	while (bg<end - 1)//ç»“å°¾æ˜¯åˆæ³•å…ƒç´ åŽä¸€ä¸ªä½ç½®çš„äºŒåˆ†
 	{
 		int mid = bg + (end - bg) / 2;
 		int cur = send(bg, mid, !i1);
-		//cnt0-cur ´ú±íÇ°°ë¶ÎÈ«ÊÇ0
+		//cnt0-cur ä»£è¡¨å‰åŠæ®µå…¨æ˜¯0
 		if (cnt0 - cur == mid - bg)
 		{
 			bg = mid;

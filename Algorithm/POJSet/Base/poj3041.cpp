@@ -1,9 +1,9 @@
-//¶þ·ÖÍ¼ÓÐÁ½¸ö¶¨Àí£º×îÐ¡¸²¸ÇÊý = ×î´óÆ¥ÅäÊý¡¢×î´ó¶ÀÁ¢¼¯ = ×ÜÊý - ×îÐ¡¸²¸Ç¼¯ ¡£
+ï»¿//äºŒåˆ†å›¾æœ‰ä¸¤ä¸ªå®šç†ï¼šæœ€å°è¦†ç›–æ•° = æœ€å¤§åŒ¹é…æ•°ã€æœ€å¤§ç‹¬ç«‹é›† = æ€»æ•° - æœ€å°è¦†ç›–é›† ã€‚
 //
-//¼¸¸ö»ù±¾¶¨Òå£º
-//×îÐ¡¸²¸Ç£º¼´ÔÚËùÓÐ¶¥µãÖÐÑ¡Ôñ×îÉÙµÄ¶¥µãÀ´¸²¸ÇËùÓÐµÄ±ß¡£
-//×î´óÆ¥Åä£º¶þ·ÖÍ¼×óÓÒÁ½¸öµã¼¯ÖÐ£¬Ñ¡ÔñÓÐ±ßÏàÁ¬µÄÁ½¸öÆ¥Åä³ÉÒ»¶Ô£¨Ã¿¸öµãÖ»ÄÜÆ¥ÅäÒ»´Î£©£¬ËùÄÜ´ïµ½µÄ×î´óÆ¥ÅäÊý¡£
-//×î´ó¶ÀÁ¢¼¯£º¼¯ºÏÖÐµÄÈÎºÎÁ½¸öµã¶¼²»Ö±½ÓÏàÁ¬¡£
+//å‡ ä¸ªåŸºæœ¬å®šä¹‰ï¼š
+//æœ€å°è¦†ç›–ï¼šå³åœ¨æ‰€æœ‰é¡¶ç‚¹ä¸­é€‰æ‹©æœ€å°‘çš„é¡¶ç‚¹æ¥è¦†ç›–æ‰€æœ‰çš„è¾¹ã€‚
+//æœ€å¤§åŒ¹é…ï¼šäºŒåˆ†å›¾å·¦å³ä¸¤ä¸ªç‚¹é›†ä¸­ï¼Œé€‰æ‹©æœ‰è¾¹ç›¸è¿žçš„ä¸¤ä¸ªåŒ¹é…æˆä¸€å¯¹ï¼ˆæ¯ä¸ªç‚¹åªèƒ½åŒ¹é…ä¸€æ¬¡ï¼‰ï¼Œæ‰€èƒ½è¾¾åˆ°çš„æœ€å¤§åŒ¹é…æ•°ã€‚
+//æœ€å¤§ç‹¬ç«‹é›†ï¼šé›†åˆä¸­çš„ä»»ä½•ä¸¤ä¸ªç‚¹éƒ½ä¸ç›´æŽ¥ç›¸è¿žã€‚
 
 #include<algorithm>
 #include<iostream>
@@ -18,18 +18,18 @@ const int maxstate = 1000;
 int chess[maxstate][maxstate];
 int vis[maxstate];
 int match[maxstate];
-int dfs(int x)//ÐÙÑÀÀûËã·¨
+int dfs(int x)//åŒˆç‰™åˆ©ç®—æ³•
 {
 	for (size_t i = 0; i < n; i++)
 	{
 		if (chess[x][i] == 1)
 		{
 			if (vis[i] == 1)continue;
-			vis[i] = 1;//visÔÚÕâÀïÐÞ¸Ä£¬±íÊ¾È·È·ÊµÊµ³¢ÊÔÁËÔÚiÕâÀï²åÈëµãÁË£¬³ÉÃ»³É¹¦ÊÇÁíÒ»»ØÊÂ¡£
+			vis[i] = 1;//visåœ¨è¿™é‡Œä¿®æ”¹ï¼Œè¡¨ç¤ºç¡®ç¡®å®žå®žå°è¯•äº†åœ¨iè¿™é‡Œæ’å…¥ç‚¹äº†ï¼Œæˆæ²¡æˆåŠŸæ˜¯å¦ä¸€å›žäº‹ã€‚
 			if (match[i] == -1 || dfs(match[i]))
 			{
 				match[i] = x;
-				//				vis[i] = 1;//vis ²»Ó¦¸ÃÔÚÕâÀïÐÞ¸ÄµÄ£¬²»È»dfs¾Í»áÎÞÏÞµÝ¹é iÁË£»
+				//				vis[i] = 1;//vis ä¸åº”è¯¥åœ¨è¿™é‡Œä¿®æ”¹çš„ï¼Œä¸ç„¶dfså°±ä¼šæ— é™é€’å½’ iäº†ï¼›
 				return 1;
 			}
 		}

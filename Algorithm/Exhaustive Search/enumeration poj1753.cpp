@@ -1,4 +1,4 @@
-#include<cstdio>
+ï»¿#include<cstdio>
 #include<cmath>
 #include<iostream>
 #include<cstring>
@@ -21,7 +21,7 @@ int check()
 
 int invert(int x, int y)
 {
-	S[x][y] = !S[x][y];//µÚÒ»´ÎÍü¼ÇÁËÐ´ÕâÐÐ£¬Ì«¹ý×¨×¢ÓÚÏÂÃæÄÇ¼¸ÐÐÓÐÃ»ÓÐÐ´¶Ô¡£
+	S[x][y] = !S[x][y];//ç¬¬ä¸€æ¬¡å¿˜è®°äº†å†™è¿™è¡Œï¼Œå¤ªè¿‡ä¸“æ³¨äºŽä¸‹é¢é‚£å‡ è¡Œæœ‰æ²¡æœ‰å†™å¯¹ã€‚
 
 	if (x - 1 >= 0)
 		S[x - 1][y] = !S[x - 1][y];
@@ -72,7 +72,7 @@ int main()
 	if (pcnt<100000)
 		cout << pcnt << endl;
 	else {
-		cout << "Impossible" << endl;//Ã»Ð´ÕâÐÐµ¼ÖÂwa£¬Ã»ÓÐÈÏÕæ¿´Êä³öÒªÇó¡£
+		cout << "Impossible" << endl;//æ²¡å†™è¿™è¡Œå¯¼è‡´waï¼Œæ²¡æœ‰è®¤çœŸçœ‹è¾“å‡ºè¦æ±‚ã€‚
 	}
 
 

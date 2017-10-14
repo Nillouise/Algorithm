@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include<string>
 #include<algorithm>
 #include<vector>
@@ -27,10 +27,10 @@ int main()
 			cout << -1 << endl;
 			return 0;
 		}
-		//ÐèÒªÅÜÏÂÒ»ÌË
+		//éœ€è¦è·‘ä¸‹ä¸€è¶Ÿ
 		if (i != k - 1)
 		{
-			//¿ÉÒÔ¿ª»Ø¼ÓÓÍÕ¾
+			//å¯ä»¥å¼€å›žåŠ æ²¹ç«™
 			if (cg >= (a - cost) * 2)
 			{
 
@@ -40,7 +40,7 @@ int main()
 				cnt++;
 			}
 		}
-		//²»ÐèÒªÅÜÏÂÒ»ÌË
+		//ä¸éœ€è¦è·‘ä¸‹ä¸€è¶Ÿ
 		else {
 			if (cg >= a - cost)
 			{

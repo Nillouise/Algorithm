@@ -1,9 +1,9 @@
-//���д��������������x��y
-//�����check�����Ǹı�ȫ����С������ �������ֵ
-//û���ڼ�����С����ʱ�����޸ı���ı���
-//���ڻ��Ǵ���
-//׼���ô�ӡ����+�ϵ� ����
-//û�п��Ǳ߽��������Ϊ��Ҫ��check֮��ż��߽�ģ���Ȼ���һ��ı�󣬸���û�л���check��
+﻿//多次写错变量，混淆了x和y
+//这次在check后，忘记改变全局最小变量和 保存相关值
+//没有在检查完更小变量时，才修改保存的变量
+//现在还是错的
+//准备用打印变量+断点 调试
+//没有考虑边界情况，因为是要在check之后才检查边界的（不然最后一格改变后，根本没有机会check）
 #include<iostream>
 #include<memory.h>
 #include<stdio.h>
@@ -49,7 +49,7 @@ void log(int x, int y)
 		{
 			if (i == x && j == y)
 				cout << "[";
-			cout << m[i][j] << "��";
+			cout << m[i][j] << "　";
 			if (i == x && j == y)
 				cout << "]";
 		}
@@ -63,7 +63,7 @@ int dfs(int x, int y, int cnt)
 	if (check())
 	{
 		if (ming>cnt) {
-			memcpy(ulcontent, content, sizeof(ulcontent));//�ص�
+			memcpy(ulcontent, content, sizeof(ulcontent));//重点
 			ming = cnt;
 		}
 		return 0;

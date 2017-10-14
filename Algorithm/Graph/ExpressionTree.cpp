@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<vector>
 #include<string>
 using namespace std;
@@ -13,12 +13,12 @@ int expression(string s,int begin, int end)
 		nc++;
 		lsubtree[nc] = rsubtree[nc] = 0;
 		op[nc] = s[begin];
-		return nc;//ÕâÀïÎÒÔ­ÏÈĞ´´íÁË£¬Ğ´³Éreturn beginÁË£¬µ«ÆäÊµÒªreturn nc£¬Ò²¾ÍÊÇ·µ»Øµ±Ç°½ÚµãµÄºÅÂë¡£
+		return nc;//è¿™é‡Œæˆ‘åŸå…ˆå†™é”™äº†ï¼Œå†™æˆreturn beginäº†ï¼Œä½†å…¶å®è¦return ncï¼Œä¹Ÿå°±æ˜¯è¿”å›å½“å‰èŠ‚ç‚¹çš„å·ç ã€‚
 	}
 	int c1 = -1;
 	int c2 = -1;
 	int bs = 0;//bracket state
-	for (size_t i = begin; i <= end; i++)//ÕâÀïÊÇ´Óbegin ±éÀúµ½end£¬´øÀ´µÄºó¹ûÊÇÕÒµ½µÄÊÇ×îÓÒ±ßµÄËã·û£¬ËùÒÔÕû¸ö±í´ïÊ½ÊÇ×ó½áºÏµÄ¡£
+	for (size_t i = begin; i <= end; i++)//è¿™é‡Œæ˜¯ä»begin éå†åˆ°endï¼Œå¸¦æ¥çš„åæœæ˜¯æ‰¾åˆ°çš„æ˜¯æœ€å³è¾¹çš„ç®—ç¬¦ï¼Œæ‰€ä»¥æ•´ä¸ªè¡¨è¾¾å¼æ˜¯å·¦ç»“åˆçš„ã€‚
 	{
 		switch (s[i]) {
 		case '(':bs++;break;
@@ -28,14 +28,14 @@ int expression(string s,int begin, int end)
 		}
 	}
 
-	if (c1 == c2&&c1 == -1)//ÍâÃæÊÇÀ¨ºÅµÄÇé¿ö
+	if (c1 == c2&&c1 == -1)//å¤–é¢æ˜¯æ‹¬å·çš„æƒ…å†µ
 	{
 		return expression(s,begin + 1, end - 1);
 	}
 
 	int curC = c1 > -1 ? c1 : c2;
 	nc++;
-	int snap = nc;//ÕâÀïµÄsnap ±í´ïÁËÒ»¸öÒâË¼£¬¾ÍÊÇ nc¿ÉÄÜ»áÔÚºóĞøº¯ÊıÀï¸Ä±ä£¬ËùÒÔ¿ìÕÕÒ»ÏÂ.
+	int snap = nc;//è¿™é‡Œçš„snap è¡¨è¾¾äº†ä¸€ä¸ªæ„æ€ï¼Œå°±æ˜¯ ncå¯èƒ½ä¼šåœ¨åç»­å‡½æ•°é‡Œæ”¹å˜ï¼Œæ‰€ä»¥å¿«ç…§ä¸€ä¸‹.
 	lsubtree[snap] = expression(s,begin, curC - 1);
 	rsubtree[snap] = expression(s,curC + 1, end);
 	op[snap] = s[curC];

@@ -1,6 +1,6 @@
-//ÍØÕ¹Ò»ÏÂ°¬ÊÏÉ¸·¨¼´¿É£¬Èç¹ûÒ»¸öÊıiÊÇH - ËØÊı£¬ÄÇÃ´5i + 4i * x Ò»¶¨ÊÇH - ËØÊı£¬ÒòÎª(5i + 4i * x) mod 4 = 5i mod 4 = (5 mod 4) * (i mod 4) = 1 * 1 = 1¡£
+ï»¿//æ‹“å±•ä¸€ä¸‹è‰¾æ°ç­›æ³•å³å¯ï¼Œå¦‚æœä¸€ä¸ªæ•°iæ˜¯H - ç´ æ•°ï¼Œé‚£ä¹ˆ5i + 4i * x ä¸€å®šæ˜¯H - ç´ æ•°ï¼Œå› ä¸º(5i + 4i * x) mod 4 = 5i mod 4 = (5 mod 4) * (i mod 4) = 1 * 1 = 1ã€‚
 
-//±ğÈËµÄ´úÂë
+//åˆ«äººçš„ä»£ç 
 
 #ifndef ONLINE_JUDGE
 #pragma warning(disable : 4996)
@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 	freopen("in.txt", "r", stdin);
 	freopen("out.txt", "w", stdout);
 #endif
-	// °¬ÊÏÉ¸·¨
+	// è‰¾æ°ç­›æ³•
 	int p = 0;
 	for (int i = 5; i < MAX_H; i += 4)
 	{

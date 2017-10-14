@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<list>
 #include<algorithm>
 #include<cmath>
@@ -31,8 +31,8 @@ int main()
 
 		for (int i = 1; i <= n; i++)
 		{
-			//ÕâÀï°ÑÉÏÒ»ÐÐËùÓÐµÄ×´Ì¬¸´ÖÆ½ø i=0µÄ¸ñ×ÓÀï 
-			//ÕâÀïstatÖ±½Ó¸ô¾øÁËÊ×Î»ÊÇ1µÄÇé¿ö£¬Ò²¾ÍÊÇÇ½ÓÐÏßµÄÇé¿ö 
+			//è¿™é‡ŒæŠŠä¸Šä¸€è¡Œæ‰€æœ‰çš„çŠ¶æ€å¤åˆ¶è¿› i=0çš„æ ¼å­é‡Œ 
+			//è¿™é‡Œstatç›´æŽ¥éš”ç»äº†é¦–ä½æ˜¯1çš„æƒ…å†µï¼Œä¹Ÿå°±æ˜¯å¢™æœ‰çº¿çš„æƒ…å†µ 
 			for (int stat = 0; stat<(1 << m); stat++)
 			{
 				if (stat&(1 << m))
@@ -49,7 +49,7 @@ int main()
 				int right = 1 << j;
 				for (int stat = 0; stat<(1 << (m + 1)); stat++)
 				{
-					if (tree[i][j])//ÓÐÊ÷ 
+					if (tree[i][j])//æœ‰æ ‘ 
 					{
 						if ((down&stat) && (right&stat))
 						{
@@ -58,12 +58,12 @@ int main()
 						else if (!(down&stat) && !(right&stat))
 						{
 							//							DP[i][j][stat]+=DP[i][j-1][stat&down&right];
-							//ÕâÀïÊÇ|²»ÊÇ&£¬&ÊÇÇå0 
+							//è¿™é‡Œæ˜¯|ä¸æ˜¯&ï¼Œ&æ˜¯æ¸…0 
 							DP[i][j][stat] += DP[i][j - 1][stat | down | right];
 						}
 						else
 						{
-							//							int b = 0;//ÕâÀïlong long ²ÅÐÐ£¬ÖÐ¼ä±äÁ¿ÓÖÍü¼ÇÒªÒ»ÖÂ
+							//							int b = 0;//è¿™é‡Œlong long æ‰è¡Œï¼Œä¸­é—´å˜é‡åˆå¿˜è®°è¦ä¸€è‡´
 							long long b = 0;
 							b += DP[i][j - 1][stat];
 							b += DP[i][j - 1][stat^right^down];

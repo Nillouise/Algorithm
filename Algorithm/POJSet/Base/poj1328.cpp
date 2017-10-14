@@ -1,11 +1,11 @@
-//һ��ʼ��û�����
-//�ṹ��Ҫ�ڶ����˺�����ã������ȫ�ֱ������ܻ������ͻ��
-//û�����⵽����x�����Ǹ�����
-//����һ�����磬��ûŪ��������ˣ������˴�˼·�����Ǹ��̵ģ����õ����������ݶ��ǶԵģ��������wa��
-//��������Ҫ��ѧ�ط��������Ŀ������ѧ�������ǣ���Сʱǰ���������Ŀ��
-//�������ǣ���y���������ȽϺ�
+﻿//一开始就没想对了
+//结构体要在定义了后才能用，这个和全局变量可能会产生冲突。
+//没有留意到坐标x可以是负数。
+//搞了一个下午，仍没弄清哪里错了，跟别人答案思路几乎是复刻的，能拿到的样例数据都是对的，结果还是wa。
+//所以现在要科学地放弃这道题目，更科学的做法是，两小时前放弃这道题目。
+//最后结论是，按y坐标排序会比较好
 
-//���debug�˳��õ�ԭ����Ҫ����Ϊ�ң�������int left = p[0].b, right = p[0].e; Ӧ��ʹdouble����Ϊ������䱾������ʵ����
+//这次debug了超久的原因，主要是因为我，忘记了int left = p[0].b, right = p[0].e; 应该使double，因为这个区间本来就是实数的
 #include <iostream>  
 #include <algorithm>  
 #include <stdlib.h>  
@@ -57,11 +57,11 @@ int main()
 		else {
 			int cnt = 1;
 			sort(p, p + n);
-			//			int left = p[0].b, right = p[0].e;//���д��������debug�˳��õĴ�����
+			//			int left = p[0].b, right = p[0].e;//这行代码就是我debug了超久的代码了
 			double left = p[0].b, right = p[0].e;
 			for (int i = 1; i < n; i++)
 			{
-				//			if (line[i].b>left) //����û�п��Ǳ߽�Ľ��
+				//			if (line[i].b>left) //这是没有考虑边界的结果
 				//			{
 				if (p[i].b > right)
 				{

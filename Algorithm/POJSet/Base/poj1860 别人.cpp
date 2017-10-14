@@ -1,27 +1,27 @@
-#include<iostream>  
+ï»¿#include<iostream>  
 using namespace std;
 
-int n;     //»õ±ÒÖÖÊı  
-int m;     //¶Ò»»µãÊıÁ¿  
-int s;     //³ÖÓĞµÚsÖÖ»õ±Ò  
-double v;  //³ÖÓĞµÄs»õ±ÒµÄ±¾½ğ  
+int n;     //è´§å¸ç§æ•°  
+int m;     //å…‘æ¢ç‚¹æ•°é‡  
+int s;     //æŒæœ‰ç¬¬sç§è´§å¸  
+double v;  //æŒæœ‰çš„sè´§å¸çš„æœ¬é‡‘  
 
-int all;  //±ß×ÜÊı  
-double dis[101];  //sµ½¸÷µãµÄÈ¨Öµ  
+int all;  //è¾¹æ€»æ•°  
+double dis[101];  //såˆ°å„ç‚¹çš„æƒå€¼  
 
 class exchange_points
 {
 public:
-	int a;      //»õ±Òa  
-	int b;      //»õ±Òb  
+	int a;      //è´§å¸a  
+	int b;      //è´§å¸b  
 	double r;   //rate  
-	double c;   //ÊÖĞø·Ñ  
+	double c;   //æ‰‹ç»­è´¹  
 }exc[202];
 
 bool bellman(void)
 {
-	memset(dis, 0, sizeof(dis));      //ÕâÀïÓëbellmanµÄÄ¿µÄ¸ÕºÃÏà·´¡£³õÊ¼»¯ÎªÔ´µãµ½¸÷µã¾àÀëÎŞÇîĞ¡  
-	dis[s] = v;                       //¼´bellman±¾ÓÃÓÚÕÒ¸º»·£¬Çó×îĞ¡Â·¾¶£¬±¾ÌâÊÇÀûÓÃÍ¬ÑùµÄË¼ÏëÕÒÕı»·£¬Çó×î´óÂ·¾¶  
+	memset(dis, 0, sizeof(dis));      //è¿™é‡Œä¸bellmançš„ç›®çš„åˆšå¥½ç›¸åã€‚åˆå§‹åŒ–ä¸ºæºç‚¹åˆ°å„ç‚¹è·ç¦»æ— ç©·å°  
+	dis[s] = v;                       //å³bellmanæœ¬ç”¨äºæ‰¾è´Ÿç¯ï¼Œæ±‚æœ€å°è·¯å¾„ï¼Œæœ¬é¢˜æ˜¯åˆ©ç”¨åŒæ ·çš„æ€æƒ³æ‰¾æ­£ç¯ï¼Œæ±‚æœ€å¤§è·¯å¾„  
 
 									  /*relax*/
 
@@ -30,8 +30,8 @@ bool bellman(void)
 	{
 		flag = false;
 		for (int j = 0; j<all; j++)
-			if (dis[exc[j].b] < (dis[exc[j].a] - exc[j].c) * exc[j].r)         //Ñ°ÕÒ×î³¤Â·¾¶  
-			{                                                                 //½øĞĞ±È½ÏµÄÊÇ"Ä³µãµ½×ÔÉíµÄÈ¨Öµ"ºÍ"Ä³µãµ½ÁíÒ»µãµÄÈ¨Öµ"  
+			if (dis[exc[j].b] < (dis[exc[j].a] - exc[j].c) * exc[j].r)         //å¯»æ‰¾æœ€é•¿è·¯å¾„  
+			{                                                                 //è¿›è¡Œæ¯”è¾ƒçš„æ˜¯"æŸç‚¹åˆ°è‡ªèº«çš„æƒå€¼"å’Œ"æŸç‚¹åˆ°å¦ä¸€ç‚¹çš„æƒå€¼"  
 				dis[exc[j].b] = (dis[exc[j].a] - exc[j].c) * exc[j].r;
 				flag = true;
 			}
@@ -42,7 +42,7 @@ bool bellman(void)
 	/*Search Positive Circle*/
 
 	for (int k = 0; k<all; k++)
-		if (dis[exc[k].b] < (dis[exc[k].a] - exc[k].c) * exc[k].r)           //Õı»·ÄÜ¹»ÎŞÏŞËÉ³Ú  
+		if (dis[exc[k].b] < (dis[exc[k].a] - exc[k].c) * exc[k].r)           //æ­£ç¯èƒ½å¤Ÿæ— é™æ¾å¼›  
 			return true;
 
 	return false;
@@ -51,11 +51,11 @@ bool bellman(void)
 int main(void)
 {
 	int a, b;
-	double rab, cab, rba, cba;   //ÁÙÊ±±äÁ¿  
+	double rab, cab, rba, cba;   //ä¸´æ—¶å˜é‡  
 
 	while (cin >> n >> m >> s >> v)
 	{
-		all = 0;    //×¢Òâ³õÊ¼»¯  
+		all = 0;    //æ³¨æ„åˆå§‹åŒ–  
 		for (int i = 0; i<m; i++)
 		{
 			cin >> a >> b >> rab >> cab >> rba >> cba;

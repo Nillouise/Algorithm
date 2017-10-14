@@ -1,11 +1,11 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include<string>
 #include<cstring>
 #include<algorithm>
 #include<vector>
 #include<map>
 #include<set>
-#include<cmath>//Õâ¸ösqrtÒªÓÃ
+#include<cmath>//è¿™ä¸ªsqrtè¦ç”¨
 #include<queue>
 using namespace std;
 typedef long long LL;
@@ -24,7 +24,7 @@ struct star
 LL getbright(star s, LL t)
 {
 	LL b = s.init + t;
-	b %= c + 1;//¹âµÄÁÁ¶ÈÊÇ0µ½c£¬ËùÒÔc+1²ÅÊÇ·¶Î§
+	b %= c + 1;//å…‰çš„äº®åº¦æ˜¯0åˆ°cï¼Œæ‰€ä»¥c+1æ‰æ˜¯èŒƒå›´
 	return b;
 }
 vector<star> v[200];

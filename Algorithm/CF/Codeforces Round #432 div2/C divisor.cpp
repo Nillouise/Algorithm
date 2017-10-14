@@ -1,11 +1,11 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include<string>
 #include<cstring>
 #include<algorithm>
 #include<vector>
 #include<map>
 #include<set>
-#include<cmath>//Õâ¸ösqrtÒªÓÃ
+#include<cmath>//è¿™ä¸ªsqrtè¦ç”¨
 #include<queue>
 using namespace std;
 typedef long long LL;
@@ -33,7 +33,7 @@ int dfs(int x, int fa)
 	int MAX = -1;
 	for (int i = path.size() - 1; i >0; i--)
 	{
-		//suf = gcd(path[i], suf);//Õâ¾äÊÇ·ÅÔÚÏÂÃæ²Å¶Ô
+		//suf = gcd(path[i], suf);//è¿™å¥æ˜¯æ”¾åœ¨ä¸‹é¢æ‰å¯¹
 		if (MAX < gcd(suf, pregcd[i - 1]))MAX = gcd(suf, pregcd[i - 1]);
 		suf = gcd(path[i], suf);
 	}
@@ -74,7 +74,7 @@ int main()
 		G[u].push_back(v);
 		G[v].push_back(u);
 	}
-	//pregcd.push_back(tree[1]);//ÕâÊÇ²»ĞĞµÄ
+	//pregcd.push_back(tree[1]);//è¿™æ˜¯ä¸è¡Œçš„
 	pregcd.push_back(0);
 	path.push_back(0);
 	dfs(1, 0);

@@ -1,4 +1,4 @@
-//ÕâÌâÇóÄæÐòÊý£¬ÒªÓÃlong long ±£´æ
+ï»¿//è¿™é¢˜æ±‚é€†åºæ•°ï¼Œè¦ç”¨long long ä¿å­˜
 
 #include<iostream>
 #include<string>
@@ -22,7 +22,7 @@ long long merg_sort(int x, int y)
 		{
 			if (q >= y || (p < m&&a[p] < a[q]))
 			{
-				//				cnt += (y - q);//Õâ¸ö²»ÓÃ¼ÓÄæÐòÊý£¬Ö»ÓÐºó°ë¶Î·Åµ½Ç°°ë¶Î²ÅÓÃ¼Ó
+				//				cnt += (y - q);//è¿™ä¸ªä¸ç”¨åŠ é€†åºæ•°ï¼Œåªæœ‰åŽåŠæ®µæ”¾åˆ°å‰åŠæ®µæ‰ç”¨åŠ 
 				v.push_back(a[p]);
 				p++;
 			}

@@ -1,4 +1,4 @@
-
+ï»¿
 #include <iostream>
 #include<string>
 #include<cstring>
@@ -6,7 +6,7 @@
 #include<vector>
 #include<map>
 #include<set>
-#include<cmath>//Õâ¸ösqrtÒªÓÃ
+#include<cmath>//è¿™ä¸ªsqrtè¦ç”¨
 #include<queue>
 using namespace std;
 typedef long long LL;
@@ -50,7 +50,7 @@ int main()
 			else if (have[4] > 0)a -= 2, have[4]--, have[1]++;
 			else
 				//return cout << "NO" << endl, 0;
-				have[1] -= 2;//·Ö¿ª
+				have[1] -= 2;//åˆ†å¼€
 		}
 	}
 	LL cnt1 = 0;

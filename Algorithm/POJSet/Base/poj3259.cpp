@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <cstdio>
 #include <cstring>
 #include<string>
@@ -20,9 +20,9 @@ int state[maxn];
 int BellMon()
 {
 	fill(state, state + maxn, INF);
-	//	state[1] = 0;//²¢²»ĞèÒª³õÊ¼Öµ£¬Ö»ÒªÅĞ¸ºÈ¦
+	//	state[1] = 0;//å¹¶ä¸éœ€è¦åˆå§‹å€¼ï¼Œåªè¦åˆ¤è´Ÿåœˆ
 	//	for (int i = 0; i < N; i++)
-	for (int i = 0; i < N - 1; i++)//Ò»¸öµã×î¶àÓëN-1¸öµãÏàÁ¬£¬Ò²¾ÍÊÇ×î¶à¸üĞÂN-1´Î£¨Ã»È¦µÄ»°£©
+	for (int i = 0; i < N - 1; i++)//ä¸€ä¸ªç‚¹æœ€å¤šä¸N-1ä¸ªç‚¹ç›¸è¿ï¼Œä¹Ÿå°±æ˜¯æœ€å¤šæ›´æ–°N-1æ¬¡ï¼ˆæ²¡åœˆçš„è¯ï¼‰
 	{
 		int flag = 0;
 		for (int j = 0; j < edges.size(); j++)

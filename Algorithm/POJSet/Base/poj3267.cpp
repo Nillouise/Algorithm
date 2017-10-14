@@ -1,4 +1,4 @@
-#include<algorithm>
+ï»¿#include<algorithm>
 #include<iostream>
 #include<sstream>
 #include<string>
@@ -30,7 +30,7 @@ int dfs(int index)
 				flag = 1;
 				break;
 			}
-			if (j + index >= s.size())//ÕâÀïÃ»ÓĞ¿¼ÂÇºÃ£¬ÒªÊÇÕâÖÖÇé¿öÏÂ£¬dpÓ¦¸ÃÔõÃ´Ëã£¿
+			if (j + index >= s.size())//è¿™é‡Œæ²¡æœ‰è€ƒè™‘å¥½ï¼Œè¦æ˜¯è¿™ç§æƒ…å†µä¸‹ï¼Œdpåº”è¯¥æ€ä¹ˆç®—ï¼Ÿ
 				break;
 			if (s[index + j] == word[k])
 			{

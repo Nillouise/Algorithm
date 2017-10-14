@@ -1,8 +1,8 @@
-/*
-Ö÷Òª¹Ø×¢ÖØµã
+ï»¿/*
+ä¸»è¦å…³æ³¨é‡ç‚¹
 while (scanf("%s", s), s[0] != '.')
-scanf("%s%s", op, s2);ÕâÀïÀûÓÃÁË£¬scanfÓöµ½¿Õ¸ñ¾ÍËãÒ»¸ö×Ö·û´®µÄ½áÊøÕâ¸öÌØµã£¬Ò²¾ÍÊÇËµ£¬¿Õ¸ñÌìÈ»¾ÍÊÇscanfµÄ·Ö¸ô·û
-vector<string>::iterator it;¼Ç×¡Õâ±éÀúµÄ¸ñÊ½
+scanf("%s%s", op, s2);è¿™é‡Œåˆ©ç”¨äº†ï¼Œscanfé‡åˆ°ç©ºæ ¼å°±ç®—ä¸€ä¸ªå­—ç¬¦ä¸²çš„ç»“æŸè¿™ä¸ªç‰¹ç‚¹ï¼Œä¹Ÿå°±æ˜¯è¯´ï¼Œç©ºæ ¼å¤©ç„¶å°±æ˜¯scanfçš„åˆ†éš”ç¬¦
+vector<string>::iterator it;è®°ä½è¿™éå†çš„æ ¼å¼
 for (it = m.begin(); it != m.end(); it++)
 {
 	if ((*it) == t)
@@ -10,7 +10,7 @@ for (it = m.begin(); it != m.end(); it++)
 		m.erase(it);
 		break;
 	}
-}É¾³ı vectorÄÚµÄÔªËØÓÃvector.erase(iterator)
+}åˆ é™¤ vectorå†…çš„å…ƒç´ ç”¨vector.erase(iterator)
 
 
 */

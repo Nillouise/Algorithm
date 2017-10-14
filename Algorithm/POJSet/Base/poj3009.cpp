@@ -1,4 +1,4 @@
-#include<algorithm>
+ï»¿#include<algorithm>
 #include<iostream>
 #include<sstream>
 #include<string>
@@ -16,8 +16,8 @@ int road[4][2] = { { -1,0 },{ 0,1 },{ 1,0 },{ 0,-1 } };
 int dfs(int x, int y, int step)
 {
 	if (step >= 10)return 0;
-	if (step >= mincnt)return 0;//²»¼ÓÕâ¾ä¼ôÖ¦£¬ËÆºõ»á³¬Ê±tl
-	int maze2[maxn][maxn]; //Õ»Òç³öÁË£¬º¯ÊıÄÚ²»ÄÜ¿ªÕâÃ´´óµÄÊı×é£¨350*350£©ÊÇ²»ĞĞµÄ
+	if (step >= mincnt)return 0;//ä¸åŠ è¿™å¥å‰ªæï¼Œä¼¼ä¹ä¼šè¶…æ—¶tl
+	int maze2[maxn][maxn]; //æ ˆæº¢å‡ºäº†ï¼Œå‡½æ•°å†…ä¸èƒ½å¼€è¿™ä¹ˆå¤§çš„æ•°ç»„ï¼ˆ350*350ï¼‰æ˜¯ä¸è¡Œçš„
 
 	memcpy(maze2, maze, sizeof(maze));
 	for (size_t dire = 0; dire < 4; dire++)

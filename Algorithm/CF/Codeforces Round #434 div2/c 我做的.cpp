@@ -1,11 +1,11 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include<string>
 #include<cstring>
 #include<algorithm>
 #include<vector>
 #include<map>
 #include<set>
-#include<cmath>//Õâ¸ösqrtÒªÓÃ
+#include<cmath>//è¿™ä¸ªsqrtè¦ç”¨
 #include<queue>
 using namespace std;
 typedef long long LL;
@@ -30,7 +30,7 @@ int main()
 	int N, S;
 	cin >> N >> S;
 	vector<Person> va, vb;
-	//×î¶àÄÜÓĞ¶àÉÙ£¬¼õÈ¥±»Ç¿ÆÈ³ÔÁíÒ»ÖÖÅûÈøµÄÖµ
+	//æœ€å¤šèƒ½æœ‰å¤šå°‘ï¼Œå‡å»è¢«å¼ºè¿«åƒå¦ä¸€ç§æŠ«è¨çš„å€¼
 	LL MAXT = 0;
 	for (size_t i = 0; i < N; i++)
 	{
@@ -39,7 +39,7 @@ int main()
 		//Person p{ s,a,b };
 		if (a > b)
 		{
-			va.push_back({ s,a,b });//ÕâÀï¿ÉÒÔÕâÃ´Ğ´£¬×Ô¶¯Ç¿ÖÆ×ª»»³ÉpÀàĞÍ
+			va.push_back({ s,a,b });//è¿™é‡Œå¯ä»¥è¿™ä¹ˆå†™ï¼Œè‡ªåŠ¨å¼ºåˆ¶è½¬æ¢æˆpç±»å‹
 			MAXT += s*a;
 		}
 
@@ -49,13 +49,13 @@ int main()
 			MAXT += s*b;
 		}
 	}
-	//ÒÔa´ÓĞ¡µ½´óÅÅĞò
+	//ä»¥aä»å°åˆ°å¤§æ’åº
 	sort(va.begin(), va.end());
-	//ÒÔb´ÓĞ¡µ½¸ºÊıÅÅĞò
+	//ä»¥bä»å°åˆ°è´Ÿæ•°æ’åº
 	sort(vb.begin(), vb.end());
 	reverse(vb.begin(), vb.end());
 
-	//ËãÁ½±ß¸÷×ÔÊ£Óà¶àÉÙ
+	//ç®—ä¸¤è¾¹å„è‡ªå‰©ä½™å¤šå°‘
 	LL arem = 0;
 	for (auto a : va)
 	{
@@ -75,7 +75,7 @@ int main()
 		return 0;
 	}
 
-	//Ç¿ÆÈÈË³ÔÁíÒ»ÖÖpizzaµÄÕÛËğ
+	//å¼ºè¿«äººåƒå¦ä¸€ç§pizzaçš„æŠ˜æŸ
 	LL ax = 0, bx = 0;
 
 	for (auto a : va)

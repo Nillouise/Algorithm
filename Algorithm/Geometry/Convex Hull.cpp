@@ -1,4 +1,4 @@
-#include<cmath>
+﻿#include<cmath>
 using namespace std;
 struct Point
 {

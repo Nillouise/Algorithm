@@ -1,10 +1,10 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <cstdio>
 #include <cstring>
 #include<string>
 #include <algorithm>
 #include<sstream>
-#include<cmath>//ÕâÀïÓÐlog º¯Êý
+#include<cmath>//è¿™é‡Œæœ‰log å‡½æ•°
 using namespace std;
 const int maxn = 200;
 const double INF = 1000000.0;
@@ -32,11 +32,11 @@ int dcmp(double x)
 	return x < 0 ? -1 : 1;
 }
 
-void intersect(Point ha, Point hb, Point va, Point vb, double &rx, double &ry)//ÕâÀïÍü¼ÇÓÃÒýÓÃ´«µÝ
+void intersect(Point ha, Point hb, Point va, Point vb, double &rx, double &ry)//è¿™é‡Œå¿˜è®°ç”¨å¼•ç”¨ä¼ é€’
 {
 	double area1 = cross(hb - ha, va - ha);
 	double area2 = cross(hb - ha, vb - ha);
-	if (dcmp(area1)*dcmp(area2) == -1)//ÕâÀïÐ´´íÁË£¬Ó¦¸ÃÓÃdcmp»¯¾«¶È
+	if (dcmp(area1)*dcmp(area2) == -1)//è¿™é‡Œå†™é”™äº†ï¼Œåº”è¯¥ç”¨dcmpåŒ–ç²¾åº¦
 	{
 		rx = (area1*vb.x - area2*va.x) / (area1 - area2);
 		ry = (area1*vb.y - area2*va.y) / (area1 - area2);
@@ -56,9 +56,9 @@ void intersect(Point ha, Point hb, Point va, Point vb, double &rx, double &ry)//
 
 double calrect(Point a, Point b, Point c, Point d)
 {
-	double angle1 = cross(c - a, b - a);//¾ØÐÎÄÚ¶Ô½ÇÏßµÄÁ½¸öÈý½ÇÐÎ
+	double angle1 = cross(c - a, b - a);//çŸ©å½¢å†…å¯¹è§’çº¿çš„ä¸¤ä¸ªä¸‰è§’å½¢
 	double angle2 = cross(c - a, d - a);
-	//	return abs(angle1) + abs(angle2);//¼ÇµÃÈ¡¾ø¶ÔÖµ£¬µ«Íü¼Ç³ýÒÔ2
+	//	return abs(angle1) + abs(angle2);//è®°å¾—å–ç»å¯¹å€¼ï¼Œä½†å¿˜è®°é™¤ä»¥2
 	return 0.5*(abs(angle1) + abs(angle2));
 }
 
@@ -103,16 +103,16 @@ int main() {
 				double r[4][2];
 				for (int f = 0; f < 4; f++)
 				{
-					intersect(d[i - f % 2], c[i - f % 2], b[j - f / 2], a[j - f / 2], r[f][0], r[f][1]);//Õâ¸öÑ­»·²»ÊÇÄæÊ±ÕëµÄ£¬¶øÊÇ ÉÏÏÂÉÏÏÂÕâÑùµÄ£¬ÐèÒª×ª»»
+					intersect(d[i - f % 2], c[i - f % 2], b[j - f / 2], a[j - f / 2], r[f][0], r[f][1]);//è¿™ä¸ªå¾ªçŽ¯ä¸æ˜¯é€†æ—¶é’ˆçš„ï¼Œè€Œæ˜¯ ä¸Šä¸‹ä¸Šä¸‹è¿™æ ·çš„ï¼Œéœ€è¦è½¬æ¢
 				}
-				//ÏÂÃæÕâÃ´Ð´»¹ÊÇÌ«´ÀÁË£¬Ó¦¸ÃÔÚcalrectÄÇÀï¸Ä
+				//ä¸‹é¢è¿™ä¹ˆå†™è¿˜æ˜¯å¤ªè ¢äº†ï¼Œåº”è¯¥åœ¨calrecté‚£é‡Œæ”¹
 				{
 					double x = r[2][0], y = r[2][1];
 					r[2][0] = r[3][0]; r[2][1] = r[3][1];
 					r[3][0] = x; r[3][1] = y;
 				}
 
-				//				double rect = calrect(Point(r[0][1], r[0][1]), Point(r[1][1], r[1][1]), Point(r[2][1], r[2][1]), Point(r[3][1], r[3][1]));//´íµÄÕæÀëÆ×
+				//				double rect = calrect(Point(r[0][1], r[0][1]), Point(r[1][1], r[1][1]), Point(r[2][1], r[2][1]), Point(r[3][1], r[3][1]));//é”™çš„çœŸç¦»è°±
 				double rect = calrect(Point(r[0][0], r[0][1]), Point(r[1][0], r[1][1]), Point(r[2][0], r[2][1]), Point(r[3][0], r[3][1]));
 
 				maxrect = max(rect, maxrect);

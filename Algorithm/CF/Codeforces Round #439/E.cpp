@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include<string>
 #include<cstring>
 #include<algorithm>
@@ -15,17 +15,17 @@ typedef pair<int, int> pii;
 int n, m, q;
 int t, r1, c1, r2, c2;
 
-//Ò»¿ªÊ¼Êı¾İ·¶Î§Ò²¿´´íÁË
+//ä¸€å¼€å§‹æ•°æ®èŒƒå›´ä¹Ÿçœ‹é”™äº†
 LL G[3000][3000];
 
 int add(int x, int y, LL val)
 {
-	//ÕâÊÇ´íµÄ£¬ÔÚ¶şÎ¬Êı×éÀï£¬²»ÄÜÕâÃ´¸É£¬yÔÚ±éÀúÒ»´ÎºóÒªÖØÖÃµÄ
+	//è¿™æ˜¯é”™çš„ï¼Œåœ¨äºŒç»´æ•°ç»„é‡Œï¼Œä¸èƒ½è¿™ä¹ˆå¹²ï¼Œyåœ¨éå†ä¸€æ¬¡åè¦é‡ç½®çš„
 	//	for(;x<=m;x+=x&(-x))
 	//	{
 	//		for(;y<=n;y+=y&(-y))
 	//		{
-	//			G[y][x] += val;//ÕâÀïÊÇy£¬x
+	//			G[y][x] += val;//è¿™é‡Œæ˜¯yï¼Œx
 	//		}
 	//	}
 	for (int kx = x; kx <= m; kx += kx&(-kx))
@@ -63,7 +63,7 @@ int main()
 	//	freopen("output.txt", "w", stdout);
 	ios::sync_with_stdio(false);
 	srand(time(NULL));
-	//ÕâÀï²»ÊÇ±ØÒªµÄ£¬²»¹ırand()µÄ·¶Î§Ì«Ğ¡£¬ÒªÀ©´ó·¶Î§ÊÇ±ØÒªµÄ
+	//è¿™é‡Œä¸æ˜¯å¿…è¦çš„ï¼Œä¸è¿‡rand()çš„èŒƒå›´å¤ªå°ï¼Œè¦æ‰©å¤§èŒƒå›´æ˜¯å¿…è¦çš„
 	//	for (int i = 0; i < 011; i++) {
 	//		srand(rd());
 	//	}
@@ -75,10 +75,10 @@ int main()
 
 		if (t == 1)
 		{
-			//ÕâÀïÀ©´órand()µÄ·¶Î§ÊÇ±ØÒªµÄ
-			LL val = (rand() << 15) + rand() + 1;//·ÀÖ¹Îª0
+			//è¿™é‡Œæ‰©å¤§rand()çš„èŒƒå›´æ˜¯å¿…è¦çš„
+			LL val = (rand() << 15) + rand() + 1;//é˜²æ­¢ä¸º0
 
-												 //Á½¸öadd±íÊ¾²»ÁË¶şÎ¬¡£
+												 //ä¸¤ä¸ªaddè¡¨ç¤ºä¸äº†äºŒç»´ã€‚
 												 //			add(c1, r1, val);
 												 //			add(c2+1, r2+1, -val);
 			add(c1, r1, val);

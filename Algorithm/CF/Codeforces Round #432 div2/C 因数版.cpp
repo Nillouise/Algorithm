@@ -1,11 +1,11 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include<string>
 #include<cstring>
 #include<algorithm>
 #include<vector>
 #include<map>
 #include<set>
-#include<cmath>//Õâ¸ösqrtÒªÓÃ
+#include<cmath>//è¿™ä¸ªsqrtè¦ç”¨
 #include<queue>
 using namespace std;
 typedef long long LL;
@@ -13,7 +13,7 @@ typedef long long LL;
 int n;
 vector<int> G[100000 * 2 + 5];
 vector<int> tree;
-//map<int, int> cntdivisor;//Ì«ÂıÁË
+//map<int, int> cntdivisor;//å¤ªæ…¢äº†
 int cntdivisor[100000 * 2 + 5];
 int ans[100000 * 2 + 5][2];
 
@@ -32,7 +32,7 @@ void init()
 
 int dfs(int x, int p, int dep)
 {
-	//ans[x][1] = ans[p][1];//µ±Òª°Ñµ±Ç°½Úµã±ä³É0Ê±
+	//ans[x][1] = ans[p][1];//å½“è¦æŠŠå½“å‰èŠ‚ç‚¹å˜æˆ0æ—¶
 	ans[x][1] = ans[p][0];
 
 
@@ -44,7 +44,7 @@ int dfs(int x, int p, int dep)
 	//	{
 	//		cntdivisor[i]++;
 	//		cd.push_back(i);
-	//		//if (i*i != tree[x]);//¶à´òÁË;ºÅ
+	//		//if (i*i != tree[x]);//å¤šæ‰“äº†;å·
 	//		if (i*i != tree[x])
 	//		{
 	//			cntdivisor[tree[x] / i]++;
@@ -73,7 +73,7 @@ int dfs(int x, int p, int dep)
 		}
 	}
 
-	//ÕâÑù×ö£¬ÒòÎªÕû¸öÂ·¾¶µÄËùÓĞÒòÊı¶¼ÒªËãÒ»±é£¬Ì«ÂıÁË
+	//è¿™æ ·åšï¼Œå› ä¸ºæ•´ä¸ªè·¯å¾„çš„æ‰€æœ‰å› æ•°éƒ½è¦ç®—ä¸€éï¼Œå¤ªæ…¢äº†
 	//for (auto i = cntdivisor.begin(); i !=cntdivisor.end();)
 	//{
 	//	if (i->second == dep)
@@ -84,7 +84,7 @@ int dfs(int x, int p, int dep)
 	//	{
 	//		ans[x][1] = max(i->first, ans[x][1]);
 	//	}
-	//	//ÕâÊÇ²»ĞĞµÄ£¬ÒòÎªÕâÀïeraseµÄ»°£¬ÄÇ·µ»Øµ½ÉÏÒ»²ãÊ±£¬¸¸½ÚµãµÄmap¾Í²»¶ÔÁË¡£
+	//	//è¿™æ˜¯ä¸è¡Œçš„ï¼Œå› ä¸ºè¿™é‡Œeraseçš„è¯ï¼Œé‚£è¿”å›åˆ°ä¸Šä¸€å±‚æ—¶ï¼Œçˆ¶èŠ‚ç‚¹çš„mapå°±ä¸å¯¹äº†ã€‚
 	//	//if (i->second < dep - 1)
 	//	//{
 	//	//	i =cntdivisor.erase(i);
@@ -113,7 +113,7 @@ int dfs(int x, int p, int dep)
 	//for (int i = 1; i*i <= tree[x]; i++)
 	//{
 	//	//if (tree[x] % i == 0 &&cntdivisor.find(i)!=cntdivisor.end() )cntdivisor[i]--;
-	//	 if (tree[x] % i == 0)cntdivisor[i]--;//ÕâÊÇ´íµÄ£¬ÒòÎªÁíÒ»¸öÒòËØÃ»ÓĞ¼õÈ¥
+	//	 if (tree[x] % i == 0)cntdivisor[i]--;//è¿™æ˜¯é”™çš„ï¼Œå› ä¸ºå¦ä¸€ä¸ªå› ç´ æ²¡æœ‰å‡å»
 	//}
 	return 0;
 }

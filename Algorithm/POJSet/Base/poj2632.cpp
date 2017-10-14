@@ -1,6 +1,6 @@
-//¶ÔÓÚÇóÓàÊı´¦ÀíÊÇ·ñ×¢Òâ³öÏÖ¸ºÊıµÄÇé¿ö£»ÕâµãÃ»ÓĞ¿¼ÂÇ
-//×ø±êÏµ±ä»¯²»ÊÇºÜÊìÏ¤£¬±ä»»´íÁËÒ»´Î
-//getPosº¯ÊıÃ»ÓĞ¿¼ÂÇºÃ±ß½ç£¬ÕâÌâÊÇ´Ó1¿ªÊ¼±àºÅµÄ
+ï»¿//å¯¹äºæ±‚ä½™æ•°å¤„ç†æ˜¯å¦æ³¨æ„å‡ºç°è´Ÿæ•°çš„æƒ…å†µï¼›è¿™ç‚¹æ²¡æœ‰è€ƒè™‘
+//åæ ‡ç³»å˜åŒ–ä¸æ˜¯å¾ˆç†Ÿæ‚‰ï¼Œå˜æ¢é”™äº†ä¸€æ¬¡
+//getPoså‡½æ•°æ²¡æœ‰è€ƒè™‘å¥½è¾¹ç•Œï¼Œè¿™é¢˜æ˜¯ä»1å¼€å§‹ç¼–å·çš„
 #include<algorithm>
 #include<iostream>
 #include<string>
@@ -36,9 +36,9 @@ int checkcrash(int x, int y)
 {
 
 	if (x<1 || x>A || y<1 || y>B)
-		return 1;//×ß³öÁË·¶Î§
+		return 1;//èµ°å‡ºäº†èŒƒå›´
 	if (chess[x][y].Number != -1)
-		return 2;//×²ÁË±ğµÄ»úÆ÷
+		return 2;//æ’äº†åˆ«çš„æœºå™¨
 	return 0;
 }
 
@@ -79,7 +79,7 @@ int main()
 				switch (instrusion)
 				{
 				case 'L':
-					curdirection = (curdirection - 1 + 4) % 4;//vÕâÀï×¢ÒâÒª+4£»
+					curdirection = (curdirection - 1 + 4) % 4;//vè¿™é‡Œæ³¨æ„è¦+4ï¼›
 					break;
 				case 'R':
 					curdirection = (curdirection + 1) % 4;
@@ -91,7 +91,7 @@ int main()
 				}
 				if (checkcrash(x, y) && flag == 1)
 				{
-					flag = 0;//Éè0ºó¾Í²»ÔÙ»á¼ÆËãÁË
+					flag = 0;//è®¾0åå°±ä¸å†ä¼šè®¡ç®—äº†
 					switch (checkcrash(x, y))
 					{
 					case 1:

@@ -1,5 +1,5 @@
-//Ò»¿ªÊ¼ÎÒ»¹Àí½â´íÁËÊý¾Ý£¨°ÑÒ»¸ö±äÁ¿µ±³ÉÁíÒ»¸ö±äÁ¿µÄÒâË¼£©£¬µ¼ÖÂÁ¬ÑùÀý¶¼¿´²»¶®£¬»¹»³ÒÉÑùÀý
-//ÒÔºó¿´´íÑùÀýÒª×¢ÒâÕâÒ»µã
+ï»¿//ä¸€å¼€å§‹æˆ‘è¿˜ç†è§£é”™äº†æ•°æ®ï¼ˆæŠŠä¸€ä¸ªå˜é‡å½“æˆå¦ä¸€ä¸ªå˜é‡çš„æ„æ€ï¼‰ï¼Œå¯¼è‡´è¿žæ ·ä¾‹éƒ½çœ‹ä¸æ‡‚ï¼Œè¿˜æ€€ç–‘æ ·ä¾‹
+//ä»¥åŽçœ‹é”™æ ·ä¾‹è¦æ³¨æ„è¿™ä¸€ç‚¹
 #include <iostream>
 #include<string>
 #include<cstring>
@@ -45,7 +45,7 @@ int main()
 
 			while (true)
 			{
-				if (j == N) { break; }//Ò»¿ªÊ¼»¹Íü¼ÇÅÐ¶Ï³É¹¦µÄÍË³öÌõ¼þ
+				if (j == N) { break; }//ä¸€å¼€å§‹è¿˜å¿˜è®°åˆ¤æ–­æˆåŠŸçš„é€€å‡ºæ¡ä»¶
 				else if (v[j] == i) { i++, j++; }
 				else if (!s.empty() && s.top() == v[j]) { s.pop(); j++; }
 				else if (i <= N) { s.push(i); i++; }
@@ -54,7 +54,7 @@ int main()
 
 			if (flag == 0)
 			{
-				//cout << "NO" << endl;//ÍòÍòÃ»Ïëµ½£¬Õâ¸ö¶Ô´óÐ¡Ð´Ãô¸Ð
+				//cout << "NO" << endl;//ä¸‡ä¸‡æ²¡æƒ³åˆ°ï¼Œè¿™ä¸ªå¯¹å¤§å°å†™æ•æ„Ÿ
 				cout << "No" << endl;
 			}
 			else

@@ -1,6 +1,6 @@
-//http://www.2cto.com/kf/201308/232597.html
+ï»¿//http://www.2cto.com/kf/201308/232597.html
 //http://qscoj.cn/problem/163/
-//ÇóÖÊÒò×ÓºÍ Å·À­º¯ÊýµÄÓ¦ÓÃ
+//æ±‚è´¨å› å­å’Œ æ¬§æ‹‰å‡½æ•°çš„åº”ç”¨
 
 #include<iostream>
 #include<list>
@@ -19,8 +19,8 @@ int main()
 		cin >> N;
 		long long ans = N;
 		long long phi = N;
-		// ÕâÀïµÄNÔÚÃ»Ò»¸öÑ­»·¶¼»á±äµÃ£¬µ±Ò»¸öÊýº¬ÓÐÁ½¸öÒÔÉÏµÄÒò×ÓÊ±£¬×ÜÓÐÒ»¸öÊÇ<=sqrt(N)µÄ
-		//µ«µ±Ê£ÏÂÒ»¸öÖÊÊýÊ±£¬ÕâÀï²»ÄÜ´¦ÀíºÃ£¬ËùÒÔÐèÒªÔÚÏÂÃæÓÃifÓï¾ä´¦Àí£¬
+		// è¿™é‡Œçš„Nåœ¨æ²¡ä¸€ä¸ªå¾ªçŽ¯éƒ½ä¼šå˜å¾—ï¼Œå½“ä¸€ä¸ªæ•°å«æœ‰ä¸¤ä¸ªä»¥ä¸Šçš„å› å­æ—¶ï¼Œæ€»æœ‰ä¸€ä¸ªæ˜¯<=sqrt(N)çš„
+		//ä½†å½“å‰©ä¸‹ä¸€ä¸ªè´¨æ•°æ—¶ï¼Œè¿™é‡Œä¸èƒ½å¤„ç†å¥½ï¼Œæ‰€ä»¥éœ€è¦åœ¨ä¸‹é¢ç”¨ifè¯­å¥å¤„ç†ï¼Œ
 		for (long long i = 2; i <= sqrt(N); i++)
 		{
 			if (N%i == 0)
@@ -31,7 +31,7 @@ int main()
 		}
 		if (N>1) phi = phi / N *(N - 1);
 
-		ans = phi / 2 * ans;//phiÊÇÓÐ¶àÉÙ¸öÊýÓëN»¥ÖÊ£¬ÕâÐ©»¥ÖÊµÄÊý×ÜÊÇ³É¶Ô³öÏÖ£¨Ò»¶ÔÊýÏë¼Ó¾ÍµÈÓÚN£©£¬ËùÒÔ¾ÍÐèÒªÕâÑù´¦Àí¾Í¿ÉÒÔÁË
+		ans = phi / 2 * ans;//phiæ˜¯æœ‰å¤šå°‘ä¸ªæ•°ä¸ŽNäº’è´¨ï¼Œè¿™äº›äº’è´¨çš„æ•°æ€»æ˜¯æˆå¯¹å‡ºçŽ°ï¼ˆä¸€å¯¹æ•°æƒ³åŠ å°±ç­‰äºŽNï¼‰ï¼Œæ‰€ä»¥å°±éœ€è¦è¿™æ ·å¤„ç†å°±å¯ä»¥äº†
 		cout << ans << endl;
 	}
 

@@ -1,4 +1,4 @@
-//ÓÅÏÈ¶ÓÁĞ
+ï»¿//ä¼˜å…ˆé˜Ÿåˆ—
 
 #include <iostream>
 #include<string>
@@ -16,7 +16,7 @@ struct F
 	LL cost;
 	LL start;
 	LL next;
-	bool operator < (const F &f) const  //ÕâÀïÒªĞ´const£¬´ú±í²»»áĞŞ¸Ä±äÁ¿
+	bool operator < (const F &f) const  //è¿™é‡Œè¦å†™constï¼Œä»£è¡¨ä¸ä¼šä¿®æ”¹å˜é‡
 	{
 		return cost < f.cost;
 	}
@@ -56,8 +56,8 @@ int main()
 	LL total = 0;
 	for (int i = 0; i < n; i++)
 	{
-		//ÕâÀïÒ»¿ªÊ¼ÎÒÓÃµÄcost²»ÊÇlonglong£¬±»±¬µôÁË
-		total += cost[i].cost * (cost[i].next - cost[i].start);//ÕâÀïµÄnextºÍstartÊÇ¸ö³óÂªµÄÏë·¨£¬ÎÒÃ»ÏëºÃÒ»¸öºÅµÄÄ£ĞÍ
+		//è¿™é‡Œä¸€å¼€å§‹æˆ‘ç”¨çš„costä¸æ˜¯longlongï¼Œè¢«çˆ†æ‰äº†
+		total += cost[i].cost * (cost[i].next - cost[i].start);//è¿™é‡Œçš„nextå’Œstartæ˜¯ä¸ªä¸‘é™‹çš„æƒ³æ³•ï¼Œæˆ‘æ²¡æƒ³å¥½ä¸€ä¸ªå·çš„æ¨¡å‹
 	}
 	cout << total << endl;
 	for (size_t i = 0; i < n; i++)

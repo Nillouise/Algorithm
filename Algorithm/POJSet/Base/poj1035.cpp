@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<string>
 #include<sstream>
 #include<vector>
@@ -38,7 +38,7 @@ int comp(string s1, string s2)
 				return 0;
 			}
 			else {
-				//	j++;//²»ÊÇj++£¬ÕâÑùÕâÑù i¾Í²»ÔÙ±È½ÏÁË,²»¹ıÕâÀïÕâÃ´Ğ´£¬ÆäÊµ²»ÊÇºÜ·ûºÏÂß¼­µÄ
+				//	j++;//ä¸æ˜¯j++ï¼Œè¿™æ ·è¿™æ · iå°±ä¸å†æ¯”è¾ƒäº†,ä¸è¿‡è¿™é‡Œè¿™ä¹ˆå†™ï¼Œå…¶å®ä¸æ˜¯å¾ˆç¬¦åˆé€»è¾‘çš„
 				i--;
 				flag = 1;
 			}

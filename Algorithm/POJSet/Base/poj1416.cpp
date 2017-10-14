@@ -1,5 +1,5 @@
-//���⸽�������Ƚ϶࣬�����õ���string����֮���ת������Ϊ���ǰ�10���Ƶ����ֽ��в����ģ�
-//���һ�Ҫ���·���������Ҫ����һ�����·����һ����ǰ·����
+﻿//这题附加条件比较多，而且用到了string与数之间的转换（因为他是按10进制的数字进行操作的）
+//而且还要输出路径（这就需要保存一个最佳路径，一个当前路径）
 #include<algorithm>
 #include<iostream>
 #include<sstream>

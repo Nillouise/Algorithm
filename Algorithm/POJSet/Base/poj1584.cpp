@@ -1,4 +1,4 @@
-//ÕâÌâÒª·â±Õ¶à±ßĞÎ£¬ÒòÎªÊÇÒ»¸ö»·¡£
+ï»¿//è¿™é¢˜è¦å°é—­å¤šè¾¹å½¢ï¼Œå› ä¸ºæ˜¯ä¸€ä¸ªç¯ã€‚
 
 #include <iostream>
 #include <cstdio>
@@ -33,11 +33,11 @@ int dcmp(double x)
 	return x < 0 ? -1 : 1;
 }
 
-void intersect(Point ha, Point hb, Point va, Point vb, double &rx, double &ry)//ÕâÀïÍü¼ÇÓÃÒıÓÃ´«µİ
+void intersect(Point ha, Point hb, Point va, Point vb, double &rx, double &ry)//è¿™é‡Œå¿˜è®°ç”¨å¼•ç”¨ä¼ é€’
 {
 	double area1 = cross(hb - ha, va - ha);
 	double area2 = cross(hb - ha, vb - ha);
-	if (dcmp(area1)*dcmp(area2) == -1)//ÕâÀïĞ´´íÁË£¬Ó¦¸ÃÓÃdcmp»¯¾«¶È
+	if (dcmp(area1)*dcmp(area2) == -1)//è¿™é‡Œå†™é”™äº†ï¼Œåº”è¯¥ç”¨dcmpåŒ–ç²¾åº¦
 	{
 		rx = (area1*vb.x - area2*va.x) / (area1 - area2);
 		ry = (area1*vb.y - area2*va.y) / (area1 - area2);
@@ -57,9 +57,9 @@ void intersect(Point ha, Point hb, Point va, Point vb, double &rx, double &ry)//
 
 double calrect(Point a, Point b, Point c, Point d)
 {
-	double angle1 = cross(c - a, b - a);//¾ØĞÎÄÚ¶Ô½ÇÏßµÄÁ½¸öÈı½ÇĞÎ
+	double angle1 = cross(c - a, b - a);//çŸ©å½¢å†…å¯¹è§’çº¿çš„ä¸¤ä¸ªä¸‰è§’å½¢
 	double angle2 = cross(c - a, d - a);
-	//	return abs(angle1) + abs(angle2);//¼ÇµÃÈ¡¾ø¶ÔÖµ£¬µ«Íü¼Ç³ıÒÔ2
+	//	return abs(angle1) + abs(angle2);//è®°å¾—å–ç»å¯¹å€¼ï¼Œä½†å¿˜è®°é™¤ä»¥2
 	return 0.5*(abs(angle1) + abs(angle2));
 }
 
@@ -72,7 +72,7 @@ int isInPoly(Point cent, Point *poly, int n)
 		int direct = dcmp(cross(poly[i] - cent, poly[i + 1] - poly[i]));
 		int d0 = dcmp(poly[i].y - cent.y);
 		int d1 = dcmp(poly[i + 1].y - cent.y);
-		//µãÔÚ¶à±ßĞÎÄÚÊ±£¬Ó¦¸ÃÖ»ÓĞ1¶øÒÑ£¬ÕâÀïÖ¸»Ó¼ÓÒ»´Î£¬ÒòÎªÓĞÒ»´ÎyÖáÊÇĞ¡ÓÚ£¬×ªµ½ÁíÒ»±ßµÄÊ±ºò£¬¾ÍÊÇ´óÓÚÁË
+		//ç‚¹åœ¨å¤šè¾¹å½¢å†…æ—¶ï¼Œåº”è¯¥åªæœ‰1è€Œå·²ï¼Œè¿™é‡ŒæŒ‡æŒ¥åŠ ä¸€æ¬¡ï¼Œå› ä¸ºæœ‰ä¸€æ¬¡yè½´æ˜¯å°äºï¼Œè½¬åˆ°å¦ä¸€è¾¹çš„æ—¶å€™ï¼Œå°±æ˜¯å¤§äºäº†
 		if (d1 > 0 && d0 <= 0 && direct > 0)wn++;
 		if (d0 > 0 && d1 <= 0 && direct < 0)wn--;
 
@@ -95,23 +95,23 @@ int main() {
 	{
 		Point circle;
 		double radius;
-		//		cin >> circle.x >> circle.y >> radius;//ÊäÈëÊı¾İÎÒÓÖÃ»ÓĞÈÏÕæ¿´¸ã´íÁË
+		//		cin >> circle.x >> circle.y >> radius;//è¾“å…¥æ•°æ®æˆ‘åˆæ²¡æœ‰è®¤çœŸçœ‹æé”™äº†
 		cin >> radius >> circle.x >> circle.y;
 		Point poly[100];
 		for (size_t i = 0; i < vertices; i++)
 		{
 			cin >> poly[i].x >> poly[i].y;
 		}
-		//·â±Õµô¶à±ßĞÎ»·
+		//å°é—­æ‰å¤šè¾¹å½¢ç¯
 		poly[vertices].x = poly[0].x;
 		poly[vertices].y = poly[0].y;
 		int flag = 0;
-		for (size_t i = 1; i < vertices - 1; i++)//×¢ÒâÕâ¸ö-1 ÊÇ¾«Ëè£¬ÒòÎªÏÂÃæÊÇ+2µÄ
+		for (size_t i = 1; i < vertices - 1; i++)//æ³¨æ„è¿™ä¸ª-1 æ˜¯ç²¾é«“ï¼Œå› ä¸ºä¸‹é¢æ˜¯+2çš„
 		{
 			int wirl1 = dcmp(cross(poly[i + 1] - poly[i], poly[i] - poly[i - 1]));
 			int wirl2 = dcmp(cross(poly[i + 2] - poly[i + 1], poly[i + 1] - poly[i]));
 
-			//			if (wirl1 != wirl2)//²»ÄÜÕâÃ´Ğ´£¬ÒòÎªÓĞ¿ÉÄÜÈıµã¹²Ïß
+			//			if (wirl1 != wirl2)//ä¸èƒ½è¿™ä¹ˆå†™ï¼Œå› ä¸ºæœ‰å¯èƒ½ä¸‰ç‚¹å…±çº¿
 			if (wirl1*wirl2<0)
 			{
 				flag = 1;

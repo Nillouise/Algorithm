@@ -1,4 +1,4 @@
-//dfsÒ»¶¨ÓĞ³ö¿ÚµÄ£¬²»ÒªÍü¼Ç¼Ó³ö¿Ú
+ï»¿//dfsä¸€å®šæœ‰å‡ºå£çš„ï¼Œä¸è¦å¿˜è®°åŠ å‡ºå£
 #include <iostream>
 #include <cstdio>
 #include <cstring>
@@ -18,11 +18,11 @@ int relate(int i, int j)
 {
 	if (rect[i][3] == rect[j][1])
 	{
-		if (rect[i][0] >= rect[j][0] && rect[i][0] < rect[j][2])//ÕâÊÇ×ó½»µãµÄ£¬ËùÒÔÒ²¿ÉÒÔµÈÓÚ±ğÈËµÄ×ó½»µã
+		if (rect[i][0] >= rect[j][0] && rect[i][0] < rect[j][2])//è¿™æ˜¯å·¦äº¤ç‚¹çš„ï¼Œæ‰€ä»¥ä¹Ÿå¯ä»¥ç­‰äºåˆ«äººçš„å·¦äº¤ç‚¹
 		{
 			return 1;
 		}
-		else if (rect[i][2] > rect[j][0] && rect[i][2] <= rect[j][2])//ÕâÊÇÓÒ½»µãµÄ£¬ËùÒÔÒ²¿ÉÒÔµÈÓÚ±ğÈËµÄÓÒ½»µã
+		else if (rect[i][2] > rect[j][0] && rect[i][2] <= rect[j][2])//è¿™æ˜¯å³äº¤ç‚¹çš„ï¼Œæ‰€ä»¥ä¹Ÿå¯ä»¥ç­‰äºåˆ«äººçš„å³äº¤ç‚¹
 		{
 			return 1;
 		}
@@ -64,7 +64,7 @@ int dfs(int brush)
 	int Tinn[15];
 	memcpy(Tinn, inn, sizeof(inn));
 	int finish = 1;
-	//Õâ¾äÊÇ³ö¿Ú£¬dfs¾ÓÈ»ÍüÁË¼Ó³ö¿Ú¡£
+	//è¿™å¥æ˜¯å‡ºå£ï¼Œdfså±…ç„¶å¿˜äº†åŠ å‡ºå£ã€‚
 	for (size_t i = 0; i < N; i++)
 	{
 		if (inn[i] != -1)
@@ -93,7 +93,7 @@ int dfs(int brush)
 			for (int i = 0; i < N; i++)
 			{
 				//				if (inn[i] == 0 && color[i] == co)
-				if (Tinn[i] == 0 && color[i] == co)//ÔÚÔ­Í¼ÉÏ¸Ä£¬²»È»»áĞŞ¸Äµôinn
+				if (Tinn[i] == 0 && color[i] == co)//åœ¨åŸå›¾ä¸Šæ”¹ï¼Œä¸ç„¶ä¼šä¿®æ”¹æ‰inn
 				{
 					inn[i] = -1;
 					for (size_t jj = 0; jj < N; jj++)

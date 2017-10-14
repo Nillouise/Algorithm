@@ -1,10 +1,10 @@
-//http://codeforces.com/contest/861/problem/D
+ï»¿//http://codeforces.com/contest/861/problem/D
 #include<iostream>
 #include<string>
 #include<vector>
 using namespace std;
 
-//¸´Ï°Ò»ÏÂÔõÃ´Ð´×Ö·ûÊ÷£¬µ±È»ÕâÌâ²¢²»ÓÃ£¬ÒòÎªÒ»¸öµç»°ºÅÂë×î¶àÖ»ÓÐ50¸ö×éºÏ£¬ËùÒÔÖ»Òª±©Á¦¾Í¿ÉÒÔÁË
+//å¤ä¹ ä¸€ä¸‹æ€Žä¹ˆå†™å­—ç¬¦æ ‘ï¼Œå½“ç„¶è¿™é¢˜å¹¶ä¸ç”¨ï¼Œå› ä¸ºä¸€ä¸ªç”µè¯å·ç æœ€å¤šåªæœ‰50ä¸ªç»„åˆï¼Œæ‰€ä»¥åªè¦æš´åŠ›å°±å¯ä»¥äº†
 class TreeNode
 {
 public:
@@ -20,8 +20,8 @@ public:
 		{
 			next[offset] = new TreeNode();
 		}
-		//if (index != pre)pathcnt++, pre = index;//°Ñpathcnt·ÅÕâÀïÓ¦¸Ã²»ÐÐ£¬ÒòÎªÕâ¸ötreenodeÊÇÓÀÔ¶ÓÐÒâÒåµÄ£¬´ú±íÄ³¸öÊý×Ö»òÕß´ú±íroot£¬
-		//Ò²¾ÍÊÇ´ÓÍ·µ½½áÎ²£¬¶¼ÊÇÒª¼Ó£¬ÕâÀï²»ÄÜ·ÅÔÚsize()¼ì²éºóÃæ
+		//if (index != pre)pathcnt++, pre = index;//æŠŠpathcntæ”¾è¿™é‡Œåº”è¯¥ä¸è¡Œï¼Œå› ä¸ºè¿™ä¸ªtreenodeæ˜¯æ°¸è¿œæœ‰æ„ä¹‰çš„ï¼Œä»£è¡¨æŸä¸ªæ•°å­—æˆ–è€…ä»£è¡¨rootï¼Œ
+		//ä¹Ÿå°±æ˜¯ä»Žå¤´åˆ°ç»“å°¾ï¼Œéƒ½æ˜¯è¦åŠ ï¼Œè¿™é‡Œä¸èƒ½æ”¾åœ¨size()æ£€æŸ¥åŽé¢
 		next[offset]->extent(s.substr(1), index);
 		return 0;
 	}
@@ -67,14 +67,14 @@ int main()
 		v.push_back(s);
 	}
 	if (n == 1) { cout << v[0][0] << endl; return 0; }
-	//ÕâÀï²»ÄÜÕýÈ·´¦ÀíÖ»ÓÐÒ»Ìõµç»°µÄÇé¿ö
+	//è¿™é‡Œä¸èƒ½æ­£ç¡®å¤„ç†åªæœ‰ä¸€æ¡ç”µè¯çš„æƒ…å†µ
 
 	TreeNode root;
 	for (int s = 0; s < v.size(); s++)
 	{
 		for (int i = 0; i < 10; i++)
 		{
-			//trees[v[s][i] - 'a'].extent(v[s].substr(i));//ºÃÐ¦£¬ÕâÀï¾ÓÈ»´íÁË(-'a')£¬ÀË·ÑÎÒ20·ÖÖÓ
+			//trees[v[s][i] - 'a'].extent(v[s].substr(i));//å¥½ç¬‘ï¼Œè¿™é‡Œå±…ç„¶é”™äº†(-'a')ï¼Œæµªè´¹æˆ‘20åˆ†é’Ÿ
 			//trees[v[s][i] - '0'].extent(v[s].substr(i),s);
 			//trees[v[s][i] - '0'].extent(v[s].substr(i + 1), s);
 			root.extent(v[s].substr(i), s);
@@ -88,7 +88,7 @@ int main()
 		//for (int b = 0; b < 10; b++)
 		for (int b = 0; b < 9; b++)
 		{
-			const string &cs = v[s].substr(b);//ÕâÀïÒªÓÃconstÐÞÊÎ£¬ºÃÏñÊÇÒòÎª²»ÄÜÓÃÒýÓÃ¸ÄÄÚÈÝ
+			const string &cs = v[s].substr(b);//è¿™é‡Œè¦ç”¨constä¿®é¥°ï¼Œå¥½åƒæ˜¯å› ä¸ºä¸èƒ½ç”¨å¼•ç”¨æ”¹å†…å®¹
 											  //int len = trees[cs[0] - '0'].search(cs);
 			int len = root.find(cs) - 1;
 			if (len < 0)continue;

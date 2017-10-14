@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include<string>
 #include<algorithm>
 #include<vector>
@@ -26,15 +26,15 @@ int dfs(int c, int fa)
 		static LL tmp[MAXX][3];
 		memcpy(tmp, dp[c], sizeof(tmp));
 
-		//ÕâÀïµÄÖ÷ÒªÎÊÌâÊÇ£¬Ó¦¸Ã°Ñ¸¸×´Ì¬[¸öÊı][×´Ì¬]¸ú×Ó×´Ì¬[¸öÊı][×´Ì¬]¶ÀÁ¢¿ªÀ´£¬È¥¸üĞÂ¸¸×´Ì¬µÄÁíÒ»¸ö×´Ì¬
-		for (int j = 0; j <= x; j++)//¸¸ÏÖÓĞvaultµÄÊıÁ¿
+		//è¿™é‡Œçš„ä¸»è¦é—®é¢˜æ˜¯ï¼Œåº”è¯¥æŠŠçˆ¶çŠ¶æ€[ä¸ªæ•°][çŠ¶æ€]è·Ÿå­çŠ¶æ€[ä¸ªæ•°][çŠ¶æ€]ç‹¬ç«‹å¼€æ¥ï¼Œå»æ›´æ–°çˆ¶çŠ¶æ€çš„å¦ä¸€ä¸ªçŠ¶æ€
+		for (int j = 0; j <= x; j++)//çˆ¶ç°æœ‰vaultçš„æ•°é‡
 		{
-			for (int k = 0; k <= x; k++)//×ÓÓĞµÄvaultµÄÊıÁ¿
+			for (int k = 0; k <= x; k++)//å­æœ‰çš„vaultçš„æ•°é‡
 			{
 				if (j + k > x)continue;
-				for (int l = 0; l < 3; l++)//×Ó½ÚµãµÄÀàĞÍ
+				for (int l = 0; l < 3; l++)//å­èŠ‚ç‚¹çš„ç±»å‹
 				{
-					if (dp[y][k][l] == 0)continue;//¿ÉÄÜ×Ó½ÚµãÄ³ÖÖ×´Ì¬ÊÇ²»´æÔÚµÄ
+					if (dp[y][k][l] == 0)continue;//å¯èƒ½å­èŠ‚ç‚¹æŸç§çŠ¶æ€æ˜¯ä¸å­˜åœ¨çš„
 
 					if (l == 0)
 					{
@@ -51,7 +51,7 @@ int dfs(int c, int fa)
 						tmp[k + j][2] += tmp[j][2] * dp[y][k][2];
 						tmp[k + j][0] += tmp[j][0] * dp[y][k][2];
 					}
-					//ËãÍêÖ®ºó£¬Õâ¸ötmp×ÜÊÇĞèÒªmodÒ»´Î
+					//ç®—å®Œä¹‹åï¼Œè¿™ä¸ªtmpæ€»æ˜¯éœ€è¦modä¸€æ¬¡
 					tmp[k + j][0] %= MOD;
 					tmp[k + j][1] %= MOD;
 					tmp[k + j][2] %= MOD;

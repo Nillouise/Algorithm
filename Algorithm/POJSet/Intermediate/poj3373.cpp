@@ -1,5 +1,5 @@
-//Ϊʲô��Ҫ��������أ���Ϊǰ50�����ı�ĳЩ���ֺ󣬿��ܻ����һ����������һ��������Ҫ�ں�50������ı䣬��Ҫ���ٸ�������Ȼ��һ���ġ�
-//��ģ�Ķ�����������������㡣
+﻿//为什么需要这个数组呢？因为前50个数改变某些数字后，可能会产生一样的余数，一样的余数要在后50个数里改变，需要多少个数字自然是一定的。
+//讲模的东西基本都会碰上这点。
 #include <iostream>
 #include <cstdio>
 #include <cstring>
@@ -30,13 +30,13 @@ int init()
 }
 int vis[100 + 5][10000 + 5];
 
-//Ϊʲô��Ҫ��������أ���Ϊǰ50�����ı�ĳЩ���ֺ󣬿��ܻ����һ����������һ��������Ҫ�ں�50������ı䣬��Ҫ���ٸ�������Ȼ��һ���ġ�
+//为什么需要这个数组呢？因为前50个数改变某些数字后，可能会产生一样的余数，一样的余数要在后50个数里改变，需要多少个数字自然是一定的。
 int dfs(int pos, int remainder, int chn)
 {
-	//�������˳���ܴ�����Ϊ��鶼���һ�����ֺ�����-1��λ�ü��remainder��
+	//这两句的顺序不能错，因为检查都最后一个数字后，是在-1的位置检查remainder的
 	if (remainder == 0)
 		return 1;
-	//	if (pos <0)//�������һ�Σ�pos�ǵ�����
+	//	if (pos <0)//这里错了一次，pos是递增的
 	if (pos >= n.length())
 		return 0;
 	if (chn <= 0)
@@ -47,12 +47,12 @@ int dfs(int pos, int remainder, int chn)
 	}
 	for (int i = 0; i < 10; i++)
 	{
-		if (pos == 0 && i == 0 && n.length()>1)continue;//�ų�ǰ��0���������ֻ��һ��0ʱ��������
+		if (pos == 0 && i == 0 && n.length()>1)continue;//排除前导0的情况，但只有一个0时，又启用
 		int c = n[pos] - '0';
-		ouput[pos] = '0' + i;//�������ȴ����ʧ����Ҫ�ָ��ģ������ݴ�ȫ�ֱ�������β�Ƚϳ���Ҫ��ס
+		ouput[pos] = '0' + i;//这里改了却忘记失败是要恢复的，这种暂存全局变量的手尾比较长，要记住
 		if (c > i)
 		{
-			int nr = (remainder - mode[c - i][n.length() - pos - 1]) % k;//������һ��Ҫ�㣬���� ��+���Ǽ�������ݸĳɴ�������С������
+			int nr = (remainder - mode[c - i][n.length() - pos - 1]) % k;//这里是一个要点，余数 是+还是减，会根据改成大数还是小数决定
 
 			if (dfs(pos + 1, nr, chn - 1))
 				return 1;

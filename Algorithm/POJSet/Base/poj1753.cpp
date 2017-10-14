@@ -1,9 +1,9 @@
-//��=��=��a ����
-//coverse�����жϱ߽�
-//��converse x y��д��converse x2,y2�ˣ��������������ĸ��ż��Ҳ����ĵ��µ�
-//û�п���Ŀ���� Impossible �����
-//impossible û�ж���ɳ���INF
-//û�п��Ǳ߽������û�б�check ��
+﻿//！=和=！a 混挠
+//coverse忘记判断边界
+//把converse x y，写成converse x2,y2了，这是由于上下文干扰加我不留心导致的
+//没有看题目考虑 Impossible 的情况
+//impossible 没有定义成常量INF
+//没有考虑边界情况有没有被check 到
 #include<iostream>
 #include<algorithm>
 #include<stdio.h>

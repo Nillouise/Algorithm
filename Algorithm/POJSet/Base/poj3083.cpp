@@ -1,6 +1,6 @@
-//ÕâÌâ×îºóÒ²ÊÇwa£¬µ«ÌÖÂÛ°æ·¢µÄ²âÊÔÊı¾İ¶¼¹ıÁË£¬²»¹ÜÁË
-//µ±È»£¬ÕâÌâÎÒµÄ´úÂëĞ´µÃÏàµ±ÀÃ£¬Ëµ²»¶¨²Î¿¼Ò»ÏÂ±ğÈËÔõÃ´Ğ´µÃ±È½ÏºÃ
-//wa µÄÔ­ÒòÓ¦¸ÃÊÇÎÒµÄ¿Õ¸ñ´ò³ÉÊÇÖĞÎÄµÄ¿Õ¸ñÁË
+ï»¿//è¿™é¢˜æœ€åä¹Ÿæ˜¯waï¼Œä½†è®¨è®ºç‰ˆå‘çš„æµ‹è¯•æ•°æ®éƒ½è¿‡äº†ï¼Œä¸ç®¡äº†
+//å½“ç„¶ï¼Œè¿™é¢˜æˆ‘çš„ä»£ç å†™å¾—ç›¸å½“çƒ‚ï¼Œè¯´ä¸å®šå‚è€ƒä¸€ä¸‹åˆ«äººæ€ä¹ˆå†™å¾—æ¯”è¾ƒå¥½
+//wa çš„åŸå› åº”è¯¥æ˜¯æˆ‘çš„ç©ºæ ¼æ‰“æˆæ˜¯ä¸­æ–‡çš„ç©ºæ ¼äº†
 #include<algorithm>
 #include<iostream>
 #include<string>
@@ -31,11 +31,11 @@ struct human
 int searchleft(human start)
 {
 	memset(vis, 0, sizeof(vis));
-	int cnt = 1;//ÒòÎª´ÓÆğµã¿ªÊ¼¾ÍÊÇ1£¬ËãÂ·¾¶µÄ
+	int cnt = 1;//å› ä¸ºä»èµ·ç‚¹å¼€å§‹å°±æ˜¯1ï¼Œç®—è·¯å¾„çš„
 	human hu = start;
 	for (;;)
 	{
-		int newdirect = (hu.direction + 4 - 1) % 4;//¼ÇµÃÒª+4±ÜÃâ¸ºÊı
+		int newdirect = (hu.direction + 4 - 1) % 4;//è®°å¾—è¦+4é¿å…è´Ÿæ•°
 		int leftx = hu.x + direct[newdirect][0];
 		int lefty = hu.y + direct[newdirect][1];
 		//		if (maze[leftx][lefty] != '#'&&leftx<h&&leftx>=0&&lefty<w&&lefty>=0)
@@ -53,9 +53,9 @@ int searchleft(human start)
 			int upy = hu.y + direct[hu.direction][1];
 			if (maze[upx][upy] == '#')
 			{
-				//				hu.direction = (hu.direction - 1 + 4) % 4;//Ïò×óÏòÉÏ¶¼²»ĞĞÊ±£¬¾ÍÒªÏòÓÒ
+				//				hu.direction = (hu.direction - 1 + 4) % 4;//å‘å·¦å‘ä¸Šéƒ½ä¸è¡Œæ—¶ï¼Œå°±è¦å‘å³
 				hu.direction = (hu.direction + 1 + 4) % 4;
-				//				break;//ÕâÀïÊÇcontinue£¬½øÈëÏÂÒ»¸öÑ­»·
+				//				break;//è¿™é‡Œæ˜¯continueï¼Œè¿›å…¥ä¸‹ä¸€ä¸ªå¾ªç¯
 				continue;
 			}
 			cnt++;
@@ -70,11 +70,11 @@ int searchleft(human start)
 int searchright(human start)
 {
 	memset(vis, 0, sizeof(vis));
-	int cnt = 1;//ÒòÎª´ÓÆğµã¿ªÊ¼¾ÍÊÇ1£¬ËãÂ·¾¶µÄ
+	int cnt = 1;//å› ä¸ºä»èµ·ç‚¹å¼€å§‹å°±æ˜¯1ï¼Œç®—è·¯å¾„çš„
 	human hu = start;
 	for (;;)
 	{
-		int newdirect = (hu.direction + 4 + 1) % 4;//¼ÇµÃÒª+4±ÜÃâ¸ºÊı
+		int newdirect = (hu.direction + 4 + 1) % 4;//è®°å¾—è¦+4é¿å…è´Ÿæ•°
 		int leftx = hu.x + direct[newdirect][0];
 		int lefty = hu.y + direct[newdirect][1];
 		//		if (maze[leftx][lefty] != '#'&&leftx<h&&leftx>=0&&lefty<w&&lefty>=0)
@@ -93,7 +93,7 @@ int searchright(human start)
 			if (maze[upx][upy] == '#')
 			{
 				hu.direction = (hu.direction - 1 + 4) % 4;
-				//				break;//ÕâÀïÊÇcontinue£¬½øÈëÏÂÒ»¸öÑ­»·
+				//				break;//è¿™é‡Œæ˜¯continueï¼Œè¿›å…¥ä¸‹ä¸€ä¸ªå¾ªç¯
 				continue;
 			}
 			cnt++;
@@ -118,7 +118,7 @@ int searchshort(human start)
 		if (maze[hu.x][hu.y] == 'E')return vis[hu.x][hu.y];
 		human h1(hu.x + direct[0][0], hu.y + direct[0][1]);
 
-		//ÏÂÃæÕâÀïĞ´´íÁË£¬Ó¦¸ÃÓÃÒ»¸öÑ­»·´úÌæ
+		//ä¸‹é¢è¿™é‡Œå†™é”™äº†ï¼Œåº”è¯¥ç”¨ä¸€ä¸ªå¾ªç¯ä»£æ›¿
 		if (h1.x >= 0 && h1.x < h&&h1.y >= 0 && h1.y < w&&vis[h1.x][h1.y] == -1 && maze[h1.x][h1.y] != '#')
 		{
 			q.push(h1);

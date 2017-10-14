@@ -1,9 +1,9 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<algorithm>
 using namespace std;
 
 
-//Õâ¸öÊÇÓÃÁÚ½Ó¾ØÕó×öµÄ
+//è¿™ä¸ªæ˜¯ç”¨é‚»æ¥çŸ©é˜µåšçš„
 
 const int maxstate = 100;
 int u[maxstate], v[maxstate], w[maxstate];

@@ -1,5 +1,5 @@
-/*
-vec[0].substr(i, j - i);substr ÊÇ´Ó aÎ»ÖÃ¿ªÊ¼£¬Ñ¡³ö b¸öÔªËØ¡£
+ï»¿/*
+vec[0].substr(i, j - i);substr æ˜¯ä» aä½ç½®å¼€å§‹ï¼Œé€‰å‡º bä¸ªå…ƒç´ ã€‚
 */
 
 #include<iostream>
@@ -36,11 +36,11 @@ int main()
 			{
 				if (j - i < common.length())continue;
 				string cur = vec[0].substr(i, j - i);
-				if (cur.length() == common.length() && cur > common)continue;//È·±£ÊÇ×îĞ¡µÄ×ÖµäĞò¡£
+				if (cur.length() == common.length() && cur > common)continue;//ç¡®ä¿æ˜¯æœ€å°çš„å­—å…¸åºã€‚
 				int ok = 1;
-				for (vector<string>::iterator it = vec.begin(); it != vec.end(); it++)//ÕâÀïÊ¹ÓÃauto ¹Ø¼ü×Ö£¬²¢²»ÄÜÍ¨¹ı ojµÄÏµÍ³
+				for (vector<string>::iterator it = vec.begin(); it != vec.end(); it++)//è¿™é‡Œä½¿ç”¨auto å…³é”®å­—ï¼Œå¹¶ä¸èƒ½é€šè¿‡ ojçš„ç³»ç»Ÿ
 				{
-					if (it->find(cur) == cur.npos) {//ÕÒ²»µ½£¬¾Í»á·µ»Ønpos ×÷Îª±ê¼Ç
+					if (it->find(cur) == cur.npos) {//æ‰¾ä¸åˆ°ï¼Œå°±ä¼šè¿”å›npos ä½œä¸ºæ ‡è®°
 						ok = 0;
 						break;
 					}

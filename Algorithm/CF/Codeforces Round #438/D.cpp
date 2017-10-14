@@ -1,4 +1,4 @@
-//ÕâÌâºÃµäĞÍµÄ×Ö·û´®Ä£ÄâÑ½£¬½»ÁË10¶à´Î£¬²ÅÔÚdebugÖĞÍêÕûÀí½âÁËÌâÄ¿µÄ¹ı³Ì
+ï»¿//è¿™é¢˜å¥½å…¸å‹çš„å­—ç¬¦ä¸²æ¨¡æ‹Ÿå‘€ï¼Œäº¤äº†10å¤šæ¬¡ï¼Œæ‰åœ¨debugä¸­å®Œæ•´ç†è§£äº†é¢˜ç›®çš„è¿‡ç¨‹
 #include <iostream>
 #include<string>
 #include<cstring>
@@ -54,7 +54,7 @@ int main()
 		}
 		if (str.size()>MAXK)
 		{
-			//			node.pre = str.substr(MAXK);//ÕâÀïÍêÈ«Íü¼ÇÁËsubstrµÄÓÃ·¨¸újavaµÄÓĞµã²»Ò»Ñù
+			//			node.pre = str.substr(MAXK);//è¿™é‡Œå®Œå…¨å¿˜è®°äº†substrçš„ç”¨æ³•è·Ÿjavaçš„æœ‰ç‚¹ä¸ä¸€æ ·
 			node.pre = str.substr(0, MAXK);
 			node.suf = str.substr(str.size() - MAXK, MAXK);
 		}
@@ -75,7 +75,7 @@ int main()
 		string str = v[a].suf + v[b].pre;
 
 		Token node;
-		//Ò»¿ªÊ¼¾ÓÈ»»¹Íê³ÉĞ´Õâ¾ä£¬ÕâÊÇÒª»ñÈ¡ÕâÁ½Ìõ×Ö¾äÄÚ²¿×Ö¶ÎµÄ×éºÏ£¬µ¥µ¥Í·Î²½áºÏµÄÄÚ²¿×Ö·û´®²¢²»ÄÜ»ñµÃÕâĞ©ÄÚ²¿×éºÏ
+		//ä¸€å¼€å§‹å±…ç„¶è¿˜å®Œæˆå†™è¿™å¥ï¼Œè¿™æ˜¯è¦è·å–è¿™ä¸¤æ¡å­—å¥å†…éƒ¨å­—æ®µçš„ç»„åˆï¼Œå•å•å¤´å°¾ç»“åˆçš„å†…éƒ¨å­—ç¬¦ä¸²å¹¶ä¸èƒ½è·å¾—è¿™äº›å†…éƒ¨ç»„åˆ
 		node.vis = v[a].vis | v[b].vis;
 		for (int i = 0; i<str.size(); i++)
 		{
@@ -87,7 +87,7 @@ int main()
 			}
 		}
 
-		//ÕâÀïÊÇÖØµã,Æ´½Ó¶«Î÷
+		//è¿™é‡Œæ˜¯é‡ç‚¹,æ‹¼æ¥ä¸œè¥¿
 		if (v[a].pre.size()<MAXK)
 		{
 			node.pre = str.substr(0, MAXK);
@@ -99,7 +99,7 @@ int main()
 
 		if (v[b].suf.size()<MAXK)
 		{
-			//¿´ÕâÀïÕâ¸ömax
+			//çœ‹è¿™é‡Œè¿™ä¸ªmax
 			node.suf = str.substr(max(0, (int)str.size() - MAXK), MAXK);
 		}
 		else
@@ -110,10 +110,10 @@ int main()
 
 		//		node.pre = v[a].pre;
 		//		node.suf = v[b].suf;
-		//ÕâÀïÊÇÎ¥·´Âß¼­µÄ´íÎó
+		//è¿™é‡Œæ˜¯è¿åé€»è¾‘çš„é”™è¯¯
 		//		if (str.size()>MAXK)
 		//		{
-		//			//ÕâÀïÊÇÎ¥·´Âß¼­µÄ´íÎó
+		//			//è¿™é‡Œæ˜¯è¿åé€»è¾‘çš„é”™è¯¯
 		////			node.pre = str.substr(0, MAXK);
 		////			node.suf = str.substr(str.size() - MAXK, MAXK);
 		//		}
@@ -121,7 +121,7 @@ int main()
 		//		{
 		//			node.pre = node.suf = str;
 		//		}
-		//		//Ô­ÏÈÎÒ°ÑÕâ¾ä·ÅÔÚÕâÀï£¬Õâ¿ÉÊÇ»áÇå¿ÕÔ­À´µÄ½á¹ûÑ½
+		//		//åŸå…ˆæˆ‘æŠŠè¿™å¥æ”¾åœ¨è¿™é‡Œï¼Œè¿™å¯æ˜¯ä¼šæ¸…ç©ºåŸæ¥çš„ç»“æœå‘€
 		//		node.vis = v[a].vis | v[b].vis;
 		v.push_back(node);
 		int res = 0;

@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <cstdio>
 #include <cstring>
 #include<string>
@@ -10,8 +10,8 @@
 using namespace std;
 int N, P;
 
-//ÕâÖÖË¼Â·µÄ²»¶ÔÖ®´¦ÔÚÓÚ
-//À¨ºÅÊÇÓÐÁ½ÖÖ¹ØÏµ£¬»¥Ïà°üº¬ºÍ²¢ÁÐ£¬µ±²¢ÁÐÊ±£¬Õâ¸ö³ÌÐò²»ÄÜÕýÈ·´¦ÀíÁ½¸ö²¢ÁÐÐòÁÐÖ®¼äµÄÄÇÐ©·Ç·¨À¨ºÅ
+//è¿™ç§æ€è·¯çš„ä¸å¯¹ä¹‹å¤„åœ¨äºŽ
+//æ‹¬å·æ˜¯æœ‰ä¸¤ç§å…³ç³»ï¼Œäº’ç›¸åŒ…å«å’Œå¹¶åˆ—ï¼Œå½“å¹¶åˆ—æ—¶ï¼Œè¿™ä¸ªç¨‹åºä¸èƒ½æ­£ç¡®å¤„ç†ä¸¤ä¸ªå¹¶åˆ—åºåˆ—ä¹‹é—´çš„é‚£äº›éžæ³•æ‹¬å·
 int solve(string s)
 {
 	stack<char> sta;
@@ -36,7 +36,7 @@ int solve(string s)
 			}
 		}
 	}
-	//×îºóÒ»¸ö×Ö·ûÒª·ÅÔÚÍâÃæÀ´£¬ÒòÎªÖ»ÓÐ²»ºÏ·¨Ê±£¬²Å»á¸üÐÂMAX
+	//æœ€åŽä¸€ä¸ªå­—ç¬¦è¦æ”¾åœ¨å¤–é¢æ¥ï¼Œå› ä¸ºåªæœ‰ä¸åˆæ³•æ—¶ï¼Œæ‰ä¼šæ›´æ–°MAX
 	MAX = max(MAX, temp);
 	return MAX;
 }

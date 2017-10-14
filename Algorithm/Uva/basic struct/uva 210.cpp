@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include<string>
 #include<cstring>
 #include<algorithm>
@@ -50,7 +50,7 @@ void run(int pid)
 			if (!blockQ.empty())
 			{
 				int cid = blockQ.front();
-				blockQ.pop();//¶Ô¶ÓÁĞÓĞµãÉúÊèÁË£¬Ò»¿ªÊ¼¶¼Íü¼ÇÁËÄÃÁËÊı¾İ¾ÍÒªÉ¾³ıµôËûÁË
+				blockQ.pop();//å¯¹é˜Ÿåˆ—æœ‰ç‚¹ç”Ÿç–äº†ï¼Œä¸€å¼€å§‹éƒ½å¿˜è®°äº†æ‹¿äº†æ•°æ®å°±è¦åˆ é™¤æ‰ä»–äº†
 				readyQ.push_front(cid);
 			}
 			total += E;
@@ -72,16 +72,16 @@ int main()
 	cin >> T;
 	while (T--)
 	{
-		//Íü¼Çacm¸úcfÓĞµã²»Ò»Ñù£¬¶àÑùÀıÒªÇå¿ÕÊı¾İµÄ
+		//å¿˜è®°acmè·Ÿcfæœ‰ç‚¹ä¸ä¸€æ ·ï¼Œå¤šæ ·ä¾‹è¦æ¸…ç©ºæ•°æ®çš„
 		memset(var, 0, sizeof(var));
 		vs.clear();
-		cin >> N >> A >> O >> B >> E >> S >> Quan;//ÕâÀïÁôÁËÒ»¸ö¿ÕĞĞ£¬ĞèÒª¶àÒ»¸ögetline³Ôµô
+		cin >> N >> A >> O >> B >> E >> S >> Quan;//è¿™é‡Œç•™äº†ä¸€ä¸ªç©ºè¡Œï¼Œéœ€è¦å¤šä¸€ä¸ªgetlineåƒæ‰
 		string es;
 		getline(cin, es);
 		for (int i = 0; i<N; i++)
 		{
 			pc[i] = vs.size();
-			for (string s; getline(cin, s);)//ÕâÀïÖ»ĞèÒª¸ögetline£¬Ö»ÓĞcin>>Êı×ÖµÈÖ®ºó²Å»áÁôÒ»¸ö¿ÕĞĞ
+			for (string s; getline(cin, s);)//è¿™é‡Œåªéœ€è¦ä¸ªgetlineï¼Œåªæœ‰cin>>æ•°å­—ç­‰ä¹‹åæ‰ä¼šç•™ä¸€ä¸ªç©ºè¡Œ
 			{
 				vs.push_back(s);
 				pe[i] = vs.size();

@@ -1,6 +1,6 @@
-//���������������Ƿ�ע����ָ�������������û�п���
-//����ϵ�仯���Ǻ���Ϥ���任����һ��
-//getPos����û�п��Ǻñ߽磬�����Ǵ�1��ʼ��ŵ�
+﻿//对于求余数处理是否注意出现负数的情况；这点没有考虑
+//坐标系变化不是很熟悉，变换错了一次
+//getPos函数没有考虑好边界，这题是从1开始编号的
 #include<algorithm>
 #include<iostream>
 #include<string>
@@ -28,7 +28,7 @@ int findset(int x)
 }
 int solve()
 {
-	//	for (size_t i = 0; i <= n; i++)p[i] = i; //���ģ���ʼ����λ�ö��Ŵ���
+	//	for (size_t i = 0; i <= n; i++)p[i] = i; //错的，初始化的位置都放错了
 	sort(edges, edges + m);
 	int ans = INF;
 	for (size_t b = 0; b < m; b++)
@@ -47,7 +47,7 @@ int solve()
 			{
 				int curd = edges[i].d - edges[b].d;
 				if (curd < ans) {
-					//					curd = ans;//�����Ȼд��������,����ans һֱΪINF
+					//					curd = ans;//这里居然写成了这样,导致ans 一直为INF
 					ans = curd;
 				}
 				break;

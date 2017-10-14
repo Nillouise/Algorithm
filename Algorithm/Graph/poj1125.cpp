@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<string>
 #include<set>
 #include<map>
@@ -23,7 +23,7 @@ int main()
 	int n;
 	while (~scanf("%d", &n) && n)
 	{
-		memset(gra, -1, sizeof(gra));//°Ñ ²»Í¨µÄÂ· ³õÊ¼»¯Îª-1£¬¼«ÆäµØ²»ºÃÓÃ¡£
+		memset(gra, -1, sizeof(gra));//æŠŠ ä¸é€šçš„è·¯ åˆå§‹åŒ–ä¸º-1ï¼Œæå…¶åœ°ä¸å¥½ç”¨ã€‚
 		for (int sn = 0; sn < n; sn++)
 		{
 			int ctn;
@@ -38,7 +38,7 @@ int main()
 
 		//solve
 
-		//Õâ¸öfloddy ÓÖĞ´´íÁËÒ»´Î£¬ÖĞ¼äµã Ò»¶¨ÒªÊÇ×îÍâ²ãµÄÑ­»·¡£
+		//è¿™ä¸ªfloddy åˆå†™é”™äº†ä¸€æ¬¡ï¼Œä¸­é—´ç‚¹ ä¸€å®šè¦æ˜¯æœ€å¤–å±‚çš„å¾ªç¯ã€‚
 		for (size_t j = 0; j < n; j++)
 		{
 			for (size_t i = 0; i < n; i++)

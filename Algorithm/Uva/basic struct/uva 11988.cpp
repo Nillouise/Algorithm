@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include<string>
 #include<cstring>
 #include<algorithm>
@@ -39,7 +39,7 @@ int main()
 			}
 			else
 			{
-				//ÕâÀïÒªÏëºÃ
+				//è¿™é‡Œè¦æƒ³å¥½
 				if (cur == last)
 				{
 					last = i;
@@ -52,7 +52,7 @@ int main()
 			}
 		}
 		int i = next[0];
-		//ÕâÀï»áÉÙ´òÓ¡³ö×îºóÒ»¸ö×Ö·û
+		//è¿™é‡Œä¼šå°‘æ‰“å°å‡ºæœ€åä¸€ä¸ªå­—ç¬¦
 		//		while(next[i]!=-1)
 		while (i != -1)
 		{

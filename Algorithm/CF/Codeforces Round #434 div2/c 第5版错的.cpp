@@ -1,4 +1,4 @@
-
+ï»¿
 #include <iostream>
 #include<string>
 #include<cstring>
@@ -6,7 +6,7 @@
 #include<vector>
 #include<map>
 #include<set>
-#include<cmath>//Õâ¸ösqrtÒªÓÃ
+#include<cmath>//è¿™ä¸ªsqrtè¦ç”¨
 #include<queue>
 using namespace std;
 typedef long long LL;
@@ -39,7 +39,7 @@ int main()
 	}
 	sort(v.begin(), v.end());
 
-	vector<LL> preh; //sufh(v.size()+2);//ÕâÀïÓÃreverse´¦ÀíÓ¦¸Ã±È½ÏºÃ
+	vector<LL> preh; //sufh(v.size()+2);//è¿™é‡Œç”¨reverseå¤„ç†åº”è¯¥æ¯”è¾ƒå¥½
 	vector<LL> sufh;
 	preh.push_back(0);
 	vector<LL> precnt;
@@ -84,7 +84,7 @@ int main()
 
 
 		LL index = ct / S;
-		LL last = index + 3000 > pizza ? pizza : index + 3000;//ÕâÀïÊÔ100´Î£¬ÆäÊµ²¢Ã»ÓĞ¶¨ÂÛ
+		LL last = index + 3000 > pizza ? pizza : index + 3000;//è¿™é‡Œè¯•100æ¬¡ï¼Œå…¶å®å¹¶æ²¡æœ‰å®šè®º
 															  //LL last = 0;
 															  //for (LL i = 0; i <= pizza; i++)
 		for (LL i = index; i <= last; i++)
@@ -103,13 +103,13 @@ int main()
 				tmp += -1LL * preh[pos];
 			}
 			else {
-				//tmp += -1 * (piece - precnt[pos - 1])*(v[pos - 1].a - v[pos - 1].b);//¿ÉÄÜbÒ²»á³ÔÊ£ÏÂ¡£
-				//int gap = pizza*S - precnt.back();//¾«¶ÈÓĞÎÊÌâ
+				//tmp += -1 * (piece - precnt[pos - 1])*(v[pos - 1].a - v[pos - 1].b);//å¯èƒ½bä¹Ÿä¼šåƒå‰©ä¸‹ã€‚
+				//int gap = pizza*S - precnt.back();//ç²¾åº¦æœ‰é—®é¢˜
 				LL gap = pizza*S - precnt.back();
 				LL cut = piece - precnt[pos - 1];
 
-				////ÕâÀïÊÇ´íµÄ£¬ÒòÎªËûµ¥´¿±È½ÏÁËaºÍbµÄ´óĞ¡£¬µ«Ã»ÓĞ±È½ÏÓĞ¿ÉÄÜaÒª³Ô¶àµã£¬b¿ÉÄÜÖ»ÓÃ³ÔÉÙµã
-				////»¹ÓĞÒ»¸ö´íÎóÊÇ£¬µ±Òª»»pizzaµÄÀàĞÍÊ±£¬¿ÉÓĞÓĞ¼¸¸öÈËÒªÒ»Æğ»»
+				////è¿™é‡Œæ˜¯é”™çš„ï¼Œå› ä¸ºä»–å•çº¯æ¯”è¾ƒäº†aå’Œbçš„å¤§å°ï¼Œä½†æ²¡æœ‰æ¯”è¾ƒæœ‰å¯èƒ½aè¦åƒå¤šç‚¹ï¼Œbå¯èƒ½åªç”¨åƒå°‘ç‚¹
+				////è¿˜æœ‰ä¸€ä¸ªé”™è¯¯æ˜¯ï¼Œå½“è¦æ¢pizzaçš„ç±»å‹æ—¶ï¼Œå¯æœ‰æœ‰å‡ ä¸ªäººè¦ä¸€èµ·æ¢
 				//if (v[pos - 1].a < v[pos - 1].b)
 				//{
 				//	tmp += -1LL * (cut)*(v[pos - 1].a - v[pos - 1].b);
@@ -119,14 +119,14 @@ int main()
 				//	LL remain = gap - cut > 0 ? 0 : cut - gap;
 				//	tmp += -1LL * remain*(v[pos - 1].a - v[pos - 1].b);
 				//}
-				//ÏÂÃæÕâÀïÃ»ÓĞ¿¼ÂÇ¶à¸öÈËÒªÒ»Æğ»»
+				//ä¸‹é¢è¿™é‡Œæ²¡æœ‰è€ƒè™‘å¤šä¸ªäººè¦ä¸€èµ·æ¢
 				//LL eata = -1LL * (cut)*(v[pos - 1].a - v[pos - 1].b);
 				//LL remain = gap - cut > 0 ? 0 : cut - gap;
 				//LL eatb = -1LL * remain*(v[pos - 1].a - v[pos - 1].b);
 				//tmp += max(eata, eatb);
 
 
-				//ÏÂÃæÕâÀï»¹ÔÚ³¢ÊÔ£¬°Ñ¶à¸öÈË·ÅÔÚgapÀï£¨¶ø²»ÊÇÒ»¸öÈË£©£¬µ«»¹ÊÇ´íµÄ
+				//ä¸‹é¢è¿™é‡Œè¿˜åœ¨å°è¯•ï¼ŒæŠŠå¤šä¸ªäººæ”¾åœ¨gapé‡Œï¼ˆè€Œä¸æ˜¯ä¸€ä¸ªäººï¼‰ï¼Œä½†è¿˜æ˜¯é”™çš„
 				if (v[pos - 1].a < v[pos - 1].b)
 				{
 					tmp += -1LL * (cut)*(v[pos - 1].a - v[pos - 1].b);
@@ -138,7 +138,7 @@ int main()
 					{
 						cut -= gap;
 						tmp += -1LL * (cut)*(v[pos - 1].a - v[pos - 1].b);
-						tmp += -1LL * preh[pos - 1];//Õâ¾äÒª¸úÉÏÃæµÄposÅäÌ×
+						tmp += -1LL * preh[pos - 1];//è¿™å¥è¦è·Ÿä¸Šé¢çš„posé…å¥—
 					}
 					else {
 						pos--;
@@ -154,7 +154,7 @@ int main()
 
 							if (v[pos - 1].a <= v[pos - 1].b)
 							{
-								tmp += -1LL * preh[pos]; //×¢ÒâÕâÀï
+								tmp += -1LL * preh[pos]; //æ³¨æ„è¿™é‡Œ
 								break;
 							}
 
@@ -195,7 +195,7 @@ int main()
 	for (auto a : v)
 	{
 		//floor += a.cnt*a.b;
-		floor += (LL)a.cnt*(LL)a.a;//ÕâÀï¾«¶È²»×ã£¬ÖĞ¼ä½á¹ûµÄ¾«¶È²»×ã
+		floor += (LL)a.cnt*(LL)a.a;//è¿™é‡Œç²¾åº¦ä¸è¶³ï¼Œä¸­é—´ç»“æœçš„ç²¾åº¦ä¸è¶³
 	}
 	cout << floor + MAX << endl;
 

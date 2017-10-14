@@ -1,4 +1,4 @@
-//ÕâÊ±×î´ÀµÄ£¬ÍıÍ¼ÓÃÒ»¸ö¸´ÔÓ¶È¾Ş¸ßµÄËã·¨Í¨¹ı£¬»¹»¨ÁË²»ÉÙÊ±¼äĞ´Õâ¸öËã·¨£¬
+ï»¿//è¿™æ—¶æœ€è ¢çš„ï¼Œå¦„å›¾ç”¨ä¸€ä¸ªå¤æ‚åº¦å·¨é«˜çš„ç®—æ³•é€šè¿‡ï¼Œè¿˜èŠ±äº†ä¸å°‘æ—¶é—´å†™è¿™ä¸ªç®—æ³•ï¼Œ
 #include <iostream>
 #include<string>
 #include<cstring>
@@ -6,7 +6,7 @@
 #include<vector>
 #include<map>
 #include<set>
-#include<cmath>//Õâ¸ösqrtÒªÓÃ
+#include<cmath>//è¿™ä¸ªsqrtè¦ç”¨
 #include<queue>
 using namespace std;
 typedef long long LL;
@@ -30,7 +30,7 @@ struct star
 LL getbright(star s, LL t)
 {
 	LL b = s.init + t;
-	b %= c + 1;//¹âµÄÁÁ¶ÈÊÇ0µ½c£¬ËùÒÔc+1²ÅÊÇ·¶Î§
+	b %= c + 1;//å…‰çš„äº®åº¦æ˜¯0åˆ°cï¼Œæ‰€ä»¥c+1æ‰æ˜¯èŒƒå›´
 	return b;
 }
 vector<star> v[200];

@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<string>
 #include<vector>
 #include<algorithm>
@@ -54,7 +54,7 @@ int main()
 
 	dfs(1, -1, r);
 	long long sub = n - 1;
-	long long total = vs1.size()*vs2.size();//Á½¸ö10ÍòÏà³ËÒªlong long×°£¬ÕâÀïÊ¹ÎÒwaÁËÈı´Î
+	long long total = vs1.size()*vs2.size();//ä¸¤ä¸ª10ä¸‡ç›¸ä¹˜è¦long longè£…ï¼Œè¿™é‡Œä½¿æˆ‘waäº†ä¸‰æ¬¡
 	long long gap = total - sub;
 	//int gap = vs1.size()*vs2.size() - n+1;
 	cout << gap << endl;

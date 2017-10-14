@@ -1,8 +1,8 @@
-//��δ�����Ҫ�����ǣ���������ô�ж����㹲�ߣ��ò����������ɣ�
-//���У���û����vector���жϺϼƣ�������vis���ֵ����ֶΣ����´����쳣���ӣ�
-//������vector��¼�������ߵ����꣬��������Ҫ���׵ö࣬����˵����vis��ȫ����շǳ����ӣ���visȡǰ����������Ҳ���鷳����Щ��vector���ܼ򵥡�
+﻿//这段代码主要问题是，我忘了怎么判断三点共线（用叉积求面积即可）
+//还有，我没有用vector来判断合计，而是用vis这种抵消手段，导致代码异常复杂，
+//这里用vector记录下两条边的坐标，后续处理要容易得多，比如说，用vis判全数组空非常复杂，用vis取前两个的坐标也很麻烦，这些用vector都很简单。
 //
-//�ܵ���˵�������������˵㡣һЩ��ȷ���÷�û�����պ�
+//总的来说，代码能力差了点。一些正确的用法没有掌握好
 
 #include<cmath>
 #include <cstring>
@@ -89,7 +89,7 @@ int main()
 		cout << "No" << endl;
 		return 0;
 	}
-	//��һ��Ϊ����
+	//第一点为独点
 	int vis[1000 + 5];
 	memset(vis, 0, sizeof(vis));
 	double xxx;
@@ -100,7 +100,7 @@ int main()
 		return 0;
 	}
 	else {
-		//��һ��Ϊ��ϵ�
+		//第一点为组合点
 		memset(vis, 0, sizeof(vis));
 		double xie1;
 		tong(0, maxI, vis, 100, 1, xie1);

@@ -1,4 +1,4 @@
-//The bridges between red and blue islands have no effection with those between red and purple ones.Therefore, we can make the graph into 3 parts: one between red and blue, one between blue and purple, and the last one between red and purple.
+ï»¿//The bridges between red and blue islands have no effection with those between red and purple ones.Therefore, we can make the graph into 3 parts: one between red and blue, one between blue and purple, and the last one between red and purple.
 
 
 
@@ -9,7 +9,7 @@
 #include<vector>
 #include<map>
 #include<set>
-#include<cmath>//Õâ¸ösqrtÒªÓÃ
+#include<cmath>//è¿™ä¸ªsqrtè¦ç”¨
 #include<queue>
 using namespace std;
 typedef long long LL;
@@ -58,10 +58,10 @@ int main()
 	cin >> a >> b >> c;
 
 	LL total = 1;
-	//aÓëbÁ¬Ïß
+	//aä¸bè¿çº¿
 	//	for(int i=0;i<=min(a,b);i++)
 	//	{
-	//		//aÓëcÁ¬Ïß
+	//		//aä¸cè¿çº¿
 	//		for(int j=0;j<=min(a,c);j++)
 	//		{
 	//
@@ -82,10 +82,10 @@ int main()
 
 	LL cnt = 0;
 
-	//ÏÂÃæÕâÈı¸öÑ­»·¿ÉÒÔ³é³öÀ´×ö³ÉÒ»¸öº¯Êı
+	//ä¸‹é¢è¿™ä¸‰ä¸ªå¾ªç¯å¯ä»¥æŠ½å‡ºæ¥åšæˆä¸€ä¸ªå‡½æ•°
 	for (int i = 0; i <= min(a, b); i++)
 	{
-		cnt += ((C[a][i] * A[i]) % MOD) * C[b][i] % MOD;//ÕâÀï»áÒç³ö
+		cnt += ((C[a][i] * A[i]) % MOD) * C[b][i] % MOD;//è¿™é‡Œä¼šæº¢å‡º
 	}
 	cnt %= 998244353l;
 	total = cnt;

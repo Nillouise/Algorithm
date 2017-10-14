@@ -1,4 +1,4 @@
-#include<algorithm>
+ï»¿#include<algorithm>
 #include<iostream>
 #include<cstring>
 #include<stack>
@@ -16,7 +16,7 @@ int topo(int x)
 {
 	if (vis[x] == 1)return 0;
 	vis[x] = -1;
-	for (size_t i = 1; i <= n; i++)//ÒòÎªÕâÀïºÃÏñÊÇ´Ó1ËãÆğµÄ
+	for (size_t i = 1; i <= n; i++)//å› ä¸ºè¿™é‡Œå¥½åƒæ˜¯ä»1ç®—èµ·çš„
 	{
 		if (order[x][i] == 1 && vis[i] != -1)
 		{
@@ -31,7 +31,7 @@ int main()
 {
 	freopen("input.txt", "r", stdin);
 	freopen("output.txt", "w", stdout);
-	while (cin >> n >> m && (!(n == 0 && m == 0)))//Á½¸ö0Ê±²Å»á½áÊø
+	while (cin >> n >> m && (!(n == 0 && m == 0)))//ä¸¤ä¸ª0æ—¶æ‰ä¼šç»“æŸ
 	{
 		memset(order, 0, sizeof(order));
 		memset(vis, 0, sizeof(vis));

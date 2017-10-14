@@ -1,4 +1,4 @@
-#include<algorithm>
+ï»¿#include<algorithm>
 #include<iostream>
 #include<sstream>
 #include<string>
@@ -43,23 +43,23 @@ int invert(double *a, int n)
 
 int LIS(int  *result)
 {
-	double increse[maxn];//Õâ¸öincreseµÄÏÂ±ê´ú±íµÄÊÇ´ÎÊý£¬0´ÎÊÇ´ú±íÃ»ÓÐ¶«Î÷£¬×ÔÈ»Ò²¾ÍÊÇ0.0
+	double increse[maxn];//è¿™ä¸ªincreseçš„ä¸‹æ ‡ä»£è¡¨çš„æ˜¯æ¬¡æ•°ï¼Œ0æ¬¡æ˜¯ä»£è¡¨æ²¡æœ‰ä¸œè¥¿ï¼Œè‡ªç„¶ä¹Ÿå°±æ˜¯0.0
 	for (size_t i = 0; i < n; i++)increse[i] = INF;
 	increse[0] = 0.0;
 	for (size_t i = 0; i < n; i++)
 	{
-		int L = 0, R = i + 1;//RÓ¦¸ÃÊÇ+1µÄ£¬ÒòÎªR´ú±íµÄÊÇ¸öÊý£¬µ±Ã¶¾Ùµ½ iÊ±£¬Ö®Ç°ÒÑ¾­ÓÐi¸ö¶«Î÷ÅªºÃµÄ£¬¶ørÊÇi+1£»
-		while (L<R - 1)//ÕâÀï´ú±íLºÍRÖ±½ÓÆðÂëÓÐÁ½¸ö¿ÉÄÜÔªËØ£¨RÊÇ²»¿ÉÄÜµÄ£©
+		int L = 0, R = i + 1;//Råº”è¯¥æ˜¯+1çš„ï¼Œå› ä¸ºRä»£è¡¨çš„æ˜¯ä¸ªæ•°ï¼Œå½“æžšä¸¾åˆ° iæ—¶ï¼Œä¹‹å‰å·²ç»æœ‰iä¸ªä¸œè¥¿å¼„å¥½çš„ï¼Œè€Œræ˜¯i+1ï¼›
+		while (L<R - 1)//è¿™é‡Œä»£è¡¨Lå’ŒRç›´æŽ¥èµ·ç æœ‰ä¸¤ä¸ªå¯èƒ½å…ƒç´ ï¼ˆRæ˜¯ä¸å¯èƒ½çš„ï¼‰
 		{
 			int temp = L + (R - L) / 2;
-			//			if (line[temp] < line[i])//²»ÄÜµÈÓÚ
-			if (increse[temp] < p[i])//ÕâÀïÔ­±¾Ð´´íÁË£¬ºÜÃ÷ÏÔ£¬Ó¦¸ÃÓÃ¶þ·ÖÊý×é¸úµ±Ç°µÄÖµ±È½Ï
+			//			if (line[temp] < line[i])//ä¸èƒ½ç­‰äºŽ
+			if (increse[temp] < p[i])//è¿™é‡ŒåŽŸæœ¬å†™é”™äº†ï¼Œå¾ˆæ˜Žæ˜¾ï¼Œåº”è¯¥ç”¨äºŒåˆ†æ•°ç»„è·Ÿå½“å‰çš„å€¼æ¯”è¾ƒ
 				L = temp;
 			else
 				R = temp;
 		}
 		increse[L + 1] = min(increse[L + 1], p[i]);
-		result[i] = L + 1;//LISÔÚÃ¿¸ö×Ö·ûÎ»ÖÃ¼ÇÂ¼ÒÔÕâ¸öÎ»ÖÃÎªÖØµã×î³¤µÄµÝÔöÐòÁÐ£¬increaseÖ»ÊÇÄÃÀ´¶þ·Ö¶øÒÑ
+		result[i] = L + 1;//LISåœ¨æ¯ä¸ªå­—ç¬¦ä½ç½®è®°å½•ä»¥è¿™ä¸ªä½ç½®ä¸ºé‡ç‚¹æœ€é•¿çš„é€’å¢žåºåˆ—ï¼Œincreaseåªæ˜¯æ‹¿æ¥äºŒåˆ†è€Œå·²
 	}
 	return 0;
 }
@@ -68,7 +68,7 @@ int solve()
 {
 	int increse[maxn];
 	LIS(increse);
-	invert(p, n);//reverse µÄÓÃ·¨¸ú sort²»Ò»Ñù£¬ºóÃæµÄ²ÎÊýÊÇ¸öÊý²»ÊÇÊý×éÄ©Î²µØÖ·
+	invert(p, n);//reverse çš„ç”¨æ³•è·Ÿ sortä¸ä¸€æ ·ï¼ŒåŽé¢çš„å‚æ•°æ˜¯ä¸ªæ•°ä¸æ˜¯æ•°ç»„æœ«å°¾åœ°å€
 	int decrese[maxn];
 	LIS(decrese);
 	invert(decrese, n);
@@ -82,7 +82,7 @@ int solve()
 		decrese[i] = max(decrese[i], decrese[i + 1]);
 	}
 
-	for (size_t i = 0; i < n - 1; i++)//Òª¼õ1£¬ÒòÎªÖÐÖáÊÇÓÐÁ½¸öµÄ
+	for (size_t i = 0; i < n - 1; i++)//è¦å‡1ï¼Œå› ä¸ºä¸­è½´æ˜¯æœ‰ä¸¤ä¸ªçš„
 	{
 		MAX = max(increse[i] + decrese[i + 1], MAX);
 	}

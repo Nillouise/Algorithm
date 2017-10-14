@@ -1,4 +1,4 @@
-#include <iostream>
+Ôªø#include <iostream>
 #include<string>
 #include<cstring>
 #include<algorithm>
@@ -39,7 +39,7 @@ int main()
 	ios::sync_with_stdio(false);
 	cin >> n >> m >> k;
 
-	for (size_t i = 0; i < m; i++)//’‚¿Ô ’»°–≈œ¢ ±£¨∞—»•µƒ∑…ª˙∫Õªÿ¿¥µƒ∑…ª˙∑÷≥…¡Ω∏ˆ ˝◊Èª·±»Ωœ∫√°£
+	for (size_t i = 0; i < m; i++)//ËøôÈáåÊî∂Âèñ‰ø°ÊÅØÊó∂ÔºåÊääÂéªÁöÑÈ£ûÊú∫ÂíåÂõûÊù•ÁöÑÈ£ûÊú∫ÂàÜÊàê‰∏§‰∏™Êï∞ÁªÑ‰ºöÊØîËæÉÂ•Ω„ÄÇ
 	{
 		F f;
 		cin >> f.d >> f.f >> f.t >> f.c;
@@ -104,7 +104,7 @@ int main()
 		return 0;
 	}
 
-	//—”’π
+	//Âª∂Â±ï
 	for (int i = 1; i < maxn - k - 1; i++)
 	{
 		if (tom[i] == 0)

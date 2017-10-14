@@ -1,4 +1,4 @@
-#include<cstdio>
+ï»¿#include<cstdio>
 #include<cstring>
 #include<algorithm>
 using namespace std;
@@ -66,8 +66,8 @@ struct Btree
 				suffix[o] = v1 > v2 ? suffix[lc] : suffix[rc];
 			}
 
-			maxsub[o] = better(maxsub[lc], maxsub[rc]);// ÍêÈ«ÔÚ×ó×ÓÊ÷»òÕßÓÒ×ÓÊ÷
-			maxsub[o] = better(maxsub[o], make_pair(suffix[lc], prefix[rc]));// ¿çÔ½ÖĞÏß
+			maxsub[o] = better(maxsub[lc], maxsub[rc]);// å®Œå…¨åœ¨å·¦å­æ ‘æˆ–è€…å³å­æ ‘
+			maxsub[o] = better(maxsub[o], make_pair(suffix[lc], prefix[rc]));// è·¨è¶Šä¸­çº¿
 
 		}
 

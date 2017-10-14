@@ -1,4 +1,4 @@
-//ÕâÌâ×¢ÒâÓÃµÄÊÇ¿Õ¸ñ×öÁ½¸ö½ÚµãµÄ·Ö¸ô·û£¬¿ÉÒÔ¿¿Õâµã¶ÁĞ´
+ï»¿//è¿™é¢˜æ³¨æ„ç”¨çš„æ˜¯ç©ºæ ¼åšä¸¤ä¸ªèŠ‚ç‚¹çš„åˆ†éš”ç¬¦ï¼Œå¯ä»¥é è¿™ç‚¹è¯»å†™
 #include <iostream>
 #include<string>
 #include<cstring>
@@ -15,34 +15,34 @@
 using namespace std;
 typedef long long LL;
 
-vector<int> post;//ºóĞò±éÀú
-vector<int> mids;//ÖĞĞò±éÀú
+vector<int> post;//ååºéå†
+vector<int> mids;//ä¸­åºéå†
 
 int let[10000 + 5];
 int rit[10000 + 5];
 
-//ÕâÀïÓÃL1,R1,L2,R2×ö±ê¼ÇÓ¦¸Ã±È½ÏºÏÊÊ
-//ÕâÀïµÄÊéÉÏ £¬²»ÊÇÓÃ×îºóÒ»Î»ºóÒ»Î»µÄÏÂ±ê×ö½áÎ²£¬¶øÊÇÓÃ½áÎ²ÄÄÒ»Î»µÄÏÂ±ê£¬¸Ğ¾õ±ÈÎÒÕâÑù×öºÃ
+//è¿™é‡Œç”¨L1,R1,L2,R2åšæ ‡è®°åº”è¯¥æ¯”è¾ƒåˆé€‚
+//è¿™é‡Œçš„ä¹¦ä¸Š ï¼Œä¸æ˜¯ç”¨æœ€åä¸€ä½åä¸€ä½çš„ä¸‹æ ‡åšç»“å°¾ï¼Œè€Œæ˜¯ç”¨ç»“å°¾å“ªä¸€ä½çš„ä¸‹æ ‡ï¼Œæ„Ÿè§‰æ¯”æˆ‘è¿™æ ·åšå¥½
 int build(int bp, int ep, int bm, int em)
 {
-	//ÕâÀïµÄÈë¿Ú¼ì²éÓÖ´íÁË
+	//è¿™é‡Œçš„å…¥å£æ£€æŸ¥åˆé”™äº†
 	//	int root =  post[ep - 1];
 	//	if (ep-bp == 1)return root;
 	//	if (ep - bp == 0) return -1;
 	if (ep - bp == 0)return -1;
 	int root = post[ep - 1];
-	if (ep - bp == 1)return root;//ÕâÀïÊÇ±ØÒªµÄ£¬ÒòÎªÕâÒÑ¾­´ú±í¿ÕÁË
-	//ÉÏÃæÕâĞĞÊÇ²»±ØÒªµÄ£¬ÎÒÖ»ÊÇ±ğµÄµØ·½´íÁË²Å¾õµÃÕâ¶«·½±ØÒª
+	if (ep - bp == 1)return root;//è¿™é‡Œæ˜¯å¿…è¦çš„ï¼Œå› ä¸ºè¿™å·²ç»ä»£è¡¨ç©ºäº†
+	//ä¸Šé¢è¿™è¡Œæ˜¯ä¸å¿…è¦çš„ï¼Œæˆ‘åªæ˜¯åˆ«çš„åœ°æ–¹é”™äº†æ‰è§‰å¾—è¿™ä¸œæ–¹å¿…è¦
 
-								 //	int pos = lower_bound(&mids[bm], &mids[em], root) - &mids[bm];//ÕâÀïºÃ´À£¬emÒòÎªÊÇ±ê¼Ç×îºóµÄÔªËØµÄºóÒ»Î»£¬»áµ¼ÖÂoutofboundµÄ
-								 //	int pos = lower_bound(&mids + bm, &mids+em, root) - &mids - bm;//ÔÚvectorµÄÖĞ°ë¶ÎÕÒÊı»¹ÊÇ²»ÔõÃ´ºÏÊÊÓÃlower_bound
+								 //	int pos = lower_bound(&mids[bm], &mids[em], root) - &mids[bm];//è¿™é‡Œå¥½è ¢ï¼Œemå› ä¸ºæ˜¯æ ‡è®°æœ€åçš„å…ƒç´ çš„åä¸€ä½ï¼Œä¼šå¯¼è‡´outofboundçš„
+								 //	int pos = lower_bound(&mids + bm, &mids+em, root) - &mids - bm;//åœ¨vectorçš„ä¸­åŠæ®µæ‰¾æ•°è¿˜æ˜¯ä¸æ€ä¹ˆåˆé€‚ç”¨lower_bound
 	int pos = bm;
 	while (mids[pos] != root)pos++;
 	pos = pos - bm;
 
-	//ÕâÀïµÄpos ÓÉÒ»¿ªÊ¼µÄ±íÊ¾¸öÊı£¬±ä³ÉÕæÕıµÄÎ»ÖÃ
+	//è¿™é‡Œçš„pos ç”±ä¸€å¼€å§‹çš„è¡¨ç¤ºä¸ªæ•°ï¼Œå˜æˆçœŸæ­£çš„ä½ç½®
 	let[root] = build(bp, bp + pos, bm, bm + pos);
-	rit[root] = build(bp + pos, ep - 1, bm + pos + 1, em);//-1£¬+1Ìø¹ıÊ÷¸ù
+	rit[root] = build(bp + pos, ep - 1, bm + pos + 1, em);//-1ï¼Œ+1è·³è¿‡æ ‘æ ¹
 
 														  //	let[root] = build(bp, pos, bm, bm + pos - bp);
 														  //	rit[root] = build(pos, ep - 1, bm + pos - bp+1, em);
@@ -95,7 +95,7 @@ int main()
 		getline(cin, s);
 		//	char c;
 		//	ss >> c;
-		//	ss << s;//ÕâÀïµÄstringstreamºÃÏñ²»ÄÜÕıÈ·´¦Àí»»ĞĞ£¬µ¼ÖÂµÚÒ»¸öÊÇ»»ĞĞ·û
+		//	ss << s;//è¿™é‡Œçš„stringstreamå¥½åƒä¸èƒ½æ­£ç¡®å¤„ç†æ¢è¡Œï¼Œå¯¼è‡´ç¬¬ä¸€ä¸ªæ˜¯æ¢è¡Œç¬¦
 		stringstream ss2;
 		ss2 << s;
 		while (ss2 >> a)
@@ -106,7 +106,7 @@ int main()
 		memset(rit, -1, sizeof(rit));
 		build(0, post.size(), 0, mids.size());
 		//	dfs(post.back(), post.back());
-		dfs(post.back(), 0);//ÕâÀïÊÇ0£¬ÒòÎªÊÇÕâ¸ö½ÚµãµÄ¸¸Â·¾¶µÄºÍ
+		dfs(post.back(), 0);//è¿™é‡Œæ˜¯0ï¼Œå› ä¸ºæ˜¯è¿™ä¸ªèŠ‚ç‚¹çš„çˆ¶è·¯å¾„çš„å’Œ
 		cout << MINX << endl;
 	}
 

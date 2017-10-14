@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<list>
 #include<algorithm>
 #include<cmath>
@@ -22,7 +22,7 @@ int main()
 	while (cin >> n)
 	{
 		v[0] = 0;
-		//ÕâÊÇ¸ö»·£¬°ÑÇ°¶ËÔªËØ¸´ÖÆÒ»±éµ½ºó¶Ë¹¹³É»· 
+		//è¿™æ˜¯ä¸ªç¯ï¼ŒæŠŠå‰ç«¯å…ƒç´ å¤åˆ¶ä¸€éåˆ°åç«¯æ„æˆç¯ 
 		for (int i = 0; i <= 2 * n; i++)
 		{
 			for (int j = 0; j <= 2 * n; j++)
@@ -32,7 +32,7 @@ int main()
 				g[i][j] = i;
 			}
 		}
-		//		memset(g,0,sizeof(g));//³õÊ¼»¯Íü¼ÇÉ¾ÕâÒ»ĞĞ 
+		//		memset(g,0,sizeof(g));//åˆå§‹åŒ–å¿˜è®°åˆ è¿™ä¸€è¡Œ 
 		for (int i = 1; i <= n; i++)
 		{
 			cin >> v[i];
@@ -40,7 +40,7 @@ int main()
 		}
 		for (int i = 1; i <= n; i++)
 		{
-			//¹¹Ôì»·µÄÇ°×ººÍ 
+			//æ„é€ ç¯çš„å‰ç¼€å’Œ 
 			v[i + n] = v[i] - v[i - 1] + v[n + i - 1];
 		}
 
@@ -65,7 +65,7 @@ int main()
 				}
 			}
 		}
-		//ÕâÊÇ¸ö»·£¬¿ªÊ¼²»Ò»¶¨ÊÇÔÚ1Õâ¸öµØ·½¡£		
+		//è¿™æ˜¯ä¸ªç¯ï¼Œå¼€å§‹ä¸ä¸€å®šæ˜¯åœ¨1è¿™ä¸ªåœ°æ–¹ã€‚		
 		//		cout<<DP[1][n]<<endl;
 		long long MIN = INF;
 		for (int i = 1; i <= n; i++)

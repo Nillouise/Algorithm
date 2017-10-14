@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<string>
 #include<set>
 #include<map>
@@ -18,7 +18,7 @@ string tran(char c)
 		s += c % 2 ? '1' : '0';
 	} while (c /= 2);
 
-	reverse(s.begin(), s.end());//·­×ª×Ö·û´®£¬ĞèÒªAlgorithms
+	reverse(s.begin(), s.end());//ç¿»è½¬å­—ç¬¦ä¸²ï¼Œéœ€è¦Algorithms
 	return s;
 }
 

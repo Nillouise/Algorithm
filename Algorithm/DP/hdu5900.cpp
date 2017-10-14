@@ -1,4 +1,4 @@
-#include<iostream>
+﻿#include<iostream>
 #include<list>
 #include<algorithm>
 #include<cmath>
@@ -7,7 +7,7 @@
 
 using namespace std;
 
-//��ôд�Ǵ��ģ���Ϊ�Ұ�DP[i][j]��Ϊi��j��Ҫ���������м�ֵ����ô֮���Ҫ�������ֲ��������ܱ���ȥ������
+//这么写是错的，因为我把DP[i][j]设为i到j都要能消除才有价值，那么之后就要处理这种不连续的能被消去的区间
 const int maxn = 500;
 long long k[maxn];
 long long v[maxn];
@@ -120,7 +120,7 @@ int main()
 		long long MAX = 0;
 		//		for(int len = 1;len<N;len++)
 		//		for(int len = 1;len<N;len+=2)
-		for (int len = 1; len<N; len++)//�����len����ֻ��1 
+		for (int len = 1; len<N; len++)//这里的len必须只加1 
 		{
 			for (int i = 1; i + len <= N; i++)
 			{
@@ -132,8 +132,8 @@ int main()
 					DP[i][j] = max(DP[i][j], DP[i + 1][j - 1] + v[i] + v[j]);
 				}
 				else {
-					//������ö�ٷֽ磬�ֽ������ ������һ�߲��������������䣬ֻ�ǵ����� 
-					//������ôд��j�Ϳ����ǵ������� 
+					//这里是枚举分界，分界的两边 可能有一边不是能消除的区间，只是单个数 
+					//这里这么写，j就可能是单个数了 
 					for (int e = i + 1; e<j; e++)
 						//					for(int e=i;e<j;e++)
 					{

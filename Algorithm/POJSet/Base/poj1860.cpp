@@ -1,4 +1,4 @@
-#include<algorithm>
+ï»¿#include<algorithm>
 #include<iostream>
 #include<string>
 #include<stack>
@@ -9,7 +9,7 @@ using namespace std;
 int N, M, S;
 double V;
 const int INF = 1000000;
-const int maxstate = 1000;//ÕâÌâÊı×é¿ªĞ¡ÁË£¬µ¼ÖÂ runtime error
+const int maxstate = 1000;//è¿™é¢˜æ•°ç»„å¼€å°äº†ï¼Œå¯¼è‡´ runtime error
 struct Edge
 {
 	int u, v;
@@ -17,7 +17,7 @@ struct Edge
 	Edge(int u, int v, double com, double rate) :u(u), v(v), com(com), rate(rate) {}
 };
 vector<int> s[maxstate];
-double d[maxstate];//ÎÒËûÂèÓÖ°Ñ doubleĞ´³Éint£¬²»¹Ø×¢±äÁ¿µÄº¬Òå
+double d[maxstate];//æˆ‘ä»–å¦ˆåˆæŠŠ doubleå†™æˆintï¼Œä¸å…³æ³¨å˜é‡çš„å«ä¹‰
 int vis[maxstate];
 vector<Edge> edges;
 
@@ -26,7 +26,7 @@ int Bellman()
 	memset(vis, 0, sizeof(vis));
 	for (int i = 0; i < maxstate; i++)d[i] = 0.0;
 	int cnt[maxstate];
-//	memset(cnt, 0, sizeof(maxn)); //ÎÒ¾ÓÈ»ÓÃmaxn³õÊ¼»¯±äÁ¿
+//	memset(cnt, 0, sizeof(maxn)); //æˆ‘å±…ç„¶ç”¨maxnåˆå§‹åŒ–å˜é‡
 	memset(cnt, 0, sizeof(cnt));
 	queue<int> q;
 	d[S] = V;
@@ -38,7 +38,7 @@ int Bellman()
 		for (size_t i = 0; i < s[node].size(); i++)
 		{
 			int v = edges[s[node][i]].v;
-			double com = edges[s[node][i]].com;//ÕâÀïµÄdouble ÓÖ´íĞ´³Éint£¬ÍêÈ«Ã»ÓĞ¿¼ÂÇ¾ÍÄÇ¼¸¸öµÄ±äÁ¿
+			double com = edges[s[node][i]].com;//è¿™é‡Œçš„double åˆé”™å†™æˆintï¼Œå®Œå…¨æ²¡æœ‰è€ƒè™‘å°±é‚£å‡ ä¸ªçš„å˜é‡
 			double rate = edges[s[node][i]].rate;
 
 			if (d[v] < (d[node] - com)*rate)
@@ -74,7 +74,7 @@ int main()
 		{
 			int a, b;
 			double Cab, Rab, Cba, Rba;
-			cin >> a >> b >> Rab >> Cab >> Rba >> Cba;//ÊäÈëÊı¾İµÄ ±ÈÂÊºÍÊÖĞø·ÑµÄÎ»ÖÃ¶¼¿´´íÁË
+			cin >> a >> b >> Rab >> Cab >> Rba >> Cba;//è¾“å…¥æ•°æ®çš„ æ¯”ç‡å’Œæ‰‹ç»­è´¹çš„ä½ç½®éƒ½çœ‹é”™äº†
 
 			Edge e1(a, b, Cab, Rab);
 			Edge e2(b, a, Cba, Rba);
@@ -86,7 +86,7 @@ int main()
 			//if (Bellman())
 			//	cout << "YES" << endl;
 			//else
-			//	cout << "NO" << endl;ÎÒËûÂè¾ÓÈ»·ÅÔÚÕâÀïÅĞ¶Ï£¬ÊäÈë¶¼Ã»ÓĞÍê³É
+			//	cout << "NO" << endl;æˆ‘ä»–å¦ˆå±…ç„¶æ”¾åœ¨è¿™é‡Œåˆ¤æ–­ï¼Œè¾“å…¥éƒ½æ²¡æœ‰å®Œæˆ
 
 		}
 		if (Bellman())

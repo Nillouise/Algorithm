@@ -1,4 +1,4 @@
-//return (bit&(1 << pos))>0;Õâ¾äĞ´´íÁË£¬Ğ´³É(bit&(1 << pos)) == 1£¬Êâ²»ÖªÕâÖÖÎ»ÔËËã²úÉúµÄ¸ù±¾²»ÊÇ1£¬¶øÊÇÕæ¶øÒÑ
+ï»¿//return (bit&(1 << pos))>0;è¿™å¥å†™é”™äº†ï¼Œå†™æˆ(bit&(1 << pos)) == 1ï¼Œæ®Šä¸çŸ¥è¿™ç§ä½è¿ç®—äº§ç”Ÿçš„æ ¹æœ¬ä¸æ˜¯1ï¼Œè€Œæ˜¯çœŸè€Œå·²
 #include<algorithm>
 #include<iostream>
 #include<string>
@@ -28,7 +28,7 @@ bool comp(snow s1, snow s2)
 {
 	int a[12]; for (size_t i = 0; i < 6; i++) { a[i + 6] = a[i] = s1.f[i]; }
 
-	//ÕıĞò±È½Ï
+	//æ­£åºæ¯”è¾ƒ
 	for (size_t i = 0; i < 6; i++)
 	{
 		int flag = 0;
@@ -43,13 +43,13 @@ bool comp(snow s1, snow s2)
 		if (flag == 0)
 			return true;
 	}
-	//ÄæĞò±È½Ï
+	//é€†åºæ¯”è¾ƒ
 	for (size_t i = 0; i < 6; i++)
 	{
 		int flag = 0;
 		for (int j = 0; j < 6; j++)
 		{
-			if (s2.f[5 - j] != a[i + j])//ÄæĞò±È½ÏÖ»ÊÇ°Ñ j¸Ä³ÉÁË 5-j¾Í¿ÉÒÔÁË
+			if (s2.f[5 - j] != a[i + j])//é€†åºæ¯”è¾ƒåªæ˜¯æŠŠ jæ”¹æˆäº† 5-jå°±å¯ä»¥äº†
 			{
 				flag = 1;
 				break;
@@ -100,7 +100,7 @@ int main()
 			int a[6];
 			for (size_t j = 0; j < 6; j++)
 			{
-				//				cin >> a[j];//ÕâÀï»áµ¼ÖÂ³¬Ê±
+				//				cin >> a[j];//è¿™é‡Œä¼šå¯¼è‡´è¶…æ—¶
 				scanf("%d", &a[j]);
 			}
 			if (!flag)

@@ -1,11 +1,11 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include<string>
 #include<cstring>
 #include<algorithm>
 #include<vector>
 #include<map>
 #include<set>
-#include<cmath>//Õâ¸ösqrtÒªÓÃ
+#include<cmath>//è¿™ä¸ªsqrtè¦ç”¨
 #include<queue>
 using namespace std;
 typedef long long LL;
@@ -38,7 +38,7 @@ int main()
 	}
 	sort(v.begin(), v.end());
 
-	vector<LL> preh; //sufh(v.size()+2);//ÕâÀïÓÃreverse´¦ÀíÓ¦¸Ã±È½ÏºÃ
+	vector<LL> preh; //sufh(v.size()+2);//è¿™é‡Œç”¨reverseå¤„ç†åº”è¯¥æ¯”è¾ƒå¥½
 	vector<LL> sufh;
 	preh.push_back(0);
 	vector<LL> precnt;
@@ -67,7 +67,7 @@ int main()
 	}
 	pizza = (pizza + S - 1) / S;
 	LL MAX = -1e18;
-	////ÕâÀïÊÇ´ÓÇ°µ½ºó¸øa pizza£¬µ«Ó¦¸Ã´Ób pizza¿ªÊ¼¸ø²Å¶Ô¡£
+	////è¿™é‡Œæ˜¯ä»å‰åˆ°åç»™a pizzaï¼Œä½†åº”è¯¥ä»b pizzaå¼€å§‹ç»™æ‰å¯¹ã€‚
 	//for (int i = 0; i <= pizza; i++)
 	//{
 	//	LL tmp = 0;

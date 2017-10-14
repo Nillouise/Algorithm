@@ -1,11 +1,11 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include<string>
 #include<cstring>
 #include<algorithm>
 #include<vector>
 #include<map>
 #include<set>
-#include<cmath>//Õâ¸ösqrtÒªÓÃ
+#include<cmath>//è¿™ä¸ªsqrtè¦ç”¨
 #include<queue>
 using namespace std;
 typedef long long LL;
@@ -38,7 +38,7 @@ int main()
 	}
 	sort(v.begin(), v.end());
 
-	vector<LL> preh; //sufh(v.size()+2);//ÕâÀïÓÃreverse´¦ÀíÓ¦¸Ã±È½ÏºÃ
+	vector<LL> preh; //sufh(v.size()+2);//è¿™é‡Œç”¨reverseå¤„ç†åº”è¯¥æ¯”è¾ƒå¥½
 	vector<LL> sufh;
 	preh.push_back(0);
 	vector<LL> precnt;
@@ -85,7 +85,7 @@ int main()
 
 
 		LL index = ct / S;
-		LL last = index + 3000 > pizza ? pizza : index + 3000;//ÕâÀïÊÔ100´Î£¬ÆäÊµ²¢Ã»ÓĞ¶¨ÂÛ
+		LL last = index + 3000 > pizza ? pizza : index + 3000;//è¿™é‡Œè¯•100æ¬¡ï¼Œå…¶å®å¹¶æ²¡æœ‰å®šè®º
 															  //LL last = 0;
 															  //for (LL i = 0; i <= pizza; i++)
 		for (LL i = index; i <= last; i++)
@@ -105,8 +105,8 @@ int main()
 			}
 			else {
 				tmp += -1 * preh[pos - 1];
-				//tmp += -1 * (piece - precnt[pos - 1])*(v[pos - 1].a - v[pos - 1].b);//¿ÉÄÜbÒ²»á³ÔÊ£ÏÂ¡£
-				//int gap = pizza*S - precnt.back();//¾«¶ÈÓĞÎÊÌâ
+				//tmp += -1 * (piece - precnt[pos - 1])*(v[pos - 1].a - v[pos - 1].b);//å¯èƒ½bä¹Ÿä¼šåƒå‰©ä¸‹ã€‚
+				//int gap = pizza*S - precnt.back();//ç²¾åº¦æœ‰é—®é¢˜
 				LL gap = pizza*S - precnt.back();
 				LL cut = piece - precnt[pos - 1];
 				if (v[pos - 1].a < v[pos - 1].b)
@@ -136,7 +136,7 @@ int main()
 	for (auto a : v)
 	{
 		//floor += a.cnt*a.b;
-		floor += (LL)a.cnt*a.a;//ÕâÀï¾«¶È²»×ã£¬ÖĞ¼ä½á¹ûµÄ¾«¶È²»×ã
+		floor += (LL)a.cnt*a.a;//è¿™é‡Œç²¾åº¦ä¸è¶³ï¼Œä¸­é—´ç»“æœçš„ç²¾åº¦ä¸è¶³
 	}
 	cout << floor + MAX << endl;
 

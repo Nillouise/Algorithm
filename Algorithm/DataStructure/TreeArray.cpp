@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<string>
 #include<set>
 #include<map>
@@ -11,7 +11,7 @@
 #include <cstdio>  
 using namespace std;
 
-//ÕâÌâĞèÒª¶şÎ¬Ê÷×´Êı×é
+//è¿™é¢˜éœ€è¦äºŒç»´æ ‘çŠ¶æ•°ç»„
 int area[1024 + 1][1024 + 1];
 int S;
 int lowbit(int x)
@@ -59,7 +59,7 @@ int main()
 			int total = 0;
 			for (size_t i = B; i <= T; i++)
 			{
-				total += sum(i, R) - sum(i, L - 1);//ÎªÊ²Ã´Òª-1£¿ÒòÎª -1£¬²Å»áËãÉÏ LÕâ¸ö¸ñ×Ó
+				total += sum(i, R) - sum(i, L - 1);//ä¸ºä»€ä¹ˆè¦-1ï¼Ÿå› ä¸º -1ï¼Œæ‰ä¼šç®—ä¸Š Lè¿™ä¸ªæ ¼å­
 			}
 			cout << total << endl;
 		}

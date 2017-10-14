@@ -1,4 +1,4 @@
-//return (bit&(1 << pos))>0;Õâ¾äĞ´´íÁË£¬Ğ´³É(bit&(1 << pos)) == 1£¬Êâ²»ÖªÕâÖÖÎ»ÔËËã²úÉúµÄ¸ù±¾²»ÊÇ1£¬¶øÊÇÕæ¶øÒÑ
+ï»¿//return (bit&(1 << pos))>0;è¿™å¥å†™é”™äº†ï¼Œå†™æˆ(bit&(1 << pos)) == 1ï¼Œæ®Šä¸çŸ¥è¿™ç§ä½è¿ç®—äº§ç”Ÿçš„æ ¹æœ¬ä¸æ˜¯1ï¼Œè€Œæ˜¯çœŸè€Œå·²
 #include<algorithm>
 #include<iostream>
 #include<string>
@@ -13,11 +13,11 @@ const int maxCharacter = 26;
 struct Trie
 {
 	int ch[maxn][maxCharacter];
-	int val[maxn];//±ê¼ÇÓĞÃ»ÓĞ×Ö·û´®ÔÚÕâÀïÖÕ½á
+	int val[maxn];//æ ‡è®°æœ‰æ²¡æœ‰å­—ç¬¦ä¸²åœ¨è¿™é‡Œç»ˆç»“
 	int sz;
 	int d[maxn];
 	Trie() {
-		sz = 1;//0µãÊÇ¸ù½Úµã
+		sz = 1;//0ç‚¹æ˜¯æ ¹èŠ‚ç‚¹
 		memset(val, 0, sizeof(val));
 		memset(d, -1, sizeof(d));
 		memset(ch, 0, sizeof(ch));

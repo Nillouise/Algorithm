@@ -1,4 +1,4 @@
-//return (bit&(1 << pos))>0;Õâ¾äĞ´´íÁË£¬Ğ´³É(bit&(1 << pos)) == 1£¬Êâ²»ÖªÕâÖÖÎ»ÔËËã²úÉúµÄ¸ù±¾²»ÊÇ1£¬¶øÊÇÕæ¶øÒÑ
+ï»¿//return (bit&(1 << pos))>0;è¿™å¥å†™é”™äº†ï¼Œå†™æˆ(bit&(1 << pos)) == 1ï¼Œæ®Šä¸çŸ¥è¿™ç§ä½è¿ç®—äº§ç”Ÿçš„æ ¹æœ¬ä¸æ˜¯1ï¼Œè€Œæ˜¯çœŸè€Œå·²
 #include<algorithm>
 #include<iostream>
 #include<string>
@@ -23,7 +23,7 @@ int solve(string exp)
 	for (int bitSet = 0; bitSet < (1 << 5); bitSet++)
 	{
 		stack<int> sta;
-		for (int i = exp.length() - 1; i >= 0; i--)//´ÓºóËãÆğ¾ÍÊÇÇ°×ºÊ½
+		for (int i = exp.length() - 1; i >= 0; i--)//ä»åç®—èµ·å°±æ˜¯å‰ç¼€å¼
 		{
 			if (isVal(exp[i]))sta.push(getVal(bitSet, exp[i]));
 			else {

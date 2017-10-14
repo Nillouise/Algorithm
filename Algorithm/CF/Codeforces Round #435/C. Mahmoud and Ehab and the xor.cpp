@@ -1,4 +1,4 @@
-//ÕâÊÇ´íµÄ
+ï»¿//è¿™æ˜¯é”™çš„
 
 #include<iostream>
 #include<string>
@@ -12,7 +12,7 @@ int dfs(int b, int e, int curbit, vector<int> arr, int inverse)
 {
 	if (curbit >= arr.size())return 0;
 	if (b == e)return 0;
-	//if (b == e - 1)return 0; ´íµÄ
+	//if (b == e - 1)return 0; é”™çš„
 
 	if (inverse == 0)
 	{
@@ -44,11 +44,11 @@ int dfs(int b, int e, int curbit, vector<int> arr, int inverse)
 			arr2[i] = arr2[i] / 2;
 		}
 
-		//arr2[i] /= 2 + arr[i] % 2;//ÕâÀï´íÁË
+		//arr2[i] /= 2 + arr[i] % 2;//è¿™é‡Œé”™äº†
 	}
 	int mid = b + (e - b) / 2;
 	dfs(b, mid, curbit + 1, arr1, !inverse);
-	//dfs(mid + 1, e, curbit + 1, arr2);´íµÄ
+	//dfs(mid + 1, e, curbit + 1, arr2);é”™çš„
 	if (mid == b)return 0;
 	dfs(mid, e, curbit + 1, arr2, !inverse);
 	return 0;

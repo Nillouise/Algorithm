@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 using namespace std;
 char s[1005];
 int ans, pos0, pos1, n;

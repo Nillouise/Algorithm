@@ -1,4 +1,4 @@
-//ÕâÌâÍ¦ÖØÒªµÄ
+ï»¿//è¿™é¢˜æŒºé‡è¦çš„
 #include <iostream>
 #include<string>
 #include<cstring>
@@ -6,7 +6,7 @@
 #include<vector>
 #include<map>
 #include<set>
-#include<cmath>//Õâ¸ösqrtÒªÓÃ
+#include<cmath>//è¿™ä¸ªsqrtè¦ç”¨
 #include<queue>
 using namespace std;
 typedef long long LL;
@@ -46,7 +46,7 @@ int main()
 		icntG[x][y]++;
 	}
 
-	//ÕâÀïÒª¼Óµ½102£¬ÒòÎªÔ­±¾ÊÇ1¿ªÍ·
+	//è¿™é‡Œè¦åŠ åˆ°102ï¼Œå› ä¸ºåŸæœ¬æ˜¯1å¼€å¤´
 	for (int i = 1; i < 100 + 1; i++)
 	{
 		for (int j = 1; j < 100 + 1; j++)

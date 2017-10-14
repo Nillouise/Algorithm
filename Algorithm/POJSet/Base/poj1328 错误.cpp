@@ -1,6 +1,6 @@
-//һ��ʼ��û�����
-//�ṹ��Ҫ�ڶ����˺�����ã������ȫ�ֱ������ܻ������ͻ��
-//û�����⵽����x�����Ǹ�����
+﻿//一开始就没想对了
+//结构体要在定义了后才能用，这个和全局变量可能会产生冲突。
+//没有留意到坐标x可以是负数。
 #include<iostream>
 #include<stdio.h>
 #include<stdlib.h>
@@ -40,7 +40,7 @@ int main()
 		int left = p[0].b, right = p[0].e;
 		for (size_t i = 1; i < n; i++)
 		{
-			//			if (line[i].b>left) //����û�п��Ǳ߽�Ľ��
+			//			if (line[i].b>left) //这是没有考虑边界的结果
 			//			{
 			if (p[i].b > right)
 			{

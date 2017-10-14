@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <cstdio>
 #include <cstring>
 #include<string>
@@ -13,7 +13,7 @@ int init()
 	stringstream ss;
 	s = "";
 
-	for (int j = 1; j <= 31268 + 4; j++) //ÕâÀïĞ´µÃ²»¹»´ó
+	for (int j = 1; j <= 31268 + 4; j++) //è¿™é‡Œå†™å¾—ä¸å¤Ÿå¤§
 	{
 		ss << j;
 	}
@@ -36,12 +36,12 @@ int main() {
 		long long cur = 0;
 		for (int i = 1; ; i++)
 		{
-			cur += log10((double)i) + 1;//Òª×ª»»ÀàĞÍ£¬²»È»log10²»ÖªµÀÒªÖØÔØÄÇ¸öº¯Êı
+			cur += log10((double)i) + 1;//è¦è½¬æ¢ç±»å‹ï¼Œä¸ç„¶log10ä¸çŸ¥é“è¦é‡è½½é‚£ä¸ªå‡½æ•°
 			total += cur;
 			if (total >= quest)
 			{
 				int index = quest - (total - cur);
-				index--;//ÊıÁ¿×ª×ø±êÒª--
+				index--;//æ•°é‡è½¬åæ ‡è¦--
 				cout << s[index] << endl;
 				break;
 			}

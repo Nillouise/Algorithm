@@ -1,11 +1,11 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<vector>
 #include<math.h>
 #include<cmath>
 #include<algorithm>
 using namespace std;
 
-//Õâ¸öÊÇ Æ½·½¼¶µÄËã·¨¡£
+//è¿™ä¸ªæ˜¯ å¹³æ–¹çº§çš„ç®—æ³•ã€‚
 
 const int maxstate = 100;
 
@@ -23,7 +23,7 @@ int main()
 	int pc = 100;
 	//for (size_t i = 0; i < pc; i++)
 	//	cin >> u[i] >> v[i] >> w[i];
-	//Ã»Ğ´Õâ¸öÂ¼Èë´úÂë¡£
+	//æ²¡å†™è¿™ä¸ªå½•å…¥ä»£ç ã€‚
 	for (size_t i = 0; i < pc; i++)
 	{
 		int cp = 0; int cpw = INF;

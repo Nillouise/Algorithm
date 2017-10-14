@@ -1,4 +1,4 @@
-#include<algorithm>
+ï»¿#include<algorithm>
 #include<iostream>
 #include<sstream>
 #include<string>
@@ -8,7 +8,7 @@
 #include<map>
 #include<queue>
 using namespace std;
-const int maxn = 10000 + 10;//ÕâÀïÒ»¶¨ÒªÌù½üµ½10000£¬²»È»»á¼ÓÈëÆæ¹Ö¡¢5Î»ÊıµÄÖÊÊı£¬µ¼ÖÂ´íÎó£¨ÒòÎªvisÊı×éÖ»¿ªÁË10000£¬µ¼ÖÂruntime error
+const int maxn = 10000 + 10;//è¿™é‡Œä¸€å®šè¦è´´è¿‘åˆ°10000ï¼Œä¸ç„¶ä¼šåŠ å…¥å¥‡æ€ªã€5ä½æ•°çš„è´¨æ•°ï¼Œå¯¼è‡´é”™è¯¯ï¼ˆå› ä¸ºvisæ•°ç»„åªå¼€äº†10000ï¼Œå¯¼è‡´runtime error
 const int INF = 10000000;
 int p1[maxn];
 int p2[maxn];
@@ -31,7 +31,7 @@ int prime2()
 
 	for (size_t i = 2; i < maxn; i++)
 	{
-		if (i>999)//Ö®Ç°Ã»¼ÓÕâ¾ä£¬µ¼ÖÂ´íÎó£¬ÒòÎªÄÇĞ©4Î»Êı¿ÉÄÜ»áÆ¥ÅäµôÈıÎ»ÊıµÄ
+		if (i>999)//ä¹‹å‰æ²¡åŠ è¿™å¥ï¼Œå¯¼è‡´é”™è¯¯ï¼Œå› ä¸ºé‚£äº›4ä½æ•°å¯èƒ½ä¼šåŒ¹é…æ‰ä¸‰ä½æ•°çš„
 			if (p1[i] == 0)p2[pcnt++] = i;
 	}
 	return 0;

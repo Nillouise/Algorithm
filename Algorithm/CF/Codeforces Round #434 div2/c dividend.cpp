@@ -1,11 +1,11 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include<string>
 #include<cstring>
 #include<algorithm>
 #include<vector>
 #include<map>
 #include<set>
-#include<cmath>//Õâ¸ösqrtÒªÓÃ
+#include<cmath>//è¿™ä¸ªsqrtè¦ç”¨
 #include<queue>
 using namespace std;
 typedef long long LL;
@@ -50,7 +50,7 @@ int main()
 
 	vector<LL> precnt;
 	vector<LL> preh;
-	//Ç°×ººÍÓ¦¸ÃÓÃ0¿ªÍ·
+	//å‰ç¼€å’Œåº”è¯¥ç”¨0å¼€å¤´
 	precnt.push_back(0);
 	preh.push_back(0);
 	for (int i = 0; i<v.size(); i++)
@@ -67,26 +67,26 @@ int main()
 	sufh.push_back(0);
 
 	LL MAX = -1e18;
-	//Ä£ÄâÓĞ¶àÉÙ¿éaÅûÈø
+	//æ¨¡æ‹Ÿæœ‰å¤šå°‘å—aæŠ«è¨
 	for (int i = 0; i <= pizza; i++)
 	{
 		int piece = i*s;
 		int a = lower_bound(precnt.begin(), precnt.end(), piece) - precnt.begin();
 
 		LL ch = 0;
-		//¸ÕºÃ¿ÉÒÔ·Ö¿ª
+		//åˆšå¥½å¯ä»¥åˆ†å¼€
 		if (precnt[a] * s == piece)
 		{
 			ch += preh[a];
 			ch += (-1 * sufh[a + 1]);
 		}
-		//ÆäÖĞÒ»ÈËÒª³ÔÁ½ÖÖÀàĞÍµÄpizza
+		//å…¶ä¸­ä¸€äººè¦åƒä¸¤ç§ç±»å‹çš„pizza
 		else {
 			ch += preh[a - 1];
 			ch += (-1 * sufh[a + 1]);
-			//ch += (piece - precnt[a - 1] * s)*((v[a - 1].a - v[a - 1].b));//´¦ÀíµÄÊÇa
+			//ch += (piece - precnt[a - 1] * s)*((v[a - 1].a - v[a - 1].b));//å¤„ç†çš„æ˜¯a
 			//ch += (precnt[a + 1] * s - piece)*(-1)*((v[a - 1].a - v[a - 1].b));
-			ch += (piece - precnt[a - 1] * s)*((v[a - 1].a - v[a - 1].b));//¸úÉÏÃæÒ»Ñù¶ÔµÄ
+			ch += (piece - precnt[a - 1] * s)*((v[a - 1].a - v[a - 1].b));//è·Ÿä¸Šé¢ä¸€æ ·å¯¹çš„
 			if (a + 1 != precnt.size())
 				ch += (precnt[a + 1] * s - piece)*(-1)*((v[a - 1].a - v[a - 1].b));
 		}

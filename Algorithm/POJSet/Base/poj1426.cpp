@@ -1,5 +1,5 @@
-//��ô��Ӧ�����������Ŀ˼·�ˣ���Ҫͬ��ģ����������  11% m  == 10%m +1%m
-//���ⲻ�������ģ���û�뵽ͬ��ģ��������ô�����Ǵ���
+﻿//这么做应该是最符合题目思路了，主要同余模定理，就是  11% m  == 10%m +1%m
+//这题不是我做的，我没想到同余模定理，怎么做都是错的
 //1426 Find The Multiple
 #include<iostream>
 #include<fstream>
@@ -61,7 +61,7 @@ void bfs()
 			cout << v << "\n";
 			return;
 		}
-		if (!vis[m])//���������ֻ�Ǽ�֦
+		if (!vis[m])//这里的作用只是剪枝
 		{
 			vis[m] = 1;
 			q.push(v);

@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<cmath>
 #include<algorithm>
 using namespace std;
@@ -63,7 +63,7 @@ double solve(Point *parr, int N, Point *ch)
 	int m = 0;
 	for (int i = 0; i < N; i++)
 	{
-		while (m>1 && Cross(ch[m - 1] - ch[m - 2], parr[i] - ch[m - 2]) <= 0)//ÕâÀï ÊÇ m-1 ºÍm-2£¬ÒòÎªmÊÇÖ¸Ïò¿ÕÎ»µÄ¡£
+		while (m>1 && Cross(ch[m - 1] - ch[m - 2], parr[i] - ch[m - 2]) <= 0)//è¿™é‡Œ æ˜¯ m-1 å’Œm-2ï¼Œå› ä¸ºmæ˜¯æŒ‡å‘ç©ºä½çš„ã€‚
 		{
 			m--;
 		}
@@ -72,7 +72,7 @@ double solve(Point *parr, int N, Point *ch)
 	int k = m;
 	for (int i = N - 2; i >= 0; i--)
 	{
-		while (m>k&&Cross(ch[m - 1] - ch[m - 2], parr[i] - ch[m - 2]) <= 0)//ÕâÀï¸ú ÉÏÃæµÄ ²î²»¶à£¬ÒòÎª¶¼ÊÇÌô ÄæÊ±ÕëÇÌÉÏÈ¥µÄµã£¬ÎÞÂÛÊÇÉÏÃæµÄ°ü »¹ÊÇÏÂÃæµÄ°ü
+		while (m>k&&Cross(ch[m - 1] - ch[m - 2], parr[i] - ch[m - 2]) <= 0)//è¿™é‡Œè·Ÿ ä¸Šé¢çš„ å·®ä¸å¤šï¼Œå› ä¸ºéƒ½æ˜¯æŒ‘ é€†æ—¶é’ˆç¿˜ä¸ŠåŽ»çš„ç‚¹ï¼Œæ— è®ºæ˜¯ä¸Šé¢çš„åŒ… è¿˜æ˜¯ä¸‹é¢çš„åŒ…
 		{
 			m--;
 		}

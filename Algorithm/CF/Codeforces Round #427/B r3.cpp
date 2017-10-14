@@ -1,4 +1,4 @@
-//ÓÐÒ»¸ö×ÜÁ¿£¬È»ºóÃ¿´Î±éÀúÄ³ÖÖÌõ¼þ¿ÛÒ»´ÎÕâ¸ö×ÜÁ¿£¬µ±Õâ¸ö×ÜÁ¿ÉÙÓÚ0Ê±¾Í½áÊø£¬ÕâÑù×öµÄ×îºÃ·½·¨ÊÇ¿ÛÕâ¸ö×ÜÁ¿
+ï»¿//æœ‰ä¸€ä¸ªæ€»é‡ï¼Œç„¶åŽæ¯æ¬¡éåŽ†æŸç§æ¡ä»¶æ‰£ä¸€æ¬¡è¿™ä¸ªæ€»é‡ï¼Œå½“è¿™ä¸ªæ€»é‡å°‘äºŽ0æ—¶å°±ç»“æŸï¼Œè¿™æ ·åšçš„æœ€å¥½æ–¹æ³•æ˜¯æ‰£è¿™ä¸ªæ€»é‡
 
 #include <iostream>
 #include<string>
@@ -7,7 +7,7 @@
 #include<vector>
 #include<map>
 #include<set>
-#include<cmath>//Õâ¸ösqrtÒªÓÃ
+#include<cmath>//è¿™ä¸ªsqrtè¦ç”¨
 #include<queue>
 using namespace std;
 typedef long long LL;
@@ -35,8 +35,8 @@ int main()
 		cut -= a;
 
 	int cnt = 0;
-	//Õâ¸öÐ´·¨¾ÍºÜ´ÀÁË£¬ÒòÎªvÒÑ¾­ÅÅºÃÁË¡£
-	//ÕâÀïÕâÃ´Ð´»áµ¼ÖÂËã·¨±ä³ÉnµÄÆ½·½µÄ¸´ÔÓ¶È
+	//è¿™ä¸ªå†™æ³•å°±å¾ˆè ¢äº†ï¼Œå› ä¸ºvå·²ç»æŽ’å¥½äº†ã€‚
+	//è¿™é‡Œè¿™ä¹ˆå†™ä¼šå¯¼è‡´ç®—æ³•å˜æˆnçš„å¹³æ–¹çš„å¤æ‚åº¦
 	//while (cut>0)
 	//{
 	//	for (auto&a : v)

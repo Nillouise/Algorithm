@@ -1,4 +1,4 @@
-//Õâ¸öË«ÏòÁ´±í£¬Ò»¿ªÊ¼»¹Íü¼ÇÁËÒÆ¶¯Ò»¸ö½áµãÊ±£¬ÒªÃÖºÏÔ­À´µÄÎ»ÖÃÁË
+ï»¿//è¿™ä¸ªåŒå‘é“¾è¡¨ï¼Œä¸€å¼€å§‹è¿˜å¿˜è®°äº†ç§»åŠ¨ä¸€ä¸ªç»“ç‚¹æ—¶ï¼Œè¦å¼¥åˆåŽŸæ¥çš„ä½ç½®äº†
 #include <iostream>
 #include<string>
 #include<cstring>
@@ -61,16 +61,16 @@ int main()
 				//				cout << endl;
 				if (com == 3)
 				{
-					//ÕâÊÇ´íµÄ
-					//					//Ò»¿ªÊ¼Íü¼ÇÃÖºÏÕâ¸ölaÁË//ÕâÀï½»»»ÊÇ²»ÓÃÃÖºÏµÄ
+					//è¿™æ˜¯é”™çš„
+					//					//ä¸€å¼€å§‹å¿˜è®°å¼¥åˆè¿™ä¸ªlaäº†//è¿™é‡Œäº¤æ¢æ˜¯ä¸ç”¨å¼¥åˆçš„
 					//					int la = let[a];
 					//					int ra = rit[a];
 					//					int lb = let[b];
 					//					int rb = rit[b];
-					//					//ÏÈÃÖºÏ£¬ºó½â¾öÆäËûÎÊÌâ
+					//					//å…ˆå¼¥åˆï¼ŒåŽè§£å†³å…¶ä»–é—®é¢˜
 					//					link(la, ra);
 					//					link(lb, rb);
-					//ºÃÏñÒªÏÈ½»»»ÁË£¬²ÅÄÜÕÒµã
+					//å¥½åƒè¦å…ˆäº¤æ¢äº†ï¼Œæ‰èƒ½æ‰¾ç‚¹
 					if (rit[b] == a)swap(a, b);
 
 					int lb = let[b];
@@ -78,7 +78,7 @@ int main()
 					int la = let[a];
 					int ra = rit[a];
 
-					//					//ÕâÀïÒªÌØ±ð´¦ÀíÕâÁ½µãÊÇÏàÁÚµÄÇé¿ö¡£
+					//					//è¿™é‡Œè¦ç‰¹åˆ«å¤„ç†è¿™ä¸¤ç‚¹æ˜¯ç›¸é‚»çš„æƒ…å†µã€‚
 					//
 					//					if (rit[b] == a)swap(a, b);
 					if (rit[a] == b)
@@ -115,22 +115,22 @@ int main()
 				}
 				if (com == 1)
 				{
-					//ÕâÀïµÄlinkÊÇ»á¸Ä±äºóÃælet»ñÈ¡µÄÄÚÈÝµÄ£¬Ë÷ÒýÒªÏÈÃÖºÏ
-					//Ò»¿ªÊ¼Íü¼ÇÃÖºÏÕâ¸ölaÁË
+					//è¿™é‡Œçš„linkæ˜¯ä¼šæ”¹å˜åŽé¢letèŽ·å–çš„å†…å®¹çš„ï¼Œç´¢å¼•è¦å…ˆå¼¥åˆ
+					//ä¸€å¼€å§‹å¿˜è®°å¼¥åˆè¿™ä¸ªlaäº†
 					int la = let[a];
 					int ra = rit[a];
 					link(la, ra);
 
 					int ly = let[b];
-					//ÕâÀïµÄlinkÊÇ»á¸Ä±äºóÃælet»ñÈ¡µÄÄÚÈÝµÄ
+					//è¿™é‡Œçš„linkæ˜¯ä¼šæ”¹å˜åŽé¢letèŽ·å–çš„å†…å®¹çš„
 					link(ly, a);
 					link(a, b);
 
 				}
-				//				else //ÕâÀï°Ñcom==3µÄÇé¿öÒ²°üÀ¨½øÀ´ÁË£¬ÏÂ´ÎÒ»¶¨ÒªÐ´ÇëÌõ¼þ
+				//				else //è¿™é‡ŒæŠŠcom==3çš„æƒ…å†µä¹ŸåŒ…æ‹¬è¿›æ¥äº†ï¼Œä¸‹æ¬¡ä¸€å®šè¦å†™è¯·æ¡ä»¶
 				else if (com == 2)
 				{
-					//ÊÇ°Ña¸îµô£¬¶ø²»ÊÇ°Ñb¸îµô
+					//æ˜¯æŠŠaå‰²æŽ‰ï¼Œè€Œä¸æ˜¯æŠŠbå‰²æŽ‰
 					//					int lb = let[b];
 					//					int rb = rit[b];
 					//					link(lb, rb);

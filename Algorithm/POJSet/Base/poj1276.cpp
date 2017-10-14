@@ -1,4 +1,4 @@
-//ÕâÌâµÄdp²¢Ã»ÓĞÈİÁ¿Õâ¸ö¸ÅÄî£¬Ö»ÊÇ¸ödag¶øÒÑ£¬ËùÒÔdpÊı×éÖ»Òª¼ÇÂ¼µ±Ç°µÄÖµÄÜ²»ÄÜ¹¹Ôì³öÀ´¾Í¿ÉÒÔÁË
+ï»¿//è¿™é¢˜çš„dpå¹¶æ²¡æœ‰å®¹é‡è¿™ä¸ªæ¦‚å¿µï¼Œåªæ˜¯ä¸ªdagè€Œå·²ï¼Œæ‰€ä»¥dpæ•°ç»„åªè¦è®°å½•å½“å‰çš„å€¼èƒ½ä¸èƒ½æ„é€ å‡ºæ¥å°±å¯ä»¥äº†
 #include<algorithm>
 #include<iostream>
 #include<sstream>
@@ -9,13 +9,13 @@
 #include<map>
 #include<queue>
 using namespace std;
-const int maxn = 20;//ÕâÀïÒ»¶¨ÒªÌù½üµ½10000£¬²»È»»á¼ÓÈëÆæ¹Ö¡¢5Î»ÊıµÄÖÊÊı£¬µ¼ÖÂ´íÎó£¨ÒòÎªvisÊı×éÖ»¿ªÁË10000£¬µ¼ÖÂruntime error
+const int maxn = 20;//è¿™é‡Œä¸€å®šè¦è´´è¿‘åˆ°10000ï¼Œä¸ç„¶ä¼šåŠ å…¥å¥‡æ€ªã€5ä½æ•°çš„è´¨æ•°ï¼Œå¯¼è‡´é”™è¯¯ï¼ˆå› ä¸ºvisæ•°ç»„åªå¼€äº†10000ï¼Œå¯¼è‡´runtime error
 const int INF = 10000000;
 int cash;
 int N;
 int bills[maxn];
 int domin[maxn];
-int dp[100000 + 10];//ÕâÀïÒ»¶¨Òª+10£¬²»È»»áwa
+int dp[100000 + 10];//è¿™é‡Œä¸€å®šè¦+10ï¼Œä¸ç„¶ä¼šwa
 
 int main()
 {
@@ -29,14 +29,14 @@ int main()
 		}
 
 		memset(dp, 0, sizeof(dp));
-		dp[0] = 1;//0ÊÇ¿Ï¶¨¿ÉÒÔµÄ
+		dp[0] = 1;//0æ˜¯è‚¯å®šå¯ä»¥çš„
 		int MAX = 0;
 		for (int i = 0; i < N; i++)
 		{
-			//			for (int j = cash; j >= 0; j--)//ÕâÀïÕâ¸öj==cash ¿ÉÒÔÓÃMAXÓÅ»¯
+			//			for (int j = cash; j >= 0; j--)//è¿™é‡Œè¿™ä¸ªj==cash å¯ä»¥ç”¨MAXä¼˜åŒ–
 			for (int j = MAX; j >= 0; j--)
 			{
-				if (dp[j] == 1)//ÅĞdp[j]Ò»¶¨Òª·ÅÔÚÕâÀï£¬²»È» tl
+				if (dp[j] == 1)//åˆ¤dp[j]ä¸€å®šè¦æ”¾åœ¨è¿™é‡Œï¼Œä¸ç„¶ tl
 					for (int k = 1; k <= bills[i]; k++)
 					{
 						if (j + k*domin[i] <= cash)

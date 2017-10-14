@@ -1,4 +1,4 @@
-
+ï»¿
 #include <iostream>
 #include<string>
 #include<cstring>
@@ -6,7 +6,7 @@
 #include<vector>
 #include<map>
 #include<set>
-#include<cmath>//Õâ¸ösqrtÒªÓÃ
+#include<cmath>//è¿™ä¸ªsqrtè¦ç”¨
 #include<queue>
 using namespace std;
 typedef long long LL;
@@ -16,7 +16,7 @@ int clw(int b, int m, int e)
 	//for(int i=b;i<=e;i++)
 	for (int i = b; i != e; i++)
 	{
-		if (i>12) i = (i % 12) + 1;//ÕâÀï´íÁË
+		if (i>12) i = (i % 12) + 1;//è¿™é‡Œé”™äº†
 		if (i == m)
 		{
 			return 0;

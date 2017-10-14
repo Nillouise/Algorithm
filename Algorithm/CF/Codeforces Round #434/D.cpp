@@ -1,4 +1,4 @@
-//δ���
+﻿//未完成
 #include<cmath>
 #include <string>
 #include <algorithm>
@@ -38,8 +38,8 @@ public:
 
 	int search(string &s)
 	{
-		//if (cnt == 0)//����û���ǵ����ַ�����;ʱ����������1,1�ʹ���ֻ��һ���ַ�����,0�Ļ��ͱ�ʾ��β���ַ���
-		//������ж��Ǵ��ģ�Ҫ�������ַ�����ȫ��ͬ����β��tree ��cntҲһ����0
+		//if (cnt == 0)//这里没考虑到，字符串中途时，至起码是1,1就代表只有一条字符串了,0的话就表示结尾的字符串
+		//上面的判断是错的，要是两个字符串完全相同，结尾的tree 的cnt也一样是0
 		if (cnt <= 1)
 		{
 			return 1;
@@ -48,7 +48,7 @@ public:
 		{
 			return -1000000;
 		}
-		//return search(s.substr(1)) + 1;//����ֻ���ڵ�ǰ�Ľڵ��ѣ��������������ѵı���
+		//return search(s.substr(1)) + 1;//这样只是在当前的节点搜，不符合在树上搜的本意
 		return z[s[1] - '0']->search(s.substr(1)) + 1;
 	}
 };
@@ -93,7 +93,7 @@ int main()
 	{
 		for (int i = 0; i < 10; i++)
 		{
-			//trees[v[s][i] - 'a'].extent(v[s].substr(i));//��Ц�������Ȼ����(-'a')���˷���20����
+			//trees[v[s][i] - 'a'].extent(v[s].substr(i));//好笑，这里居然错了(-'a')，浪费我20分钟
 			//trees[v[s][i] - '0'].extent(v[s].substr(i),s);
 			trees[v[s][i] - '0'].extent(v[s].substr(i + 1), s);
 		}

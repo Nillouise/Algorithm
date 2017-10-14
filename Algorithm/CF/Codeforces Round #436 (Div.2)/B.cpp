@@ -1,4 +1,4 @@
-//������Ҫע���βҪ����û�д�д��ĸ�ضϣ�Ҫ�Լ��ضϽ�β
+﻿//这题主要注意结尾要可能没有大写字母截断，要自己截断结尾
 #include <iostream>
 #include<string>
 #include<algorithm>
@@ -29,7 +29,7 @@ int main()
 		}
 		else {
 			cnt.insert(str[i]);
-			//ע������Ҫ�ж����Ľض�
+			//注意这里要判断最后的截断
 			if (cnt.size() > MAX) {
 				MAX = cnt.size();
 			}

@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<algorithm>
 #include<vector>
 using namespace std;
@@ -14,7 +14,7 @@ bool findRoot(int x)
 	return father[x] == x ? x : findRoot(father[x]);
 }
 
-int Krushal(int n)//nÊÇ½²ÓĞ¼¸Ìõ±ß£¬Õâ¸öËã·¨Ó¦¸Ã²»ÓÃÖªµÀÓĞ¼¸¸öµã¡ª¡ªĞÅÏ¢ÒÑ¾­È«²¿°üº¬ÔÚ±ßÀïÁË
+int Krushal(int n)//næ˜¯è®²æœ‰å‡ æ¡è¾¹ï¼Œè¿™ä¸ªç®—æ³•åº”è¯¥ä¸ç”¨çŸ¥é“æœ‰å‡ ä¸ªç‚¹â€”â€”ä¿¡æ¯å·²ç»å…¨éƒ¨åŒ…å«åœ¨è¾¹é‡Œäº†
 {
 	for (int i = 0; i < n; i++)r[i] = i;
 	for (int i = 0; i < n; i++)father[i] = i;

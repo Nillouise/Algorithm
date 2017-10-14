@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<cstring>
 #include<cstdio>
 #include<algorithm>
@@ -51,7 +51,7 @@ int main() {
 				//				for (int k = (i+1+1)*(i*1)/2; k >= (j + 1 + 1)*(j * 1) / 2; k--)
 				for (int k = (i + 1 + 1)*(i + 1) / 2; k >= (j + 1 + 1)*(j + 1) / 2; k--)
 				{
-					//ÕâÀïÍü¼Ç¿¼ÂÇ i=0Ê±²»ÄÜ-1
+					//è¿™é‡Œå¿˜è®°è€ƒè™‘ i=0æ—¶ä¸èƒ½-1
 					//dp[i][j][k] = max(dp[i][j + 1][k], dp[i - 1][j - 1][k - j - 1] - C[i - 1][j - 1] + C[i][j]);
 					if ((!i || !j))
 					{

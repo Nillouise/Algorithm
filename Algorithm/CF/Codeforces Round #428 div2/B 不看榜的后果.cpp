@@ -1,4 +1,4 @@
-//Ò»¿ªÊ¼ÎÒ»¹´òËã°´ÈËÊıÒ»¸öÒ»¸öÈûµ½×ùÎ»£¬¶ø²»ÊÇ¸ù¾İ×ùÎ»µÄ¶àÉÙ°²ÅÅÈËÊı£¬ÕâÖÖË¼Â·¾ÍÊÇ´íµÄ
+ï»¿//ä¸€å¼€å§‹æˆ‘è¿˜æ‰“ç®—æŒ‰äººæ•°ä¸€ä¸ªä¸€ä¸ªå¡åˆ°åº§ä½ï¼Œè€Œä¸æ˜¯æ ¹æ®åº§ä½çš„å¤šå°‘å®‰æ’äººæ•°ï¼Œè¿™ç§æ€è·¯å°±æ˜¯é”™çš„
 
 #include <iostream>
 #include<string>
@@ -7,7 +7,7 @@
 #include<vector>
 #include<map>
 #include<set>
-#include<cmath>//Õâ¸ösqrtÒªÓÃ
+#include<cmath>//è¿™ä¸ªsqrtè¦ç”¨
 #include<queue>
 using namespace std;
 typedef long long LL;
@@ -80,7 +80,7 @@ int main()
 	//	cout << "NO" << endl;
 	//	return 0;
 	//}
-	LL seat1 = 0;//Õâ¸öseat1ÊÇºÜÖØÒªµÄË¼Â·
+	LL seat1 = 0;//è¿™ä¸ªseat1æ˜¯å¾ˆé‡è¦çš„æ€è·¯
 
 	if (m[2] > 0)
 	{
@@ -88,7 +88,7 @@ int main()
 		m[2] -= MIN;
 		seat2 -= MIN;
 
-		//ÕâÀïÂß¼­ÊÇ´íµÄ£¬¼´Ê¹m[2]´óÓÚseat4£¬Ò²¿ÉÒÔ·ÖÒ»¸öÈË×ø
+		//è¿™é‡Œé€»è¾‘æ˜¯é”™çš„ï¼Œå³ä½¿m[2]å¤§äºseat4ï¼Œä¹Ÿå¯ä»¥åˆ†ä¸€ä¸ªäººå
 		//if (m[2] > seat4)
 		//	return cout << "NO" << endl, 0;
 		//else {
@@ -98,7 +98,7 @@ int main()
 		LL MAX = min(seat4, m[2]);
 		seat4 -= MAX;
 		seat1 += MAX;
-		m[1] += (m[2] - MAX) * 2;//ÕâÀïÒ»¿ªÊ¼ÓÖÃ»Ïëµ½
+		m[1] += (m[2] - MAX) * 2;//è¿™é‡Œä¸€å¼€å§‹åˆæ²¡æƒ³åˆ°
 	}
 
 	if (seat4 * 2 + seat2 + seat1 >= m[1])
