@@ -45,7 +45,7 @@ int main()
 		else {
 			cout << "YES" << endl;
 		}
-		if (T != 1)
+		if (T != 0)
 			cout << endl;
 	}
 

@@ -594,7 +594,7 @@
     <ClCompile Include="source\Source Files\Uva\basic struct\uva 548 注意stringstream.cpp">
       <Filter>Source Files\Uva\basic struct</Filter>
     </ClCompile>
-    <ClCompile Include="uva839.cpp">
+    <ClCompile Include="source\Source Files\Uva\basic struct\uva839.cpp">
       <Filter>Source Files\Uva\basic struct</Filter>
     </ClCompile>
   </ItemGroup>

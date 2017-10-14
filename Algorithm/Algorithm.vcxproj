@@ -304,7 +304,7 @@
     <ClCompile Include="source\Source Files\String\BitToString.cpp" />
     <ClCompile Include="source\Source Files\String\Erase and Add.cpp" />
     <ClCompile Include="source\Source Files\String\poj3080.cpp" />
-    <ClCompile Include="uva839.cpp" />
+    <ClCompile Include="source\Source Files\Uva\basic struct\uva839.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="source\Source Files\CF\Codeforces Round #429 div2\cf429.txt" />
