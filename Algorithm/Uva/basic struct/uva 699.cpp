@@ -22,7 +22,7 @@ int main()
     freopen("I:\\Algorithms\\git\\Algorithm\\Algorithm\\input.txt","r",stdin);//
     
     ios::sync_with_stdio(false);
-    
+    //这个t用kase代表比较好
     for(int t=1;;t++)
     {
         memset(tree,0,sizeof(tree));
