@@ -246,6 +246,3 @@ ModelManifest.xml
 # FAKE - F# Make
 .fake/
 
-
-[http]
-¡¡¡¡proxy = localhost:8080/
