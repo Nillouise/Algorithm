@@ -34,7 +34,7 @@ int main()
     
     while(begin<end)
     {
-        
+        //这方法太慢了，因为不能利用前一次mid出的dp加速
         memset(DP,0,sizeof(DP));
         DP[0] = 1;// 种子
         int mid = (begin+end)>>1;
