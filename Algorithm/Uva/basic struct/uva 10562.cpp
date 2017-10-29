@@ -2,7 +2,8 @@
 using namespace std;
 typedef long long LL;
 const int maxn= 1000;
-char buf[100][1000];
+//char buf[100][1000];//卧槽貌似是因为数据开小了一直错
+char buf[300][1000];
 int n;
 
 int dfs(int r,int c)
@@ -52,7 +53,8 @@ cout<<"(";
     {
 //        cout<<'(';//假如没输入的话，应该也要输出空树
   //      cout<<strlen(buf[0])<<endl<<buf[0];//
-        for(int i=0;i<9;i++)
+        for(int i=0;i<strlen(buf[0]);i++)
+//      for(int i=0;i<9;i++)//这里debug完居然忘记改了。。。。。。        
         {
    //         cout<<'a'<<buf[0][i];//
             if(buf[0][i]!=' ')//这里我曾写成i!=' '，导致恒定判断是跳过
