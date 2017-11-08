@@ -1,3 +1,6 @@
+//注意这题在递归删结点时会遇到重复删除的问题。
+    //确实如此，因为是先删了本点，然后再删子节点，所以加入本点于子节点共同依赖于一个孙子结点的话，就会导致孙子结点删两次
+
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long LL;
@@ -47,6 +50,7 @@ int install(int id,int toplevel)
 int remove(int id,int toplevel)
 {
     //居然是这句错了，为啥呀？难不成status[id]还能为0？//测试结果确实能为0。。
+    //确实如此，因为是先删了本点，然后再删子节点，所以加入本点于子节点共同依赖于一个孙子结点的话，就会导致孙子结点删两次
     //if(toplevel==0&&status[id]==1)return 0;
     if(toplevel||status[id]==2)
     {
