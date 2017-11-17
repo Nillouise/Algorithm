@@ -51,7 +51,7 @@ int main()
 
     ios::sync_with_stdio(false);
 
-    while(cin>>n>>k,n!=0)
+    while(cin>>k>>n,n!=0)
     {
       cnt=0;
       std::vector<char> vec;
