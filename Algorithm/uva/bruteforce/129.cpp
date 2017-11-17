@@ -36,6 +36,9 @@ int dfs(vector<char>& vec)
     if(flag==0){vec.pop_back();continue;}
     if(dfs(vec))
       return 1;
+      else{
+        vec.pop_back();
+      }
   }
   return 0;
 }
