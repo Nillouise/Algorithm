@@ -1,11 +1,8 @@
-//放弃这题吧，用来理解的材料质量太低了
+﻿//放弃这题吧，用来理解的材料质量太低了
 
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long LL;
-
-
-
 
 
 int main()
