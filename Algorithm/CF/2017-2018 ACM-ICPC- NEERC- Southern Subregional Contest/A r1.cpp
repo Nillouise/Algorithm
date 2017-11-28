@@ -1,4 +1,4 @@
-//这个模拟题好难写呀
+//这个模拟题好难写呀，door，过门
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long LL;

@@ -1,36 +1,64 @@
-﻿//放弃这题吧，用来理解的材料质量太低了
-
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long LL;
+int n,k;
+vector<int> data;
 
 
 int main()
 {
-    // freopen("I:\\Algorithms\\git\\Algorithm\\Algorithm\\input.txt","r",stdin);//
-    
+    //freopen("C:\\Users\\37\\Documents\\project\\atom\\Algorithm\\Algorithm\\output.txt","w",stdout);//
+    freopen("C:\\Users\\37\\Documents\\project\\atom\\Algorithm\\Algorithm\\input.txt","r",stdin);//
+
     ios::sync_with_stdio(false);
     
-    int a[10] = {6 ,7, 4, 5, 0, 1, 8, 9 ,2 ,3};
-    
-    int b[10];
-    for (int i = 0; i < 10; i++) {
-        b[a[i]]=i;
+    cin>>n>>k;
+    data.resize(n+1);
+    data[0]=-1e9;
+    for (int i = 1; i <=n; i++) 
+    {
+        cin>>data[i];
     }
-    for (int i = 0; i < 10; i++) {
-        cout<<b[i]<<" ";
+    sort(data.begin(),data.end());
+    data[0]=1e9;
+    int beg=0,end = data.back()-data[1];
+    while(beg<end)
+    {
+        int mid = (beg+end)>>1;
+        vector<int> DP(n+1);
+        DP[0]=1;
+        vector<int> g(n+1);//前缀和
+        g[0]=1;
+        int j=1;//双指针法
+        for (int i = 1; i <=n; i++) 
+        {
+            while(data[j]+mid<data[i])j++;
+            if(i-j+1<k)
+            {
+                g[i]=g[i-1];
+                DP[i]=0;
+                continue;
+            }
+            int x = i-k+1;
+            //这里处理j==1好好想想。
+            if(j==1||(j-2>=0&&x-1>=0&&g[x-1]-g[j-2]>0))
+            {
+                DP[i]=1;
+                g[i]=g[i-1]+1;
+            }else{
+                DP[i]=0;
+                g[i]=g[i-1];
+            }
+        }
+        if(DP[n]==1)
+        {
+            end=mid;
+        }else{
+            beg=mid+1;
+        }
     }
-    cout<<endl;
-    
-    for (int i = 0; i < 10; i++) {
-        cout<<(a[0]^b[i])<<" ";
-    }
-    cout<<endl;
-    for (int i = 0; i < 10; i++) {
-        cout<<(b[0]^a[i])<<" ";
-    }
-    cout<<endl;
-    
+    cout<<end<<endl;
+
 
     return 0;
 }

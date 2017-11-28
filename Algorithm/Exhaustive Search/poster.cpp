@@ -51,7 +51,7 @@ int dfs(int x,int dep,int pre)
    break;
   }
  }
- 
+ //这个cm值预留一个空位给下一个面额的邮票是毫无卵用的。
  for(int i=1;i<1000;i++)
  {
   if(DP[i][dep]>0&&DP[i][dep]<n)cm = i;
