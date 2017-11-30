@@ -1,3 +1,4 @@
+//这题同一种变量有便是范围的，有表示还没访问的，有表示种子节点的，有表示由种子节点生成的子节点的，十分复杂，要认真查好
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long LL;
@@ -10,7 +11,7 @@ set<int> C[1050];
 
 void update(int cr,int cc)
 {
-    cout<<"update "<<cr<<" "<<cc<<endl;//
+    // cout<<"update "<<cr<<" "<<cc<<endl;//
     R[cr].erase(cc);
     C[cc].erase(cr);
 }
