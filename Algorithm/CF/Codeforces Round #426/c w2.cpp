@@ -1,4 +1,6 @@
-﻿#include <iostream>
+//这题的重点是要意识到，输赢的顺序是没用的，可以一开始全输，然后全赢。这是个数学问题。﻿
+
+#include<iostream>
 #include<string>
 #include<cstring>
 #include<algorithm>
