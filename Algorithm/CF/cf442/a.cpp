@@ -22,7 +22,7 @@ int main()
         while((pos=ss.find(a))!=s.npos)
         {
 
-                 ss=ss.substr(pos+a.size(),s.size());/这里要ss=ss才会更新ss的值
+                 ss=ss.substr(pos+a.size(),s.size());//这里要ss=ss才会更新ss的值
                  cnt++;
         }
 

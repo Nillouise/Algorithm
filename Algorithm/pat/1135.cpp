@@ -91,7 +91,7 @@ int main()
         // head->br = 1;
         init(head,0,1e9);
         
-        prin(head);//
+        // prin(head);//
         
         dfs(head,1,1);
         if(flag==0)

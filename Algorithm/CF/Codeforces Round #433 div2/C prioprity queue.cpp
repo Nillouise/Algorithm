@@ -57,7 +57,7 @@ int main()
 	for (int i = 0; i < n; i++)
 	{
 		//这里一开始我用的cost不是longlong，被爆掉了
-		total += cost[i].cost * (cost[i].next - cost[i].start);//这里的next和start是个丑陋的想法，我没想好一个号的模型
+		total += cost[i].cost * (cost[i].next - cost[i].start);//这里的next和start是个丑陋的想法，我没想好一个好的模型
 	}
 	cout << total << endl;
 	for (size_t i = 0; i < n; i++)
