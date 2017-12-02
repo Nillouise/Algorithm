@@ -5,7 +5,7 @@
 //At this point, if we can find a pair of problems with pi  = 2 and non - intersecting set of teams, then we are done.Otherwise, we can show that a good set does not exist by case analysis.
 //
 //To avoid O(n2) solution, we can leave at most 24 problems with unique types(sets of teams) and do pairwise checking on them.This solution has O(n) complexity.
-//上面这个分析的前提是，只有4个队伍，所以只需要最多两题，论证中的那个2的意思是，最多有4个队，4个对乘以题目数K 再乘以一半，就是2K
+//上面这个分析的前提是，只有4个队伍，所以只需要最多两题，论证中的那个2的意思是，最多有4个队，4个队乘以题目数K 再乘以一半，就是2K
 
 
 #include <iostream>

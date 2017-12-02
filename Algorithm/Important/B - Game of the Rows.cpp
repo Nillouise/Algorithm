@@ -1,0 +1,38 @@
+// For groups with size  = 2, allocate 2 seats in range [1, 2] or [7, 8] or 3 seats in range [3, 6]. If no seat found, divide this group and make it two groups with size 1.
+
+// Fill the other parts with groups with groups with size  = 1.
+
+#include <bits/stdc++.h>
+using namespace std;
+const int maxn = 1e2 + 17;
+
+int n, k, have[5], cnt[5];
+int main(){
+	ios::sync_with_stdio(0), cin.tie(0);
+	cin >> n >> k;
+	have[2] = 2 * n, have[4] = n;
+	for(int i = 0; i < k; i++){
+		int x;
+		cin >> x;
+		while(x >= 3)
+			if(have[4] > 0)
+				x -= 4, have[4]--;
+			else if(have[2] > 0)
+				x -= 2, have[2]--;
+			else
+				return cout << "NO" << '\n', 0;
+		if(x > 0)
+			cnt[x]++;
+	}
+	while(cnt[2])
+		if(have[2] > 0)
+			cnt[2]--, have[2]--;
+		else if(have[4] > 0)
+			cnt[2]--, have[4]--, have[1]++;
+		else
+            cnt[2]--, cnt[1] += 2;
+	if(cnt[1] > have[1] + have[2] + have[4] * 2)
+		return cout << "NO" << '\n', 0;
+	cout << "YES" << '\n';
+	return 0;
+}
