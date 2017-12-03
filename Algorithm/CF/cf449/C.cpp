@@ -1,3 +1,5 @@
+//这题为了防被爆long long，直接设个上限，因为从过程来看，最终每一层（query的每一次调用）的位置都是对的
+//那么设了上限防止位置跑偏了就行了。也就是说能根据位置算出所求字母是在第几层调用就可以了。
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long LL;
@@ -14,15 +16,15 @@ void getNum()
     for (int i = 1; i < 100000+10; i++) 
     {
         F[i] = 2*F[i-1]+len;
-        if(F[i]>1e18*7LL)
+        if(F[i]>1e18*2LL)
         {
-             // cout<<"i "<<i<<" "<<F[i]<<endl;
-            break;
+            F[i] = 1e18*2LL;
         }
     }
 }
 
-char query(int f,int pos)
+// char query(int f,int pos)//真的弱智，这里用int
+char query(int f,LL pos)
 {
     // cout<<"f "<<f<<" pos "<<pos<<endl;
     if(f==0)
@@ -71,20 +73,7 @@ int main()
     {
         LL f,pos;
         cin>>f>>pos;
-        if(f>59)
-        {
-            pos--;
-            if(pos<pre.size()*(f-59))
-            {
-                cout<<pre[pos%pre.size()]<<endl;
-            }else{
-                cout<<query(59,pos-pre.size()*(f-59))<<endl;
-            }
-        }else
-        {
-            pos--;
-            cout<<query(f,pos);
-        }
+        cout<<query(f,pos-1);
     }
 
 

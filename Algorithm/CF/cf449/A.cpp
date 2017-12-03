@@ -25,8 +25,9 @@ int main()
         {
             if(s[i]==c1)s[i]=c2;
         }
-        cout<<s<<endl;
+        //cout<<s<<endl;
     }
+    cout<<s<<endl;
 
 
     return 0;

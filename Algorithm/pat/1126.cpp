@@ -22,7 +22,7 @@ int main()
 
     int n,m;
     cin>>n>>m;
-    if(n==1)
+    if(n==1)//...pat也会测试极端条件呀。。
     {
         cout<<"0"<<endl;
         cout<<"Eulerian"<<endl;
