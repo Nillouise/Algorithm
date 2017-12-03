@@ -1,3 +1,4 @@
+//好脑残，这题直接dfs跑回溯就行了（不过要保存边而不是点，也让我一开始没想出来，真脑残）
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long LL;
