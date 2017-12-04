@@ -13,6 +13,7 @@ int merge(int l,int r)
     int mid = (l+r)/2;
 //    if(mid==l)//这个判断好像是必要的
 //        return 0;
+    cout<<"l "<<l<<" mid"<<mid<<" r "<<r<<endl;
     for(int i=l;i<mid;i++)
     {
         swap(vec[i],vec[mid+(i-l)]);

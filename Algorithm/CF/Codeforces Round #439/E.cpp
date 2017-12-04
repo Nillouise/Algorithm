@@ -63,7 +63,7 @@ int main()
 	//	freopen("output.txt", "w", stdout);
 	ios::sync_with_stdio(false);
 	srand(time(NULL));
-	//这里不是必要的，不过rand()的范围太小，要扩大范围是必要的
+	//这里多次初始化不是必要的，不过rand()的范围太小，扩大范围是必要的
 	//	for (int i = 0; i < 011; i++) {
 	//		srand(rd());
 	//	}
