@@ -32,9 +32,9 @@ int main()
     LL penal = 0;
     while(pq.size()>=3)
     {
-        int a = pq.top();pq.pop();
-        int b = pq.top();pq.pop();
-        int c = pq.top();pq.pop();
+        LL a = pq.top();pq.pop();
+        LL b = pq.top();pq.pop();
+        LL c = pq.top();pq.pop();
         pq.push(a+b+c);
         penal +=a+b+c;
     }
