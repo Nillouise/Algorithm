@@ -1,67 +1,70 @@
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long LL;
-int n;
-vector<int> stk;
+
+struct Token
+{
+    int beg;
+    int dur;
+    bool operator <(const Token&t)const
+    {
+        return beg<t.beg;
+    }
+};
+
 
 
 int main()
 {
-    freopen("input.txt","r",stdin);//
+    //freopen("C:\\Users\\37\\Documents\\project\\atom\\Algorithm\\Algorithm\\output.txt","w",stdout);//
+    freopen("C:\\Users\\37\\Documents\\project\\atom\\Algorithm\\Algorithm\\input.txt","r",stdin);//
 
     ios::sync_with_stdio(false);
-
-    cin>>n;
-    map<int,int> backet;//这东西一开始还放到里里面导致出bug，没有考虑每个变量合适的位置
+    
+    int n,m;
+    cin>>n>>m;
+    vector<Token> vec;
     for (int i = 0; i < n; i++) 
     {
-        string cmd;
-        cin>>cmd;
-        if(cmd=="Pop")
+        int h,m,se;
+        char c;
+        cin>>h>>c>>m>>c>>se;
+        Token t;
+        t.beg = h*3600+m*60+se;
+        int dur;
+        cin>>dur;
+        dur*=60;
+        if(dur>3600)dur=3600;
+        t.dur = dur;
+        vec.push_back(t);
+    }
+    sort(vec.begin(),vec.end());
+    vector<int> cur(m,8*3600);
+    LL total = 0;
+    int cnt =0;
+    
+    for (int i = 0; i < vec.size(); i++) 
+    {
+        if(vec[i].beg>17*3600)break;
+        cnt++;
+        int ti=0;
+        for (int j = 0; j < m; j++) 
         {
-            if(stk.size()==0)
-            {
-                cout<<"Invalid"<<endl;
-            }else{
-                cout<<stk.back()<<endl;
-                map<int,int>::iterator it = backet.find(stk.back());
-                it->second--;
-                if(it->second==0)
-                    backet.erase(it);
-                
-                stk.pop_back();
-            }
-        }else if(cmd=="PeekMedian")
+            if(cur[j]<cur[ti])ti=j;
+        }
+        // if(cur[ti]>)
+        
+        if(cur[ti]>vec[i].beg)
         {
-            //cout<<"PeekMedian";//
-            if(stk.size()==0)
-            {
-                cout<<"Invalid"<<endl;                
-            }else{
-                int pos = stk.size();
-                pos = (pos%2==0)?pos/2:(pos+1)/2;
-                int cnt = 0;
-            //    for(auto a:backet)cout<<"fdfd"<<a.first<<" ";//
-                
-                for(auto &a:backet)
-                {
-                    cnt+=a.second;
-                    if(cnt>=pos)
-                    {
-                        cout<<a.first<<endl;
-                        break;
-                    }
-                }
-            }
-        }else if(cmd=="Push")
-        {
-            int a;
-            cin>>a;
-            stk.push_back(a);
-            backet[a]++;
+            total += cur[ti]-vec[i].beg;
+            cur[ti] += vec[i].dur;
+        }else{
+            cur[ti]=vec[i].beg+vec[i].dur;
         }
     }
-
+    double ans = 1.0*total/60/cnt;
+    printf("%.1lf\n",ans);
+    
 
     return 0;
 }
