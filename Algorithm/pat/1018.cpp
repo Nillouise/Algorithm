@@ -1,3 +1,4 @@
+//这题注意考虑道路的唯一性需要哪些条件（一开始我不愿意考虑清楚题目的唯一条件，wa了几次）
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long LL;
@@ -43,7 +44,7 @@ int dfs(int x,int path,int cat,int need)
             minpath = path;
             mincat = need;
             takeback = cat;
-        }else if(path==minpath&&need==mincat&&cat<takback)
+        }else if(path==minpath&&need==mincat&&cat<takeback)
         {
             anspath=curpath;
             minpath = path;

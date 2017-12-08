@@ -1,3 +1,4 @@
+//这题背包，有个更好的方法是保存状态转移边，回忆一下是什么意思。https://www.liuchuo.net/archives/2323
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long LL;
