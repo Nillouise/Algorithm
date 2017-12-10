@@ -5,6 +5,7 @@ typedef long long LL;
 int dat[100000+10];
 int pre[100000+10];
 
+int but[100000*10+1];
 
 
 int main()
@@ -24,18 +25,13 @@ int main()
     {
         pre[i] = pre[i-1]+dat[i];
     }
-    map<int,int> but;
     LL cnt = 0;
     for (int i = n; i >= 1; i--) 
     {
         but[pre[i]]++;
         for (int j = 0; pre[i-1]+ j*j <= pre[n]; j++) 
         {
-            auto it = but.find(pre[i-1]+j*j);
-            if(it!=but.end())
-            {
-                cnt+=it->first;
-            }
+            cnt+=but[pre[i-1]+j*j];
         }
     }
     cout<<cnt<<endl;
