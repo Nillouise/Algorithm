@@ -1,4 +1,4 @@
-https://www.nowcoder.com/acm/contest/18/A
+//https://www.nowcoder.com/acm/contest/18/A
 
 #include<bits/stdc++.h>
 using namespace std;
