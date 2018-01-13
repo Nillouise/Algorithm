@@ -1,0 +1,101 @@
+//错的
+#include <iostream>
+#include<vector>
+#include<string>
+#include<cstring>
+#include <algorithm>
+using namespace std;
+int vis[50000 + 10];
+int len = 0;
+int add(int p, int g)
+{
+	for (int i = p; i <= len; i = i + (i&(-i)))
+	{
+		vis[i] += g;
+	}
+	return 0;
+}
+
+int get(int l, int r)
+{
+	int pre = 0;
+	for (int i = l - 1; i>0; i = i - (i&(-i)))
+	{
+		pre += vis[i];
+	}
+	int suf = 0;
+	for (int i = r; i>0; i = i - (i&(-i)))
+	{
+		suf += vis[i];
+	}
+	return suf - pre;
+}
+
+int main()
+{
+	freopen("input.txt", "r", stdin);
+	ios::sync_with_stdio(false);
+	int T;
+	cin >> T;
+	for (int kase = 1; kase <= T; kase++)
+	{
+		memset(vis, 0, sizeof(vis));
+		int n, m;
+		cin >> n >> m;
+		len = n;
+		string s;
+		cin >> s;
+		s = ' ' + s;
+		for (int i = 3; i<s.size(); i++)
+		{
+			if (s[i - 2] == 'w'&&s[i - 1] == 'b'&&s[i] == 'w')
+			{
+				add(i, 1);
+			}
+		}
+//		for (int i = 0; i <= len; i++)//
+//		{
+//			cout << vis[i] << " ";
+//		}
+//		cout << endl;//
+
+		cout << "Case " << kase << ":" << endl;
+		for (int i = 0; i<m; i++)
+		{
+			int order;
+			cin >> order;
+			if (order == 0)
+			{
+				int l, r;
+				cin >> l >> r;
+				l++, r++;
+				cout << get(l + 1, r) << endl;
+
+			}
+			else {
+				int p;
+				char c;
+				cin >> p >> c;
+				p++;
+				if (c == s[p])continue;
+//				s[p] = c;
+				for (int i = max(p,3); i <= p + 2; i++)
+				{
+					bool confirm = (s[i - 2] == 'w'&&s[i - 1] == 'b'&&s[i] == 'w');
+					if (confirm)
+						add(i, -1);
+				}
+				s[p] = c;
+				for (int i = max(p,3); i <= p + 2; i++)
+				{
+					bool confirm = s[i - 2] == 'w'&&s[i - 1] == 'b'&&s[i] == 'w';
+					if (confirm)
+						add(i, 1);
+				}
+			}
+
+		}
+
+	}
+	return 0;
+}
