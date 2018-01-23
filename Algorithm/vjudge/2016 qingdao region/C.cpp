@@ -1,3 +1,6 @@
+// https://www.cnblogs.com/wmrv587/p/6107134.html
+//http://www.itdadao.com/articles/c15a835091p0.html
+//或者纯湊，纯猜
 #include<iostream>
 using namespace std;
 typedef long long LL;
