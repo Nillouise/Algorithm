@@ -11,6 +11,8 @@ int main()
   int n,m;
   cin>>n>>m;
   cout<<2;
+  if(n==2)cout<<" "<<2<<endl;
+  else
   cout<<" "<<100003<<endl;
   cout<<1<<" "<<n<<" "<<2<<endl;
   for(int i=2;i<=n-1;i++)
