@@ -66,7 +66,7 @@ int main()
 {
   res = (res+MOD-1)%MOD;
 }
-cout<<"res"<<res<<endl;//
+// cout<<"res"<<res<<endl;//
       }
     }
     pre++;
