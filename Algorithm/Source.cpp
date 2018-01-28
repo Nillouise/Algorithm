@@ -1,5 +1,3 @@
-//测试一下sshkey
-
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long LL;
@@ -10,26 +8,20 @@ int dist[1050][1050];
 set<int> R[1050];
 set<int> C[1050];
 
-void update(int cr,int cc)
-{
-    cout<<"update "<<cr<<" "<<cc<<endl;//
-    R[cr].erase(cc);
-    C[cc].erase(cr);
-}
 
 int main()
 {
-  double a = 0.25;
-  double res = 1.0;
-  for(int i=0;i<4;i++)
-  res*=a;
-  cout<<"res "<<res<<endl;
-  double ans = 1.0;
-  for(int i=0;i<7;i++){
-    ans*=(1-res);
+  freopen("D:\\Project\\Algorithm\\Algorithm\\Algorithm\\input.txt","w",stdout);
+  srand(time(0));
+  for(int i=0;i<30;i++)
+  {
+    
+    int n = rand()%30+1;
+    char a[2] = {'o','O'};
+    for(int i=0;i<n;i++){
+      cout<<a[rand()%2];
+    }
+    cout<<endl;
   }
-  cout<<"res* 5 ="<<res*5<<endl;//
-  cout<<"ans "<<ans<<endl;
-  
-    return 0;
+  return 0;
 }
