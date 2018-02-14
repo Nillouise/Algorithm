@@ -16,14 +16,15 @@ int main()
     LL p = m-1;
     LL r = n-p;
     if(n<m-1){
-      
+      cout<<"No"<<endl;
+      return 0;
     }
     
     if(r<0){
       cout<<"No"<<endl;
       return 0;      
     }
-    if(m==1&&r>0){
+    if(m<=1&&r>0){
       cout<<"No"<<endl;
       return 0;
     }
