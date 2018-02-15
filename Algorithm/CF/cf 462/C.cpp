@@ -1,3 +1,4 @@
+//这是错的
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long LL;
@@ -51,6 +52,11 @@ int main()
     sign.push_back(0);
     sign.push_back(0);
     sign.push_back(0);
+    
+    for(auto a:num)
+    {
+        cout<<a<<" ";
+    }
     
     int MAX = 0;
     for(int i=0;i<num.size()-3;i++)
