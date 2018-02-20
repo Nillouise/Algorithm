@@ -20,10 +20,10 @@ int main()
     for(int i=1;i<=n;i++)
     {
         int b = vec[i];
-        // cout<<b<<endl;//
+        cout<<b<<endl;//
         for(int j=0;j<2;j++)
         {
-            // cout<<b<<endl;//
+            cout<<b<<endl;//
             b = vec[b];
         }
         if(b==i)
