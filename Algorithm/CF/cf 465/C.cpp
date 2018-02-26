@@ -1,5 +1,6 @@
 //这题我傻逼了，以为半径除以2就能计算到中心点(r/2,r2)，但其实是要用开方才能根据半径 (r/根号2,r/根号2)
 //好傻逼呀
+// http://codeforces.com/contest/935/problem/C
 #include<bits/stdc++.h>
 #include<cmath>
 using namespace std;
