@@ -11,7 +11,7 @@ bool check(const string &s)
         else i--;
         if(i<0)
         {
-            cout<<"false "<<s<<endl;
+      //      cout<<"false "<<s<<endl;
             return false;
         }
     }
@@ -39,7 +39,9 @@ int main()
         }
         t=s;
         for(int j=i;j>0;j--){
-            
+            swap(t[j],t[j+1]);
+            if(check(t))
+                but.insert(t);
         }
 
     }
