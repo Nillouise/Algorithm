@@ -46,7 +46,7 @@ int main()
     for (int i = n; i >0; i--) 
     {
         int c = get(1,dat[i]-1);
-        cout<<dat[i]<<" "<<c<<endl;//
+        // cout<<dat[i]<<" "<<c<<endl;//
         if(c>MAX||flag==0)
         {
             flag=1;

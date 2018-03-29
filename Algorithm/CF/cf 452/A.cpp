@@ -11,26 +11,23 @@ int main()
     freopen("C:\\Users\\37\\Documents\\project\\atom\\Algorithm\\Algorithm\\input.txt","r",stdin);//
 
     ios::sync_with_stdio(false);
+
     int n;
     cin>>n;
-    int side1=0,side2=0;
+    vector<int> dat(3,0);
     for (int i = 0; i < n; i++) 
     {
-        int x,y;
-        cin>>x>>y;
-        if(x<0)
-            side1++;
-        
-        if(x>0)side2++;
+        int a;
+        cin>>a;
+        dat[a]++;
     }
-    if(side1<=1||side2<=1)
+    if(dat[1]<=dat[2])
     {
-        cout<<"YES"<<endl;
+        cout<<dat[1]<<endl;
     }else{
-        cout<<"NO"<<endl;
+        cout<<dat[2] + (dat[1]-dat[2])/3<<endl;
     }
     
-
 
     return 0;
 }

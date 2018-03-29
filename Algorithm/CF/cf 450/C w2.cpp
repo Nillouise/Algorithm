@@ -8,7 +8,7 @@ int vis[100000+10];
 int main()
 {
     //freopen("C:\\Users\\37\\Documents\\project\\atom\\Algorithm\\Algorithm\\output.txt","w",stdout);//
-//    freopen("C:\\Users\\37\\Documents\\project\\atom\\Algorithm\\Algorithm\\input.txt","r",stdin);//
+    freopen("C:\\Users\\37\\Documents\\project\\atom\\Algorithm\\Algorithm\\input.txt","r",stdin);//
 
     ios::sync_with_stdio(false);
 
@@ -23,7 +23,7 @@ int main()
     set<int> but;
     for (int i = 0; i < n; i++) 
     {
-        auto it = but.lower_bound(dat[i]-1);
+        auto it = but.lower_bound(dat[i]+1);
         int num = 0;
         auto it2 = it;
         // cout<<*it2<<endl;//
