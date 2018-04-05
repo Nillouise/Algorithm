@@ -27,7 +27,7 @@ bool dfs(int res,int cur,int tar,int pre)
             if(dfs(res,cur+i,tar,i))return true;
             vis[i]++;
             // if(cur+i==tar||cur==tar)return false;//cur+i==tar有可能是最后组成的木棍。//注意这里cur==tar是错的
-            if(cur+i==tar||cur==0)return false;//cur+i==tar有可能是最后组成的木棍。
+            if(cur+i==tar||cur==0)return false;//这里是关键
         }
     }
     //写在这里是错的，因为会跟上面冲突的

@@ -19,13 +19,17 @@ int main()
     {
         int x;
         cin>>x;
-        for(int j=20000;j>=x;j--)
+        for(int j=V;j>=x;j--)
         {
             if(dp[j-x])dp[j]=1;
         }
     }
-    
-    
+    int ans =0;
+    for(int i=0;i<V+1;i++)
+    {
+        if(dp[i])ans=i;
+    }
+    cout<<V-ans<<endl;
     
     
     return 0;

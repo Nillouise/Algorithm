@@ -17,9 +17,9 @@ int main()
     for(int i=0;i<M;i++)
     {
         cin>>w[i]>>v[i];
-        dp[i].resize(T+5);
-    }
 
+    }
+        dp[0].resize(T+5);
     for(int i=0;i<=T;i++)
     {
         if(i%w[0]==0)
