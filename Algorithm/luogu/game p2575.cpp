@@ -61,7 +61,7 @@ int main()
                 int x;cin>>x;
                 binary = binary|(1<<(20-x));
             }
-            nim = nim^binary;
+            nim = nim^sg(binary);
         }
         if(nim)
         {

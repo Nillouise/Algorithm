@@ -101,7 +101,7 @@ int main()
     LL n;
     cin>>n;
     LL res = 1;
-    for(LL i=1;i<n;i++)
+    for(LL i=1;i<=n;i++)
     {
         res*=i;
         while(res%10==0)res/=10;
