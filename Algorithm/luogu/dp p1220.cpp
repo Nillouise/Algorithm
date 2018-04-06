@@ -20,7 +20,7 @@ int dfs(int t,int side,int b,int e)
     
     
     int ans = INF;
-    if(side==1)
+    if(side==1)//注意，一开始我连side都没用上，真是睿智！！
         ans = min(ans,dfs(t-(dat[e][0]-dat[e-1][0]),1,b,e-1)+t*dat[e][1]);
     int path =0;
     path = dat[e][0]-dat[b][0];
