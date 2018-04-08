@@ -26,7 +26,9 @@ int main()
     while(gap.top()!=0&&total!=0)
     {
         int a = gap.top();gap.pop();
+
         // cout<<a<<endl;//
+
         a--,total--;
         gap.push(a);
     }
