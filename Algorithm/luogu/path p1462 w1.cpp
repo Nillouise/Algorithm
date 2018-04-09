@@ -83,7 +83,7 @@ int main()
             continue;
         }
         
-        LL heal2 = dij(cc,n-1,f[cc]);//我这里用了两个dij，有点弱智呀，一个dij即可。
+        LL heal2 = dij(cc,n-1,f[cc]);//我这里用了两个dij，有点弱智呀，一个dij即可!!!!!
         if(heal2==-1)
         {
             beg = mid+1;

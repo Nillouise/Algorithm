@@ -41,8 +41,10 @@ int main()
         int pa = find(u[ce]),pb = find(v[ce]);
         if(pa==pb)continue;
         cnt++;
+        fa[pa]=pb;
         if(cnt==n-1){cout<<t[ce]<<endl;return 0;}
     }
+    cout<<-1<<endl;
     
     
     
