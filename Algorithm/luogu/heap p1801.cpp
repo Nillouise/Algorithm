@@ -23,33 +23,33 @@ int main()
         cin>>u[i];
     }
     int k=0;
-    for (int i = 0; i < M; i++) {
-        // if(k>=N)break;
-        if(u[k]==i)
-        {
-            cout<<up.top()<<endl;
-            down.push(up.top());
-            up.pop();
-            k++;
-            // i--;//这么干是错的，因为会重复push进一个东西！！！
-        }else{
-            down.push(dat[i]);
-            up.push(down.top());
-            down.pop();
-        }
-    }
-    // int b = 0;
-    // for (int i = 0; i < N; i++) {
-    //     for(;b<u[i];b++)
+    // for (int i = 0; i < M; i++) {
+    //     // if(k>=N)break;
+    //     if(u[k]==i)
     //     {
-    //         down.push(dat[b]);
+    //         cout<<up.top()<<endl;
+    //         down.push(up.top());
+    //         up.pop();
+    //         k++;
+    //         // i--;//这么干是错的，因为会重复push进一个东西！！！
+    //     }else{
+    //         down.push(dat[i]);
     //         up.push(down.top());
     //         down.pop();
     //     }
-    //     cout<<up.top()<<endl;
-    //     down.push(up.top());
-    //     up.pop();
     // }
+    int b = 0;
+    for (int i = 0; i < N; i++) {
+        for(;b<u[i];b++)
+        {
+            down.push(dat[b]);
+            up.push(down.top());
+            down.pop();
+        }
+        cout<<up.top()<<endl;
+        down.push(up.top());
+        up.pop();
+    }
     
     
     
