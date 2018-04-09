@@ -46,7 +46,7 @@ int main()
             // fa[b3]=a3;
         }else{
             if(b1==a2||b2==a3||a1==b3){ans++;continue;}
-            // if(a1==a2){ans++;continue;}//一开始写错了这里，导致mle
+            // if(a1==a2){ans++;continue;}//一开始写错了这里，导致mle，应该是导致无限递归了。
             if(a1==b1){ans++;continue;}
             fa[a1] = b2;
             fa[a2]=b3;
