@@ -3,7 +3,7 @@ using namespace std;
 typedef long long LL;
 int N;
 int G[200][200];
-int w[20000], u[20000], v[20000], e[20000];
+int w[20000], u[20000], v[20000], e[20000];//注意这里的边的数量应该是点的数量的平方
 
 //并查集，要初始化成fa[i]=i
 int fa[200];
@@ -22,7 +22,7 @@ int Kruskal()
 {
     for (int i = 0; i < N; i++) fa[i]=i;//初始化并查集
     for(int i=0;i<N*N;i++)e[i]=i;//初始化边序号
-    sort(e,e+N*N,cmp);
+    sort(e,e+N*N,cmp);//注意，这里边的数量有可能不是N*N,而是一个明确的m.
     LL ans = 0;
     for (int i = 0; i < N*N; i++) {
         // int pa = find(u[e[i]]),pb = find(v[e[i]]);//这里写错了，写成了u[i]
