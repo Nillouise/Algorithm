@@ -26,8 +26,8 @@ LL pow(LL x,LL p)
     return res;
 }
 
-LL inv[1000000];
-LL pre[1000000];
+LL inv[2000000+100];
+LL pre[2000000+100];
 
 //算组合数
 LL Combine(int n,int m)
