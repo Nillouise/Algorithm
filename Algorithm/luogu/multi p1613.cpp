@@ -20,8 +20,8 @@ int main()
         G[a][b] = 1;
         flo[a][b][0] = 1;
     }
-    
-    for (int t = 1; t < 20; t++) {
+    //这里最多会有2^40是因为可能存在环
+    for (int t = 1; t < 40; t++) {
         for (int k = 0; k < n; k++) {
             for (int i = 0; i < n; i++) {
                 for (int j = 0; j < n; j++) {
@@ -34,7 +34,7 @@ int main()
         }
     }
     memset(flo2,0x3f3f,sizeof(flo2));
-    for (int k = 0; k < 20; k++) {
+    for (int k = 0; k < 40; k++) {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 if(flo[i][j][k] == 1)
