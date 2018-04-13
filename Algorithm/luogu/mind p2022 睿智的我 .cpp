@@ -12,7 +12,7 @@ int cmp(LL x,LL y)
     ss>>s1;
     ss2<<y;
     ss2>>s2;
-    cout<<s1<<" s2 "<<s2<<endl;//
+    // cout<<s1<<" s2 "<<s2<<endl;//
     return s1<s2;
 }
 
