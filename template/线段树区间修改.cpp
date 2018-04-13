@@ -7,7 +7,7 @@ LL sumv[MAXN],minv[MAXN],maxv[MAXN],addv[MAXN];
 void maintain(int o,int L,int R)
 {
     int lc = o*2,rc = o*2+1;
-    sumv[o] = minv[o] = maxv[o]=0;
+    sumv[o] = minv[o] = maxv[o]=0;//注意不要把o写成零
     if(R>L)
     {
         sumv[o] = sumv[lc]+sumv[rc];
@@ -35,8 +35,7 @@ void query(int o,int L,int R,LL add)
 {
     if(x1<=L&&x2>=R)
     {
-        // cout<<"q"<<sumv[o]<<endl;
-        _sum+=sumv[o]+add*(R-L+1);
+        _sum+=sumv[o]+add*(R-L+1);//注意这里，单单sumv[o]是不包含父节点被增加的变量的，
         _min = min(_min,minv[o]+add);
         _max = max(_max,maxv[o]+add);
     }else {
@@ -46,46 +45,22 @@ void query(int o,int L,int R,LL add)
     }
 }
 
-int useexample()
-{  
-      int op; cin>>op;
-    if(op==1){
-        int x,y,k;cin>>x>>y>>k;
-        v = k, x1 = x-1,x2 = y-1;
-        update(1,0,N-1);
-    
-}
-
 
 int main()
 {
-    //freopen("I:\\Project\\acm\\Algorithm\\input.txt","r",stdin);//
     
     ios::sync_with_stdio(false);
     int N,M;
     cin>>N>>M;
+    //使用示例
     for (int i = 0; i < N; i++) {
         int x;cin>>x;
-        v = x;
-        x1 = i,x2 = i;
+        v = x;//v 是全局变量，代表把某个区间要增加的值
+        x1 = i,x2 = i;//单点修改，用全局变量x1,x2来表示要修改的区间
         update(1,0,N-1);
+        _sum=0,_max = 0,_min = 1e8;//这些都是全局变量，在查询的时候需要充值。
+        query(1,0,N-1,0);//形参add，代表的是父节点对子节点的影响
     }
-    for (int i = 0; i < M; i++) {
-        int op; cin>>op;
-        if(op==1){
-            int x,y,k;cin>>x>>y>>k;
-            v = k, x1 = x-1,x2 = y-1;
-            update(1,0,N-1);
-        }else{
-            int x,y;cin>>x>>y;
-            x1 = x-1,x2=y-1;
-            _sum=0,_max = 0,_min = 1e8;
-            query(1,0,N-1,0);
-            // cout<<"d "<<_sum<<" "<<_max<<" "<<_min<<endl;//
-            cout<<_sum<<endl;//
-        }
-    }
-    
     
     return 0;
 }

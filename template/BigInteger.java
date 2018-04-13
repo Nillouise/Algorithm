@@ -21,15 +21,59 @@ public class Main
         BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in));
         String str = stdin.readLine();
         while(str.trim().length()==0)str = stdin.readLine();
-
-            BigInteger a = new BigInteger(str.trim());
-            str = stdin.readLine();
+        BigInteger a = new BigInteger(str.trim());
+        str = stdin.readLine();
         while(str.trim().length()==0)str = stdin.readLine();
-            
-            BigInteger b = new BigInteger(str.trim());
-            System.out.println(a.gcd(b));
+        BigInteger b = new BigInteger(str.trim());
+        System.out.println(a.gcd(b));
     }
 }
+//这里可以定义数据类
+class Token
+{
+    public long mul;
+    public int ind;
+}
+public class Main
+{
+    public static void main(String args[])throws Exception
+    {
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        int a = scan.nextInt(),b=scan.nextInt();
+        int dat1[] = new int[n],dat2[] = new int[n];
+        for (int i=0;i<n;i++) {
+            dat1[i] = scan.nextInt();
+            dat2[i] = scan.nextInt();
+        }
+        Token t[] = new Token[n]; 
+        for (int i=0;i<n;i++ ) {
+        	t[i] = new Token();//新创建的数组没有元素
+            t[i].mul = dat1[i]*dat2[i];
+            t[i].ind = i;
+        }
+        Arrays.sort(t,(t1,t2)-> {
+            //comparator返回 -1,0,1;
+        	if(t1.mul==t2.mul)return 0;
+        	return t1.mul<t2.mul?-1:1;
+        });
+        BigInteger total = BigInteger.valueOf(a);
+        BigInteger ans = BigInteger.valueOf(0);
+        for(int i=0;i<n;i++)
+        {
+            int ind = t[i].ind;
+            BigInteger cur = total.divide(BigInteger.valueOf(dat2[ind]));
+            if(ans.compareTo(cur)==-1){
+                ans = cur;
+            }
+            total=total.multiply(BigInteger.valueOf(dat1[ind]));
+        }
+        System.out.println(ans);
+
+    }
+}
+
+
 
 
 
