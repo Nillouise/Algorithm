@@ -73,9 +73,9 @@ int main()
     for (int i = 0; i < a-n+1; i++) {
         for (int j = 0; j < b-n+1; j++) {
             ans = min(ans,yup[i][j]-ylow[i][j]);
-            cout<<yup[i][j]<<" "<<ylow[i][j]<<" ";
+            // cout<<yup[i][j]<<" "<<ylow[i][j]<<" ";
         }
-        cout<<endl;//
+        // cout<<endl;//
     }
     
     cout<<ans<<endl;
