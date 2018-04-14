@@ -19,6 +19,7 @@ int main()
             cin>>dat[i][j];
         }
     }
+    //因为有可能是负数，一定要把这个设成这样
     memset(dp,-0x3f3f3f,sizeof(dp));
     for (int i = 0; i <= n; i++) {
         for (int j = 0; j <= k; j++) {
