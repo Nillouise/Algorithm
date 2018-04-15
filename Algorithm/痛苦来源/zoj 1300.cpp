@@ -1,3 +1,4 @@
+//点坐标转边坐标，直接用纸算各种变换即可
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long LL;
@@ -11,7 +12,6 @@ int main()
     //freopen("I:\\Project\\acm\\Algorithm\\input.txt","r",stdin);//
     
     ios::sync_with_stdio(false);
-    
     int T;
     cin>>T;
     for (int TT = 0; TT < T; TT++) {
@@ -41,6 +41,7 @@ int main()
                 r--;
             }
         }
+        cout<<"Bitmap #"<<TT+1<<endl;
         for (int i = 31; i >=0; i--) {
             for (int j = 0; j < 32; j++) {
                 if(dat[i][j])cout<<"X";
@@ -48,6 +49,7 @@ int main()
             }
             cout<<endl;
         }
+        cout<<endl;
         
     }
     

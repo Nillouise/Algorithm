@@ -42,12 +42,9 @@ LL query(vector<int> &s)
             res += val[u];
         // cout<<i<<"lon "<<longest<<" res "<<res<<endl;//
     }
-    //羡慕的判断式中的u，会是代表字符串最后一个字符的节点。
+    //最后的判断式中的u，是代表字符串最后一个字符的节点。
     return res+(u==0?0:suf[u]);
 }
-
-
-
 
 
 int main()
