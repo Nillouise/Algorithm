@@ -13,7 +13,13 @@ int main()
     LL M,N;
     while(cin>>M>>N)
     {
-        cout<<"T"<<endl;
+        if(M/2 *M/2>N)
+        {
+            cout<<"F"<<endl;
+        }else{
+            cout<<"T"<<endl;
+        }
+        
     }
     
     
