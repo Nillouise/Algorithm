@@ -29,7 +29,7 @@ int main()
     for(auto &a:vec)
     {
         q.push(a);
-        if(vis[a.second]==0)sum++;
+        if(vis[a.second]==0)sum++;//注意这里记录vis元素的方法我才学会
         vis[a.second]++;
         
         while(sum>=K)
