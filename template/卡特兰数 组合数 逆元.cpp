@@ -63,8 +63,5 @@ int main()
     init(n,m);
     cout<<(Combine(n+m,m)-Combine(n+m,m-1)+MOD)%MOD<<endl;
     
-    
-    
-    
     return 0;
 }

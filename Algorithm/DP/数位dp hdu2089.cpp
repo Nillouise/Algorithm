@@ -44,6 +44,7 @@ int main()
     
     int le,ri;
     while(cin>>le>>ri){
+        if(le==0&&ri==0)break;
         memset(dp,0,sizeof(dp));
         memset(vis,0,sizeof(vis));
         cout<<solve(ri)-solve(le-1)<<endl;

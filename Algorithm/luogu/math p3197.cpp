@@ -11,12 +11,12 @@ LL pow(LL x,LL p)
         if((1LL<<i) & p )
         {
             res=(res*cur)%mod;
-            cout<<"res"<<res<<endl;//
+            // cout<<"res"<<res<<endl;//
         }
         // cur= (cur*x)%mod;
         cur= (cur*cur)%mod;
     }
-    cout<<res<<endl;//
+    // cout<<res<<endl;//
     return res;
 }
 
@@ -34,7 +34,7 @@ int main()
     // LL n  =pow(M,N) - M*pow(M-1,N-1) + mod; //这里会导致溢出，知道为什么吗？
     LL n  =pow(M,N) - (M*pow(M-1,N-1))%mod + mod;
     
-    cout<<n<<endl;//
+    // cout<<n<<endl;//
     cout<<n%mod<<endl;//
     
     
