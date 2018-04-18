@@ -5,7 +5,7 @@ typedef long long LL;
 LL n,m;
 LL MOD = 20100403;
 
-
+//注意这模板不能处理n比MOD大的情况，n!%MOD会变成0的！！！！要用卢卡斯定理
 //禁止使用这种递归
 LL pow2(LL x,LL p)
 {
@@ -37,6 +37,20 @@ LL Combine(int n,int m)
     return down;
 }
 
+int init(int n,int m)
+{
+    pre[1]=1;
+    for (int i = 2; i <= n+m; i++) {//算1*2*3*4...
+        pre[i]=pre[i-1]*i%MOD;
+    }
+    //算1*2*3*4...在MOD下的逆元
+    inv[n+m] = pow(pre[n+m],MOD-2);
+    for(int i=n+m-1;i>0;i--)
+    {
+        inv[i] = inv[i+1]*(i+1)%MOD;
+    }
+}
+
 int main()
 {
     //freopen("I:\\Project\\acm\\Algorithm\\input.txt","r",stdin);//
@@ -45,18 +59,8 @@ int main()
     
     cin>>n>>m;
     
-    pre[1]=1;
-    for (int i = 2; i <= n+m; i++) {//算1*2*3*4...
-        pre[i]=pre[i-1]*i%MOD;
-    }
-    
-    //算1*2*3*4...MOD下的逆元
-    inv[n+m] = pow(pre[n+m],MOD-2);
-    for(int i=n+m-1;i>0;i--)
-    {
-        inv[i] = inv[i+1]*(i+1)%MOD;
-    }
-    
+    //使用示例
+    init(n,m);
     cout<<(Combine(n+m,m)-Combine(n+m,m-1)+MOD)%MOD<<endl;
     
     
