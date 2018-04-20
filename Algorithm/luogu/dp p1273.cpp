@@ -82,6 +82,7 @@ int main()
         cin>>x;
         int a,b;
         for (int j = 0; j < x; j++) {
+        // for(int i=0;i<x;i++){//一开始写成这样错了
             cin>>a>>b;
             G[i].push_back({a-1,b});
         }

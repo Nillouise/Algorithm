@@ -31,10 +31,7 @@ int main()
     lis[0] = 0;
     for (int i = 0; i < n; i++) {
         int p = lower_bound(lis,lis+n,dat2[i])-lis;
-        if(lis[p]!=dat2[i])
-        {
-            lis[p]=dat2[i];
-        }
+        lis[p]=dat2[i];
     }
     for (int i = 0; i < n+1; i++) {//注意这里要n+1
         if(lis[i]>=0x3f3f3f){
