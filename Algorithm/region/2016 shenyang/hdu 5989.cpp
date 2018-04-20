@@ -6,7 +6,7 @@ LL dp[30][2][2];//pos，之前的数字是奇数还是偶数，之前的数量�
 int vis[30][2][2];
 int vec[30];
 
-int dfs(int x,int precnt,int preodd,int limit,int leadzero)
+LL dfs(int x,int precnt,int preodd,int limit,int leadzero)
 {
     if(x==-1)
     {
@@ -16,7 +16,7 @@ int dfs(int x,int precnt,int preodd,int limit,int leadzero)
             return 0;
         }
     }
-    if(vis[x][precnt][preodd]==1&&limit==0&&leadzero)
+    if(vis[x][precnt][preodd]==1&&limit==0&&leadzero==0)//一开始写成leadzero==1 
     {
         return dp[x][precnt][preodd];
     }
@@ -30,7 +30,7 @@ int dfs(int x,int precnt,int preodd,int limit,int leadzero)
         
         if(i==0&&leadzero)
         {
-            sum+=dfs(x-1,0,0,limit,1);
+            sum+=dfs(x-1,0,0,limit&&(i==vec[x]),1);
             continue;
         }
         if(i%2 != preodd||leadzero)
@@ -47,8 +47,8 @@ int dfs(int x,int precnt,int preodd,int limit,int leadzero)
 
 LL solve(LL x)
 {
-    memset(vis,0,sizeof(vis));
-    memset(dp,0,sizeof(dp));
+//    memset(vis,0,sizeof(vis));
+//    memset(dp,0,sizeof(dp));
     memset(vec,0,sizeof(vec));
     int pos = 0;
     while(x){
@@ -65,12 +65,11 @@ int main()
     //freopen("I:\\Project\\acm\\Algorithm\\input.txt","r",stdin);//
     
     ios::sync_with_stdio(false);
-    cout<<solve(10)<<endl;//
     int T;cin>>T;
-    while(T--)
+    for(int t=1;t<=T;t++)
     {
         LL a,b;cin>>a>>b;
-        
+        cout<<"Case #"<<t<<": ";
         cout<<solve(b)-solve(a-1)<<endl;
     }
     

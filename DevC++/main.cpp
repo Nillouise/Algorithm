@@ -1,45 +1,39 @@
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long LL;
-const int maxn = 2*100000;
-int mod = 0;
+int dat[20000];
+int tac[20000];
+int dp[20000];
 
-long long fac[maxn],inv[maxn];//这里的maxn视具体数据范围而定
-LL n;
-long long pow(long long x,int k)//快速幂，为求一个逆元而准备
-{
-    long long ans=1;
-    while(k)
-    {
-        if(k&1)
-            ans=ans* x%mod;
-        x=x*x%mod;
-        k>>=1;
-    } 
-    return ans;
-} 
-void init()
-{
-    fac[0]=inv[0]=1;
-    for(int i=1;i<=n;i++)
-        fac[i]=fac[i-1]*i%mod;//线性扫一遍求i的阶乘的逆元
-     inv[n]=pow(fac[n],mod-2);//求n的阶乘对于mod的逆元
-     for(int i=n-1;i>=1;i--)
-        inv[i]=inv[i+1]*(i+1)%mod;//这个技巧就是通过最大的n的阶乘的逆元来求所有小于n的阶乘的逆元，也是线性扫一遍  
-}
-long long get(int n,int m)//然后直接用上面预处理的数组即可
-{
-    return fac[n]*inv[m]%mod*inv[n-m]%mod;
-}
 
 int main() {
-    // int T;cin>>T;
-    LL m,p;
-    while (~scanf("%lld %lld %lld", &n, &m, &p)) {  
-	cout<<n<<m<<p<<endl;//  
-        n+=m;
-        mod = p;
-        init();
-        cout<<get(n,m)<<endl;
-    }
+	int T;cin>>T;
+	while(T--)
+	{
+		int n;cin>>n;
+		for(int i=0;i<n-1;i++)
+		{
+			cin>>dat[i+1];
+		}
+		for(int i=0;i<n-2;i++)
+		{
+			tac[i+1] = dat[i+2]-dat[1]; 
+		}
+		
+		int top = n-2;
+		memset(dp,-0x3f3f,sizeof(dp));
+		dp[0] = 0;
+		for(int i=1;i<=n-2;i++)
+		{
+			for(int j = top;j>=i;j--)
+			{
+				for(int k = 1;j-k*i>=0;k++)
+				{
+					dp[j] = max(dp[j],dp[j-k*i] +tac[i]*k);
+				}
+			}
+		}
+		
+		cout<<dat[1]*n + dp[n-2]<<endl;
+	}
 }
