@@ -57,6 +57,7 @@ int main()
     {
         ans=(ans*b)%10007LL;
     }
+    //除法不能用在mod上
     // LL xi = 1;
     // LL t = 1;
     // for(LL i=k;i>k-n;i--)
