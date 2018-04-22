@@ -26,7 +26,7 @@ int main()
 			if(pos==s.npos)break;
         	else cnt++;
         	s[pos+1]='X';s[pos+2]='X';
-		}while(pos!=s.npos)
+		}while(pos!=s.npos);
         
         if(s.find("CCC")!=s.npos){
         	flag=1;
