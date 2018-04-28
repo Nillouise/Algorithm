@@ -4,7 +4,7 @@ typedef long long LL;
 int n,m;
 map<int,int> mc[100000+100];
 
-//´Ëº¯ÊıÅäºÏlowerbound£¬×ö³öµÄÊÇ¹ØÓÚwµÄÊ²Ã´Ğ§¹û£¿ ¾ÍÊÇÕÒ±ÈwĞ¡µÄ×î³¤Á´£¨¶ø²»ÊÇÕÒÒÔwÎª½áÎ²µÄ×î³¤Á´£© 
+//æ­¤å‡½æ•°é…åˆlowerboundï¼Œåšå‡ºçš„æ˜¯å…³äºwçš„ä»€ä¹ˆæ•ˆæœï¼Ÿ å°±æ˜¯æ‰¾æ¯”wå°çš„æœ€é•¿é“¾ï¼ˆè€Œä¸æ˜¯æ‰¾ä»¥wä¸ºç»“å°¾çš„æœ€é•¿é“¾ï¼‰ 
 int get(int x,int w)
 {
 	 auto it = mc[x].lower_bound(w);
@@ -28,7 +28,7 @@ int main()
 		if(len<get(b,w+1))continue;
 		mc[b][w]=len+1;
 		auto it = mc[b].upper_bound(w);
-		//É¾³ı¹ØÓÚ 
+		//LISæ³¨æ„ç‚¹ï¼Œæ›´æ–°æ—¶éœ€è¦è€ƒè™‘åˆ é™¤ 
 		while(it!=mc[b].end()&&it->second<=len+1)
 		{
 			it = mc[b].erase(it);
