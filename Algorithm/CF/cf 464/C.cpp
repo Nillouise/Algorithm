@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long LL;
-
+//这题不能枚举其他（如枚举哪个时区而不是时间，因为要满足smallest这个要求，请直接枚举时间）
 int main()
 {
     //freopen("D:\\Project\\Algorithm\\Algorithm\\Algorithm\\input.txt","r",stdin);//
