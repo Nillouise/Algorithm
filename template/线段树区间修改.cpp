@@ -48,7 +48,6 @@ void query(int o,int L,int R,LL add)
 
 int main()
 {
-    
     ios::sync_with_stdio(false);
     int N,M;
     cin>>N>>M;
