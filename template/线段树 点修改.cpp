@@ -19,6 +19,7 @@ void update(int o,int L,int R)
     int M = L+(R-L)/2;
     if(L==R)minv[o]=v;
     else{
+        //这里假如是用来建树的话，只要同时update两边即可。
         if(p<=M)update(o*2,L,M);else update(o*2+1,M+1,R);
         minv[o] = min(minv[o*2],minv[o*2+1]);
     }

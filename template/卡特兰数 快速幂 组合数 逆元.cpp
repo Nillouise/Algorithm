@@ -16,14 +16,14 @@ LL pow2(LL x,LL p)
 //快速幂
 LL pow(LL x,LL p)
 {
-    LL res = 1;
+    LL res = 1;//注意这里是1不是0
     while(p)
     {
-        if(p&1)res = (res*x)%MOD;
+        if(p&1)res = (res*x)%MOD; //注意这里是res*x而不是+
         p>>=1;
         x=(x*x)%MOD;
     }
-    return res;
+    return res%MOD;//这里需要%k是因为，当p一开始就为0时，res为1是没被mod过得 
 }
 //逆元数组
 LL inv[1000000];
