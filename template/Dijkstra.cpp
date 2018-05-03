@@ -39,7 +39,7 @@ struct Dij {
     void dij(int s) {
         priority_queue<HeapNode> Q;
         for(int i = 0; i < n; i++) 
-            d[i] = 0x3f3f3f;//这里设置一个极大值
+            d[i] = 0x3f3f3f3f;//这里设置一个极大值，注意根据题目的不同，这里可能还不够大
         d[s] = 0;
         memset(done, 0, sizeof(done));
         Q.push((HeapNode){0, s});
