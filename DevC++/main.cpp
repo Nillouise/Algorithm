@@ -1,111 +1,52 @@
-#include<bits/stdc++.h>
-using namespace std;
-typedef long long LL;
-
-const int MAXN = 10000;
-
-struct Edge {
-    int u, v, dist;
-    Edge(int u, int v, int d):u(u),v(v),dist(d) {}
-};
-
-vector<int> G[MAXN];
-vector<int> Gs[MAXN];//存储每个节点的儿子节点
-vector<Edge> edges;
-int dep[MAXN];//节点的深度
-
-void addedge(int u,int v,int w)
+#include <cstdio>
+int f[101][101],a[101][101];
+int inf=999999999;
+int min(int x,int y)
 {
-    G[u].push_back(edges.size());
-    edges.push_back({u,v,w});
+    return x<y?x:y; 
 }
-
-
-int pa[MAXN][22];
-int paw[MAXN][22];//这里应该是用来维护当前节点到祖先节点的一点信息的
-void build(int x,int p,int depth){
-    pa[x][0] = p;
-    dep[x]=depth;
-    for(auto a:G[x]){
-//    	cout<<"x"<<x<<" "<<a<<endl;//
-        Edge e = edges[a];
-        if(e.v!=p){
-        	//注意这里是Gs 
-            Gs[x].push_back(e.v);
-            build(e.v,x,depth+1);
-        }
-    }
-}
-
-
-//LAC的倍增要写一下
-//n为节点的数目
-void build_beizeng(int n)
+int max(int x,int y)
 {
-    for(int i=1;i<20;i++){
-        for(int x=1;x<=n;x++)//注意，因为本题是1-n为标号，所以用<=n 
+    return x>y?x:y;
+}
+void print(int x,int y)
+{
+    if(x>0)
+    {
+        int n=x;
+        while(f[n][x]!=y)
         {
-            if(dep[x]<(1<<i))
-            {
-                continue;
-            }
-            int cp = pa[x][i-1];//半路上的父节点。
-            pa[x][i] = pa[cp][i-1]; 
+            n++;
         }
+        print(x-1,y-a[x][n]);
+        printf("%d ",n);
     }
 }
-
-
-int LCA(int x,int y)
-{
-    if(dep[x]<dep[y]){
-        swap(x,y);
-    }
-    //拔x到同一层
-    for(int i=20;i>=0;i--){
-        if(dep[x]-(1<<i)>=dep[y]){
-//        	cout<<x<<" "<<pa[x][i]<<endl;//
-            x = pa[x][i];
-        }
-    }
-//    cout<<"x="<<x<<endl;
-    //特判是必须的
-    if(x==y){
-        return x;
-    }
-    for(int i=20;i>=0;i--){
-        //这里必须是continue，不能直接返回，因为有可能1<<20是超过所有根的
-        if(pa[x][i] == pa[y][i]){
-            continue;
-        }else{
-            x= pa[x][i],y=pa[y][i];
-        }
-    }
-    return pa[x][0];
-}
-
-
-
 int main()
 {
-    //freopen("I:\\Project\\acm\\Algorithm\\input.txt","r",stdin);//
-    
-    ios::sync_with_stdio(false);
-    int n,m,s;
-    cin>>n>>m>>s;
-    for(int i=0;i<n-1;i++){
-        int a,b;cin>>a>>b;
-        addedge(a,b,0);
-        addedge(b,a,0);
+    int n=0,m=0;
+    scanf("%d %d",&n,&m);
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=1;j<=m;j++)
+        {
+            scanf("%d",&a[i][j]);
+            f[j][i]=-inf;
+        }
     }
-
-    
-    build(s,0,0);
-    build_beizeng(n);
-    for(int i=0;i<m;i++){
-        int a,b;cin>>a>>b;
-        cout<<LCA(a,b)<<endl;
+    for(int i=1;i<=m;i++)
+    {
+        f[0][i]=-inf;
     }
-    
+    f[0][0]=0;
+    for(int i=1;i<=m;i++)
+    {
+        for(int j=1;j<=min(n,i);j++)
+        {
+            f[i][j]=max(f[i-1][j],f[i-1][j-1]+a[j][i]);
+        }
+    }
+    printf("%d\n",f[m][n]);
+    print(n,f[m][n]);
     return 0;
 }
