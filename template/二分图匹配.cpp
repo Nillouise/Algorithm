@@ -2,7 +2,7 @@
 using namespace std;
 typedef long long LL;
 
-const int MAX_V = 1000;
+const int MAX_V = 3000;
 
 int V; //顶点数应该是作为上界存在
 vector<int> G[MAX_V];
@@ -53,7 +53,17 @@ int main()
     
     ios::sync_with_stdio(false);
     
-    
+    int n,m,e;
+    cin>>n>>m>>e;
+    V = n;
+    for(int i=0;i<e;i++){
+        
+        int a,b;cin>>a>>b;a--,b--;
+        if(b>=m)continue;
+        b+=n;//这是因为某题左边的点跟右边的点数字一样而已
+        add_edge(a,b);
+    }
+    cout<<bipartite_matching()<<endl;
     
     
     return 0;
