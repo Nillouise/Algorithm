@@ -76,7 +76,7 @@ int main()
         Mat m;
         m.dat=v;
         Mat res = pow(m,x-3);
-        cout<<res.dat[0][0]+res.dat[0][1]+res.dat[0][2]<<endl;
+        cout<<(res.dat[0][0]+res.dat[0][1]+res.dat[0][2])%mod<<endl;
     }
     
     
