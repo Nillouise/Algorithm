@@ -16,8 +16,8 @@ int main()
     for (int i = 0; i < n; i++) {
         cin>>dat[i];
     }
-    
-    
+    sort(dat.begin(),dat.end());
+    cout<<dat[(n-1)/2]<<endl;
     
     
     return 0;

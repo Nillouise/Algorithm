@@ -23,7 +23,10 @@ int main()
         for(;;){
             LL x =__gcd(down,b);
             if(x==1)break;
-            down/=x;
+            while(down%x==0)
+            {
+                down/=x;
+            }
         }
         
         if(down==1){
