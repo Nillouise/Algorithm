@@ -5,6 +5,7 @@ typedef long long LL;
 class token
 {
   public:
+  //因为这个是单向链表，所以无法再查找get后，获得前驱节点，导致增加删除为O(n)复杂度
     token *next = nullptr;
     token *down = nullptr;
     int val;
@@ -85,6 +86,7 @@ class skip_list
         }
     }
 
+    //这个插入不也他妈的O(n)吗？
     Token *insert(Token *t, int val)
     {
         Token *u = t;
@@ -92,6 +94,10 @@ class skip_list
         {
             if (u->next == nullptr || u->next->val > val)
             {
+                Token *n = new Token();
+                n->val = val;
+                n->next = u->next;
+                u->next = n;
                 break;
             }
             else
@@ -101,13 +107,29 @@ class skip_list
         }
         return u;
     }
-
+    //O(n)的删除方法
     void del(int val)
     {
         Token *u = head;
         for (;;)
         {
-
+            Token *t = u;
+            Token *p = u;
+            while (t.next != nullptr)
+            {
+                if (t.val == val)
+                {
+                    p.next = t.next;
+                    delete t;
+                    break;
+                }
+                if (t.val > val)
+                {
+                    break;
+                }
+                p=t;
+                t=t.next;
+            }
             if (u->down == nullptr)
             {
                 break;
